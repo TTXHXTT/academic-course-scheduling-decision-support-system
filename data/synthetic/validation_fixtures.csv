@@ -1,16 +1,4 @@
 course_id,course_name,section_id,term,year,semester,days,times,modality,campus,enrollment,capacity,attempted_enrollment,unmet_demand,major,student_level
-<<<<<<< Updated upstream
-CSE-3500,Software Engineering,01,Fall 2023,2023,Fall,MWF,09:00-09:50,In-Person,San Bernardino,28,30,32,4,Computer Science,Junior
-CSE-3500,Software Engineering,01,Fall 2023,2023,Fall,MWF,09:00-09:50,In-Person,San Bernardino,28,30,32,4,Computer Science,Junior
-,Missing Course ID,01,Fall 2023,2023,Fall,MWF,09:00-09:50,In-Person,San Bernardino,20,30,,,Computer Science,Junior
-CSE-XXXX,Bad Course Format,01,INVALID_TERM,,,,In-Person,San Bernardino,abc,-5,,,Computer Science,Junior
-CSE-4600,Database Systems,01,Fall 2023,2023,Fall,TR,10:00-11:15,In-Person,San Bernardino,35,25,40,15,Computer Science,Senior
-CSE-2200,Data Structures,01,Fall 2023,2023,Fall,MWF,11:00-11:50,In-Person,San Bernardino,-10,40,,,Computer Science,Sophomore
-MATH-2110,Calculus I,01,Fall 2023,2023,Fall,MWF,08:00-08:50,In-Person,San Bernardino,20,,,,Mathematics,Freshman
-PSY-1100,General Psychology,01,Fall 2023,2023,Fall,MWF,10:00-10:50,UNKNOWN_MODALITY,San Bernardino,45,50,,,Psychology,Freshman
-BUS-3010,Principles of Marketing,01,Fall 2023,2023,Fall,MWF,13:00-13:50,In-Person,San Bernardino,40,40,,,Business Administration,Junior
-CSE-9999,Valid New Course,01,Spring 2024,2024,Spring,TR,14:00-15:15,Online,San Bernardino,15,25,,,Computer Science,Graduate
-=======
 CSE-3500,Software Engineering,01,Fall 2026,2026,Fall,MWF,09:00-09:50,In-Person,San Bernardino,28,30,32,4,Computer Science,Junior
 CSE-3500,Software Engineering,01,Fall 2026,2026,Fall,MWF,09:00-09:50,In-Person,San Bernardino,28,30,32,4,Computer Science,Junior
 ,Missing Course ID,01,Fall 2026,2026,Fall,MWF,09:00-09:50,In-Person,San Bernardino,20,30,,,Computer Science,Junior
