@@ -30,10 +30,12 @@ from app.services.recommendation_service import RecommendationService
 
 
 DEMO_USERS = [
+    {"email": "000000000@coyote.csusb.edu", "password": "123456", "full_name": "Coyote Administrator", "role": UserRole.admin},
     {"email": "admin@csusb.edu", "password": "Admin@CSUSB123", "full_name": "System Administrator", "role": UserRole.admin},
     {"email": "scheduler@csusb.edu", "password": "Scheduler@123", "full_name": "Alex Scheduler", "role": UserRole.academic_scheduler},
     {"email": "chair@csusb.edu", "password": "Chair@123", "full_name": "Dr. Department Chair", "role": UserRole.department_chair},
     {"email": "coordinator@csusb.edu", "password": "Coord@123", "full_name": "Pat Coordinator", "role": UserRole.program_coordinator},
+    {"email": "007455611@coyote.csusb.edu", "password": "123456", "full_name": "Student Coyote", "role": UserRole.student},
 ]
 
 

@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+
+{% block title %}Data Import & Management - Academic Course Scheduling (ACS){% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Historical Academic Data Import</h1>
+    <p class="page-subtitle">Ingest and validate course offering and enrollment datasets (CSV)</p>
+  </div>
+</div>
+
+<div class="disclaimer-banner">
+  <div>
+    <strong>Validation Integrity:</strong> Course ID, Course Name, Term, and Section ID are strictly required. Missing values are preserved as null rather than defaulted to zero. Invalid rows are excluded and logged below without silent data loss.
+  </div>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 2fr; gap: 1.5rem;">
+  <!-- Upload Form -->
+  <div class="card">
+    <div class="card-title">Upload Course Dataset</div>
+
+    <form id="upload-form">
+      <div class="form-group">
+        <label class="form-label" for="dataset-name">Dataset Name *</label>
+        <input type="text" id="dataset-name" class="form-control" placeholder="e.g. Fall 2024 - Spring 2026" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="academic-year">Academic Year / Range</label>
+        <input type="text" id="academic-year" class="form-control" placeholder="e.g. 2024-2026">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="description">Description / Source Notes</label>
+        <textarea id="description" class="form-control" rows="2" placeholder="e.g. Historical census data from registrar"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="csv-file">CSV File *</label>
+        <input type="file" id="csv-file" class="form-control" accept=".csv" required>
+        <small style="color: var(--text-muted); font-size: 0.75rem; margin-top: 0.25rem; display: block;">
+          Required headers: course_id, course_name, term, section_id, enrollment, capacity
+        </small>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width: 100%;" id="upload-btn">
+        Upload & Validate
+      </button>
+    </form>
+  </div>
+
+  <!-- Ingestion Results / Datasets List -->
+  <div>
+    <!-- Import Report (Shown after upload) -->
+    <div id="import-report-card" class="card" style="display: none; border-left: 4px solid var(--primary);">
+      <div class="card-title">
+        <span>Validation Summary</span>
+        <button class="btn btn-outline btn-sm" onclick="document.getElementById('import-report-card').style.display='none'">Dismiss</button>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1rem;">
+        <div style="text-align: center; padding: 0.5rem; background: var(--bg-subtle); border-radius: var(--radius-sm);">
+          <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Total Rows</span>
+          <strong id="rep-total" style="font-size: 1.25rem;">0</strong>
+        </div>
+        <div style="text-align: center; padding: 0.5rem; background: var(--success-bg); border-radius: var(--radius-sm);">
+          <span style="font-size: 0.75rem; color: var(--success); display: block;">Valid Rows</span>
+          <strong id="rep-valid" style="font-size: 1.25rem; color: var(--success);">0</strong>
+        </div>
+        <div style="text-align: center; padding: 0.5rem; background: var(--danger-bg); border-radius: var(--radius-sm);">
+          <span style="font-size: 0.75rem; color: var(--danger); display: block;">Rejected Errors</span>
+          <strong id="rep-errors" style="font-size: 1.25rem; color: var(--danger);">0</strong>
+        </div>
+        <div style="text-align: center; padding: 0.5rem; background: var(--warning-bg); border-radius: var(--radius-sm);">
+          <span style="font-size: 0.75rem; color: var(--warning); display: block;">Warnings</span>
+          <strong id="rep-warnings" style="font-size: 1.25rem; color: var(--warning);">0</strong>
+        </div>
+      </div>
+
+      <div id="errors-section" style="display: none; margin-bottom: 1rem;">
+        <h4 style="font-size: 0.85rem; color: var(--danger); margin-bottom: 0.5rem;">Data Validation Errors (Rows Excluded)</h4>
+        <div class="table-container" style="max-height: 180px;">
+          <table>
+            <thead>
+              <tr><th>Row</th><th>Field</th><th>Reason</th><th>Value</th></tr>
+            </thead>
+            <tbody id="errors-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="warnings-section" style="display: none;">
+        <h4 style="font-size: 0.85rem; color: var(--warning); margin-bottom: 0.5rem;">Data Quality Warnings (Rows Accepted with Flags)</h4>
+        <div class="table-container" style="max-height: 180px;">
+          <table>
+            <thead>
+              <tr><th>Row</th><th>Field</th><th>Warning</th><th>Value</th></tr>
+            </thead>
+            <tbody id="warnings-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Existing Datasets -->
+    <div class="card">
+      <div class="card-title">Existing Historical Datasets</div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Total Rows</th>
+              <th>Terms</th>
+              <th>Created</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="datasets-tbody">
+            <tr><td colspan="6" style="text-align: center; color: var(--text-muted);">Loading datasets...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  document.addEventListener("DOMContentLoaded", async () => {
+    const user = API.requireAuth();
+    if (user && user.role === "program_coordinator") {
+      showToast("Access restricted: Program coordinators cannot import raw data.", "warning");
+    }
+    await loadDatasetsList();
+  });
+
+  async function loadDatasetsList() {
+    try {
+      const datasets = await API.getDatasets();
+      const tbody = document.getElementById("datasets-tbody");
+      tbody.innerHTML = "";
+
+      if (!datasets || datasets.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" style="text-align: center; color: var(--text-muted);">No datasets imported yet.</td></tr>`;
+        return;
+      }
+
+      datasets.forEach(ds => {
+        const tr = document.createElement("tr");
+        const termsList = ds.summary && ds.summary.terms ? ds.summary.terms.join(", ") : "N/A";
+        tr.innerHTML = `
+          <td><strong>#${ds.id}</strong></td>
+          <td>
+            <strong>${ds.name}</strong>
+            ${ds.description ? `<div style="font-size: 0.75rem; color: var(--text-muted);">${ds.description}</div>` : ""}
+          </td>
+          <td>${(ds.total_records || 0).toLocaleString()}</td>
+          <td style="font-size: 0.8rem; max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${termsList}">${termsList}</td>
+          <td style="font-size: 0.8rem;">${new Date(ds.created_at).toLocaleDateString()}</td>
+          <td>
+            <div style="display: flex; gap: 0.35rem;">
+              <a href="/explorer?dataset_id=${ds.id}" class="btn btn-outline btn-sm">Explore</a>
+              <button onclick="deleteDataset(${ds.id}, '${ds.name}')" class="btn btn-outline btn-sm" style="color: var(--danger);">&times;</button>
+            </div>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    } catch (err) {
+      showToast("Error loading datasets: " + err.message, "error");
+    }
+  }
+
+  document.getElementById("upload-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById("upload-btn");
+    btn.disabled = true;
+    btn.textContent = "Validating and Uploading...";
+
+    const formData = new FormData();
+    formData.append("name", document.getElementById("dataset-name").value);
+    formData.append("academic_year", document.getElementById("academic-year").value);
+    formData.append("description", document.getElementById("description").value);
+    formData.append("file", document.getElementById("csv-file").files[0]);
+
+    try {
+      const res = await API.uploadDataset(formData);
+      showToast("Dataset successfully imported and validated!", "success");
+      
+      // Render report
+      document.getElementById("import-report-card").style.display = "block";
+      document.getElementById("rep-total").textContent = res.total_records.toLocaleString();
+      document.getElementById("rep-valid").textContent = res.valid_records.toLocaleString();
+      document.getElementById("rep-errors").textContent = res.error_records.toLocaleString();
+      document.getElementById("rep-warnings").textContent = res.warning_records.toLocaleString();
+
+      if (res.errors && res.errors.length > 0) {
+        document.getElementById("errors-section").style.display = "block";
+        const etbody = document.getElementById("errors-tbody");
+        etbody.innerHTML = res.errors.map(err => `
+          <tr>
+            <td>Row ${err.row_index != null ? err.row_index : 'N/A'}</td>
+            <td><code>${err.field || 'General'}</code></td>
+            <td style="color: var(--danger);">${err.error_message}</td>
+            <td><code>${err.rejected_value != null ? err.rejected_value : ''}</code></td>
+          </tr>
+        `).join("");
+      } else {
+        document.getElementById("errors-section").style.display = "none";
+      }
+
+      if (res.warnings && res.warnings.length > 0) {
+        document.getElementById("warnings-section").style.display = "block";
+        const wtbody = document.getElementById("warnings-tbody");
+        wtbody.innerHTML = res.warnings.map(w => `
+          <tr>
+            <td>Row ${w.row_index != null ? w.row_index : 'N/A'}</td>
+            <td><code>${w.field || 'General'}</code></td>
+            <td style="color: var(--warning);">${w.warning_message}</td>
+            <td><code>${w.flagged_value != null ? w.flagged_value : ''}</code></td>
+          </tr>
+        `).join("");
+      } else {
+        document.getElementById("warnings-section").style.display = "none";
+      }
+
+      // Reset form & refresh list
+      document.getElementById("upload-form").reset();
+      await loadDatasetsList();
+    } catch (err) {
+      showToast("Upload failed: " + err.message, "error");
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "Upload & Validate";
+    }
+  });
+
+  async function deleteDataset(id, name) {
+    if (!confirm(`Are you sure you want to delete dataset "${name}"? This will also remove associated analysis runs.`)) return;
+    try {
+      await API.deleteDataset(id);
+      showToast("Dataset deleted.", "info");
+      await loadDatasetsList();
+    } catch (err) {
+      showToast("Error deleting: " + err.message, "error");
+    }
+  }
+</script>
+{% endblock %}

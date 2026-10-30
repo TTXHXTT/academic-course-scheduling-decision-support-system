@@ -149,3 +149,51 @@ class TestScenarioAPI:
             "scenario_type": "invalid_xyz", "parameters": {},
         })
         assert resp.status_code == 422
+
+
+class TestHTMLPages:
+    def test_login_page_renders(self, test_client):
+        resp = test_client.get("/login")
+        assert resp.status_code == 200
+        assert "ACS Portal Sign In" in resp.text
+
+    def test_dashboard_page_renders(self, test_client):
+        resp = test_client.get("/dashboard")
+        assert resp.status_code == 200
+        assert "Executive Dashboard" in resp.text
+
+    def test_imports_page_renders(self, test_client):
+        resp = test_client.get("/imports")
+        assert resp.status_code == 200
+        assert "Historical Academic Data Import" in resp.text
+
+    def test_explorer_page_renders(self, test_client):
+        resp = test_client.get("/explorer")
+        assert resp.status_code == 200
+        assert "Historical Course Explorer" in resp.text
+
+    def test_analysis_page_renders(self, test_client):
+        resp = test_client.get("/analysis")
+        assert resp.status_code == 200
+        assert "Course Demand Analysis Engine" in resp.text
+
+    def test_recommendations_page_renders(self, test_client):
+        resp = test_client.get("/recommendations")
+        assert resp.status_code == 200
+        assert "Course-Offering Decision Support" in resp.text
+
+    def test_scenarios_page_renders(self, test_client):
+        resp = test_client.get("/scenarios")
+        assert resp.status_code == 200
+        assert "What-If Course Offering Scenarios" in resp.text
+
+    def test_history_page_renders(self, test_client):
+        resp = test_client.get("/history")
+        assert resp.status_code == 200
+        assert "Analysis History & Run Traceability" in resp.text
+
+    def test_audit_page_renders(self, test_client):
+        resp = test_client.get("/audit")
+        assert resp.status_code == 200
+        assert "Administrative Audit Trail" in resp.text
+

@@ -16,6 +16,7 @@ class UserRole(str, enum.Enum):
     academic_scheduler = "academic_scheduler"
     program_coordinator = "program_coordinator"
     admin = "admin"
+    student = "student"
 
 
 class User(Base):

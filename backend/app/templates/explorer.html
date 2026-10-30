@@ -1,0 +1,348 @@
+{% extends "base.html" %}
+
+{% block title %}Historical Explorer - Academic Course Scheduling (ACS){% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Historical Course Explorer</h1>
+    <p class="page-subtitle">Search, filter, and inspect section-level historical enrollment and capacity data</p>
+  </div>
+</div>
+
+<!-- Filters Card -->
+<div class="card" style="margin-bottom: 1.5rem;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; align-items: flex-end;">
+    <div class="form-group" style="margin-bottom: 0;">
+      <label class="form-label" for="filter-dataset">Dataset</label>
+      <select id="filter-dataset" class="form-select" onchange="onDatasetFilterChange(this.value)">
+        <option value="">Loading...</option>
+      </select>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 0;">
+      <label class="form-label" for="filter-search">Search Course ID / Name</label>
+      <input type="text" id="filter-search" class="form-control" placeholder="e.g. CSE 2010, Computer...">
+    </div>
+
+    <div class="form-group" style="margin-bottom: 0;">
+      <label class="form-label" for="filter-term">Academic Term</label>
+      <select id="filter-term" class="form-select">
+        <option value="">All Terms</option>
+      </select>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 0;">
+      <label class="form-label" for="filter-modality">Modality</label>
+      <select id="filter-modality" class="form-select">
+        <option value="">All Modalities</option>
+        <option value="In-Person">In-Person</option>
+        <option value="Online Asynchronous">Online Asynchronous</option>
+        <option value="Online Synchronous">Online Synchronous</option>
+        <option value="Hybrid">Hybrid</option>
+      </select>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 0;">
+      <label class="form-label" for="filter-utilization">Utilization Filter</label>
+      <select id="filter-utilization" class="form-select">
+        <option value="">All Levels</option>
+        <option value="high">High (&ge; 85%)</option>
+        <option value="low">Low (&le; 50%)</option>
+        <option value="full">At Capacity (100%+)</option>
+      </select>
+    </div>
+
+    <div>
+      <button onclick="applyFilters()" class="btn btn-primary" style="width: 100%;">Filter Records</button>
+    </div>
+  </div>
+</div>
+
+<!-- Records Table -->
+<div class="card">
+  <div class="card-title">
+    <span>Course Sections (<span id="record-count">0</span> matching records)</span>
+    <div style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">
+      Page <span id="current-page">1</span> of <span id="total-pages">1</span>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Course ID</th>
+          <th>Course Name</th>
+          <th>Term</th>
+          <th>Section</th>
+          <th>Enrollment</th>
+          <th>Capacity</th>
+          <th>Utilization</th>
+          <th>Modality</th>
+          <th>Unmet Demand</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="records-tbody">
+        <tr><td colspan="10" style="text-align: center; color: var(--text-muted);">Loading records...</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pagination Controls -->
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+    <button id="btn-prev" class="btn btn-outline btn-sm" onclick="changePage(-1)">Previous</button>
+    <span style="font-size: 0.85rem; color: var(--text-muted);" id="pagination-info">Showing records</span>
+    <button id="btn-next" class="btn btn-outline btn-sm" onclick="changePage(1)">Next</button>
+  </div>
+</div>
+
+<!-- Side Drawer for Course History Detail -->
+<div class="drawer-backdrop" id="drawer-backdrop" onclick="closeDrawer()"></div>
+<div class="drawer" id="course-drawer">
+  <div class="drawer-header">
+    <div>
+      <h2 style="font-size: 1.25rem; color: var(--primary-dark);" id="drawer-course-id">CSE 2010</h2>
+      <p style="font-size: 0.85rem; color: var(--text-muted);" id="drawer-course-name">Data Structures</p>
+    </div>
+    <button onclick="closeDrawer()" class="btn btn-outline btn-sm">&times;</button>
+  </div>
+
+  <div style="margin-bottom: 1.5rem;">
+    <h3 style="font-size: 0.95rem; margin-bottom: 0.75rem;">Multi-Term Enrollment History</h3>
+    <div style="height: 200px; position: relative;">
+      <canvas id="courseDrawerChart"></canvas>
+    </div>
+  </div>
+
+  <div>
+    <h3 style="font-size: 0.95rem; margin-bottom: 0.75rem;">Offering Sections</h3>
+    <div class="table-container" style="max-height: 250px;">
+      <table>
+        <thead>
+          <tr><th>Term</th><th>Section</th><th>Enroll / Cap</th><th>Util</th></tr>
+        </thead>
+        <tbody id="drawer-sections-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  let currentPage = 1;
+  const pageSize = 50;
+  let drawerChartInstance = null;
+  let cachedRecords = [];
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    API.requireAuth();
+    await initDatasets();
+  });
+
+  async function initDatasets() {
+    try {
+      const datasets = await API.getDatasets();
+      const select = document.getElementById("filter-dataset");
+      select.innerHTML = "";
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const preselectedId = urlParams.get("dataset_id");
+
+      datasets.forEach(ds => {
+        const opt = document.createElement("option");
+        opt.value = ds.id;
+        opt.textContent = `${ds.name} (${ds.total_records} rows)`;
+        if (preselectedId && ds.id == preselectedId) opt.selected = true;
+        select.appendChild(opt);
+      });
+
+      if (datasets.length > 0) {
+        await onDatasetFilterChange(select.value);
+      } else {
+        document.getElementById("records-tbody").innerHTML = `<tr><td colspan="10" style="text-align:center;">No datasets available. <a href="/imports">Import one</a>.</td></tr>`;
+      }
+    } catch (err) {
+      showToast("Error loading datasets: " + err.message, "error");
+    }
+  }
+
+  async function onDatasetFilterChange(datasetId) {
+    if (!datasetId) return;
+    try {
+      const opts = await API.getRecordFilterOptions(datasetId);
+      const termSelect = document.getElementById("filter-term");
+      termSelect.innerHTML = '<option value="">All Terms</option>';
+      if (opts.terms) {
+        opts.terms.forEach(t => {
+          const opt = document.createElement("option");
+          opt.value = t;
+          opt.textContent = t;
+          termSelect.appendChild(opt);
+        });
+      }
+      currentPage = 1;
+      await fetchRecords();
+    } catch (err) {
+      showToast("Error loading filter options: " + err.message, "error");
+    }
+  }
+
+  function applyFilters() {
+    currentPage = 1;
+    fetchRecords();
+  }
+
+  async function fetchRecords() {
+    const datasetId = document.getElementById("filter-dataset").value;
+    if (!datasetId) return;
+
+    const params = {
+      dataset_id: datasetId,
+      page: currentPage,
+      page_size: pageSize,
+    };
+
+    const search = document.getElementById("filter-search").value.trim();
+    if (search) params.search = search;
+
+    const term = document.getElementById("filter-term").value;
+    if (term) params.term = term;
+
+    const modality = document.getElementById("filter-modality").value;
+    if (modality) params.modality = modality;
+
+    const utilFilter = document.getElementById("filter-utilization").value;
+    if (utilFilter === "high") {
+      params.min_utilization = 85.0;
+    } else if (utilFilter === "low") {
+      params.max_utilization = 50.0;
+    } else if (utilFilter === "full") {
+      params.min_utilization = 100.0;
+    }
+
+    try {
+      const res = await API.queryRecords(params);
+      cachedRecords = res.items || [];
+      renderRecords(res);
+    } catch (err) {
+      showToast("Error loading records: " + err.message, "error");
+    }
+  }
+
+  function renderRecords(res) {
+    const tbody = document.getElementById("records-tbody");
+    tbody.innerHTML = "";
+
+    document.getElementById("record-count").textContent = res.total.toLocaleString();
+    const totalPages = Math.ceil(res.total / pageSize) || 1;
+    document.getElementById("current-page").textContent = currentPage;
+    document.getElementById("total-pages").textContent = totalPages;
+
+    document.getElementById("btn-prev").disabled = currentPage <= 1;
+    document.getElementById("btn-next").disabled = currentPage >= totalPages;
+
+    if (!res.items || res.items.length === 0) {
+      tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-muted);">No records matching the filter criteria.</td></tr>`;
+      return;
+    }
+
+    res.items.forEach(r => {
+      const tr = document.createElement("tr");
+      let utilBadge = `<span style="color: var(--text-muted);">-</span>`;
+      if (r.capacity_utilization != null) {
+        const u = r.capacity_utilization;
+        const color = u >= 85 ? "var(--success)" : u <= 50 ? "var(--danger)" : "inherit";
+        utilBadge = `<strong style="color: ${color};">${u.toFixed(1)}%</strong>`;
+      }
+
+      tr.innerHTML = `
+        <td><strong>${r.course_id}</strong></td>
+        <td>${r.course_name || '-'}</td>
+        <td>${r.term}</td>
+        <td>${r.section_id || '-'}</td>
+        <td>${r.enrollment != null ? r.enrollment : '<span style="color:var(--text-muted);">N/A</span>'}</td>
+        <td>${r.capacity != null ? r.capacity : '<span style="color:var(--text-muted);">N/A</span>'}</td>
+        <td>${utilBadge}</td>
+        <td><span class="badge badge-secondary">${r.modality || 'Not specified'}</span></td>
+        <td>${r.unmet_demand != null ? `<span class="badge badge-warning">${r.unmet_demand}</span>` : '<span style="color:var(--text-muted);">-</span>'}</td>
+        <td>
+          <button onclick="openCourseDrawer('${r.course_id}', '${r.course_name}')" class="btn btn-outline btn-sm">Inspect</button>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  function changePage(delta) {
+    currentPage += delta;
+    fetchRecords();
+  }
+
+  async function openCourseDrawer(courseId, courseName) {
+    document.getElementById("drawer-course-id").textContent = courseId;
+    document.getElementById("drawer-course-name").textContent = courseName;
+    document.getElementById("drawer-backdrop").style.display = "block";
+    document.getElementById("course-drawer").style.display = "flex";
+
+    // Filter cached records or fetch records for this course
+    const datasetId = document.getElementById("filter-dataset").value;
+    try {
+      const res = await API.queryRecords({ dataset_id: datasetId, search: courseId, page_size: 100 });
+      const sections = res.items.filter(i => i.course_id === courseId);
+
+      const dtbody = document.getElementById("drawer-sections-tbody");
+      dtbody.innerHTML = sections.map(s => `
+        <tr>
+          <td>${s.term}</td>
+          <td>${s.section_id || '-'}</td>
+          <td>${s.enrollment != null ? s.enrollment : '?'}/${s.capacity != null ? s.capacity : '?'}</td>
+          <td>${s.capacity_utilization != null ? `${s.capacity_utilization.toFixed(1)}%` : '-'}</td>
+        </tr>
+      `).join("");
+
+      // Render drawer chart (enrollment by term)
+      const termData = {};
+      sections.forEach(s => {
+        if (s.enrollment != null) {
+          termData[s.term] = (termData[s.term] || 0) + s.enrollment;
+        }
+      });
+
+      const labels = Object.keys(termData);
+      const values = Object.values(termData);
+
+      const ctx = document.getElementById("courseDrawerChart").getContext("2d");
+      if (drawerChartInstance) drawerChartInstance.destroy();
+
+      drawerChartInstance = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels,
+          datasets: [{
+            label: "Total Enrollment",
+            data: values,
+            backgroundColor: "#003366",
+            borderRadius: 4
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: { y: { beginAtZero: true } }
+        }
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  function closeDrawer() {
+    document.getElementById("drawer-backdrop").style.display = "none";
+    document.getElementById("course-drawer").style.display = "none";
+  }
+</script>
+{% endblock %}

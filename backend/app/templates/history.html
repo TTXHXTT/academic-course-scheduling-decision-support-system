@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}Analysis History & Traceability - Academic Course Scheduling (ACS){% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Analysis History & Run Traceability</h1>
+    <p class="page-subtitle">Reproducible record of all historical demand evaluations and parameter sets</p>
+  </div>
+</div>
+
+<div class="disclaimer-banner">
+  <div>
+    <strong>Audit & Method Traceability (DR-03):</strong> Each demand analysis records its exact parameter thresholds, software method version, input dataset ID, and timestamp to ensure reproducibility and transparency in administrative decision-support.
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title">
+    <span>Historical Analysis Runs</span>
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Run ID</th>
+          <th>Dataset</th>
+          <th>Created</th>
+          <th>Completed</th>
+          <th>Courses Analyzed</th>
+          <th>Aggregate Util.</th>
+          <th>Method Version</th>
+          <th>Thresholds</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="history-tbody">
+        <tr><td colspan="9" style="text-align: center; color: var(--text-muted);">Loading analysis history...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  document.addEventListener("DOMContentLoaded", async () => {
+    API.requireAuth();
+    await loadHistory();
+  });
+
+  async function loadHistory() {
+    try {
+      const runs = await API.getAnalysisRuns();
+      const tbody = document.getElementById("history-tbody");
+      tbody.innerHTML = "";
+
+      if (!runs || runs.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; color: var(--text-muted);">No analysis runs found. <a href="/analysis">Run an analysis</a>.</td></tr>`;
+        return;
+      }
+
+      runs.forEach(r => {
+        const tr = document.createElement("tr");
+        const summary = r.summary || {};
+        const aggUtil = summary.aggregate_utilization_pct != null ? `${summary.aggregate_utilization_pct.toFixed(1)}%` : "-";
+        const courses = summary.total_courses_analyzed != null ? summary.total_courses_analyzed.toLocaleString() : "-";
+
+        tr.innerHTML = `
+          <td><strong>#${r.id}</strong></td>
+          <td>${r.dataset_name || `Dataset #${r.dataset_id}`}</td>
+          <td style="font-size: 0.8rem;">${new Date(r.created_at).toLocaleString()}</td>
+          <td style="font-size: 0.8rem;">${r.completed_at ? new Date(r.completed_at).toLocaleTimeString() : '-'}</td>
+          <td>${courses}</td>
+          <td><strong>${aggUtil}</strong></td>
+          <td><span class="badge badge-info">v${r.method_version || '1.0.0'}</span></td>
+          <td style="font-size: 0.75rem; color: var(--text-muted);">
+            High: ${r.high_utilization_threshold}%, Low: ${r.low_utilization_threshold}%, Slope: ${r.increasing_demand_slope}
+          </td>
+          <td>
+            <a href="/analysis?run_id=${r.id}" class="btn btn-outline btn-sm">Inspect Run</a>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    } catch (err) {
+      showToast("Error loading history: " + err.message, "error");
+    }
+  }
+</script>
+{% endblock %}

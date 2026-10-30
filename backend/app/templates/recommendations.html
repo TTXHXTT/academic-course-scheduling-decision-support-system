@@ -1,0 +1,299 @@
+{% extends "base.html" %}
+
+{% block title %}Course-Offering Recommendations - Academic Course Scheduling (ACS){% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Course-Offering Decision Support</h1>
+    <p class="page-subtitle">Evidence-based recommendations for section expansion, consolidation, and monitoring</p>
+  </div>
+</div>
+
+<div class="disclaimer-banner">
+  <div>
+    <strong>Advisory Decision Support:</strong> ACS generates recommendations strictly to assist academic leaders in evaluating demand. Administrators retain authority for course scheduling and must verify room availability, faculty load, and curriculum policies.
+  </div>
+</div>
+
+<!-- Filters -->
+<div class="card" style="margin-bottom: 1.5rem;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; align-items: flex-end;">
+    <div class="form-group" style="margin-bottom: 0;">
+      <label class="form-label" for="filter-type">Recommendation Type</label>
+      <select id="filter-type" class="form-select" onchange="fetchRecommendations()">
+        <option value="">All Types</option>
+        <option value="ADD_SECTION">Add Section (High Demand)</option>
+        <option value="REDUCE_SECTIONS">Reduce Sections (Low Util)</option>
+        <option value="MONITOR">Monitor Demand</option>
+        <option value="INVESTIGATE_LOW_UTILIZATION">Investigate Low Utilization</option>
+      </select>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 0;">
+      <label class="form-label" for="filter-confidence">Confidence Level</label>
+      <select id="filter-confidence" class="form-select" onchange="fetchRecommendations()">
+        <option value="">All Confidence</option>
+        <option value="HIGH">High Confidence</option>
+        <option value="MEDIUM">Medium Confidence</option>
+        <option value="LOW">Low Confidence</option>
+      </select>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 0;">
+      <label class="form-label" for="filter-status">Review Status</label>
+      <select id="filter-status" class="form-select" onchange="fetchRecommendations()">
+        <option value="">All Statuses</option>
+        <option value="PENDING">Pending Review</option>
+        <option value="ACCEPTED">Accepted</option>
+        <option value="REJECTED">Rejected</option>
+        <option value="MODIFIED">Modified</option>
+      </select>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 0;">
+      <label class="form-label" for="filter-course">Search Course</label>
+      <input type="text" id="filter-course" class="form-control" placeholder="e.g. CSE 1110" oninput="fetchRecommendations()">
+    </div>
+  </div>
+</div>
+
+<!-- Recommendations List / Cards -->
+<div class="card">
+  <div class="card-title">
+    <span>Recommendations (<span id="rec-total-count">0</span> items)</span>
+  </div>
+
+  <div id="recs-container" style="display: flex; flex-direction: column; gap: 1rem;">
+    <div style="text-align: center; color: var(--text-muted); padding: 2rem;">Loading recommendations...</div>
+  </div>
+</div>
+
+<!-- Evidence & Action Drawer -->
+<div class="drawer-backdrop" id="rec-drawer-backdrop" onclick="closeRecDrawer()"></div>
+<div class="drawer" id="rec-drawer">
+  <div class="drawer-header">
+    <div>
+      <h2 style="font-size: 1.25rem; color: var(--primary-dark);" id="drawer-rec-course">CSE 2010</h2>
+      <p style="font-size: 0.85rem; color: var(--text-muted);" id="drawer-rec-type">ADD_SECTION</p>
+    </div>
+    <button onclick="closeRecDrawer()" class="btn btn-outline btn-sm">&times;</button>
+  </div>
+
+  <div style="margin-bottom: 1rem;">
+    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Decision Plain-Language Rationale</h3>
+    <div id="drawer-rec-explanation" style="background: var(--bg-subtle); padding: 0.85rem; border-radius: var(--radius-sm); font-size: 0.875rem; line-height: 1.5;"></div>
+  </div>
+
+  <div style="margin-bottom: 1rem;">
+    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Analytical Evidence</h3>
+    <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.75rem; font-size: 0.85rem;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+        <div><strong>Rule Name:</strong> <span id="drawer-rec-rule">-</span></div>
+        <div><strong>Confidence:</strong> <span id="drawer-rec-conf">-</span></div>
+        <div><strong>Target Term:</strong> <span id="drawer-rec-term">-</span></div>
+        <div><strong>Suggested Sections:</strong> <span id="drawer-rec-sections">-</span></div>
+      </div>
+      <div style="margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px dashed var(--border);">
+        <strong>Trigger Criteria & Formula Evidence:</strong>
+        <pre id="drawer-rec-evidence-json" style="margin-top: 0.25rem; background: #fff; padding: 0.5rem; font-size: 0.75rem; overflow-x: auto; border: 1px solid var(--border); border-radius: 4px;"></pre>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 1.5rem;">
+    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Limitations & Constraints</h3>
+    <ul id="drawer-rec-limitations" style="font-size: 0.85rem; padding-left: 1.25rem; color: #78350f;"></ul>
+  </div>
+
+  <!-- Reviewer Action Box -->
+  <div style="background: #fff; border: 1px solid var(--primary-light); border-radius: var(--radius-sm); padding: 1rem;">
+    <h4 style="font-size: 0.9rem; color: var(--primary-dark); margin-bottom: 0.5rem;">Administrative Decision</h4>
+    
+    <div class="form-group">
+      <label class="form-label" for="action-status-select">Decision Status</label>
+      <select id="action-status-select" class="form-select">
+        <option value="PENDING">Pending Review</option>
+        <option value="ACCEPTED">Accept Recommendation</option>
+        <option value="REJECTED">Reject Recommendation</option>
+        <option value="MODIFIED">Accept with Modifications</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="decision-notes">Decision Justification / Notes</label>
+      <textarea id="decision-notes" class="form-control" rows="2" placeholder="e.g. Approved for Spring 2026 pending adjunct instructor assignment"></textarea>
+    </div>
+
+    <button onclick="saveDecision()" class="btn btn-primary" style="width: 100%;" id="save-decision-btn">
+      Record Administrative Decision
+    </button>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  let cachedRecs = [];
+  let currentRec = null;
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    API.requireAuth();
+    await fetchRecommendations();
+  });
+
+  async function fetchRecommendations() {
+    const params = { page_size: 100 };
+
+    const type = document.getElementById("filter-type").value;
+    if (type) params.recommendation_type = type;
+
+    const conf = document.getElementById("filter-confidence").value;
+    if (conf) params.confidence_level = conf;
+
+    const status = document.getElementById("filter-status").value;
+    if (status) params.action_status = status;
+
+    const course = document.getElementById("filter-course").value.trim();
+    if (course) params.course_id = course;
+
+    try {
+      const res = await API.getRecommendations(params);
+      cachedRecs = res.items || [];
+      renderRecommendations(cachedRecs, res.total || 0);
+    } catch (err) {
+      showToast("Error loading recommendations: " + err.message, "error");
+    }
+  }
+
+  function renderRecommendations(items, total) {
+    const container = document.getElementById("recs-container");
+    container.innerHTML = "";
+    document.getElementById("rec-total-count").textContent = total.toLocaleString();
+
+    if (!items || items.length === 0) {
+      container.innerHTML = `<div style="text-align: center; color: var(--text-muted); padding: 2rem;">No recommendations matching the criteria.</div>`;
+      return;
+    }
+
+    items.forEach(rec => {
+      const card = document.createElement("div");
+      card.style.cssText = `
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1rem 1.25rem;
+        background: white;
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      `;
+
+      let typeBadge = `<span class="badge badge-info">${rec.recommendation_type}</span>`;
+      if (rec.recommendation_type === "ADD_SECTION") typeBadge = `<span class="badge badge-success">Add Section</span>`;
+      else if (rec.recommendation_type === "REDUCE_SECTIONS") typeBadge = `<span class="badge badge-danger">Reduce Section</span>`;
+      else if (rec.recommendation_type === "INVESTIGATE_LOW_UTILIZATION") typeBadge = `<span class="badge badge-warning">Investigate</span>`;
+
+      let confBadge = `<span class="badge badge-secondary">${rec.confidence_level} Conf.</span>`;
+      if (rec.confidence_level === "HIGH") confBadge = `<span class="badge badge-success">High Confidence</span>`;
+
+      let statusBadge = `<span class="badge badge-secondary">Pending</span>`;
+      if (rec.action_status === "ACCEPTED") statusBadge = `<span class="badge badge-success">Accepted</span>`;
+      else if (rec.action_status === "REJECTED") statusBadge = `<span class="badge badge-danger">Rejected</span>`;
+      else if (rec.action_status === "MODIFIED") statusBadge = `<span class="badge badge-warning">Modified</span>`;
+
+      card.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <strong style="font-size: 1.1rem; color: var(--primary-dark);">${rec.course_id}</strong>
+            <span style="font-size: 0.9rem; color: var(--text-muted);">${rec.course_name || ''}</span>
+          </div>
+          <div style="display: flex; gap: 0.35rem; align-items: center;">
+            ${typeBadge}
+            ${confBadge}
+            ${statusBadge}
+          </div>
+        </div>
+
+        <p style="font-size: 0.875rem; color: var(--text-main); margin: 0.25rem 0;">
+          ${rec.explanation}
+        </p>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text-muted);">
+          <div>
+            Target Term: <strong>${rec.target_term || 'Next Offering'}</strong>
+            ${rec.recommended_section_count != null ? ` &bull; Suggested Sections: <strong>${rec.recommended_section_count}</strong>` : ''}
+          </div>
+          <div>
+            <button onclick="openRecDrawer(${rec.id})" class="btn btn-outline btn-sm">Inspect Evidence & Review &rarr;</button>
+          </div>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  function openRecDrawer(recId) {
+    const rec = cachedRecs.find(r => r.id === recId);
+    if (!rec) return;
+    currentRec = rec;
+
+    document.getElementById("drawer-rec-course").textContent = `${rec.course_id} - ${rec.course_name || ''}`;
+    document.getElementById("drawer-rec-type").textContent = rec.recommendation_type;
+    document.getElementById("drawer-rec-explanation").textContent = rec.explanation;
+    document.getElementById("drawer-rec-rule").textContent = rec.rule_name || "RuleEngine";
+    document.getElementById("drawer-rec-conf").textContent = rec.confidence_level;
+    document.getElementById("drawer-rec-term").textContent = rec.target_term || "Next Offering";
+    document.getElementById("drawer-rec-sections").textContent = rec.recommended_section_count != null ? rec.recommended_section_count : "N/A";
+
+    // Evidence JSON formatting
+    let evObj = rec.evidence;
+    if (typeof evObj === "string") {
+      try { evObj = JSON.parse(evObj); } catch(e){}
+    }
+    document.getElementById("drawer-rec-evidence-json").textContent = JSON.stringify(evObj, null, 2);
+
+    // Limitations
+    let lims = rec.limitations || [];
+    if (typeof lims === "string") {
+      try { lims = JSON.parse(lims); } catch(e){}
+    }
+    const limUl = document.getElementById("drawer-rec-limitations");
+    limUl.innerHTML = lims.length > 0
+      ? lims.map(l => `<li>${l}</li>`).join("")
+      : `<li>No critical data limitations flagged for this recommendation.</li>`;
+
+    // Decision form prefill
+    document.getElementById("action-status-select").value = rec.action_status || "PENDING";
+    document.getElementById("decision-notes").value = rec.decision_notes || "";
+
+    document.getElementById("rec-drawer-backdrop").style.display = "block";
+    document.getElementById("rec-drawer").style.display = "flex";
+  }
+
+  function closeRecDrawer() {
+    document.getElementById("rec-drawer-backdrop").style.display = "none";
+    document.getElementById("rec-drawer").style.display = "none";
+  }
+
+  async function saveDecision() {
+    if (!currentRec) return;
+    const btn = document.getElementById("save-decision-btn");
+    btn.disabled = true;
+
+    const status = document.getElementById("action-status-select").value;
+    const notes = document.getElementById("decision-notes").value;
+
+    try {
+      await API.updateRecommendationStatus(currentRec.id, status, notes);
+      showToast("Administrative decision recorded in audit log.", "success");
+      closeRecDrawer();
+      await fetchRecommendations();
+    } catch (err) {
+      showToast("Failed to save decision: " + err.message, "error");
+    } finally {
+      btn.disabled = false;
+    }
+  }
+</script>
+{% endblock %}

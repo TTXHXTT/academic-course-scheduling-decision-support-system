@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Sign In - Academic Course Scheduling (ACS){% endblock %}
+
+{% block header %}
+<!-- Minimal header on login page -->
+<header class="navbar" style="justify-content: center;">
+  <a href="/login" class="brand-logo">
+    <span>ACS</span>
+  </a>
+</header>
+{% endblock %}
+
+{% block content %}
+<div style="max-width: 440px; margin: 3rem auto;">
+  <div class="card" style="padding: 2rem;">
+    <div style="text-align: center; margin-bottom: 1.5rem;">
+      <h1 class="page-title" style="font-size: 1.5rem;">ACS Portal Sign In</h1>
+      <p class="page-subtitle">Academic Course Scheduling Decision-Support System</p>
+    </div>
+
+    <form id="login-form">
+      <div class="form-group">
+        <label class="form-label" for="email">Campus Email</label>
+        <input type="email" id="email" class="form-control" placeholder="Enter your campus email" required autofocus>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="password">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;" id="login-btn">
+        Sign In
+      </button>
+    </form>
+  </div>
+
+  <div class="disclaimer-banner" style="margin-top: 1rem;">
+    <span>
+      <strong>Notice:</strong> This is an academic decision-support prototype. Passwords are securely hashed with bcrypt.
+    </span>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  // Redirect if already logged in
+  if (API.getToken()) {
+    window.location.href = "/dashboard";
+  }
+
+  document.getElementById("login-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById("login-btn");
+    btn.disabled = true;
+    btn.textContent = "Signing in...";
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    try {
+      await API.login(email, password);
+      showToast("Signed in successfully!", "success");
+      window.location.href = "/dashboard";
+    } catch (err) {
+      showToast(err.message || "Invalid credentials", "error");
+      btn.disabled = false;
+      btn.textContent = "Sign In";
+    }
+  });
+</script>
+{% endblock %}

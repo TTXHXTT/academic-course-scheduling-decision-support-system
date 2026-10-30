@@ -50,6 +50,8 @@ class CourseMetrics:
     peak_enrollment: Optional[int] = None
     min_enrollment: Optional[int] = None
     enrollments_by_term: Dict[str, List[int]] = field(default_factory=dict)  # term -> list of enrollments
+    avg_capacity: Optional[float] = None
+    total_capacity: Optional[int] = None
 
     # Capacity utilization (weighted: sum(enroll)/sum(cap)*100)
     # Prototype assumption: weighted aggregate avoids distortion from small sections
@@ -307,6 +309,12 @@ def compute_course_metrics(
         metrics.min_enrollment = min(enrollments)
     else:
         limitations.append("No valid enrollment data available.")
+
+    # Capacity stats
+    capacities = [s.capacity for s in sections if s.capacity is not None and s.capacity > 0]
+    if capacities:
+        metrics.total_capacity = sum(capacities)
+        metrics.avg_capacity = sum(capacities) / len(capacities)
 
     # Enrollments by term (for charts)
     for s in sections:

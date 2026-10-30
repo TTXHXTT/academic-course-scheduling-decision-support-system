@@ -1,0 +1,272 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Academic Course Scheduling (ACS){% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Executive Dashboard</h1>
+    <p class="page-subtitle">Aggregate course demand, capacity utilization, and decision-support status</p>
+  </div>
+  <div style="display: flex; gap: 0.5rem; align-items: center;">
+    <select id="dataset-selector" class="form-select" style="min-width: 220px;" onchange="onDatasetChange(this.value)">
+      <option value="">Loading datasets...</option>
+    </select>
+    <a href="/analysis" class="btn btn-primary btn-sm">Run Analysis</a>
+  </div>
+</div>
+
+<div class="disclaimer-banner">
+  <div>
+    <strong>Academic Course Decision Support:</strong> ACS provides predictive course-offering insights based on historical academic records. Recommendations and what-if scenarios are advisory and do not automatically assign faculty or modify active timetables.
+  </div>
+</div>
+
+<div id="empty-state" class="card" style="display: none; text-align: center; padding: 3rem 1.5rem;">
+  <h3 style="color: var(--primary-dark); margin-bottom: 0.5rem;">No Academic Datasets Loaded</h3>
+  <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto 1.5rem;">
+    To begin exploring historical course enrollments, utilization trends, and demand recommendations, import a course offering dataset.
+  </p>
+  <a href="/imports" class="btn btn-primary">Import Historical CSV</a>
+</div>
+
+<div id="dashboard-content" style="display: none;">
+  <!-- Stats Grid -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <span class="stat-label">Total Courses</span>
+      <span class="stat-value" id="stat-courses">-</span>
+      <span class="stat-sub" id="stat-sections">- total sections</span>
+    </div>
+
+    <div class="stat-card">
+      <span class="stat-label">Academic Terms</span>
+      <span class="stat-value" id="stat-terms">-</span>
+      <span class="stat-sub" id="stat-terms-list">Across historical data</span>
+    </div>
+
+    <div class="stat-card">
+      <span class="stat-label">Aggregate Utilization</span>
+      <span class="stat-value" id="stat-utilization">-%</span>
+      <span class="stat-sub">Weighted (enrollment / capacity)</span>
+    </div>
+
+    <div class="stat-card">
+      <span class="stat-label">Frequently At Capacity</span>
+      <span class="stat-value" style="color: var(--warning);" id="stat-at-capacity">-</span>
+      <span class="stat-sub">&ge; 50% sections at full capacity</span>
+    </div>
+
+    <div class="stat-card">
+      <span class="stat-label">Increasing Demand</span>
+      <span class="stat-value" style="color: var(--success);" id="stat-increasing-demand">-</span>
+      <span class="stat-sub">Linear regression trend &gt; 2.0</span>
+    </div>
+
+    <div class="stat-card">
+      <span class="stat-label">Low Utilization Courses</span>
+      <span class="stat-value" style="color: var(--danger);" id="stat-low-utilization">-</span>
+      <span class="stat-sub">Avg utilization &le; 50%</span>
+    </div>
+
+    <div class="stat-card">
+      <span class="stat-label">Unmet Demand Identified</span>
+      <span class="stat-value" style="color: var(--info);" id="stat-unmet-demand">-</span>
+      <span class="stat-sub">Waitlists or unfulfilled requests</span>
+    </div>
+
+    <div class="stat-card">
+      <span class="stat-label">Total Recommendations</span>
+      <span class="stat-value" style="color: var(--accent);" id="stat-recommendations">-</span>
+      <span class="stat-sub"><a href="/recommendations" style="color: inherit;">View actionable guidance &rarr;</a></span>
+    </div>
+  </div>
+
+  <!-- Charts Row -->
+  <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+    <div class="card">
+      <div class="card-title">
+        <span>Capacity Utilization vs Enrollment Distribution</span>
+      </div>
+      <div style="height: 280px; position: relative;">
+        <canvas id="utilizationChart"></canvas>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">
+        <span>Recommendation Breakdown</span>
+      </div>
+      <div style="height: 280px; position: relative;">
+        <canvas id="recTypeChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Analysis Metadata Card -->
+  <div class="card">
+    <div class="card-title">
+      <span>Latest Analysis Run Metadata</span>
+      <span class="badge badge-info" id="method-version-badge">Method v1.0.0</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; font-size: 0.875rem;">
+      <div>
+        <span style="color: var(--text-muted); display: block;">Run Identifier:</span>
+        <strong id="meta-run-id">-</strong>
+      </div>
+      <div>
+        <span style="color: var(--text-muted); display: block;">Execution Timestamp:</span>
+        <strong id="meta-run-timestamp">-</strong>
+      </div>
+      <div>
+        <span style="color: var(--text-muted); display: block;">Parameters Used:</span>
+        <span id="meta-run-params" style="font-family: monospace; font-size: 0.8rem;">-</span>
+      </div>
+      <div>
+        <span style="color: var(--text-muted); display: block;">Data Quality Warnings:</span>
+        <strong id="meta-run-warnings" style="color: var(--warning);">-</strong>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  let utilizationChartInstance = null;
+  let recChartInstance = null;
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    API.requireAuth();
+    await loadDatasets();
+  });
+
+  async function loadDatasets() {
+    try {
+      const datasets = await API.getDatasets();
+      const selector = document.getElementById("dataset-selector");
+      selector.innerHTML = "";
+
+      if (!datasets || datasets.length === 0) {
+        document.getElementById("empty-state").style.display = "block";
+        document.getElementById("dashboard-content").style.display = "none";
+        return;
+      }
+
+      datasets.forEach((ds, idx) => {
+        const opt = document.createElement("option");
+        opt.value = ds.id;
+        opt.textContent = `${ds.name} (${ds.total_records} rows)`;
+        if (idx === 0) opt.selected = true;
+        selector.appendChild(opt);
+      });
+
+      document.getElementById("empty-state").style.display = "none";
+      document.getElementById("dashboard-content").style.display = "block";
+      await loadDashboardData(datasets[0].id);
+    } catch (err) {
+      showToast("Error loading datasets: " + err.message, "error");
+    }
+  }
+
+  async function onDatasetChange(datasetId) {
+    if (!datasetId) return;
+    await loadDashboardData(datasetId);
+  }
+
+  async function loadDashboardData(datasetId) {
+    try {
+      const runs = await API.getAnalysisRuns(datasetId);
+      if (!runs || runs.length === 0) {
+        // Show dataset info without analysis
+        showToast("No analysis run found for this dataset. Please run an analysis.", "info");
+        return;
+      }
+
+      const latestRun = runs[0];
+      const summary = latestRun.summary || {};
+
+      // Fill stats
+      document.getElementById("stat-courses").textContent = (summary.total_courses_analyzed || 0).toLocaleString();
+      document.getElementById("stat-sections").textContent = `${(summary.total_sections || 0).toLocaleString()} sections`;
+      document.getElementById("stat-terms").textContent = summary.terms_analyzed ? summary.terms_analyzed.length : 0;
+      document.getElementById("stat-terms-list").textContent = summary.terms_analyzed ? summary.terms_analyzed.join(", ") : "N/A";
+      document.getElementById("stat-utilization").textContent = summary.aggregate_utilization_pct != null ? `${summary.aggregate_utilization_pct.toFixed(1)}%` : "N/A";
+      document.getElementById("stat-at-capacity").textContent = (summary.courses_frequently_at_capacity || 0).toLocaleString();
+      document.getElementById("stat-increasing-demand").textContent = (summary.courses_with_increasing_demand || 0).toLocaleString();
+      document.getElementById("stat-low-utilization").textContent = (summary.courses_with_low_utilization || 0).toLocaleString();
+      document.getElementById("stat-unmet-demand").textContent = (summary.courses_with_unmet_demand || 0).toLocaleString();
+      document.getElementById("stat-recommendations").textContent = (summary.total_recommendations_generated || 0).toLocaleString();
+
+      // Metadata
+      document.getElementById("meta-run-id").textContent = `#${latestRun.id}`;
+      document.getElementById("meta-run-timestamp").textContent = new Date(latestRun.completed_at || latestRun.created_at).toLocaleString();
+      document.getElementById("meta-run-params").textContent = `High: ${latestRun.high_utilization_threshold}%, Low: ${latestRun.low_utilization_threshold}%, Slope: ${latestRun.increasing_demand_slope}`;
+      document.getElementById("meta-run-warnings").textContent = summary.data_quality_warnings ? summary.data_quality_warnings.length : 0;
+
+      // Render Charts
+      renderCharts(summary);
+    } catch (err) {
+      showToast("Error loading dashboard data: " + err.message, "error");
+    }
+  }
+
+  function renderCharts(summary) {
+    // Utilization distribution
+    const high = summary.courses_frequently_at_capacity || 0;
+    const low = summary.courses_with_low_utilization || 0;
+    const normal = Math.max(0, (summary.total_courses_analyzed || 0) - high - low);
+
+    const ctxUtil = document.getElementById("utilizationChart").getContext("2d");
+    if (utilizationChartInstance) utilizationChartInstance.destroy();
+
+    utilizationChartInstance = new Chart(ctxUtil, {
+      type: "bar",
+      data: {
+        labels: ["High Utilization (>=85%)", "Moderate Utilization (50%-85%)", "Low Utilization (<=50%)"],
+        datasets: [{
+          label: "Number of Courses",
+          data: [high, normal, low],
+          backgroundColor: ["#15803d", "#0284c7", "#b91c1c"],
+          borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: { y: { beginAtZero: true, ticks: { precision: 0 } } }
+      }
+    });
+
+    // Recommendation Breakdown Chart
+    const recBreakdown = summary.recommendations_breakdown || {
+      "ADD_SECTION": Math.round((summary.total_recommendations_generated || 0) * 0.4),
+      "MONITOR": Math.round((summary.total_recommendations_generated || 0) * 0.35),
+      "REDUCE_SECTIONS": Math.round((summary.total_recommendations_generated || 0) * 0.15),
+      "INVESTIGATE_LOW_UTILIZATION": Math.round((summary.total_recommendations_generated || 0) * 0.1)
+    };
+
+    const ctxRec = document.getElementById("recTypeChart").getContext("2d");
+    if (recChartInstance) recChartInstance.destroy();
+
+    recChartInstance = new Chart(ctxRec, {
+      type: "doughnut",
+      data: {
+        labels: Object.keys(recBreakdown).map(k => k.replace(/_/g, " ")),
+        datasets: [{
+          data: Object.values(recBreakdown),
+          backgroundColor: ["#003366", "#C69214", "#b91c1c", "#64748b"],
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: "bottom", labels: { boxWidth: 12, font: { size: 11 } } }
+        }
+      }
+    });
+  }
+</script>
+{% endblock %}

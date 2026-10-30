@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}ACS - Academic Course Scheduling Decision Support{% endblock %}</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+  {% block header %}
+  <header class="navbar">
+    <div class="brand-container">
+      <a href="/dashboard" class="brand-logo">
+        <span>ACS</span>
+      </a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="/dashboard" id="nav-dashboard">Dashboard</a></li>
+      <li><a href="/imports" id="nav-imports" class="scheduler-only admin-only">Data Import</a></li>
+      <li><a href="/explorer" id="nav-explorer">Explorer</a></li>
+      <li><a href="/analysis" id="nav-analysis">Demand Analysis</a></li>
+      <li><a href="/recommendations" id="nav-recommendations">Recommendations</a></li>
+      <li><a href="/scenarios" id="nav-scenarios">What-If Scenarios</a></li>
+      <li><a href="/history" id="nav-history">History</a></li>
+      <li><a href="/audit" id="nav-audit" class="chair-only admin-only">Audit Log</a></li>
+    </ul>
+
+    <div class="user-nav">
+      <span class="role-badge" id="user-role-display">ROLE</span>
+      <span style="font-size: 0.85rem; color: #cbd5e1;" id="user-name-display"></span>
+      <button onclick="API.logout()" class="btn btn-outline btn-sm" style="color: white; border-color: rgba(255,255,255,0.3); background: transparent;">Sign Out</button>
+    </div>
+  </header>
+  {% endblock %}
+
+  <main class="main-content">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% block footer %}
+  <footer>
+    <p>Academic Course Scheduling Decision-Support System (ACS)</p>
+    <p style="margin-top: 0.25rem; font-size: 0.75rem;">Decision support system only. Does not replace faculty review, administrative judgment, or collective bargaining agreements.</p>
+  </footer>
+  {% endblock %}
+
+  <script src="/static/js/api.js"></script>
+  <script>
+    // Highlight active nav
+    const path = window.location.pathname;
+    const navId = "nav-" + (path.split("/")[1] || "dashboard");
+    const activeLink = document.getElementById(navId);
+    if (activeLink) activeLink.classList.add("active");
+  </script>
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

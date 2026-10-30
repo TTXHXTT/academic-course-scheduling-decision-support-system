@@ -23,7 +23,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="ACS - Academic Course Scheduling Decision-Support System",
-    description="Decision-support system for academic course offering decisions at CSUSB. CSE 6550 project.",
+    description="Decision-support system for academic course offering decisions.",
     version=settings.APP_VERSION,
     lifespan=lifespan,
 )
@@ -35,6 +35,13 @@ app.add_middleware(
     allow_methods=["GET", "POST", "PUT", "DELETE"],
     allow_headers=["Authorization", "Content-Type"],
 )
+
+
+@app.middleware("http")
+async def api_v1_compatibility_middleware(request: Request, call_next):
+    if request.url.path.startswith("/api/v1/"):
+        request.scope["path"] = request.url.path.replace("/api/v1/", "/api/", 1)
+    return await call_next(request)
 
 static_dir = os.path.join(os.path.dirname(__file__), "static")
 templates_dir = os.path.join(os.path.dirname(__file__), "templates")
@@ -51,7 +58,7 @@ app.include_router(audit.router)
 
 
 def _page(request: Request, name: str, **ctx):
-    return templates.TemplateResponse(f"{name}.html", {"request": request, **ctx})
+    return templates.TemplateResponse(request=request, name=f"{name}.html", context={"request": request, **ctx})
 
 
 @app.get("/", response_class=HTMLResponse)

@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block title %}Audit Log - Academic Course Scheduling (ACS){% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Administrative Audit Trail</h1>
+    <p class="page-subtitle">Security events, dataset imports, analysis runs, and recommendation decisions</p>
+  </div>
+</div>
+
+<div class="disclaimer-banner">
+  <div>
+    <strong>System Audit Logging (NFR-03):</strong> All authentication events, dataset modifications, analysis executions, and administrative recommendations status changes are recorded in an immutable audit trail.
+  </div>
+</div>
+
+<!-- Filters -->
+<div class="card" style="margin-bottom: 1.5rem;">
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 200px;">
+      <label class="form-label" for="audit-action-filter">Filter by Action</label>
+      <select id="audit-action-filter" class="form-select" onchange="fetchAuditLogs()">
+        <option value="">All Actions</option>
+        <option value="AUTH_LOGIN">User Login</option>
+        <option value="DATASET_UPLOAD">Dataset Upload</option>
+        <option value="ANALYSIS_RUN">Demand Analysis Run</option>
+        <option value="RECOMMENDATION_STATUS_CHANGE">Recommendation Status Change</option>
+        <option value="SCENARIO_CREATE">Scenario Execution</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title">
+    <span>Audit Records (<span id="audit-count">0</span> events)</span>
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Timestamp</th>
+          <th>User</th>
+          <th>Action</th>
+          <th>Entity Type</th>
+          <th>Entity ID</th>
+          <th>IP Address</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody id="audit-tbody">
+        <tr><td colspan="8" style="text-align: center; color: var(--text-muted);">Loading audit logs...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  document.addEventListener("DOMContentLoaded", async () => {
+    const user = API.requireAuth();
+    if (user && user.role !== "admin" && user.role !== "department_chair") {
+      showToast("Access restricted: Audit logs are restricted to Department Chairs and Administrators.", "error");
+      document.getElementById("audit-tbody").innerHTML = `<tr><td colspan="8" style="text-align:center; color: var(--danger);">Access Denied: Requires Chair or Admin privileges.</td></tr>`;
+      return;
+    }
+    await fetchAuditLogs();
+  });
+
+  async function fetchAuditLogs() {
+    const params = { page_size: 100 };
+    const action = document.getElementById("audit-action-filter").value;
+    if (action) params.action = action;
+
+    try {
+      const res = await API.getAuditLogs(params);
+      const items = res.items || [];
+      document.getElementById("audit-count").textContent = res.total || items.length;
+
+      const tbody = document.getElementById("audit-tbody");
+      tbody.innerHTML = "";
+
+      if (items.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; color: var(--text-muted);">No audit records found.</td></tr>`;
+        return;
+      }
+
+      items.forEach(log => {
+        const tr = document.createElement("tr");
+
+        let actionBadge = `<span class="badge badge-secondary">${log.action}</span>`;
+        if (log.action.includes("LOGIN")) actionBadge = `<span class="badge badge-info">${log.action}</span>`;
+        else if (log.action.includes("UPLOAD")) actionBadge = `<span class="badge badge-success">${log.action}</span>`;
+        else if (log.action.includes("STATUS")) actionBadge = `<span class="badge badge-warning">${log.action}</span>`;
+        else if (log.action.includes("SCENARIO")) actionBadge = `<span class="badge" style="background:#7c3aed; color:white;">${log.action}</span>`;
+
+        let detailsStr = "-";
+        if (log.details) {
+          try {
+            const parsed = typeof log.details === "string" ? JSON.parse(log.details) : log.details;
+            detailsStr = `<pre style="font-size: 0.7rem; margin:0; max-width: 250px; overflow-x: auto; white-space: pre-wrap;">${JSON.stringify(parsed)}</pre>`;
+          } catch(e) {
+            detailsStr = String(log.details);
+          }
+        }
+
+        tr.innerHTML = `
+          <td>#${log.id}</td>
+          <td style="font-size: 0.8rem; white-space: nowrap;">${new Date(log.created_at).toLocaleString()}</td>
+          <td><strong>${log.user_email || `User #${log.user_id}`}</strong></td>
+          <td>${actionBadge}</td>
+          <td><code>${log.entity_type || '-'}</code></td>
+          <td>${log.entity_id != null ? `#${log.entity_id}` : '-'}</td>
+          <td style="font-size: 0.8rem; color: var(--text-muted);">${log.ip_address || '-'}</td>
+          <td>${detailsStr}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    } catch (err) {
+      showToast("Error loading audit logs: " + err.message, "error");
+    }
+  }
+</script>
+{% endblock %}

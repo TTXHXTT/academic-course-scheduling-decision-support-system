@@ -1,0 +1,342 @@
+{% extends "base.html" %}
+
+{% block title %}What-If Scenarios - Academic Course Scheduling (ACS){% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">What-If Course Offering Scenarios</h1>
+    <p class="page-subtitle">Simulate adjustments to course sections, capacity, and student demand against a baseline</p>
+  </div>
+  <button class="btn btn-primary btn-sm" onclick="toggleScenarioModal()">Create New Scenario</button>
+</div>
+
+<!-- Prominent Simulated Disclaimers -->
+<div class="simulated-banner">
+  <strong>SIMULATED RESULTS ONLY:</strong> What-if simulations compute projected utilization changes without modifying underlying historical course records. Faculty availability, classroom allocation, and union workload rules are explicitly out-of-scope in this release.
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 2fr; gap: 1.5rem;">
+  <!-- Left Column: Scenarios List -->
+  <div class="card">
+    <div class="card-title">Saved Scenarios</div>
+    <div id="scenarios-list" style="display: flex; flex-direction: column; gap: 0.5rem;">
+      <div style="text-align: center; color: var(--text-muted); padding: 1.5rem;">Loading scenarios...</div>
+    </div>
+  </div>
+
+  <!-- Right Column: Comparison View -->
+  <div>
+    <div id="no-scenario-selected" class="card" style="text-align: center; padding: 3rem 1.5rem;">
+      <h3 style="color: var(--primary-dark); margin-bottom: 0.5rem;">No Scenario Selected</h3>
+      <p style="color: var(--text-muted); margin-bottom: 1rem;">Select a saved scenario from the left or create a new one to inspect simulated vs baseline outcomes.</p>
+      <button class="btn btn-primary btn-sm" onclick="toggleScenarioModal()">Create Scenario</button>
+    </div>
+
+    <div id="scenario-comparison-view" style="display: none;">
+      <!-- Active Scenario Meta -->
+      <div class="card" style="background: #faf5ff; border: 1px solid #e9d5ff;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <div>
+            <h2 style="font-size: 1.25rem; color: #581c87;" id="scen-title">Scenario Title</h2>
+            <p style="font-size: 0.85rem; color: #6b21a8; margin-top: 0.25rem;" id="scen-desc">Description</p>
+          </div>
+          <span class="badge" style="background: #7c3aed; color: white;" id="scen-type-badge">add_section</span>
+        </div>
+      </div>
+
+      <!-- Course Comparison Table -->
+      <div class="card">
+        <div class="card-title">
+          <span>Baseline vs Simulated Outcomes</span>
+          <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">Course-level projection</span>
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Course</th>
+                <th>Baseline Sections</th>
+                <th>Simulated Sections</th>
+                <th>Baseline Util.</th>
+                <th>Simulated Util.</th>
+                <th>Delta (%)</th>
+                <th>Simulated Trend</th>
+              </tr>
+            </thead>
+            <tbody id="comparison-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Simulation Warnings & Assumptions Card -->
+      <div class="card" style="border-left: 4px solid #7c3aed;">
+        <div class="card-title">Simulation Safeguards & Assumptions</div>
+        <ul id="scen-warnings-list" style="font-size: 0.875rem; padding-left: 1.25rem; color: #4c1d95; line-height: 1.6;"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Create Scenario Modal -->
+<div class="drawer-backdrop" id="scen-modal-backdrop" onclick="toggleScenarioModal()"></div>
+<div class="card" id="scen-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 520px; max-width: 90vw; z-index: 250; box-shadow: var(--shadow-lg);">
+  <div class="card-title">
+    <span>Build What-If Course Scenario</span>
+    <button class="btn btn-outline btn-sm" onclick="toggleScenarioModal()">&times;</button>
+  </div>
+
+  <form id="scenario-form">
+    <div class="form-group">
+      <label class="form-label" for="scen-baseline">Baseline Analysis Run *</label>
+      <select id="scen-baseline" class="form-select" required></select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="scen-name-input">Scenario Name *</label>
+      <input type="text" id="scen-name-input" class="form-control" placeholder="e.g. Add 2 Sections of CSE 2010 for Fall 2026" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="scen-desc-input">Description / Hypothesis</label>
+      <textarea id="scen-desc-input" class="form-control" rows="2" placeholder="Test whether adding 2 sections lowers utilization to target 75%"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="scen-type-select">Adjustment Type *</label>
+      <select id="scen-type-select" class="form-select" onchange="onScenarioTypeChange(this.value)" required>
+        <option value="add_section">Add Course Section(s)</option>
+        <option value="cancel_section">Cancel / Consolidate Section</option>
+        <option value="adjust_capacity">Adjust Section Capacity</option>
+        <option value="demand_increase">Project Demand Increase (%)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="scen-course-input">Target Course ID *</label>
+      <input type="text" id="scen-course-input" class="form-control" placeholder="e.g. CSE 2010" required>
+    </div>
+
+    <!-- Dynamic parameter fields -->
+    <div id="param-add-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+      <div class="form-group">
+        <label class="form-label" for="param-sections-count">Sections to Add</label>
+        <input type="number" id="param-sections-count" class="form-control" value="1" min="1" max="10">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="param-section-cap">Capacity Per Section</label>
+        <input type="number" id="param-section-cap" class="form-control" value="30" min="5" max="300">
+      </div>
+    </div>
+
+    <div id="param-demand-increase" style="display: none;">
+      <div class="form-group">
+        <label class="form-label" for="param-pct-increase">Demand Growth Percentage (%)</label>
+        <input type="number" id="param-pct-increase" class="form-control" value="15" min="1" max="200">
+      </div>
+    </div>
+
+    <div style="margin-top: 1rem; display: flex; justify-content: flex-end; gap: 0.5rem;">
+      <button type="button" class="btn btn-outline" onclick="toggleScenarioModal()">Cancel</button>
+      <button type="submit" class="btn btn-primary" id="create-scen-btn">Simulate Scenario</button>
+    </div>
+  </form>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  let cachedScenarios = [];
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    API.requireAuth();
+    await loadInitialData();
+  });
+
+  async function loadInitialData() {
+    try {
+      const runs = await API.getAnalysisRuns();
+      const baseSelect = document.getElementById("scen-baseline");
+      baseSelect.innerHTML = runs.map(r => `
+        <option value="${r.id}">Run #${r.id} - ${r.dataset_name || 'Dataset ' + r.dataset_id} (${new Date(r.created_at).toLocaleDateString()})</option>
+      `).join("");
+
+      await loadScenariosList();
+    } catch (err) {
+      showToast("Error loading baseline runs: " + err.message, "error");
+    }
+  }
+
+  async function loadScenariosList() {
+    try {
+      const scenarios = await API.getScenarios();
+      cachedScenarios = scenarios || [];
+      const listEl = document.getElementById("scenarios-list");
+      listEl.innerHTML = "";
+
+      if (cachedScenarios.length === 0) {
+        listEl.innerHTML = `<div style="text-align: center; color: var(--text-muted); padding: 1.5rem;">No scenarios simulated yet.</div>`;
+        return;
+      }
+
+      cachedScenarios.forEach((scen, idx) => {
+        const item = document.createElement("div");
+        item.style.cssText = `
+          border: 1px solid var(--border);
+          border-radius: var(--radius-sm);
+          padding: 0.75rem;
+          cursor: pointer;
+          background: white;
+          transition: background 0.15s;
+        `;
+        item.onmouseenter = () => item.style.background = "var(--bg-subtle)";
+        item.onmouseleave = () => item.style.background = "white";
+        item.onclick = () => selectScenario(scen.id);
+
+        item.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <strong style="font-size: 0.9rem; color: var(--primary-dark);">${scen.name}</strong>
+            <span class="badge badge-secondary" style="font-size: 0.7rem;">${scen.scenario_type}</span>
+          </div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">
+            Baseline Run #${scen.baseline_analysis_id} &bull; ${new Date(scen.created_at).toLocaleDateString()}
+          </div>
+        `;
+        listEl.appendChild(item);
+      });
+
+      // Auto-select first
+      if (cachedScenarios.length > 0) {
+        await selectScenario(cachedScenarios[0].id);
+      }
+    } catch (err) {
+      showToast("Error loading scenarios: " + err.message, "error");
+    }
+  }
+
+  async function selectScenario(scenarioId) {
+    try {
+      const scen = await API.getScenario(scenarioId);
+      document.getElementById("no-scenario-selected").style.display = "none";
+      document.getElementById("scenario-comparison-view").style.display = "block";
+
+      document.getElementById("scen-title").textContent = scen.name;
+      document.getElementById("scen-desc").textContent = scen.description || "Hypothetical scenario evaluation";
+      document.getElementById("scen-type-badge").textContent = scen.scenario_type;
+
+      // Render results table
+      const tbody = document.getElementById("comparison-tbody");
+      tbody.innerHTML = "";
+
+      const results = scen.results || [];
+      results.forEach(r => {
+        const tr = document.createElement("tr");
+        if (r.is_affected) {
+          tr.style.backgroundColor = "#faf5ff";
+          tr.style.fontWeight = "600";
+        }
+
+        const bUtil = r.baseline_utilization_pct != null ? `${r.baseline_utilization_pct.toFixed(1)}%` : "-";
+        const sUtil = r.scenario_utilization_pct != null ? `${r.scenario_utilization_pct.toFixed(1)}%` : "-";
+        
+        let deltaStr = "-";
+        if (r.baseline_utilization_pct != null && r.scenario_utilization_pct != null) {
+          const delta = r.scenario_utilization_pct - r.baseline_utilization_pct;
+          const deltaColor = delta > 0 ? "var(--warning)" : "var(--success)";
+          deltaStr = `<span style="color: ${deltaColor};">${delta > 0 ? '+' : ''}${delta.toFixed(1)}%</span>`;
+        }
+
+        tr.innerHTML = `
+          <td>
+            <strong>${r.course_id}</strong>
+            ${r.is_affected ? '<span class="badge" style="background:#7c3aed; color:white; margin-left:0.35rem; font-size:0.65rem;">MODIFIED</span>' : ''}
+          </td>
+          <td>${r.baseline_sections != null ? r.baseline_sections : '-'}</td>
+          <td>${r.scenario_sections != null ? r.scenario_sections : '-'}</td>
+          <td>${bUtil}</td>
+          <td><strong>${sUtil}</strong></td>
+          <td>${deltaStr}</td>
+          <td><span class="badge badge-secondary">${r.scenario_demand_trend || '-'}</span></td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      // Render Warnings
+      const warningsList = document.getElementById("scen-warnings-list");
+      warningsList.innerHTML = "";
+      let warnings = [];
+      if (results.length > 0 && results[0].warnings) {
+        warnings = results[0].warnings;
+      }
+      if (warnings.length === 0) {
+        warnings = [
+          "SIMULATED RESULTS: Hypothetical projection only.",
+          "Faculty assignment and room scheduling constraints are not verified in this prototype release."
+        ];
+      }
+      warnings.forEach(w => {
+        const li = document.createElement("li");
+        li.textContent = w;
+        warningsList.appendChild(li);
+      });
+
+    } catch (err) {
+      showToast("Error inspecting scenario: " + err.message, "error");
+    }
+  }
+
+  function toggleScenarioModal() {
+    const modal = document.getElementById("scen-modal");
+    const backdrop = document.getElementById("scen-modal-backdrop");
+    const show = modal.style.display === "none";
+    modal.style.display = show ? "block" : "none";
+    backdrop.style.display = show ? "block" : "none";
+  }
+
+  function onScenarioTypeChange(type) {
+    document.getElementById("param-add-section").style.display = (type === "add_section" || type === "adjust_capacity") ? "grid" : "none";
+    document.getElementById("param-demand-increase").style.display = type === "demand_increase" ? "block" : "none";
+  }
+
+  document.getElementById("scenario-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById("create-scen-btn");
+    btn.disabled = true;
+    btn.textContent = "Simulating...";
+
+    const type = document.getElementById("scen-type-select").value;
+    const courseId = document.getElementById("scen-course-input").value.trim().toUpperCase();
+
+    const parameters = { course_id: courseId };
+    if (type === "add_section") {
+      parameters.sections_to_add = parseInt(document.getElementById("param-sections-count").value);
+      parameters.section_capacity = parseInt(document.getElementById("param-section-cap").value);
+    } else if (type === "demand_increase") {
+      parameters.increase_percentage = parseFloat(document.getElementById("param-pct-increase").value);
+    }
+
+    const payload = {
+      baseline_analysis_id: parseInt(document.getElementById("scen-baseline").value),
+      name: document.getElementById("scen-name-input").value.trim(),
+      description: document.getElementById("scen-desc-input").value.trim(),
+      scenario_type: type,
+      parameters,
+    };
+
+    try {
+      const res = await API.createScenario(payload);
+      showToast("What-if scenario simulated successfully!", "success");
+      toggleScenarioModal();
+      document.getElementById("scenario-form").reset();
+      await loadScenariosList();
+      await selectScenario(res.id);
+    } catch (err) {
+      showToast("Simulation failed: " + err.message, "error");
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "Simulate Scenario";
+    }
+  });
+</script>
+{% endblock %}

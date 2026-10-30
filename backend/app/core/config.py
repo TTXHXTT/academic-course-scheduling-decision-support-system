@@ -4,7 +4,6 @@ Implements NFR-01 (no hardcoded credentials) and COM-01 (documented assumptions)
 """
 import os
 from functools import lru_cache
-from pydantic_settings import BaseSettings  # fallback: use plain pydantic
 
 
 class Settings:
