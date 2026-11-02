@@ -197,3 +197,109 @@ class TestHTMLPages:
         assert resp.status_code == 200
         assert "Administrative Audit Trail" in resp.text
 
+    def test_student_schedule_page_renders(self, test_client):
+        resp = test_client.get("/student/schedule")
+        assert resp.status_code == 200
+        assert "Student Class Schedule &amp; Registration" in resp.text or "Student Class Schedule" in resp.text
+
+
+class TestStudentSchedule:
+    def test_student_can_login_with_email_and_id(self, test_client, db_engine):
+        from sqlalchemy.orm import sessionmaker
+        from app.models.user import User, UserRole
+        from app.core.security import hash_password
+        Session = sessionmaker(bind=db_engine)
+        session = Session()
+        stu = User(
+            email="007455611@coyote.csusb.edu",
+            student_id="007455611",
+            hashed_password=hash_password("123456"),
+            full_name="Student Coyote",
+            role=UserRole.student,
+            is_active=True,
+        )
+        session.add(stu)
+        session.commit()
+        session.close()
+
+        # Login with student email
+        resp1 = test_client.post("/api/auth/login", json={"email": "007455611@coyote.csusb.edu", "password": "123456"})
+        assert resp1.status_code == 200
+        assert resp1.json()["user"]["role"] == "student"
+
+        # Login with student ID
+        resp2 = test_client.post("/api/auth/login", json={"email": "007455611", "password": "123456"})
+        assert resp2.status_code == 200
+        assert resp2.json()["user"]["role"] == "student"
+
+    def test_student_add_and_view_class_schedule(self, test_client, db_engine):
+        from sqlalchemy.orm import sessionmaker
+        from app.models.user import User, UserRole
+        from app.models.dataset import Dataset
+        from app.models.course_record import CourseRecord
+        from app.core.security import hash_password
+        Session = sessionmaker(bind=db_engine)
+        session = Session()
+        stu = User(
+            email="001234567@coyote.csusb.edu",
+            student_id="001234567",
+            hashed_password=hash_password("123456"),
+            full_name="Alice Student",
+            role=UserRole.student,
+            is_active=True,
+        )
+        session.add(stu)
+        session.flush()
+
+        ds = Dataset(name="current_courses", source_filename="courses.csv", is_synthetic=True, row_count=1, valid_row_count=1)
+        session.add(ds)
+        session.flush()
+
+        course = CourseRecord(
+            dataset_id=ds.id,
+            course_id="CSE-2010",
+            course_name="Computer Science I",
+            section_id="01",
+            term="Fall 2026",
+            days="MWF",
+            times="10:00-10:50",
+            modality="In-Person",
+            campus="San Bernardino",
+            enrollment=25,
+            capacity=30,
+        )
+        session.add(course)
+        session.commit()
+        course_id = course.id
+        session.close()
+
+        # Login as student
+        login_resp = test_client.post("/api/auth/login", json={"email": "001234567", "password": "123456"})
+        token = login_resp.json()["access_token"]
+        headers = {"Authorization": f"Bearer {token}"}
+
+        # Add course to schedule
+        add_resp = test_client.post("/api/student/schedule/add", headers=headers, json={"course_record_id": course_id})
+        assert add_resp.status_code == 201
+        added_data = add_resp.json()
+        assert added_data["course_id"] == "CSE-2010"
+        assert added_data["course_name"] == "Computer Science I"
+        assert added_data["days"] == "MWF"
+        assert added_data["times"] == "10:00-10:50"
+        assert added_data["modality"] == "In-Person"
+
+        # View schedule
+        sched_resp = test_client.get("/api/student/schedule", headers=headers)
+        assert sched_resp.status_code == 200
+        sched_data = sched_resp.json()
+        assert sched_data["total_classes"] == 1
+        c_info = sched_data["classes"][0]
+        assert c_info["course_id"] == "CSE-2010"
+        assert c_info["section_id"] == "01"
+        assert c_info["times"] == "10:00-10:50"
+
+        # Drop course
+        drop_resp = test_client.delete(f"/api/student/schedule/{c_info['schedule_id']}", headers=headers)
+        assert drop_resp.status_code == 204
+
+

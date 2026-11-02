@@ -12,7 +12,7 @@ import os
 
 from app.core.config import settings
 from app.core.database import init_db
-from app.api import auth, datasets, records, analysis, recommendations, scenarios, audit
+from app.api import auth, datasets, records, analysis, recommendations, scenarios, audit, student
 
 
 @asynccontextmanager
@@ -55,6 +55,7 @@ app.include_router(analysis.router)
 app.include_router(recommendations.router)
 app.include_router(scenarios.router)
 app.include_router(audit.router)
+app.include_router(student.router)
 
 
 def _page(request: Request, name: str, **ctx):
@@ -68,6 +69,10 @@ def root():
 @app.get("/login", response_class=HTMLResponse)
 def login_page(request: Request):
     return _page(request, "login")
+
+@app.get("/student/schedule", response_class=HTMLResponse)
+def student_schedule_page(request: Request):
+    return _page(request, "student_schedule")
 
 @app.get("/dashboard", response_class=HTMLResponse)
 def dashboard_page(request: Request):

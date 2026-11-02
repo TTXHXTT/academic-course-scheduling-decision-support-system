@@ -18,8 +18,23 @@ router = APIRouter(prefix="/api/auth", tags=["auth"])
 
 @router.post("/login", response_model=Token)
 def login(credentials: UserLogin, response: Response, request: Request, db: Session = Depends(get_db)):
-    """Authenticate and return JWT token."""
-    user = db.query(User).filter(User.email == credentials.email).first()
+    """Authenticate and return JWT token. Supports campus email, student_email, or 9-digit studentID."""
+    input_str = credentials.email.strip()
+    
+    # 1. Exact match by email
+    user = db.query(User).filter(User.email.ilike(input_str)).first()
+    
+    # 2. Match by student_id
+    if not user:
+        user = db.query(User).filter(User.student_id == input_str).first()
+        
+    # 3. If numeric student ID entered, check padded 9-digit ID and student email
+    if not user and input_str.isdigit():
+        padded_id = input_str.zfill(9)
+        user = db.query(User).filter(
+            (User.student_id == padded_id) | (User.email == f"{padded_id}@coyote.csusb.edu")
+        ).first()
+
     audit = AuditService(db)
     ip = request.client.host if request.client else None
 

@@ -227,16 +227,26 @@ document.addEventListener("DOMContentLoaded", () => {
   if (user) {
     const userRoleEl = document.getElementById("user-role-display");
     const userNameEl = document.getElementById("user-name-display");
-    if (userRoleEl) userRoleEl.textContent = user.role.replace("_", " ").toUpperCase();
+    if (userRoleEl) {
+      if (user.role === "student" && user.student_id) {
+        userRoleEl.textContent = `STUDENT (${user.student_id})`;
+      } else {
+        userRoleEl.textContent = user.role.replace("_", " ").toUpperCase();
+      }
+    }
     if (userNameEl) userNameEl.textContent = user.full_name;
 
     // RBAC: Show/Hide based on role
     if (user.role === "student") {
-      document.querySelectorAll(".admin-only, .scheduler-only, .chair-only").forEach(el => el.style.display = "none");
-    } else if (user.role === "program_coordinator") {
-      document.querySelectorAll(".admin-only, .scheduler-only").forEach(el => el.style.display = "none");
-    } else if (user.role === "academic_scheduler") {
-      document.querySelectorAll(".chair-only").forEach(el => el.style.display = "none");
+      document.querySelectorAll(".admin-only, .scheduler-only, .chair-only, .staff-only").forEach(el => el.style.display = "none");
+      document.querySelectorAll(".student-only").forEach(el => el.style.display = "inline-block");
+    } else {
+      document.querySelectorAll(".student-only").forEach(el => el.style.display = "none");
+      if (user.role === "program_coordinator") {
+        document.querySelectorAll(".admin-only, .scheduler-only").forEach(el => el.style.display = "none");
+      } else if (user.role === "academic_scheduler") {
+        document.querySelectorAll(".chair-only").forEach(el => el.style.display = "none");
+      }
     }
   }
 });

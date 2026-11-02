@@ -5,7 +5,7 @@ from app.models.user import UserRole
 
 
 class UserLogin(BaseModel):
-    email: EmailStr
+    email: str  # Accepts student_email, regular email, or 9-digit studentID
     password: str
 
 
@@ -14,18 +14,20 @@ class UserCreate(BaseModel):
     password: str
     full_name: str
     role: UserRole = UserRole.program_coordinator
+    student_id: Optional[str] = None
 
     @field_validator("password")
     @classmethod
     def password_strength(cls, v):
-        if len(v) < 8:
-            raise ValueError("Password must be at least 8 characters")
+        if len(v) < 6:
+            raise ValueError("Password must be at least 6 characters")
         return v
 
 
 class UserResponse(BaseModel):
     id: int
     email: str
+    student_id: Optional[str] = None
     full_name: str
     role: UserRole
     is_active: bool

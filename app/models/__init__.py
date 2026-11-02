@@ -6,6 +6,7 @@ from .analysis import AnalysisRun, CourseAnalysis
 from .recommendation import Recommendation, RecommendationEvidence
 from .scenario import Scenario, ScenarioResult
 from .audit import AuditEvent
+from .student_schedule import StudentSchedule
 
 __all__ = [
     "User",
@@ -15,4 +16,5 @@ __all__ = [
     "Recommendation", "RecommendationEvidence",
     "Scenario", "ScenarioResult",
     "AuditEvent",
+    "StudentSchedule",
 ]

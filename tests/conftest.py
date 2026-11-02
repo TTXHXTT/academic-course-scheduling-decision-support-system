@@ -25,7 +25,7 @@ def db_engine():
         connect_args={"check_same_thread": False},
         poolclass=StaticPool,
     )
-    from app.models import user, dataset, course_record, analysis, recommendation, scenario, audit  # noqa
+    from app.models import user, dataset, course_record, analysis, recommendation, scenario, audit, student_schedule  # noqa
     Base.metadata.create_all(bind=engine)
     yield engine
     Base.metadata.drop_all(bind=engine)

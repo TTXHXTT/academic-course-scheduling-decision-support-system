@@ -24,6 +24,7 @@ class User(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     email = Column(String(255), unique=True, index=True, nullable=False)
+    student_id = Column(String(9), unique=True, index=True, nullable=True)  # 9-digit CSUSB Coyote Student ID
     hashed_password = Column(String(255), nullable=False)  # bcrypt hash only, never plaintext
     full_name = Column(String(255), nullable=False)
     role = Column(SAEnum(UserRole), nullable=False, default=UserRole.program_coordinator)
@@ -36,6 +37,7 @@ class User(Base):
     analysis_runs = relationship("AnalysisRun", back_populates="run_by_user")
     scenarios = relationship("Scenario", back_populates="created_by_user")
     audit_events = relationship("AuditEvent", back_populates="actor")
+    student_schedules = relationship("StudentSchedule", back_populates="student", cascade="all, delete-orphan")
 
     def __repr__(self):
         return f"<User id={self.id} email={self.email} role={self.role}>"

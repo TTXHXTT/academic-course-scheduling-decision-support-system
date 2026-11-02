@@ -21,12 +21,15 @@
 
     <form id="login-form">
       <div class="form-group">
-        <label class="form-label" for="email">Campus Email</label>
-        <input type="email" id="email" class="form-control" placeholder="Enter your campus email" required autofocus>
+        <label class="form-label" for="email">Student Email or Campus Email</label>
+        <input type="text" id="email" class="form-control" placeholder="e.g. 007455611@coyote.csusb.edu or 007455611" required autofocus>
+        <small style="color: var(--text-muted); font-size: 0.75rem; display: block; margin-top: 0.25rem;">
+          Students can log in with their Coyote student email or 9-digit student ID.
+        </small>
       </div>
 
       <div class="form-group">
-        <label class="form-label" for="password">Password</label>
+        <label class="form-label" for="password">Student Password / Password</label>
         <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
       </div>
 
@@ -38,7 +41,7 @@
 
   <div class="disclaimer-banner" style="margin-top: 1rem;">
     <span>
-      <strong>Notice:</strong> This is an academic decision-support prototype. Passwords are securely hashed with bcrypt.
+      <strong>Student Access:</strong> Log in with your student email (studentID@coyote.csusb.edu) and password to manage your class schedule and view class times, meeting days, and course details.
     </span>
   </div>
 </div>
@@ -47,8 +50,13 @@
 {% block extra_scripts %}
 <script>
   // Redirect if already logged in
-  if (API.getToken()) {
-    window.location.href = "/dashboard";
+  const existingUser = API.getUser();
+  if (existingUser) {
+    if (existingUser.role === "student") {
+      window.location.href = "/student/schedule";
+    } else {
+      window.location.href = "/dashboard";
+    }
   }
 
   document.getElementById("login-form").addEventListener("submit", async (e) => {
@@ -57,13 +65,17 @@
     btn.disabled = true;
     btn.textContent = "Signing in...";
 
-    const email = document.getElementById("email").value;
+    const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
 
     try {
-      await API.login(email, password);
+      const data = await API.login(email, password);
       showToast("Signed in successfully!", "success");
-      window.location.href = "/dashboard";
+      if (data.user && data.user.role === "student") {
+        window.location.href = "/student/schedule";
+      } else {
+        window.location.href = "/dashboard";
+      }
     } catch (err) {
       showToast(err.message || "Invalid credentials", "error");
       btn.disabled = false;

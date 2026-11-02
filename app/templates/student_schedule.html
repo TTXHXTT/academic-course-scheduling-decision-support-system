@@ -1,0 +1,296 @@
+{% extends "base.html" %}
+
+{% block title %}My Class Schedule - Student Portal{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Student Class Schedule & Registration</h1>
+    <p class="page-subtitle">Manage your enrolled courses, view class meeting information, and register for new sections</p>
+  </div>
+</div>
+
+<!-- Student Profile Banner -->
+<div class="card" style="background: linear-gradient(135deg, #003366 0%, #1a4f8b 100%); color: white; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <div>
+      <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.85;">Coyote Student Portal</div>
+      <h2 style="font-size: 1.35rem; margin-top: 0.2rem;" id="banner-student-name">Loading Student Profile...</h2>
+      <div style="font-size: 0.85rem; opacity: 0.9; margin-top: 0.25rem;">
+        Student ID: <strong id="banner-student-id">--------</strong> &bull; 
+        Email: <span id="banner-student-email">------@coyote.csusb.edu</span>
+      </div>
+    </div>
+    <div style="text-align: right;">
+      <div style="font-size: 0.8rem; opacity: 0.85;">Enrolled Classes</div>
+      <div style="font-size: 1.85rem; font-weight: 700;" id="banner-class-count">0</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 1: MY CLASS SCHEDULE -->
+<div class="card">
+  <div class="card-title">
+    <span>My Current Class Schedule</span>
+    <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);" id="schedule-subtitle">Classes currently added to your schedule</span>
+  </div>
+
+  <div id="schedule-empty" style="display: none; text-align: center; padding: 2.5rem 1rem; color: var(--text-muted);">
+    <p style="font-size: 1.05rem; font-weight: 500; margin-bottom: 0.5rem; color: var(--primary-dark);">Your schedule is currently empty</p>
+    <p style="font-size: 0.85rem;">Use the search below to find classes from the course catalog and add them to your schedule.</p>
+  </div>
+
+  <div class="table-container" id="schedule-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Course ID</th>
+          <th>Course Name</th>
+          <th>Section</th>
+          <th>Term</th>
+          <th>Days & Times</th>
+          <th>Modality</th>
+          <th>Campus</th>
+          <th>Capacity / Enrolled</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="schedule-tbody">
+        <tr><td colspan="10" style="text-align: center; color: var(--text-muted);">Loading your schedule...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- SECTION 2: SEARCH & ADD CLASSES -->
+<div class="card" style="margin-top: 2rem;">
+  <div class="card-title">
+    <span>Search & Add Classes to Your Schedule</span>
+    <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">Available course offerings</span>
+  </div>
+
+  <!-- Search & Filters -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
+    <div class="form-group" style="margin-bottom: 0;">
+      <label class="form-label" for="class-search-input">Search Course ID or Title</label>
+      <input type="text" id="class-search-input" class="form-control" placeholder="e.g. AH-1103, Art History, CSE..." onkeyup="handleSearchKey(event)">
+    </div>
+
+    <div class="form-group" style="margin-bottom: 0;">
+      <label class="form-label" for="class-term-select">Term</label>
+      <select id="class-term-select" class="form-select" onchange="fetchAvailableClasses()">
+        <option value="">All Terms</option>
+        <option value="Summer 2026">Summer 2026</option>
+        <option value="Fall 2026">Fall 2026</option>
+        <option value="Spring 2026">Spring 2026</option>
+      </select>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 0;">
+      <label class="form-label" for="class-modality-select">Modality</label>
+      <select id="class-modality-select" class="form-select" onchange="fetchAvailableClasses()">
+        <option value="">All Modalities</option>
+        <option value="In-Person">In-Person</option>
+        <option value="Online">Online</option>
+        <option value="Hybrid">Hybrid</option>
+      </select>
+    </div>
+
+    <div style="align-self: flex-end;">
+      <button onclick="fetchAvailableClasses()" class="btn btn-primary" style="width: 100%;">Search Classes</button>
+    </div>
+  </div>
+
+  <!-- Available Classes Table -->
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Course ID</th>
+          <th>Course Title</th>
+          <th>Section</th>
+          <th>Term</th>
+          <th>Days & Times</th>
+          <th>Modality</th>
+          <th>Campus</th>
+          <th>Enrollment / Capacity</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="catalog-tbody">
+        <tr><td colspan="9" style="text-align: center; color: var(--text-muted);">Search for classes above or click Search Classes</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  let enrolledCourseRecordIds = new Set();
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const user = API.requireAuth();
+    if (!user) return;
+
+    // Populate Student Banner
+    document.getElementById("banner-student-name").textContent = user.full_name || "Coyote Student";
+    document.getElementById("banner-student-id").textContent = user.student_id || user.email.split("@")[0];
+    document.getElementById("banner-student-email").textContent = user.email;
+
+    await loadStudentSchedule();
+    await fetchAvailableClasses();
+  });
+
+  function handleSearchKey(event) {
+    if (event.key === "Enter") {
+      fetchAvailableClasses();
+    }
+  }
+
+  async function loadStudentSchedule() {
+    try {
+      const data = await API.request("/api/student/schedule");
+      renderStudentSchedule(data);
+    } catch (err) {
+      showToast("Error loading class schedule: " + err.message, "error");
+    }
+  }
+
+  function renderStudentSchedule(data) {
+    const tbody = document.getElementById("schedule-tbody");
+    const emptyEl = document.getElementById("schedule-empty");
+    const tableWrap = document.getElementById("schedule-table-wrap");
+    tbody.innerHTML = "";
+    enrolledCourseRecordIds.clear();
+
+    const classes = data.classes || [];
+    document.getElementById("banner-class-count").textContent = classes.length;
+
+    if (classes.length === 0) {
+      emptyEl.style.display = "block";
+      tableWrap.style.display = "none";
+      return;
+    }
+
+    emptyEl.style.display = "none";
+    tableWrap.style.display = "block";
+
+    classes.forEach(item => {
+      enrolledCourseRecordIds.add(item.course_record_id);
+      const tr = document.createElement("tr");
+
+      const daysTimes = (item.days && item.times) ? `${item.days} ${item.times}` : (item.times || item.days || "TBA");
+      const seats = (item.enrollment != null && item.capacity != null)
+        ? `${item.enrollment} / ${item.capacity}`
+        : "-";
+
+      tr.innerHTML = `
+        <td><strong style="color: var(--primary); font-size: 0.95rem;">${item.course_id}</strong></td>
+        <td><strong>${item.course_name || '-'}</strong></td>
+        <td><span class="badge badge-secondary">${item.section_id || '01'}</span></td>
+        <td>${item.term}</td>
+        <td><strong>${daysTimes}</strong></td>
+        <td><span class="badge badge-info">${item.modality || 'In-Person'}</span></td>
+        <td>${item.campus || 'San Bernardino'}</td>
+        <td>${seats}</td>
+        <td><span class="badge badge-success">${item.status || 'Enrolled'}</span></td>
+        <td>
+          <button onclick="dropClass(${item.schedule_id}, '${item.course_id}')" class="btn btn-outline btn-sm" style="color: var(--danger); border-color: var(--danger);">
+            Drop Class
+          </button>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  async function fetchAvailableClasses() {
+    const tbody = document.getElementById("catalog-tbody");
+    tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; color: var(--text-muted);">Searching available classes...</td></tr>`;
+
+    const params = new URLSearchParams();
+    const search = document.getElementById("class-search-input").value.trim();
+    if (search) params.append("search", search);
+
+    const term = document.getElementById("class-term-select").value;
+    if (term) params.append("term", term);
+
+    const modality = document.getElementById("class-modality-select").value;
+    if (modality) params.append("modality", modality);
+
+    params.append("limit", "50");
+
+    try {
+      const classes = await API.request(`/api/student/classes?${params.toString()}`);
+      tbody.innerHTML = "";
+
+      if (!classes || classes.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; color: var(--text-muted);">No classes found matching your criteria. Try adjusting the search.</td></tr>`;
+        return;
+      }
+
+      classes.forEach(c => {
+        const tr = document.createElement("tr");
+        const daysTimes = (c.days && c.times) ? `${c.days} ${c.times}` : (c.times || c.days || "TBA");
+        const seats = (c.enrollment != null && c.capacity != null)
+          ? `${c.enrollment} / ${c.capacity}`
+          : "-";
+
+        const isEnrolled = enrolledCourseRecordIds.has(c.id);
+
+        tr.innerHTML = `
+          <td><strong>${c.course_id}</strong></td>
+          <td>${c.course_name || '-'}</td>
+          <td>${c.section_id || '01'}</td>
+          <td>${c.term}</td>
+          <td>${daysTimes}</td>
+          <td><span class="badge badge-secondary">${c.modality || 'In-Person'}</span></td>
+          <td>${c.campus || 'San Bernardino'}</td>
+          <td>${seats}</td>
+          <td>
+            ${isEnrolled 
+              ? `<span class="badge badge-success" style="font-size:0.75rem;">In Schedule</span>` 
+              : `<button onclick="addClassToSchedule(${c.id}, '${c.course_id}', '${c.section_id || '01'}')" class="btn btn-primary btn-sm">
+                  + Add to Schedule
+                 </button>`
+            }
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    } catch (err) {
+      showToast("Error searching classes: " + err.message, "error");
+    }
+  }
+
+  async function addClassToSchedule(courseRecordId, courseId, sectionId) {
+    try {
+      const added = await API.request("/api/student/schedule/add", {
+        method: "POST",
+        body: JSON.stringify({ course_record_id: courseRecordId }),
+      });
+      showToast(`Added ${courseId} (Section ${sectionId}) to your schedule!`, "success");
+      await loadStudentSchedule();
+      await fetchAvailableClasses();
+    } catch (err) {
+      showToast(err.message || "Failed to add class", "error");
+    }
+  }
+
+  async function dropClass(scheduleId, courseId) {
+    if (!confirm(`Are you sure you want to drop ${courseId} from your schedule?`)) return;
+    try {
+      await API.request(`/api/student/schedule/${scheduleId}`, {
+        method: "DELETE",
+      });
+      showToast(`Dropped ${courseId} from schedule.`, "info");
+      await loadStudentSchedule();
+      await fetchAvailableClasses();
+    } catch (err) {
+      showToast("Failed to drop class: " + err.message, "error");
+    }
+  }
+</script>
+{% endblock %}
