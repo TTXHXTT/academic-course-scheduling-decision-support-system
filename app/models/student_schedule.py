@@ -20,6 +20,8 @@ class StudentSchedule(Base):
     student_id = Column(String(9), nullable=False, index=True)
     course_record_id = Column(Integer, ForeignKey("course_records.id", ondelete="CASCADE"), nullable=False, index=True)
     status = Column(String(20), default="Enrolled", nullable=False)
+    grade_mode = Column(String(30), default="Letter Grade", nullable=True)
+    notes = Column(String(255), nullable=True)
     added_at = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False)
 
     # Relationships

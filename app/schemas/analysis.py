@@ -7,6 +7,12 @@ class AnalysisRunCreate(BaseModel):
     dataset_id: int
     name: Optional[str] = None
     is_baseline: bool = False
+    high_utilization_threshold: Optional[float] = None
+    low_utilization_threshold: Optional[float] = None
+    full_capacity_threshold: Optional[float] = None
+    frequently_full_threshold: Optional[float] = None
+    increasing_demand_slope: Optional[float] = None
+    min_terms_for_trend: Optional[int] = None
 
 
 class AnalysisRunResponse(BaseModel):

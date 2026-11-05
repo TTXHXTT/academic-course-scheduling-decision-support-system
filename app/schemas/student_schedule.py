@@ -8,6 +8,16 @@ from pydantic import BaseModel
 
 class AddClassRequest(BaseModel):
     course_record_id: int
+    grade_mode: Optional[str] = "Letter Grade"
+    status: Optional[str] = "Enrolled"
+    notes: Optional[str] = None
+
+
+class ModifyScheduleRequest(BaseModel):
+    course_record_id: Optional[int] = None
+    grade_mode: Optional[str] = None
+    status: Optional[str] = None
+    notes: Optional[str] = None
 
 
 class ClassInfoResponse(BaseModel):
@@ -44,6 +54,8 @@ class StudentScheduleItem(BaseModel):
     enrollment: Optional[int] = None
     capacity: Optional[int] = None
     status: str
+    grade_mode: Optional[str] = "Letter Grade"
+    notes: Optional[str] = None
     added_at: datetime
 
 
@@ -52,4 +64,5 @@ class StudentScheduleListResponse(BaseModel):
     student_name: str
     student_email: str
     total_classes: int
+    total_units: Optional[int] = None
     classes: List[StudentScheduleItem]

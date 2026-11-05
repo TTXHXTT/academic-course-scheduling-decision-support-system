@@ -2,44 +2,126 @@
 
 {% block title %}My Class Schedule - Student Portal{% endblock %}
 
+{% block extra_head %}
+<style>
+  .badge-status-enrolled { background: #dcfce7; color: #166534; font-weight: 600; border: 1px solid #bbf7d0; }
+  .badge-status-waitlisted { background: #fef3c7; color: #92400e; font-weight: 600; border: 1px solid #fde68a; }
+
+  /* Timetable Grid */
+  .timetable-grid {
+    display: grid;
+    grid-template-columns: 80px repeat(5, 1fr);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: white;
+    overflow-x: auto;
+  }
+  .timetable-header {
+    background: var(--bg-subtle);
+    padding: 0.6rem;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 2px solid var(--border);
+    font-size: 0.85rem;
+  }
+  .timetable-time-slot {
+    border-top: 1px dashed var(--border);
+    padding: 0.4rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: right;
+    height: 48px;
+    box-sizing: border-box;
+    background: #fafafa;
+  }
+  .timetable-cell {
+    border-top: 1px dashed var(--border);
+    border-left: 1px solid var(--border);
+    height: 48px;
+    box-sizing: border-box;
+    position: relative;
+    padding: 2px;
+  }
+  .timetable-event {
+    background: #e0f2fe;
+    border-left: 3px solid #0284c7;
+    color: #0369a1;
+    border-radius: 3px;
+    padding: 3px 6px;
+    font-size: 0.75rem;
+    margin-bottom: 2px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    line-height: 1.2;
+  }
+  .timetable-event.waitlisted {
+    background: #fef3c7;
+    border-left: 3px solid #b45309;
+    color: #92400e;
+  }
+</style>
+{% endblock %}
+
 {% block content %}
 <div class="page-header">
   <div>
-    <h1 class="page-title">Student Class Schedule & Registration</h1>
-    <p class="page-subtitle">Manage your enrolled courses, view class meeting information, and register for new sections</p>
+    <h1 class="page-title">Student Class Schedule</h1>
+    <p class="page-subtitle">View your enrolled courses, weekly schedule calendar, and drop registered sections or waitlists</p>
+  </div>
+  <div style="display: flex; gap: 0.5rem;">
+    <a href="/student/add-classes" class="btn btn-primary">
+      <span style="font-size: 1.1rem; line-height: 1;">+</span> Add Classes
+    </a>
   </div>
 </div>
 
 <!-- Student Profile Banner -->
-<div class="card" style="background: linear-gradient(135deg, #003366 0%, #1a4f8b 100%); color: white; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+<div class="card" style="background: linear-gradient(135deg, #003366 0%, #1a4f8b 100%); color: white; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; border: none; box-shadow: var(--shadow-md);">
   <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
     <div>
-      <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.85;">Coyote Student Portal</div>
-      <h2 style="font-size: 1.35rem; margin-top: 0.2rem;" id="banner-student-name">Loading Student Profile...</h2>
-      <div style="font-size: 0.85rem; opacity: 0.9; margin-top: 0.25rem;">
-        Student ID: <strong id="banner-student-id">--------</strong> &bull; 
-        Email: <span id="banner-student-email">------@coyote.csusb.edu</span>
+      <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #fbbf24; font-weight: 700;">CSUSB Coyote Student Portal</div>
+      <h2 style="font-size: 1.45rem; margin-top: 0.2rem; font-weight: 700;" id="banner-student-name">Loading Student Profile...</h2>
+      <div style="font-size: 0.85rem; opacity: 0.95; margin-top: 0.35rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+        <span>Student ID: <strong id="banner-student-id">--------</strong></span>
+        <span>&bull;</span>
+        <span>Email: <strong id="banner-student-email">------@coyote.csusb.edu</strong></span>
+        <span>&bull;</span>
+        <span>Academic Status: <strong style="color: #4ade80;">Active / Good Standing</strong></span>
       </div>
     </div>
-    <div style="text-align: right;">
-      <div style="font-size: 0.8rem; opacity: 0.85;">Enrolled Classes</div>
-      <div style="font-size: 1.85rem; font-weight: 700;" id="banner-class-count">0</div>
+    <div style="display: flex; gap: 2rem; background: rgba(255,255,255,0.1); padding: 0.75rem 1.25rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);">
+      <div style="text-align: center;">
+        <div style="font-size: 0.75rem; text-transform: uppercase; opacity: 0.85;">Scheduled Classes</div>
+        <div style="font-size: 1.75rem; font-weight: 700;" id="banner-class-count">0</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 0.75rem; text-transform: uppercase; opacity: 0.85;">Total Units</div>
+        <div style="font-size: 1.75rem; font-weight: 700;" id="banner-units-count">0</div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- SECTION 1: MY CLASS SCHEDULE -->
-<div class="card">
-  <div class="card-title">
-    <span>My Current Class Schedule</span>
-    <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);" id="schedule-subtitle">Classes currently added to your schedule</span>
+<!-- MY CLASS SCHEDULE -->
+<div class="card" id="schedule-section">
+  <div class="card-title" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+    <div>
+      <span>My Current Class Schedule</span>
+      <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted); margin-left: 0.5rem;" id="schedule-subtitle">Classes currently registered or waitlisted</span>
+    </div>
+    <div style="display: flex; gap: 0.5rem;">
+      <button id="view-toggle-table" onclick="switchScheduleView('table')" class="btn btn-sm btn-primary">Table View</button>
+      <button id="view-toggle-grid" onclick="switchScheduleView('grid')" class="btn btn-sm btn-outline">Weekly Calendar</button>
+    </div>
   </div>
 
-  <div id="schedule-empty" style="display: none; text-align: center; padding: 2.5rem 1rem; color: var(--text-muted);">
-    <p style="font-size: 1.05rem; font-weight: 500; margin-bottom: 0.5rem; color: var(--primary-dark);">Your schedule is currently empty</p>
-    <p style="font-size: 0.85rem;">Use the search below to find classes from the course catalog and add them to your schedule.</p>
+  <div id="schedule-empty" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
+    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📅</div>
+    <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; color: var(--primary-dark);">Your schedule is currently empty</p>
+    <p style="font-size: 0.875rem; margin-bottom: 1.25rem;">Use the Add Classes tab to search course offerings and register for classes.</p>
+    <a href="/student/add-classes" class="btn btn-primary btn-sm">+ Go to Add Classes</a>
   </div>
 
+  <!-- Table View -->
   <div class="table-container" id="schedule-table-wrap">
     <table>
       <thead>
@@ -51,9 +133,9 @@
           <th>Days & Times</th>
           <th>Modality</th>
           <th>Campus</th>
-          <th>Capacity / Enrolled</th>
+          <th>Enrolled / Capacity</th>
           <th>Status</th>
-          <th>Action</th>
+          <th style="text-align: right; min-width: 120px;">Action</th>
         </tr>
       </thead>
       <tbody id="schedule-tbody">
@@ -61,74 +143,22 @@
       </tbody>
     </table>
   </div>
-</div>
 
-<!-- SECTION 2: SEARCH & ADD CLASSES -->
-<div class="card" style="margin-top: 2rem;">
-  <div class="card-title">
-    <span>Search & Add Classes to Your Schedule</span>
-    <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">Available course offerings</span>
-  </div>
-
-  <!-- Search & Filters -->
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
-    <div class="form-group" style="margin-bottom: 0;">
-      <label class="form-label" for="class-search-input">Search Course ID or Title</label>
-      <input type="text" id="class-search-input" class="form-control" placeholder="e.g. AH-1103, Art History, CSE..." onkeyup="handleSearchKey(event)">
+  <!-- Weekly Timetable Grid View -->
+  <div id="schedule-grid-wrap" style="display: none; margin-top: 1rem;">
+    <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+      Weekly layout of registered classes (Mon - Fri, 8:00 AM - 8:00 PM):
     </div>
-
-    <div class="form-group" style="margin-bottom: 0;">
-      <label class="form-label" for="class-term-select">Term</label>
-      <select id="class-term-select" class="form-select" onchange="fetchAvailableClasses()">
-        <option value="">All Terms</option>
-        <option value="Summer 2026">Summer 2026</option>
-        <option value="Fall 2026">Fall 2026</option>
-        <option value="Spring 2026">Spring 2026</option>
-      </select>
+    <div class="timetable-grid" id="timetable-container">
+      <!-- Generated dynamically in JavaScript -->
     </div>
-
-    <div class="form-group" style="margin-bottom: 0;">
-      <label class="form-label" for="class-modality-select">Modality</label>
-      <select id="class-modality-select" class="form-select" onchange="fetchAvailableClasses()">
-        <option value="">All Modalities</option>
-        <option value="In-Person">In-Person</option>
-        <option value="Online">Online</option>
-        <option value="Hybrid">Hybrid</option>
-      </select>
-    </div>
-
-    <div style="align-self: flex-end;">
-      <button onclick="fetchAvailableClasses()" class="btn btn-primary" style="width: 100%;">Search Classes</button>
-    </div>
-  </div>
-
-  <!-- Available Classes Table -->
-  <div class="table-container">
-    <table>
-      <thead>
-        <tr>
-          <th>Course ID</th>
-          <th>Course Title</th>
-          <th>Section</th>
-          <th>Term</th>
-          <th>Days & Times</th>
-          <th>Modality</th>
-          <th>Campus</th>
-          <th>Enrollment / Capacity</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody id="catalog-tbody">
-        <tr><td colspan="9" style="text-align: center; color: var(--text-muted);">Search for classes above or click Search Classes</td></tr>
-      </tbody>
-    </table>
   </div>
 </div>
 {% endblock %}
 
 {% block extra_scripts %}
 <script>
-  let enrolledCourseRecordIds = new Set();
+  let enrolledSchedules = [];
 
   document.addEventListener("DOMContentLoaded", async () => {
     const user = API.requireAuth();
@@ -140,21 +170,40 @@
     document.getElementById("banner-student-email").textContent = user.email;
 
     await loadStudentSchedule();
-    await fetchAvailableClasses();
   });
 
-  function handleSearchKey(event) {
-    if (event.key === "Enter") {
-      fetchAvailableClasses();
+  // View Switcher: Table vs Calendar
+  function switchScheduleView(view) {
+    const tableWrap = document.getElementById("schedule-table-wrap");
+    const gridWrap = document.getElementById("schedule-grid-wrap");
+    const btnTable = document.getElementById("view-toggle-table");
+    const btnGrid = document.getElementById("view-toggle-grid");
+
+    if (view === "table") {
+      tableWrap.style.display = "block";
+      gridWrap.style.display = "none";
+      btnTable.className = "btn btn-sm btn-primary";
+      btnGrid.className = "btn btn-sm btn-outline";
+    } else {
+      tableWrap.style.display = "none";
+      gridWrap.style.display = "block";
+      btnTable.className = "btn btn-sm btn-outline";
+      btnGrid.className = "btn btn-sm btn-primary";
+      renderTimetableGrid();
     }
   }
 
+  // Load Enrolled Schedule
   async function loadStudentSchedule() {
     try {
       const data = await API.request("/api/student/schedule");
+      enrolledSchedules = data.classes || [];
       renderStudentSchedule(data);
+      if (document.getElementById("schedule-grid-wrap").style.display === "block") {
+        renderTimetableGrid();
+      }
     } catch (err) {
-      showToast("Error loading class schedule: " + err.message, "error");
+      showToast("Error loading schedule: " + err.message, "error");
     }
   }
 
@@ -162,43 +211,50 @@
     const tbody = document.getElementById("schedule-tbody");
     const emptyEl = document.getElementById("schedule-empty");
     const tableWrap = document.getElementById("schedule-table-wrap");
+    const gridWrap = document.getElementById("schedule-grid-wrap");
     tbody.innerHTML = "";
-    enrolledCourseRecordIds.clear();
 
     const classes = data.classes || [];
     document.getElementById("banner-class-count").textContent = classes.length;
+    document.getElementById("banner-units-count").textContent = data.total_units || (classes.length * 3);
 
     if (classes.length === 0) {
       emptyEl.style.display = "block";
       tableWrap.style.display = "none";
+      gridWrap.style.display = "none";
       return;
     }
 
     emptyEl.style.display = "none";
-    tableWrap.style.display = "block";
+    if (gridWrap.style.display !== "block") {
+      tableWrap.style.display = "block";
+    }
 
     classes.forEach(item => {
-      enrolledCourseRecordIds.add(item.course_record_id);
       const tr = document.createElement("tr");
-
       const daysTimes = (item.days && item.times) ? `${item.days} ${item.times}` : (item.times || item.days || "TBA");
-      const seats = (item.enrollment != null && item.capacity != null)
-        ? `${item.enrollment} / ${item.capacity}`
-        : "-";
+      const seats = (item.enrollment != null && item.capacity != null) ? `${item.enrollment} / ${item.capacity}` : "-";
+      
+      const isWaitlist = (item.status === "Waitlisted");
+      const statusBadge = isWaitlist
+        ? `<span class="badge badge-status-waitlisted">Waitlisted</span>`
+        : `<span class="badge badge-status-enrolled">Enrolled</span>`;
+
+      const dropLabel = isWaitlist ? "Drop Waitlist" : "Drop Class";
 
       tr.innerHTML = `
-        <td><strong style="color: var(--primary); font-size: 0.95rem;">${item.course_id}</strong></td>
-        <td><strong>${item.course_name || '-'}</strong></td>
-        <td><span class="badge badge-secondary">${item.section_id || '01'}</span></td>
-        <td>${item.term}</td>
-        <td><strong>${daysTimes}</strong></td>
-        <td><span class="badge badge-info">${item.modality || 'In-Person'}</span></td>
-        <td>${item.campus || 'San Bernardino'}</td>
+        <td><strong style="color: var(--primary); font-size: 0.95rem;">${escapeHtml(item.course_id)}</strong></td>
+        <td><strong>${escapeHtml(item.course_name || '-')}</strong></td>
+        <td><span class="badge badge-secondary">${escapeHtml(item.section_id || '01')}</span></td>
+        <td>${escapeHtml(item.term)}</td>
+        <td><strong>${escapeHtml(daysTimes)}</strong></td>
+        <td><span class="badge badge-info">${escapeHtml(item.modality || 'In-Person')}</span></td>
+        <td>${escapeHtml(item.campus || 'San Bernardino')}</td>
         <td>${seats}</td>
-        <td><span class="badge badge-success">${item.status || 'Enrolled'}</span></td>
-        <td>
-          <button onclick="dropClass(${item.schedule_id}, '${item.course_id}')" class="btn btn-outline btn-sm" style="color: var(--danger); border-color: var(--danger);">
-            Drop Class
+        <td>${statusBadge}</td>
+        <td style="text-align: right;">
+          <button onclick="dropClass(${item.schedule_id}, '${escapeHtml(item.course_id)}', '${escapeHtml(item.section_id || '01')}', '${escapeHtml(item.course_name || '')}', ${isWaitlist})" class="btn btn-sm btn-outline" style="color: var(--danger); border-color: var(--danger);" title="Drop from schedule">
+            ${dropLabel}
           </button>
         </td>
       `;
@@ -206,91 +262,91 @@
     });
   }
 
-  async function fetchAvailableClasses() {
-    const tbody = document.getElementById("catalog-tbody");
-    tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; color: var(--text-muted);">Searching available classes...</td></tr>`;
+  // Render Timetable Visual Calendar
+  function renderTimetableGrid() {
+    const container = document.getElementById("timetable-container");
+    container.innerHTML = "";
 
-    const params = new URLSearchParams();
-    const search = document.getElementById("class-search-input").value.trim();
-    if (search) params.append("search", search);
+    const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    const dayCodes = ["M", "T", "W", "R", "F"];
 
-    const term = document.getElementById("class-term-select").value;
-    if (term) params.append("term", term);
+    // Header Row
+    const timeHeader = document.createElement("div");
+    timeHeader.className = "timetable-header";
+    timeHeader.textContent = "Time";
+    container.appendChild(timeHeader);
 
-    const modality = document.getElementById("class-modality-select").value;
-    if (modality) params.append("modality", modality);
+    daysOfWeek.forEach(d => {
+      const col = document.createElement("div");
+      col.className = "timetable-header";
+      col.textContent = d;
+      container.appendChild(col);
+    });
 
-    params.append("limit", "50");
+    // Hours 8 AM (8) to 7 PM (19)
+    for (let h = 8; h <= 19; h++) {
+      const displayHour = h > 12 ? `${h - 12}:00 PM` : (h === 12 ? "12:00 PM" : `${h}:00 AM`);
 
-    try {
-      const classes = await API.request(`/api/student/classes?${params.toString()}`);
-      tbody.innerHTML = "";
+      const timeSlot = document.createElement("div");
+      timeSlot.className = "timetable-time-slot";
+      timeSlot.textContent = displayHour;
+      container.appendChild(timeSlot);
 
-      if (!classes || classes.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; color: var(--text-muted);">No classes found matching your criteria. Try adjusting the search.</td></tr>`;
-        return;
-      }
+      for (let d = 0; d < 5; d++) {
+        const code = dayCodes[d];
+        const cell = document.createElement("div");
+        cell.className = "timetable-cell";
 
-      classes.forEach(c => {
-        const tr = document.createElement("tr");
-        const daysTimes = (c.days && c.times) ? `${c.days} ${c.times}` : (c.times || c.days || "TBA");
-        const seats = (c.enrollment != null && c.capacity != null)
-          ? `${c.enrollment} / ${c.capacity}`
-          : "-";
-
-        const isEnrolled = enrolledCourseRecordIds.has(c.id);
-
-        tr.innerHTML = `
-          <td><strong>${c.course_id}</strong></td>
-          <td>${c.course_name || '-'}</td>
-          <td>${c.section_id || '01'}</td>
-          <td>${c.term}</td>
-          <td>${daysTimes}</td>
-          <td><span class="badge badge-secondary">${c.modality || 'In-Person'}</span></td>
-          <td>${c.campus || 'San Bernardino'}</td>
-          <td>${seats}</td>
-          <td>
-            ${isEnrolled 
-              ? `<span class="badge badge-success" style="font-size:0.75rem;">In Schedule</span>` 
-              : `<button onclick="addClassToSchedule(${c.id}, '${c.course_id}', '${c.section_id || '01'}')" class="btn btn-primary btn-sm">
-                  + Add to Schedule
-                 </button>`
+        // Find classes that meet at this hour on this day
+        enrolledSchedules.forEach(item => {
+          if (!item.days || !item.times) return;
+          if (item.days.toUpperCase().includes(code)) {
+            const timeParts = item.times.split("-");
+            if (timeParts.length === 2) {
+              const startH = parseInt(timeParts[0].split(":")[0], 10);
+              if (startH === h) {
+                const event = document.createElement("div");
+                const isW = (item.status === "Waitlisted");
+                event.className = `timetable-event ${isW ? 'waitlisted' : ''}`;
+                event.innerHTML = `<strong>${escapeHtml(item.course_id)}</strong> (${escapeHtml(item.section_id || '01')}) ${isW ? '[W]' : ''}<br><span style="font-size:0.7rem;">${escapeHtml(item.times)}</span>`;
+                cell.appendChild(event);
+              }
             }
-          </td>
-        `;
-        tbody.appendChild(tr);
-      });
-    } catch (err) {
-      showToast("Error searching classes: " + err.message, "error");
+          }
+        });
+
+        container.appendChild(cell);
+      }
     }
   }
 
-  async function addClassToSchedule(courseRecordId, courseId, sectionId) {
-    try {
-      const added = await API.request("/api/student/schedule/add", {
-        method: "POST",
-        body: JSON.stringify({ course_record_id: courseRecordId }),
-      });
-      showToast(`Added ${courseId} (Section ${sectionId}) to your schedule!`, "success");
-      await loadStudentSchedule();
-      await fetchAvailableClasses();
-    } catch (err) {
-      showToast(err.message || "Failed to add class", "error");
+  // DROP CLASS FROM SCHEDULE
+  async function dropClass(scheduleId, courseId, sectionId, courseName, isWaitlist = false) {
+    const actionName = isWaitlist ? "drop your waitlist for" : "drop";
+    const label = `${courseId} (Section ${sectionId}${courseName ? ' - ' + courseName : ''})`;
+    if (!confirm(`Are you sure you want to ${actionName} ${label}?`)) {
+      return;
     }
-  }
 
-  async function dropClass(scheduleId, courseId) {
-    if (!confirm(`Are you sure you want to drop ${courseId} from your schedule?`)) return;
     try {
       await API.request(`/api/student/schedule/${scheduleId}`, {
         method: "DELETE",
       });
-      showToast(`Dropped ${courseId} from schedule.`, "info");
+      showToast(`Removed ${courseId} from your schedule.`, "info");
       await loadStudentSchedule();
-      await fetchAvailableClasses();
     } catch (err) {
       showToast("Failed to drop class: " + err.message, "error");
     }
+  }
+
+  function escapeHtml(str) {
+    if (!str) return "";
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
   }
 </script>
 {% endblock %}

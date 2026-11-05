@@ -121,6 +121,11 @@ const API = {
     return await this.request(`/api/records/filter-options${qs}`);
   },
 
+  async getCourseTrends(datasetId, courseIds) {
+    const qs = new URLSearchParams({ dataset_id: datasetId, course_ids: courseIds }).toString();
+    return await this.request(`/api/records/trends?${qs}`);
+  },
+
   // Analysis
   async getAnalysisRuns(datasetId) {
     const qs = datasetId ? `?dataset_id=${datasetId}` : "";
@@ -238,6 +243,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // RBAC: Show/Hide based on role
     if (user.role === "student") {
+      const brandLogo = document.querySelector(".brand-logo");
+      if (brandLogo) brandLogo.href = "/student/schedule";
       document.querySelectorAll(".admin-only, .scheduler-only, .chair-only, .staff-only").forEach(el => el.style.display = "none");
       document.querySelectorAll(".student-only").forEach(el => el.style.display = "inline-block");
     } else {

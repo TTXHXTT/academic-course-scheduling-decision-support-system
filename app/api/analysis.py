@@ -19,6 +19,7 @@ router = APIRouter(prefix="/api/analysis", tags=["analysis"])
 
 
 @router.post("/runs", response_model=AnalysisRunResponse)
+@router.post("/run", response_model=AnalysisRunResponse)
 def create_analysis_run(
     data: AnalysisRunCreate,
     db: Session = Depends(get_db),
@@ -31,6 +32,12 @@ def create_analysis_run(
         user=current_user,
         name=data.name,
         is_baseline=data.is_baseline,
+        high_utilization_threshold=data.high_utilization_threshold,
+        low_utilization_threshold=data.low_utilization_threshold,
+        full_capacity_threshold=data.full_capacity_threshold,
+        frequently_full_threshold=data.frequently_full_threshold,
+        increasing_demand_slope=data.increasing_demand_slope,
+        min_terms_for_trend=data.min_terms_for_trend,
     )
 
     # Auto-generate recommendations after analysis
@@ -48,6 +55,7 @@ def create_analysis_run(
     return run
 
 
+@router.get("", response_model=List[AnalysisRunResponse])
 @router.get("/runs", response_model=List[AnalysisRunResponse])
 def list_analysis_runs(
     dataset_id: int = Query(None),
@@ -61,6 +69,7 @@ def list_analysis_runs(
 
 
 @router.get("/runs/{run_id}", response_model=AnalysisRunResponse)
+@router.get("/{run_id}", response_model=AnalysisRunResponse)
 def get_analysis_run(
     run_id: int,
     db: Session = Depends(get_db),
@@ -73,6 +82,7 @@ def get_analysis_run(
 
 
 @router.get("/runs/{run_id}/courses", response_model=List[CourseAnalysisResponse])
+@router.get("/{run_id}/courses", response_model=List[CourseAnalysisResponse])
 def get_course_analyses(
     run_id: int,
     db: Session = Depends(get_db),
@@ -82,6 +92,7 @@ def get_course_analyses(
 
 
 @router.get("/runs/{run_id}/courses/{course_id}", response_model=CourseAnalysisResponse)
+@router.get("/{run_id}/courses/{course_id}", response_model=CourseAnalysisResponse)
 def get_course_analysis(
     run_id: int,
     course_id: str,

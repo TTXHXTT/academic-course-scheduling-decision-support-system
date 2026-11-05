@@ -105,6 +105,38 @@ class TestAnalysisAPI:
         assert len(data) >= 1
         assert data[0]["course_id"] == "CS-101"
 
+    def test_analysis_endpoint_aliases_and_thresholds(self, test_client, auth_headers_scheduler):
+        ds_id = self._setup(test_client, auth_headers_scheduler)
+        # Test POST /api/analysis/run alias with custom parameters
+        resp = test_client.post(
+            "/api/analysis/run",
+            headers=auth_headers_scheduler,
+            json={
+                "dataset_id": ds_id,
+                "name": "Custom Threshold Test",
+                "high_utilization_threshold": 90.0,
+                "low_utilization_threshold": 45.0,
+            }
+        )
+        assert resp.status_code == 200
+        run_id = resp.json()["id"]
+
+        # Test GET /api/analysis alias
+        runs_list = test_client.get("/api/analysis", headers=auth_headers_scheduler)
+        assert runs_list.status_code == 200
+        assert any(r["id"] == run_id for r in runs_list.json())
+
+        # Test GET /api/analysis/{run_id} alias
+        single_run = test_client.get(f"/api/analysis/{run_id}", headers=auth_headers_scheduler)
+        assert single_run.status_code == 200
+        assert single_run.json()["name"] == "Custom Threshold Test"
+
+        # Test GET /api/analysis/{run_id}/courses alias
+        courses = test_client.get(f"/api/analysis/{run_id}/courses", headers=auth_headers_scheduler)
+        assert courses.status_code == 200
+        assert len(courses.json()) >= 1
+
+
 
 class TestScenarioAPI:
     def _setup(self, client, headers):

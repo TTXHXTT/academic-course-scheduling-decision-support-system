@@ -1,6 +1,92 @@
 {% extends "base.html" %}
 
-{% block title %}Demand Analysis Engine - Academic Course Scheduling (ACS){% endblock %}
+{% block title %}Course Demand Analysis Engine - Academic Course Scheduling (ACS){% endblock %}
+
+{% block extra_head %}
+<style>
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .kpi-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    box-shadow: var(--shadow);
+  }
+  .kpi-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .kpi-card.active {
+    border-color: var(--primary);
+    background: #f0f7ff;
+    box-shadow: 0 0 0 2px var(--primary-light);
+  }
+  .kpi-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+  }
+  .kpi-val {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-top: 0.25rem;
+    line-height: 1.1;
+  }
+  .kpi-sub {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.35rem;
+  }
+
+  .filter-pills {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .filter-pill {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: white;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: all 0.15s;
+  }
+  .filter-pill:hover {
+    background: var(--bg-subtle);
+    color: var(--text-main);
+  }
+  .filter-pill.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+  }
+
+  .pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+</style>
+{% endblock %}
 
 {% block content %}
 <div class="page-header">
@@ -8,38 +94,117 @@
     <h1 class="page-title">Course Demand Analysis Engine</h1>
     <p class="page-subtitle">Deterministic capacity utilization, full capacity rates, and linear regression demand trends</p>
   </div>
-  <button class="btn btn-primary btn-sm" onclick="toggleConfigModal()">New Analysis Run</button>
+  <button class="btn btn-primary" onclick="toggleConfigModal()">
+    <span style="font-size: 1.1rem; line-height: 1;">+</span> New Analysis Run
+  </button>
 </div>
 
 <div class="disclaimer-banner">
   <div>
-    <strong>Deterministic Evaluation:</strong> ACS demand metrics are calculated using explicit formulas documented in the prototype baseline. Thresholds represent prototype assumptions (configurable below) and do not represent formal university administrative policy.
+    <strong>Deterministic Analytics Evaluation:</strong> ACS demand metrics are calculated using explicit formulas documented in the prototype baseline. Thresholds represent prototype assumptions (configurable via the Run modal) and do not represent formal university administrative policy.
   </div>
 </div>
 
 <!-- Active Run Header -->
-<div class="card" style="margin-bottom: 1.5rem; background: #fafafa;">
+<div class="card" style="margin-bottom: 1.5rem; background: #fafafa; border: 1px solid var(--border);">
   <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-    <div>
-      <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600;">Active Analysis Run:</span>
-      <select id="active-run-selector" class="form-select" style="display: inline-block; width: auto; font-weight: 600;" onchange="loadRunMetrics(this.value)">
-        <option value="">Loading runs...</option>
+    <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+      <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Active Analysis Run:</span>
+      <select id="active-run-selector" class="form-select" style="width: auto; min-width: 320px; font-weight: 600;" onchange="loadRunMetrics(this.value)">
+        <option value="">Loading analysis runs...</option>
       </select>
     </div>
-    <div style="display: flex; gap: 0.5rem; font-size: 0.85rem;">
+    <div style="display: flex; gap: 0.5rem; font-size: 0.85rem; align-items: center;">
       <span class="badge badge-info" id="method-badge">Engine v1.0.0</span>
       <span class="badge badge-secondary" id="run-date-badge">-</span>
     </div>
   </div>
 </div>
 
-<!-- Course Demand Table -->
+<!-- Data Quality & Limitations Notice (NFR-04) -->
+<div id="data-quality-alert" class="disclaimer-banner" style="display: none; background: #fffbeb; border: 1px solid #fde68a; color: #92400e; margin-bottom: 1.5rem; padding: 0.75rem 1rem; border-radius: 6px;">
+  <div>
+    <strong>Reliability & Data Quality Notice (NFR-04 / LIM-03):</strong> <span id="data-quality-message">Some historical course records contain missing, incomplete, or inconsistent values. These records are flagged and may affect demand forecasting or recommendations for the affected courses.</span>
+  </div>
+</div>
+
+<!-- KPI Summary Cards -->
+<div class="kpi-grid">
+  <div class="kpi-card active" id="kpi-all" onclick="applyQuickFilter('all')">
+    <div class="kpi-label">Courses Analyzed</div>
+    <div class="kpi-val" style="color: var(--primary);" id="kpi-total-val">0</div>
+    <div class="kpi-sub">Total distinct course IDs</div>
+  </div>
+
+  <div class="kpi-card" id="kpi-high" onclick="applyQuickFilter('high')">
+    <div class="kpi-label">High Utilization</div>
+    <div class="kpi-val" style="color: var(--success);" id="kpi-high-val">0</div>
+    <div class="kpi-sub">&ge; 85% capacity utilization</div>
+  </div>
+
+  <div class="kpi-card" id="kpi-full" onclick="applyQuickFilter('full')">
+    <div class="kpi-label">Frequently At Capacity</div>
+    <div class="kpi-val" style="color: #b45309;" id="kpi-full-val">0</div>
+    <div class="kpi-sub">&ge; 50% sections filled to cap</div>
+  </div>
+
+  <div class="kpi-card" id="kpi-trend" onclick="applyQuickFilter('increasing')">
+    <div class="kpi-label">Increasing Demand</div>
+    <div class="kpi-val" style="color: #0284c7;" id="kpi-trend-val">0</div>
+    <div class="kpi-sub">Positive regression slope</div>
+  </div>
+
+  <div class="kpi-card" id="kpi-low" onclick="applyQuickFilter('low')">
+    <div class="kpi-label">Low Utilization</div>
+    <div class="kpi-val" style="color: var(--danger);" id="kpi-low-val">0</div>
+    <div class="kpi-sub">&le; 50% capacity utilization</div>
+  </div>
+</div>
+
+<!-- Course Demand Table Card -->
 <div class="card">
-  <div class="card-title">
-    <span>Course Demand Metrics (<span id="course-count">0</span> courses)</span>
-    <div style="display: flex; gap: 0.5rem;">
-      <input type="text" id="course-filter-input" class="form-control" style="font-size: 0.8rem; padding: 0.25rem 0.5rem; width: 220px;" placeholder="Filter course ID / name..." oninput="filterCourseTable()">
-      <a href="/recommendations" class="btn btn-accent btn-sm">View Recommendations &rarr;</a>
+  <div class="card-title" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+    <div>
+      <span>Course Demand Metrics</span>
+      <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted); margin-left: 0.5rem;" id="table-record-count">(Showing 0 courses)</span>
+    </div>
+    <div style="display: flex; gap: 0.5rem; align-items: center;">
+      <a href="/recommendations" class="btn btn-accent btn-sm">Inspect Recommendations &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Filter Pills -->
+  <div class="filter-pills">
+    <button class="filter-pill active" id="pill-all" onclick="applyQuickFilter('all')">All Courses</button>
+    <button class="filter-pill" id="pill-high" onclick="applyQuickFilter('high')">High Utilization (&ge;85%)</button>
+    <button class="filter-pill" id="pill-moderate" onclick="applyQuickFilter('moderate')">Moderate Util (50-85%)</button>
+    <button class="filter-pill" id="pill-low" onclick="applyQuickFilter('low')">Low Util (&le;50%)</button>
+    <button class="filter-pill" id="pill-full" onclick="applyQuickFilter('full')">Frequently Full (&ge;50%)</button>
+    <button class="filter-pill" id="pill-increasing" onclick="applyQuickFilter('increasing')">Increasing Demand &uarr;</button>
+    <button class="filter-pill" id="pill-unmet" onclick="applyQuickFilter('unmet')">Unmet Demand</button>
+  </div>
+
+  <!-- Search & Sorting Row -->
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;">
+    <div style="flex: 1; max-width: 360px;">
+      <input type="text" id="course-filter-input" class="form-control" placeholder="Search course ID or title (e.g. ACCT, CSE, Math)..." oninput="onSearchInput()">
+    </div>
+    <div style="display: flex; gap: 0.5rem; align-items: center;">
+      <label for="sort-select" style="font-size: 0.85rem; color: var(--text-muted);">Sort by:</label>
+      <select id="sort-select" class="form-select" style="width: auto; font-size: 0.85rem;" onchange="onSortChange()">
+        <option value="course_id_asc">Course ID (A-Z)</option>
+        <option value="util_desc">Utilization (Highest First)</option>
+        <option value="util_asc">Utilization (Lowest First)</option>
+        <option value="enroll_desc">Avg Enrollment (Highest)</option>
+        <option value="fc_desc">Full Capacity Rate (Highest)</option>
+        <option value="sections_desc">Total Sections (Highest)</option>
+      </select>
+      <select id="page-size-select" class="form-select" style="width: auto; font-size: 0.85rem;" onchange="onPageSizeChange()">
+        <option value="25">25 per page</option>
+        <option value="50" selected>50 per page</option>
+        <option value="100">100 per page</option>
+        <option value="250">250 per page</option>
+      </select>
     </div>
   </div>
 
@@ -52,25 +217,35 @@
           <th>Sections</th>
           <th>Terms</th>
           <th>Avg Enrollment</th>
+          <th>Avg Capacity</th>
           <th>Utilization</th>
           <th>Full Cap. Rate</th>
           <th>Demand Trend</th>
           <th>Unmet Demand</th>
-          <th>Actions</th>
+          <th style="text-align: right;">Evidence</th>
         </tr>
       </thead>
       <tbody id="analysis-tbody">
-        <tr><td colspan="10" style="text-align: center; color: var(--text-muted);">Loading course analysis...</td></tr>
+        <tr><td colspan="11" style="text-align: center; color: var(--text-muted); padding: 2rem;">Loading course analysis...</td></tr>
       </tbody>
     </table>
+  </div>
+
+  <!-- Pagination Controls -->
+  <div class="pagination-controls">
+    <div id="page-info">Showing 0 - 0 of 0</div>
+    <div style="display: flex; gap: 0.5rem;">
+      <button id="btn-prev-page" onclick="prevPage()" class="btn btn-outline btn-sm" disabled>&larr; Previous</button>
+      <button id="btn-next-page" onclick="nextPage()" class="btn btn-outline btn-sm" disabled>Next &rarr;</button>
+    </div>
   </div>
 </div>
 
 <!-- Run Configuration Modal -->
 <div class="drawer-backdrop" id="config-modal-backdrop" onclick="toggleConfigModal()"></div>
-<div class="card" id="config-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 500px; max-width: 90vw; z-index: 250; box-shadow: var(--shadow-lg);">
+<div class="card" id="config-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 520px; max-width: 92vw; z-index: 250; box-shadow: var(--shadow-lg);">
   <div class="card-title">
-    <span>Configure & Run Demand Analysis</span>
+    <span>Execute Course Demand Analysis</span>
     <button class="btn btn-outline btn-sm" onclick="toggleConfigModal()">&times;</button>
   </div>
 
@@ -78,6 +253,11 @@
     <div class="form-group">
       <label class="form-label" for="run-dataset-select">Source Dataset *</label>
       <select id="run-dataset-select" class="form-select" required></select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="run-name-input">Analysis Run Label (Optional)</label>
+      <input type="text" id="run-name-input" class="form-control" placeholder="e.g. Fall 2026 Comprehensive Demand Review">
     </div>
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
@@ -102,9 +282,9 @@
       </div>
     </div>
 
-    <div style="margin-top: 1rem; display: flex; justify-content: flex-end; gap: 0.5rem;">
+    <div style="margin-top: 1.5rem; display: flex; justify-content: flex-end; gap: 0.5rem;">
       <button type="button" class="btn btn-outline" onclick="toggleConfigModal()">Cancel</button>
-      <button type="submit" class="btn btn-primary" id="run-btn">Execute Analysis</button>
+      <button type="submit" class="btn btn-primary" id="run-btn">Execute Engine Analysis</button>
     </div>
   </form>
 </div>
@@ -120,24 +300,33 @@
     <button onclick="closeEvidenceDrawer()" class="btn btn-outline btn-sm">&times;</button>
   </div>
 
-  <div style="margin-bottom: 1rem;">
-    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Demand Trend & Formula Evidence</h3>
-    <div style="background: var(--bg-subtle); padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.85rem; line-height: 1.6;">
-      <div><strong>Trend Category:</strong> <span id="ev-trend">-</span></div>
-      <div><strong>Linear Regression Slope:</strong> <span id="ev-slope">-</span> students/term</div>
+  <div style="margin-bottom: 1.25rem;">
+    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--primary);">Demand Trend & Mathematical Formulas</h3>
+    <div style="background: var(--bg-subtle); padding: 0.85rem 1rem; border-radius: var(--radius-sm); font-size: 0.85rem; line-height: 1.8; border: 1px solid var(--border);">
+      <div><strong>Demand Classification:</strong> <span id="ev-trend" style="font-weight: 700;">-</span></div>
+      <div><strong>Linear Regression Slope:</strong> <span id="ev-slope" style="font-weight: 700;">-</span> students/term</div>
+      <div><strong>Coefficient of Determination (R&sup2;):</strong> <span id="ev-r2">-</span></div>
+      <div><strong>Weighted Capacity Utilization:</strong> <span id="ev-util" style="font-weight: 700;">-</span></div>
       <div><strong>Full Capacity Rate:</strong> <span id="ev-fc-rate">-</span></div>
-      <div><strong>Weighted Utilization:</strong> <span id="ev-util">-</span></div>
+      <div><strong>Peak Enrollment:</strong> <span id="ev-peak">-</span> students</div>
+      <div><strong>Min Enrollment:</strong> <span id="ev-min">-</span> students</div>
     </div>
   </div>
 
-  <div style="margin-bottom: 1rem;">
-    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Documented Limitations & Caveats</h3>
-    <ul id="ev-limitations" style="font-size: 0.85rem; padding-left: 1.25rem; color: #78350f;"></ul>
+  <div style="margin-bottom: 1.25rem;">
+    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: #b45309;">Documented Data Limitations & Caveats</h3>
+    <ul id="ev-limitations" style="font-size: 0.85rem; padding-left: 1.25rem; color: #78350f; line-height: 1.6;"></ul>
   </div>
 
-  <div>
-    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Offering Terms</h3>
-    <div id="ev-terms-list" style="font-size: 0.85rem; color: var(--text-muted);"></div>
+  <div style="margin-bottom: 1.5rem;">
+    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--primary);">Historical Terms Included</h3>
+    <div id="ev-terms-list" style="font-size: 0.85rem; color: var(--text-muted); background: #fafafa; padding: 0.75rem; border-radius: 4px; border: 1px solid var(--border);"></div>
+  </div>
+
+  <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border);">
+    <a id="ev-rec-link" href="/recommendations" class="btn btn-primary" style="width: 100%; text-align: center;">
+      View Recommendations for this Course &rarr;
+    </a>
   </div>
 </div>
 {% endblock %}
@@ -145,6 +334,10 @@
 {% block extra_scripts %}
 <script>
   let cachedMetrics = [];
+  let filteredMetrics = [];
+  let currentFilter = "all";
+  let currentPage = 1;
+  let pageSize = 50;
 
   document.addEventListener("DOMContentLoaded", async () => {
     API.requireAuth();
@@ -155,7 +348,9 @@
     try {
       const datasets = await API.getDatasets();
       const dsSelect = document.getElementById("run-dataset-select");
-      dsSelect.innerHTML = datasets.map(d => `<option value="${d.id}">${d.name}</option>`).join("");
+      if (datasets && datasets.length > 0) {
+        dsSelect.innerHTML = datasets.map(d => `<option value="${d.id}">${d.name} (${d.row_count || 0} records)</option>`).join("");
+      }
 
       const runs = await API.getAnalysisRuns();
       const runSelect = document.getElementById("active-run-selector");
@@ -163,14 +358,15 @@
 
       if (!runs || runs.length === 0) {
         runSelect.innerHTML = '<option value="">No analysis runs found</option>';
-        document.getElementById("analysis-tbody").innerHTML = `<tr><td colspan="10" style="text-align: center;">No analysis runs. Click "New Analysis Run" to start.</td></tr>`;
+        document.getElementById("analysis-tbody").innerHTML = `<tr><td colspan="11" style="text-align: center; padding: 2rem;">No analysis runs found. Click "New Analysis Run" to start.</td></tr>`;
         return;
       }
 
       runs.forEach((r, idx) => {
         const opt = document.createElement("option");
         opt.value = r.id;
-        opt.textContent = `Run #${r.id} - Dataset: ${r.dataset_name || r.dataset_id} (${new Date(r.created_at).toLocaleDateString()})`;
+        const dateStr = r.started_at ? new Date(r.started_at).toLocaleDateString() : (r.completed_at ? new Date(r.completed_at).toLocaleDateString() : "-");
+        opt.textContent = `Run #${r.id} - ${r.name || ('Dataset ' + r.dataset_id)} (${dateStr})`;
         if (idx === 0) opt.selected = true;
         runSelect.appendChild(opt);
       });
@@ -186,38 +382,173 @@
     try {
       const run = await API.getAnalysisRun(analysisId);
       document.getElementById("method-badge").textContent = `Engine v${run.method_version || '1.0.0'}`;
-      document.getElementById("run-date-badge").textContent = new Date(run.completed_at || run.created_at).toLocaleString();
+      
+      const dateVal = run.completed_at || run.started_at;
+      document.getElementById("run-date-badge").textContent = dateVal ? new Date(dateVal).toLocaleString() : "-";
 
-      const metricsRes = await API.getCourseMetrics(analysisId, { page_size: 200 });
-      cachedMetrics = metricsRes.items || [];
-      renderCourseTable(cachedMetrics);
+      const metricsRes = await API.getCourseMetrics(analysisId, { page_size: 5000 });
+      cachedMetrics = Array.isArray(metricsRes) ? metricsRes : (metricsRes.items || []);
+
+      updateKpis(cachedMetrics);
+      applyFilters();
     } catch (err) {
       showToast("Error loading metrics: " + err.message, "error");
     }
   }
 
-  function renderCourseTable(items) {
+  function updateKpis(items) {
+    const total = items.length;
+    let high = 0, full = 0, increasing = 0, low = 0;
+
+    items.forEach(m => {
+      if (m.avg_utilization_pct != null) {
+        if (m.avg_utilization_pct >= 85) high++;
+        else if (m.avg_utilization_pct <= 50) low++;
+      }
+      if (m.full_capacity_rate != null && m.full_capacity_rate >= 0.5) full++;
+      if (m.demand_trend === "INCREASING") increasing++;
+    });
+
+    document.getElementById("kpi-total-val").textContent = total.toLocaleString();
+    document.getElementById("kpi-high-val").textContent = high.toLocaleString();
+    document.getElementById("kpi-full-val").textContent = full.toLocaleString();
+    document.getElementById("kpi-trend-val").textContent = increasing.toLocaleString();
+    document.getElementById("kpi-low-val").textContent = low.toLocaleString();
+
+    // Data Quality Warning toggle (NFR-04)
+    let issuesCount = 0;
+    items.forEach(m => {
+      if (m.insufficient_data || (m.limitations_json && m.limitations_json !== "[]" && m.limitations_json !== '""')) {
+        issuesCount++;
+      }
+    });
+    const alertEl = document.getElementById("data-quality-alert");
+    if (alertEl) {
+      if (issuesCount > 0) {
+        alertEl.style.display = "block";
+        document.getElementById("data-quality-message").textContent =
+          `${issuesCount} of ${total} course(s) have data limitations or insufficient observations noted in their analytical evidence. These records are flagged because missing or incomplete data may affect demand projections (NFR-04 / LIM-03).`;
+      } else {
+        alertEl.style.display = "none";
+      }
+    }
+  }
+
+  function applyQuickFilter(filterKey) {
+    currentFilter = filterKey;
+    currentPage = 1;
+
+    // Update KPI card active styles
+    document.querySelectorAll(".kpi-card").forEach(el => el.classList.remove("active"));
+    const activeKpi = document.getElementById(`kpi-${filterKey === 'increasing' ? 'trend' : filterKey}`);
+    if (activeKpi) activeKpi.classList.add("active");
+
+    // Update pill active styles
+    document.querySelectorAll(".filter-pill").forEach(el => el.classList.remove("active"));
+    const activePill = document.getElementById(`pill-${filterKey}`);
+    if (activePill) activePill.classList.add("active");
+
+    applyFilters();
+  }
+
+  function onSearchInput() {
+    currentPage = 1;
+    applyFilters();
+  }
+
+  function onSortChange() {
+    currentPage = 1;
+    applyFilters();
+  }
+
+  function onPageSizeChange() {
+    pageSize = parseInt(document.getElementById("page-size-select").value, 10);
+    currentPage = 1;
+    renderCurrentPage();
+  }
+
+  function applyFilters() {
+    const q = (document.getElementById("course-filter-input").value || "").trim().toLowerCase();
+
+    filteredMetrics = cachedMetrics.filter(m => {
+      // Text search
+      if (q) {
+        const idMatch = m.course_id && m.course_id.toLowerCase().includes(q);
+        const nameMatch = m.course_name && m.course_name.toLowerCase().includes(q);
+        if (!idMatch && !nameMatch) return false;
+      }
+
+      // Quick filter
+      if (currentFilter === "high") {
+        return m.avg_utilization_pct != null && m.avg_utilization_pct >= 85;
+      } else if (currentFilter === "moderate") {
+        return m.avg_utilization_pct != null && m.avg_utilization_pct > 50 && m.avg_utilization_pct < 85;
+      } else if (currentFilter === "low") {
+        return m.avg_utilization_pct != null && m.avg_utilization_pct <= 50;
+      } else if (currentFilter === "full") {
+        return m.full_capacity_rate != null && m.full_capacity_rate >= 0.5;
+      } else if (currentFilter === "increasing") {
+        return m.demand_trend === "INCREASING";
+      } else if (currentFilter === "unmet") {
+        return m.has_unmet_demand_data && (m.total_unmet_demand > 0 || m.avg_unmet_demand > 0);
+      }
+
+      return true;
+    });
+
+    // Apply sorting
+    const sortBy = document.getElementById("sort-select").value;
+    filteredMetrics.sort((a, b) => {
+      if (sortBy === "util_desc") return (b.avg_utilization_pct || 0) - (a.avg_utilization_pct || 0);
+      if (sortBy === "util_asc") return (a.avg_utilization_pct || 0) - (b.avg_utilization_pct || 0);
+      if (sortBy === "enroll_desc") return (b.avg_enrollment || 0) - (a.avg_enrollment || 0);
+      if (sortBy === "fc_desc") return (b.full_capacity_rate || 0) - (a.full_capacity_rate || 0);
+      if (sortBy === "sections_desc") return (b.total_sections || 0) - (a.total_sections || 0);
+      return (a.course_id || "").localeCompare(b.course_id || "");
+    });
+
+    renderCurrentPage();
+  }
+
+  function renderCurrentPage() {
     const tbody = document.getElementById("analysis-tbody");
     tbody.innerHTML = "";
-    document.getElementById("course-count").textContent = items.length.toLocaleString();
 
-    if (!items || items.length === 0) {
-      tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-muted);">No course records found.</td></tr>`;
+    const total = filteredMetrics.length;
+    document.getElementById("table-record-count").textContent = `(Showing ${total.toLocaleString()} courses)`;
+
+    if (total === 0) {
+      tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-muted); padding: 2rem;">No courses matching your filter criteria.</td></tr>`;
+      document.getElementById("page-info").textContent = "0 - 0 of 0";
+      document.getElementById("btn-prev-page").disabled = true;
+      document.getElementById("btn-next-page").disabled = true;
       return;
     }
 
-    items.forEach(m => {
+    const totalPages = Math.ceil(total / pageSize);
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+
+    const startIdx = (currentPage - 1) * pageSize;
+    const endIdx = Math.min(startIdx + pageSize, total);
+    const pageItems = filteredMetrics.slice(startIdx, endIdx);
+
+    document.getElementById("page-info").textContent = `Showing ${(startIdx + 1).toLocaleString()} - ${endIdx.toLocaleString()} of ${total.toLocaleString()}`;
+    document.getElementById("btn-prev-page").disabled = (currentPage <= 1);
+    document.getElementById("btn-next-page").disabled = (currentPage >= totalPages);
+
+    pageItems.forEach(m => {
       const tr = document.createElement("tr");
 
       // Utilization color
       let utilStr = "-";
       if (m.avg_utilization_pct != null) {
         const u = m.avg_utilization_pct;
-        const color = u >= 85 ? "var(--success)" : u <= 50 ? "var(--danger)" : "inherit";
+        const color = u >= 85 ? "var(--success)" : u <= 50 ? "var(--danger)" : "#0284c7";
         utilStr = `<strong style="color: ${color};">${u.toFixed(1)}%</strong>`;
       }
 
-      // Full capacity
+      // Full capacity rate
       const fcStr = m.full_capacity_rate != null ? `${(m.full_capacity_rate * 100).toFixed(0)}%` : "-";
 
       // Demand trend badge
@@ -225,37 +556,48 @@
       if (m.demand_trend === "INCREASING") trendBadge = `<span class="badge badge-success">Increasing &uarr;</span>`;
       else if (m.demand_trend === "DECREASING") trendBadge = `<span class="badge badge-danger">Decreasing &darr;</span>`;
       else if (m.demand_trend === "STABLE") trendBadge = `<span class="badge badge-info">Stable &rarr;</span>`;
+      else if (m.demand_trend === "INSUFFICIENT_DATA") trendBadge = `<span class="badge badge-secondary" title="Fewer than 2 historical terms">Single Term</span>`;
 
       // Unmet demand
       let udStr = `<span style="color: var(--text-muted);">-</span>`;
       if (m.has_unmet_demand_data) {
-        udStr = `<span class="badge badge-warning">${m.total_unmet_demand != null ? m.total_unmet_demand : 'Yes'}</span>`;
+        udStr = `<span class="badge badge-warning">${m.total_unmet_demand != null ? m.total_unmet_demand : 'Tracked'}</span>`;
       }
 
       tr.innerHTML = `
-        <td><strong>${m.course_id}</strong></td>
-        <td>${m.course_name || '-'}</td>
-        <td>${m.total_sections}</td>
+        <td><strong style="color: var(--primary);">${escapeHtml(m.course_id)}</strong></td>
+        <td>${escapeHtml(m.course_name || '-')}</td>
+        <td><span class="badge badge-secondary">${m.total_sections}</span></td>
         <td>${m.terms_offered}</td>
         <td>${m.avg_enrollment != null ? m.avg_enrollment.toFixed(1) : '-'}</td>
+        <td>${m.avg_capacity != null ? m.avg_capacity.toFixed(1) : '-'}</td>
         <td>${utilStr}</td>
         <td>${fcStr}</td>
         <td>${trendBadge}</td>
         <td>${udStr}</td>
-        <td>
-          <button onclick="openEvidenceDrawer('${m.course_id}')" class="btn btn-outline btn-sm">Evidence</button>
+        <td style="text-align: right;">
+          <button onclick="openEvidenceDrawer('${escapeHtml(m.course_id)}')" class="btn btn-outline btn-sm">
+            Evidence
+          </button>
         </td>
       `;
       tbody.appendChild(tr);
     });
   }
 
-  function filterCourseTable() {
-    const q = document.getElementById("course-filter-input").value.toLowerCase();
-    const filtered = cachedMetrics.filter(m =>
-      m.course_id.toLowerCase().includes(q) || (m.course_name && m.course_name.toLowerCase().includes(q))
-    );
-    renderCourseTable(filtered);
+  function prevPage() {
+    if (currentPage > 1) {
+      currentPage--;
+      renderCurrentPage();
+    }
+  }
+
+  function nextPage() {
+    const totalPages = Math.ceil(filteredMetrics.length / pageSize);
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderCurrentPage();
+    }
   }
 
   function toggleConfigModal() {
@@ -270,10 +612,11 @@
     e.preventDefault();
     const btn = document.getElementById("run-btn");
     btn.disabled = true;
-    btn.textContent = "Analyzing...";
+    btn.textContent = "Analyzing Course Demand...";
 
     const payload = {
-      dataset_id: parseInt(document.getElementById("run-dataset-select").value),
+      dataset_id: parseInt(document.getElementById("run-dataset-select").value, 10),
+      name: document.getElementById("run-name-input").value.trim() || undefined,
       high_utilization_threshold: parseFloat(document.getElementById("high-util").value),
       low_utilization_threshold: parseFloat(document.getElementById("low-util").value),
       frequently_full_threshold: parseFloat(document.getElementById("frequently-full").value),
@@ -289,7 +632,7 @@
       showToast("Analysis failed: " + err.message, "error");
     } finally {
       btn.disabled = false;
-      btn.textContent = "Execute Analysis";
+      btn.textContent = "Execute Engine Analysis";
     }
   });
 
@@ -301,19 +644,37 @@
     document.getElementById("ev-course-name").textContent = m.course_name || "-";
     document.getElementById("ev-trend").textContent = m.demand_trend || "N/A";
     document.getElementById("ev-slope").textContent = m.demand_trend_score != null ? m.demand_trend_score.toFixed(2) : "N/A";
-    document.getElementById("ev-fc-rate").textContent = m.full_capacity_rate != null ? `${(m.full_capacity_rate * 100).toFixed(1)}% (${m.full_capacity_count} sections)` : "N/A";
+    document.getElementById("ev-r2").textContent = m.trend_r_squared != null ? m.trend_r_squared.toFixed(3) : "N/A";
+    document.getElementById("ev-fc-rate").textContent = m.full_capacity_rate != null ? `${(m.full_capacity_rate * 100).toFixed(1)}% (${m.full_capacity_count || 0} sections)` : "N/A";
     document.getElementById("ev-util").textContent = m.avg_utilization_pct != null ? `${m.avg_utilization_pct.toFixed(1)}%` : "N/A";
+    document.getElementById("ev-peak").textContent = m.peak_enrollment != null ? m.peak_enrollment : "N/A";
+    document.getElementById("ev-min").textContent = m.min_enrollment != null ? m.min_enrollment : "N/A";
 
     // Limitations
     const limList = document.getElementById("ev-limitations");
-    const limitations = m.limitations || [];
+    let limitations = [];
+    if (m.limitations_json) {
+      try {
+        limitations = JSON.parse(m.limitations_json);
+      } catch (e) {}
+    } else if (Array.isArray(m.limitations)) {
+      limitations = m.limitations;
+    }
+
     limList.innerHTML = limitations.length > 0
-      ? limitations.map(l => `<li>${l}</li>`).join("")
+      ? limitations.map(l => `<li>${escapeHtml(l)}</li>`).join("")
       : `<li>No significant data limitations flagged for this course.</li>`;
 
     // Terms
     const evTerms = document.getElementById("ev-terms-list");
-    evTerms.textContent = m.terms_list && m.terms_list.length > 0 ? m.terms_list.join(", ") : "N/A";
+    let termsList = [];
+    if (m.terms_list) {
+      termsList = Array.isArray(m.terms_list) ? m.terms_list : [m.terms_list];
+    }
+    evTerms.textContent = termsList.length > 0 ? termsList.join(", ") : "N/A";
+
+    // Link to recommendations
+    document.getElementById("ev-rec-link").href = `/recommendations?search=${encodeURIComponent(m.course_id)}`;
 
     document.getElementById("evidence-backdrop").style.display = "block";
     document.getElementById("evidence-drawer").style.display = "flex";
@@ -322,6 +683,16 @@
   function closeEvidenceDrawer() {
     document.getElementById("evidence-backdrop").style.display = "none";
     document.getElementById("evidence-drawer").style.display = "none";
+  }
+
+  function escapeHtml(str) {
+    if (!str) return "";
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
   }
 </script>
 {% endblock %}

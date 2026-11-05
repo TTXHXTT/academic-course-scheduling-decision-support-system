@@ -28,18 +28,24 @@ class AnalysisService:
         user: Optional[User] = None,
         name: Optional[str] = None,
         is_baseline: bool = False,
+        high_utilization_threshold: Optional[float] = None,
+        low_utilization_threshold: Optional[float] = None,
+        full_capacity_threshold: Optional[float] = None,
+        frequently_full_threshold: Optional[float] = None,
+        increasing_demand_slope: Optional[float] = None,
+        min_terms_for_trend: Optional[int] = None,
     ) -> AnalysisRun:
         """
         Run demand analysis on a dataset and persist results.
         Uses method version from config for traceability (DR-03).
         """
         params = AnalysisParameters(
-            high_utilization_threshold=settings.HIGH_UTILIZATION_THRESHOLD,
-            low_utilization_threshold=settings.LOW_UTILIZATION_THRESHOLD,
-            full_capacity_threshold=settings.FULL_CAPACITY_THRESHOLD,
-            frequently_full_threshold=settings.FREQUENTLY_FULL_THRESHOLD,
-            increasing_demand_slope=settings.INCREASING_DEMAND_SLOPE,
-            min_terms_for_trend=settings.MIN_TERMS_FOR_TREND,
+            high_utilization_threshold=high_utilization_threshold if high_utilization_threshold is not None else settings.HIGH_UTILIZATION_THRESHOLD,
+            low_utilization_threshold=low_utilization_threshold if low_utilization_threshold is not None else settings.LOW_UTILIZATION_THRESHOLD,
+            full_capacity_threshold=full_capacity_threshold if full_capacity_threshold is not None else settings.FULL_CAPACITY_THRESHOLD,
+            frequently_full_threshold=frequently_full_threshold if frequently_full_threshold is not None else settings.FREQUENTLY_FULL_THRESHOLD,
+            increasing_demand_slope=increasing_demand_slope if increasing_demand_slope is not None else settings.INCREASING_DEMAND_SLOPE,
+            min_terms_for_trend=min_terms_for_trend if min_terms_for_trend is not None else settings.MIN_TERMS_FOR_TREND,
             method_version=settings.ANALYTICS_METHOD_VERSION,
         )
 

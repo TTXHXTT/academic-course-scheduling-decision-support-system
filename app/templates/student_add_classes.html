@@ -1,0 +1,419 @@
+{% extends "base.html" %}
+
+{% block title %}Add Classes - Course Catalog & Registration{% endblock %}
+
+{% block extra_head %}
+<style>
+  .badge-status-enrolled { background: #dcfce7; color: #166534; font-weight: 600; border: 1px solid #bbf7d0; }
+  .badge-status-waitlisted { background: #fef3c7; color: #92400e; font-weight: 600; border: 1px solid #fde68a; }
+  .badge-open { background: #f0fdf4; color: #15803d; font-weight: 600; }
+  .badge-full { background: #fffbeb; color: #b45309; font-weight: 600; }
+
+  /* Modal Styling */
+  .custom-modal-backdrop {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(2px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .custom-modal {
+    background: white;
+    border-radius: 10px;
+    width: 480px;
+    max-width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+  }
+  .custom-modal-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .custom-modal-body {
+    padding: 1.5rem;
+  }
+  .custom-modal-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    background: var(--bg-subtle);
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Course Catalog & Class Registration</h1>
+    <p class="page-subtitle">Search course offerings, register for open sections, or join the waitlist for full classes</p>
+  </div>
+  <div style="display: flex; gap: 0.5rem;">
+    <a href="/student/schedule" class="btn btn-outline">
+      📅 View My Schedule
+    </a>
+  </div>
+</div>
+
+<!-- Student Profile Banner -->
+<div class="card" style="background: linear-gradient(135deg, #003366 0%, #1a4f8b 100%); color: white; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; border: none; box-shadow: var(--shadow-md);">
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <div>
+      <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #fbbf24; font-weight: 700;">Student Class Registration</div>
+      <h2 style="font-size: 1.45rem; margin-top: 0.2rem; font-weight: 700;" id="banner-student-name">Loading Student Profile...</h2>
+      <div style="font-size: 0.85rem; opacity: 0.95; margin-top: 0.35rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+        <span>Student ID: <strong id="banner-student-id">--------</strong></span>
+        <span>&bull;</span>
+        <span>Email: <strong id="banner-student-email">------@coyote.csusb.edu</strong></span>
+      </div>
+    </div>
+    <div style="display: flex; gap: 1.5rem; background: rgba(255,255,255,0.1); padding: 0.75rem 1.25rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);">
+      <div style="text-align: center;">
+        <div style="font-size: 0.75rem; text-transform: uppercase; opacity: 0.85;">Current Classes</div>
+        <div style="font-size: 1.75rem; font-weight: 700;" id="banner-class-count">0</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 0.75rem; text-transform: uppercase; opacity: 0.85;">Registered Units</div>
+        <div style="font-size: 1.75rem; font-weight: 700;" id="banner-units-count">0</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COURSE SEARCH & CATALOG -->
+<div class="card">
+  <div class="card-title">
+    <span>Search Course Offerings</span>
+    <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">Browse courses across subjects and terms</span>
+  </div>
+
+  <!-- Quick Add Box -->
+  <div style="background: var(--bg-subtle); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem;">
+    <div style="font-size: 0.85rem; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem;">
+      ⚡ Quick Add / Search by Course ID:
+    </div>
+    <div style="display: flex; gap: 0.5rem; max-width: 500px;">
+      <input type="text" id="quick-add-input" class="form-control" placeholder="e.g. ACCT-2110, AH-1103, CSE-2010" onkeyup="handleQuickAddKey(event)">
+      <button onclick="handleQuickAdd()" class="btn btn-primary" style="white-space: nowrap;">Find & Add</button>
+    </div>
+  </div>
+
+  <!-- Search & Filters -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
+    <div class="form-group" style="margin-bottom: 0;">
+      <label class="form-label" for="class-search-input">Search Course ID or Title</label>
+      <input type="text" id="class-search-input" class="form-control" placeholder="e.g. ACCT, Computer, Math..." onkeyup="handleSearchKey(event)">
+    </div>
+
+    <div class="form-group" style="margin-bottom: 0;">
+      <label class="form-label" for="class-term-select">Term</label>
+      <select id="class-term-select" class="form-select" onchange="fetchAvailableClasses()">
+        <option value="">All Terms</option>
+        <option value="Summer 2026">Summer 2026</option>
+        <option value="Fall 2026">Fall 2026</option>
+        <option value="Spring 2026">Spring 2026</option>
+        <option value="Summer 2025">Summer 2025</option>
+        <option value="Fall 2025">Fall 2025</option>
+        <option value="Spring 2025">Spring 2025</option>
+      </select>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 0;">
+      <label class="form-label" for="class-modality-select">Modality</label>
+      <select id="class-modality-select" class="form-select" onchange="fetchAvailableClasses()">
+        <option value="">All Modalities</option>
+        <option value="In-Person">In-Person</option>
+        <option value="Online">Online</option>
+        <option value="Hybrid">Hybrid</option>
+      </select>
+    </div>
+
+    <div style="align-self: flex-end; display: flex; gap: 0.5rem;">
+      <button onclick="fetchAvailableClasses()" class="btn btn-primary" style="flex: 1;">Search</button>
+      <button onclick="resetFilters()" class="btn btn-outline" title="Reset Filters">Reset</button>
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div style="display: flex; gap: 1.5rem; margin-bottom: 1rem; font-size: 0.8rem; color: var(--text-muted); align-items: center; flex-wrap: wrap;">
+    <span><strong style="color: var(--text-main);">Availability Key:</strong></span>
+    <span><span class="badge badge-open" style="font-size: 0.75rem;">Open</span> Class has open seats (+ Add Class)</span>
+    <span><span class="badge badge-full" style="font-size: 0.75rem;">Full</span> Class at capacity (+ Add Waitlist available)</span>
+  </div>
+
+  <!-- Available Classes Table -->
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Course ID</th>
+          <th>Course Title</th>
+          <th>Section</th>
+          <th>Term</th>
+          <th>Days & Times</th>
+          <th>Modality</th>
+          <th>Campus</th>
+          <th>Enrolled / Capacity</th>
+          <th>Availability</th>
+          <th style="text-align: right; min-width: 140px;">Action</th>
+        </tr>
+      </thead>
+      <tbody id="catalog-tbody">
+        <tr><td colspan="10" style="text-align: center; color: var(--text-muted);">Loading available courses...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TIME CONFLICT WARNING MODAL -->
+<div class="custom-modal-backdrop" id="conflict-modal-backdrop">
+  <div class="custom-modal">
+    <div class="custom-modal-header" style="background: #fffbeb; border-color: #fef3c7;">
+      <div>
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: #b45309;">⚠️ Schedule Conflict Warning</h3>
+        <p style="font-size: 0.8rem; color: #92400e; margin-top: 0.15rem;">Overlapping meeting times detected</p>
+      </div>
+      <button onclick="closeConflictModal()" style="background: none; border: none; font-size: 1.5rem; line-height: 1; cursor: pointer; color: #b45309;">&times;</button>
+    </div>
+
+    <div class="custom-modal-body">
+      <p style="font-size: 0.9rem; margin-bottom: 1rem;" id="conflict-modal-message">
+        The class you are attempting to add overlaps in meeting times with another course in your schedule.
+      </p>
+      <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 6px; padding: 0.85rem; font-size: 0.85rem; color: #78350f;">
+        <strong>University Scheduling Notice:</strong>
+        <p style="margin-top: 0.25rem;">Adding this class will result in overlapping meeting times. Are you sure you want to proceed?</p>
+      </div>
+    </div>
+
+    <div class="custom-modal-footer">
+      <button onclick="closeConflictModal()" class="btn btn-outline">Cancel</button>
+      <button onclick="confirmConflictAdd()" class="btn btn-primary" style="background: #b45309; border-color: #b45309;">
+        Proceed Anyway
+      </button>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  let enrolledCourseRecordIds = new Map(); // id -> status ('Enrolled' or 'Waitlisted')
+  let pendingConflictAction = null;
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const user = API.requireAuth();
+    if (!user) return;
+
+    // Populate Student Banner
+    document.getElementById("banner-student-name").textContent = user.full_name || "Coyote Student";
+    document.getElementById("banner-student-id").textContent = user.student_id || user.email.split("@")[0];
+    document.getElementById("banner-student-email").textContent = user.email;
+
+    await loadStudentScheduleSummary();
+    await fetchAvailableClasses();
+  });
+
+  function handleSearchKey(event) {
+    if (event.key === "Enter") {
+      fetchAvailableClasses();
+    }
+  }
+
+  function handleQuickAddKey(event) {
+    if (event.key === "Enter") {
+      handleQuickAdd();
+    }
+  }
+
+  function resetFilters() {
+    document.getElementById("class-search-input").value = "";
+    document.getElementById("class-term-select").value = "";
+    document.getElementById("class-modality-select").value = "";
+    fetchAvailableClasses();
+  }
+
+  // Load schedule to see what's already added
+  async function loadStudentScheduleSummary() {
+    try {
+      const data = await API.request("/api/student/schedule");
+      enrolledCourseRecordIds.clear();
+      const classes = data.classes || [];
+      document.getElementById("banner-class-count").textContent = classes.length;
+      document.getElementById("banner-units-count").textContent = data.total_units || (classes.length * 3);
+
+      classes.forEach(item => {
+        enrolledCourseRecordIds.set(item.course_record_id, item.status || "Enrolled");
+      });
+    } catch (err) {
+      console.error("Error loading schedule summary:", err);
+    }
+  }
+
+  // Course Catalog Search
+  async function fetchAvailableClasses() {
+    const tbody = document.getElementById("catalog-tbody");
+    tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">Searching available courses...</td></tr>`;
+
+    const params = new URLSearchParams();
+    const search = document.getElementById("class-search-input").value.trim();
+    if (search) params.append("search", search);
+
+    const term = document.getElementById("class-term-select").value;
+    if (term) params.append("term", term);
+
+    const modality = document.getElementById("class-modality-select").value;
+    if (modality) params.append("modality", modality);
+
+    params.append("limit", "50");
+
+    try {
+      const classes = await API.request(`/api/student/classes?${params.toString()}`);
+      tbody.innerHTML = "";
+
+      if (!classes || classes.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-muted); padding: 2rem;">No courses found matching your criteria. Try adjusting your filters.</td></tr>`;
+        return;
+      }
+
+      classes.forEach(c => {
+        const tr = document.createElement("tr");
+        const daysTimes = (c.days && c.times) ? `${c.days} ${c.times}` : (c.times || c.days || "TBA");
+        const seats = (c.enrollment != null && c.capacity != null) ? `${c.enrollment} / ${c.capacity}` : "-";
+        
+        const isFull = (c.capacity != null && c.enrollment != null && c.enrollment >= c.capacity);
+        const enrolledStatus = enrolledCourseRecordIds.get(c.id);
+
+        let availabilityBadge = `<span class="badge badge-open">Open</span>`;
+        if (isFull) {
+          availabilityBadge = `<span class="badge badge-full">Full (Waitlist)</span>`;
+        }
+
+        let actionHtml = "";
+        if (enrolledStatus) {
+          if (enrolledStatus === "Waitlisted") {
+            actionHtml = `<span class="badge badge-status-waitlisted" style="font-size:0.8rem; padding: 0.35rem 0.6rem;">✓ Waitlisted</span>`;
+          } else {
+            actionHtml = `<span class="badge badge-status-enrolled" style="font-size:0.8rem; padding: 0.35rem 0.6rem;">✓ Enrolled</span>`;
+          }
+        } else {
+          if (isFull) {
+            // Class has reached/exceeded capacity -> Waitlist button
+            actionHtml = `
+              <button onclick="registerClass(${c.id}, '${escapeHtml(c.course_id)}', '${escapeHtml(c.section_id || '01')}', true, false)" class="btn btn-sm" style="background: #b45309; border-color: #b45309; color: white; white-space: nowrap;">
+                + Add Waitlist
+              </button>
+            `;
+          } else {
+            // Class is open -> Add Class button
+            actionHtml = `
+              <button onclick="registerClass(${c.id}, '${escapeHtml(c.course_id)}', '${escapeHtml(c.section_id || '01')}', false, false)" class="btn btn-primary btn-sm" style="white-space: nowrap;">
+                + Add Class
+              </button>
+            `;
+          }
+        }
+
+        tr.innerHTML = `
+          <td><strong style="color: var(--primary);">${escapeHtml(c.course_id)}</strong></td>
+          <td><strong>${escapeHtml(c.course_name || '-')}</strong></td>
+          <td><span class="badge badge-secondary">${escapeHtml(c.section_id || '01')}</span></td>
+          <td>${escapeHtml(c.term)}</td>
+          <td>${escapeHtml(daysTimes)}</td>
+          <td><span class="badge badge-info">${escapeHtml(c.modality || 'In-Person')}</span></td>
+          <td>${escapeHtml(c.campus || 'San Bernardino')}</td>
+          <td>${seats}</td>
+          <td>${availabilityBadge}</td>
+          <td style="text-align: right;">${actionHtml}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    } catch (err) {
+      showToast("Error searching courses: " + err.message, "error");
+    }
+  }
+
+  // Quick Add Action
+  async function handleQuickAdd() {
+    const input = document.getElementById("quick-add-input");
+    const val = input.value.trim();
+    if (!val) {
+      showToast("Please enter a Course ID to search and add", "warning");
+      return;
+    }
+    document.getElementById("class-search-input").value = val;
+    await fetchAvailableClasses();
+  }
+
+  // REGISTER CLASS (Add Class or Join Waitlist)
+  async function registerClass(courseRecordId, courseId, sectionId, isWaitlist = false, allowConflict = false) {
+    try {
+      const url = `/api/student/schedule/add${allowConflict ? '?allow_conflict=true' : ''}`;
+      const payload = {
+        course_record_id: courseRecordId,
+        status: isWaitlist ? "Waitlisted" : "Enrolled"
+      };
+
+      const res = await API.request(url, {
+        method: "POST",
+        body: JSON.stringify(payload),
+      });
+
+      if (res.status === "Waitlisted" || isWaitlist) {
+        showToast(`Added to Waitlist for ${courseId} Section ${sectionId}!`, "info");
+      } else {
+        showToast(`Successfully added ${courseId} Section ${sectionId} to your schedule!`, "success");
+      }
+
+      await loadStudentScheduleSummary();
+      await fetchAvailableClasses();
+    } catch (err) {
+      if (err.message && err.message.includes("Time conflict detected") && !allowConflict) {
+        pendingConflictAction = () => registerClass(courseRecordId, courseId, sectionId, isWaitlist, true);
+        openConflictModal(err.message);
+      } else {
+        showToast(err.message || "Failed to add class", "error");
+      }
+    }
+  }
+
+  // Conflict Warning Modal
+  function openConflictModal(msg) {
+    document.getElementById("conflict-modal-message").textContent = msg;
+    document.getElementById("conflict-modal-backdrop").style.display = "flex";
+  }
+
+  function closeConflictModal() {
+    document.getElementById("conflict-modal-backdrop").style.display = "none";
+    pendingConflictAction = null;
+  }
+
+  function confirmConflictAdd() {
+    closeConflictModal();
+    if (pendingConflictAction) {
+      pendingConflictAction();
+    }
+  }
+
+  function escapeHtml(str) {
+    if (!str) return "";
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+</script>
+{% endblock %}

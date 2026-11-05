@@ -6,8 +6,9 @@
 <div class="page-header">
   <div>
     <h1 class="page-title">Historical Course Explorer</h1>
-    <p class="page-subtitle">Search, filter, and inspect section-level historical enrollment and capacity data</p>
+    <p class="page-subtitle">Search, filter, and inspect section-level historical enrollment, capacity, and demand trends</p>
   </div>
+  <button class="btn btn-primary btn-sm" onclick="openMultiCourseModal()">Compare Group of Courses (FR-03)</button>
 </div>
 
 <!-- Filters Card -->
@@ -103,29 +104,86 @@
 <div class="drawer" id="course-drawer">
   <div class="drawer-header">
     <div>
-      <h2 style="font-size: 1.25rem; color: var(--primary-dark);" id="drawer-course-id">CSE 2010</h2>
-      <p style="font-size: 0.85rem; color: var(--text-muted);" id="drawer-course-name">Data Structures</p>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <h2 style="font-size: 1.25rem; color: var(--primary-dark); margin: 0;" id="drawer-course-id">CSE 2010</h2>
+        <span class="badge badge-secondary" id="drawer-trend-badge">-</span>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;" id="drawer-course-name">Data Structures</p>
     </div>
     <button onclick="closeDrawer()" class="btn btn-outline btn-sm">&times;</button>
   </div>
 
+  <!-- Key Metrics Row -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; margin-bottom: 1rem; font-size: 0.8rem;">
+    <div style="background: #f1f5f9; padding: 0.5rem; border-radius: 4px; text-align: center;">
+      <div style="color: var(--text-muted);">Avg Utilization</div>
+      <strong style="font-size: 1rem; color: var(--primary-dark);" id="drawer-avg-util">-</strong>
+    </div>
+    <div style="background: #f1f5f9; padding: 0.5rem; border-radius: 4px; text-align: center;">
+      <div style="color: var(--text-muted);">Total Sections</div>
+      <strong style="font-size: 1rem; color: var(--primary-dark);" id="drawer-total-sections">-</strong>
+    </div>
+    <div style="background: #f1f5f9; padding: 0.5rem; border-radius: 4px; text-align: center;">
+      <div style="color: var(--text-muted);">Unmet Demand</div>
+      <strong style="font-size: 1rem; color: #dc2626;" id="drawer-total-unmet">-</strong>
+    </div>
+  </div>
+
   <div style="margin-bottom: 1.5rem;">
-    <h3 style="font-size: 0.95rem; margin-bottom: 0.75rem;">Multi-Term Enrollment History</h3>
-    <div style="height: 200px; position: relative;">
+    <h3 style="font-size: 0.95rem; margin-bottom: 0.75rem;">Multi-Term Enrollment & Capacity Trends (FR-03)</h3>
+    <div style="height: 220px; position: relative;">
       <canvas id="courseDrawerChart"></canvas>
     </div>
   </div>
 
   <div>
-    <h3 style="font-size: 0.95rem; margin-bottom: 0.75rem;">Offering Sections</h3>
+    <h3 style="font-size: 0.95rem; margin-bottom: 0.75rem;">Offering Sections Breakdown</h3>
     <div class="table-container" style="max-height: 250px;">
       <table>
         <thead>
-          <tr><th>Term</th><th>Section</th><th>Enroll / Cap</th><th>Util</th></tr>
+          <tr><th>Term</th><th>Section</th><th>Enroll / Cap</th><th>Util</th><th>Demand</th></tr>
         </thead>
         <tbody id="drawer-sections-tbody"></tbody>
       </table>
     </div>
+  </div>
+</div>
+
+<!-- Group Course Comparison Modal (FR-03) -->
+<div class="drawer-backdrop" id="multi-course-backdrop" onclick="closeMultiCourseModal()"></div>
+<div class="card" id="multi-course-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 750px; max-width: 95vw; max-height: 90vh; overflow-y: auto; z-index: 250; box-shadow: var(--shadow-lg);">
+  <div class="card-title" style="display: flex; justify-content: space-between; align-items: center;">
+    <span>Compare Course Demand & Utilization Trends (FR-03)</span>
+    <button class="btn btn-outline btn-sm" onclick="closeMultiCourseModal()">&times;</button>
+  </div>
+  <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+    Select or enter multiple course IDs to evaluate comparative historical enrollment, capacity utilization, and student demand trends across academic terms.
+  </p>
+
+  <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+    <input type="text" id="multi-course-input" class="form-control" placeholder="e.g. CSE-2010, CSE-2020, CSE-3100">
+    <button class="btn btn-primary" onclick="loadGroupTrends()">Compare Group</button>
+  </div>
+
+  <div id="multi-course-chart-container" style="display: none; height: 260px; margin-bottom: 1.5rem;">
+    <canvas id="multiCourseChart"></canvas>
+  </div>
+
+  <div id="multi-course-results" class="table-container" style="display: none;">
+    <table>
+      <thead>
+        <tr>
+          <th>Course ID</th>
+          <th>Course Name</th>
+          <th>Total Sections</th>
+          <th>Enrollment / Capacity</th>
+          <th>Avg Utilization</th>
+          <th>Trend Direction</th>
+          <th>Unmet Demand</th>
+        </tr>
+      </thead>
+      <tbody id="multi-course-tbody"></tbody>
+    </table>
   </div>
 </div>
 {% endblock %}
@@ -135,6 +193,7 @@
   let currentPage = 1;
   const pageSize = 50;
   let drawerChartInstance = null;
+  let multiChartInstance = null;
   let cachedRecords = [];
 
   document.addEventListener("DOMContentLoaded", async () => {
@@ -175,7 +234,7 @@
       const opts = await API.getRecordFilterOptions(datasetId);
       const termSelect = document.getElementById("filter-term");
       termSelect.innerHTML = '<option value="">All Terms</option>';
-      if (opts.terms) {
+      if (opts && opts.terms) {
         opts.terms.forEach(t => {
           const opt = document.createElement("option");
           opt.value = t;
@@ -225,8 +284,10 @@
 
     try {
       const res = await API.queryRecords(params);
-      cachedRecords = res.items || [];
-      renderRecords(res);
+      const items = res.items || (Array.isArray(res) ? res : []);
+      const total = res.total != null ? res.total : items.length;
+      cachedRecords = items;
+      renderRecords({ items, total });
     } catch (err) {
       showToast("Error loading records: " + err.message, "error");
     }
@@ -236,20 +297,23 @@
     const tbody = document.getElementById("records-tbody");
     tbody.innerHTML = "";
 
-    document.getElementById("record-count").textContent = res.total.toLocaleString();
-    const totalPages = Math.ceil(res.total / pageSize) || 1;
+    const items = res.items || (Array.isArray(res) ? res : []);
+    const total = res.total != null ? res.total : items.length;
+
+    document.getElementById("record-count").textContent = total.toLocaleString();
+    const totalPages = Math.ceil(total / pageSize) || 1;
     document.getElementById("current-page").textContent = currentPage;
     document.getElementById("total-pages").textContent = totalPages;
 
     document.getElementById("btn-prev").disabled = currentPage <= 1;
     document.getElementById("btn-next").disabled = currentPage >= totalPages;
 
-    if (!res.items || res.items.length === 0) {
+    if (!items || items.length === 0) {
       tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-muted);">No records matching the filter criteria.</td></tr>`;
       return;
     }
 
-    res.items.forEach(r => {
+    items.forEach(r => {
       const tr = document.createElement("tr");
       let utilBadge = `<span style="color: var(--text-muted);">-</span>`;
       if (r.capacity_utilization != null) {
@@ -258,6 +322,7 @@
         utilBadge = `<strong style="color: ${color};">${u.toFixed(1)}%</strong>`;
       }
 
+      const safeCourseName = (r.course_name || '').replace(/'/g, "\\'");
       tr.innerHTML = `
         <td><strong>${r.course_id}</strong></td>
         <td>${r.course_name || '-'}</td>
@@ -269,7 +334,7 @@
         <td><span class="badge badge-secondary">${r.modality || 'Not specified'}</span></td>
         <td>${r.unmet_demand != null ? `<span class="badge badge-warning">${r.unmet_demand}</span>` : '<span style="color:var(--text-muted);">-</span>'}</td>
         <td>
-          <button onclick="openCourseDrawer('${r.course_id}', '${r.course_name}')" class="btn btn-outline btn-sm">Inspect</button>
+          <button onclick="openCourseDrawer('${r.course_id}', '${safeCourseName}')" class="btn btn-outline btn-sm">Inspect (FR-03)</button>
         </td>
       `;
       tbody.appendChild(tr);
@@ -287,11 +352,11 @@
     document.getElementById("drawer-backdrop").style.display = "block";
     document.getElementById("course-drawer").style.display = "flex";
 
-    // Filter cached records or fetch records for this course
     const datasetId = document.getElementById("filter-dataset").value;
     try {
-      const res = await API.queryRecords({ dataset_id: datasetId, search: courseId, page_size: 100 });
-      const sections = res.items.filter(i => i.course_id === courseId);
+      // 1. Fetch section-level records for table
+      const res = await API.queryRecords({ dataset_id: datasetId, course_id: courseId, page_size: 100 });
+      const sections = (res.items || []).filter(i => i.course_id.toLowerCase() === courseId.toLowerCase());
 
       const dtbody = document.getElementById("drawer-sections-tbody");
       dtbody.innerHTML = sections.map(s => `
@@ -300,41 +365,74 @@
           <td>${s.section_id || '-'}</td>
           <td>${s.enrollment != null ? s.enrollment : '?'}/${s.capacity != null ? s.capacity : '?'}</td>
           <td>${s.capacity_utilization != null ? `${s.capacity_utilization.toFixed(1)}%` : '-'}</td>
+          <td>${s.unmet_demand != null ? s.unmet_demand : '-'}</td>
         </tr>
       `).join("");
 
-      // Render drawer chart (enrollment by term)
-      const termData = {};
-      sections.forEach(s => {
-        if (s.enrollment != null) {
-          termData[s.term] = (termData[s.term] || 0) + s.enrollment;
-        }
-      });
+      // 2. Fetch multi-term trends across available terms (FR-03)
+      const trendsRes = await API.getCourseTrends(datasetId, courseId);
+      const courseSummary = trendsRes && trendsRes.courses ? trendsRes.courses[courseId] : null;
 
-      const labels = Object.keys(termData);
-      const values = Object.values(termData);
+      if (courseSummary) {
+        document.getElementById("drawer-avg-util").textContent = courseSummary.overall_utilization_pct != null ? `${courseSummary.overall_utilization_pct}%` : "N/A";
+        document.getElementById("drawer-total-sections").textContent = courseSummary.total_sections;
+        document.getElementById("drawer-total-unmet").textContent = courseSummary.total_unmet_demand;
 
-      const ctx = document.getElementById("courseDrawerChart").getContext("2d");
-      if (drawerChartInstance) drawerChartInstance.destroy();
+        const badge = document.getElementById("drawer-trend-badge");
+        badge.textContent = `${courseSummary.trend_direction} (${courseSummary.trend_slope != null ? (courseSummary.trend_slope >= 0 ? '+' : '') + courseSummary.trend_slope + '/term' : ''})`;
+        badge.className = "badge " + (courseSummary.trend_direction === "INCREASING" ? "badge-success" : courseSummary.trend_direction === "DECREASING" ? "badge-warning" : "badge-secondary");
 
-      drawerChartInstance = new Chart(ctx, {
-        type: "bar",
-        data: {
-          labels,
-          datasets: [{
-            label: "Total Enrollment",
-            data: values,
-            backgroundColor: "#003366",
-            borderRadius: 4
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: { legend: { display: false } },
-          scales: { y: { beginAtZero: true } }
-        }
-      });
+        // Render multi-term chart
+        const termLabels = courseSummary.terms.map(t => t.term);
+        const enrollments = courseSummary.terms.map(t => t.enrollment);
+        const capacities = courseSummary.terms.map(t => t.capacity);
+        const utils = courseSummary.terms.map(t => t.capacity_utilization || 0);
+
+        const ctx = document.getElementById("courseDrawerChart").getContext("2d");
+        if (drawerChartInstance) drawerChartInstance.destroy();
+
+        drawerChartInstance = new Chart(ctx, {
+          data: {
+            labels: termLabels,
+            datasets: [
+              {
+                type: "bar",
+                label: "Enrollment",
+                data: enrollments,
+                backgroundColor: "#003366",
+                borderRadius: 4,
+                yAxisID: "y"
+              },
+              {
+                type: "bar",
+                label: "Capacity",
+                data: capacities,
+                backgroundColor: "#94a3b8",
+                borderRadius: 4,
+                yAxisID: "y"
+              },
+              {
+                type: "line",
+                label: "Utilization %",
+                data: utils,
+                borderColor: "#e11d48",
+                backgroundColor: "#e11d48",
+                tension: 0.2,
+                yAxisID: "y1"
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            scales: {
+              y: { type: "linear", display: true, position: "left", beginAtZero: true, title: { display: true, text: "Students" } },
+              y1: { type: "linear", display: true, position: "right", beginAtZero: true, max: 120, grid: { drawOnChartArea: false }, title: { display: true, text: "Utilization %" } }
+            }
+          }
+        });
+      }
     } catch (err) {
       console.error(err);
     }
@@ -343,6 +441,84 @@
   function closeDrawer() {
     document.getElementById("drawer-backdrop").style.display = "none";
     document.getElementById("course-drawer").style.display = "none";
+  }
+
+  function openMultiCourseModal() {
+    document.getElementById("multi-course-backdrop").style.display = "block";
+    document.getElementById("multi-course-modal").style.display = "block";
+  }
+
+  function closeMultiCourseModal() {
+    document.getElementById("multi-course-backdrop").style.display = "none";
+    document.getElementById("multi-course-modal").style.display = "none";
+  }
+
+  async function loadGroupTrends() {
+    const datasetId = document.getElementById("filter-dataset").value;
+    const courseInput = document.getElementById("multi-course-input").value.trim();
+    if (!datasetId || !courseInput) {
+      showToast("Please enter course IDs to compare.", "warning");
+      return;
+    }
+
+    try {
+      const data = await API.getCourseTrends(datasetId, courseInput);
+      const courses = data.courses || {};
+      const courseKeys = Object.keys(courses);
+
+      if (courseKeys.length === 0) {
+        showToast("No records found for the specified courses.", "warning");
+        return;
+      }
+
+      document.getElementById("multi-course-chart-container").style.display = "block";
+      document.getElementById("multi-course-results").style.display = "block";
+
+      const tbody = document.getElementById("multi-course-tbody");
+      tbody.innerHTML = courseKeys.map(k => {
+        const c = courses[k];
+        return `
+          <tr>
+            <td><strong>${c.course_id}</strong></td>
+            <td>${c.course_name || '-'}</td>
+            <td>${c.total_sections}</td>
+            <td>${c.total_enrollment} / ${c.total_capacity}</td>
+            <td><strong>${c.overall_utilization_pct != null ? c.overall_utilization_pct + '%' : 'N/A'}</strong></td>
+            <td><span class="badge ${c.trend_direction === 'INCREASING' ? 'badge-success' : c.trend_direction === 'DECREASING' ? 'badge-warning' : 'badge-secondary'}">${c.trend_direction}</span></td>
+            <td>${c.total_unmet_demand}</td>
+          </tr>
+        `;
+      }).join("");
+
+      // Comparative Chart
+      const colors = ["#003366", "#2563eb", "#059669", "#d97706", "#dc2626", "#7c3aed"];
+      const datasets = courseKeys.map((k, idx) => {
+        const c = courses[k];
+        return {
+          label: c.course_id + " Util %",
+          data: c.terms.map(t => ({ x: t.term, y: t.capacity_utilization || 0 })),
+          borderColor: colors[idx % colors.length],
+          backgroundColor: colors[idx % colors.length],
+          tension: 0.2
+        };
+      });
+
+      const ctx = document.getElementById("multiCourseChart").getContext("2d");
+      if (multiChartInstance) multiChartInstance.destroy();
+      multiChartInstance = new Chart(ctx, {
+        type: "line",
+        data: { datasets },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: { beginAtZero: true, max: 120, title: { display: true, text: "Capacity Utilization %" } }
+          }
+        }
+      });
+    } catch (err) {
+      showToast("Error comparing courses: " + err.message, "error");
+    }
   }
 </script>
 {% endblock %}

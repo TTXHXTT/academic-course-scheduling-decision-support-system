@@ -19,9 +19,10 @@
 
     <ul class="nav-links">
       <li class="student-only"><a href="/student/schedule" id="nav-schedule">My Schedule</a></li>
+      <li class="student-only"><a href="/student/add-classes" id="nav-add-classes">Add Classes</a></li>
       <li class="staff-only"><a href="/dashboard" id="nav-dashboard">Dashboard</a></li>
       <li class="staff-only"><a href="/imports" id="nav-imports" class="scheduler-only admin-only">Data Import</a></li>
-      <li><a href="/explorer" id="nav-explorer">Explorer</a></li>
+      <li class="staff-only"><a href="/explorer" id="nav-explorer">Explorer</a></li>
       <li class="staff-only"><a href="/analysis" id="nav-analysis">Demand Analysis</a></li>
       <li class="staff-only"><a href="/recommendations" id="nav-recommendations">Recommendations</a></li>
       <li class="staff-only"><a href="/scenarios" id="nav-scenarios">What-If Scenarios</a></li>
@@ -52,9 +53,17 @@
   <script>
     // Highlight active nav
     const path = window.location.pathname;
-    const navId = "nav-" + (path.split("/")[1] || "dashboard");
-    const activeLink = document.getElementById(navId);
-    if (activeLink) activeLink.classList.add("active");
+    if (path.startsWith("/student/add-classes")) {
+      const activeLink = document.getElementById("nav-add-classes");
+      if (activeLink) activeLink.classList.add("active");
+    } else if (path.startsWith("/student/schedule")) {
+      const activeLink = document.getElementById("nav-schedule");
+      if (activeLink) activeLink.classList.add("active");
+    } else {
+      const navId = "nav-" + (path.split("/")[1] || "dashboard");
+      const activeLink = document.getElementById(navId);
+      if (activeLink) activeLink.classList.add("active");
+    }
   </script>
   {% block extra_scripts %}{% endblock %}
 </body>

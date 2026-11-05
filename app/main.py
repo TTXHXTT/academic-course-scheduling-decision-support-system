@@ -74,6 +74,10 @@ def login_page(request: Request):
 def student_schedule_page(request: Request):
     return _page(request, "student_schedule")
 
+@app.get("/student/add-classes", response_class=HTMLResponse)
+def student_add_classes_page(request: Request):
+    return _page(request, "student_add_classes")
+
 @app.get("/dashboard", response_class=HTMLResponse)
 def dashboard_page(request: Request):
     return _page(request, "dashboard")

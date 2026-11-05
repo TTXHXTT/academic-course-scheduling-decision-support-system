@@ -53,5 +53,5 @@ def get_db():
 def init_db():
     """Initialize all tables. Used for development and testing."""
     # Import all models so Base knows about them
-    from app.models import user, dataset, course_record, analysis, recommendation, scenario, audit  # noqa: F401
+    from app.models import user, dataset, course_record, analysis, recommendation, scenario, audit, student_schedule  # noqa: F401
     Base.metadata.create_all(bind=engine)
