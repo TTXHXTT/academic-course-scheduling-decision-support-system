@@ -22,21 +22,6 @@ from app.services.analysis_service import AnalysisService
 from app.services.recommendation_service import RecommendationService
 
 
-DEMO_USERS = [
-    {"email": "000000000@coyote.csusb.edu", "password": "123456", "full_name": "Coyote Administrator", "role": UserRole.admin},
-    {"email": "admin@csusb.edu", "password": "Admin@CSUSB123", "full_name": "System Administrator", "role": UserRole.admin},
-    {"email": "scheduler@csusb.edu", "password": "Scheduler@123", "full_name": "Alex Scheduler", "role": UserRole.academic_scheduler},
-    {"email": "chair@csusb.edu", "password": "Chair@123", "full_name": "Dr. Department Chair", "role": UserRole.department_chair},
-    {"email": "coordinator@csusb.edu", "password": "Coord@123", "full_name": "Pat Coordinator", "role": UserRole.program_coordinator},
-    {"email": "007455611@coyote.csusb.edu", "password": "123456", "full_name": "Bao Ngo", "student_id": "007455611", "role": UserRole.student},
-    {"email": "006890631@coyote.csusb.edu", "password": "123456", "full_name": "Brandon Varela Padilla", "student_id": "006890631", "role": UserRole.student},
-    {"email": "009146235@coyote.csusb.edu", "password": "123456", "full_name": "Xiangyu Qu", "student_id": "009146235", "role": UserRole.student},
-    {"email": "007543322@coyote.csusb.edu", "password": "123456", "full_name": "Savannah Hebert", "student_id": "007543322", "role": UserRole.student},
-    {"email": "008770314@coyote.csusb.edu", "password": "123456", "full_name": "Shraddha Paithankar", "student_id": "008770314", "role": UserRole.student},
-    {"email": "008123456@coyote.csusb.edu", "password": "123456", "full_name": "Erik Marvin", "student_id": "008123456", "role": UserRole.student},
-]
-
-
 def reset_db():
     print("Dropping all tables...")
     from app.models import user, dataset, course_record, analysis, recommendation, scenario, audit, student_schedule  # noqa
@@ -46,50 +31,88 @@ def reset_db():
 
 
 def seed_users(session):
-    print("Seeding demonstration users and students...")
+    print("Seeding administrators and staff from admin.csv...")
     created = 0
-    for u in DEMO_USERS:
-        existing = session.query(User).filter(User.email == u["email"]).first()
-        if not existing:
-            user = User(
-                email=u["email"],
-                student_id=u.get("student_id"),
-                hashed_password=hash_password(u["password"]),
-                full_name=u["full_name"],
-                role=u["role"],
-                is_active=True,
-            )
-            session.add(user)
-            created += 1
-        else:
-            if u.get("student_id") and not existing.student_id:
-                existing.student_id = u["student_id"]
-            existing.hashed_password = hash_password(u["password"])
-            existing.full_name = u["full_name"]
-            existing.role = u["role"]
-            session.add(existing)
 
-    # Also seed students from students.csv
+    # 1. Seed administrators and staff from admin.csv
+    admin_csv_path = os.path.join(root_dir, "data", "synthetic", "admin.csv")
+    if os.path.exists(admin_csv_path):
+        with open(admin_csv_path, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                email = (row.get("email") or "").strip()
+                if not email:
+                    continue
+                password = row.get("password") or "Admin@CSUSB123"
+                full_name = row.get("full_name") or "Administrator"
+                role_str = (row.get("role") or "admin").strip()
+                student_id = (row.get("student_id") or "").strip() or None
+
+                try:
+                    role = UserRole(role_str)
+                except ValueError:
+                    role = UserRole.admin
+
+                existing = session.query(User).filter(User.email == email).first()
+                if not existing:
+                    u = User(
+                        email=email,
+                        student_id=student_id,
+                        hashed_password=hash_password(password),
+                        full_name=full_name,
+                        role=role,
+                        is_active=True,
+                    )
+                    session.add(u)
+                    created += 1
+                else:
+                    existing.hashed_password = hash_password(password)
+                    existing.full_name = full_name
+                    existing.role = role
+                    if student_id:
+                        existing.student_id = student_id
+                    session.add(existing)
+
+    # 2. Seed students from students.csv
+    print("Seeding students from students.csv...")
     students_csv_path = os.path.join(root_dir, "data", "synthetic", "students.csv")
     if os.path.exists(students_csv_path):
         with open(students_csv_path, "r", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
-                s_id = row.get("studentID") or row.get("student_id")
-                s_email = row.get("student_email")
-                s_name = row.get("student_name") or f"Student {s_id}"
+                s_id = (row.get("studentID") or row.get("student_id") or "").strip() or None
+                s_email = (row.get("student_email") or "").strip()
+                s_name = row.get("student_name") or (f"Student {s_id}" if s_id else "Student")
                 s_pass = row.get("student_password") or "123456"
-                if s_email and not session.query(User).filter(User.email == s_email).first():
+                role_str = (row.get("role") or "student").strip()
+
+                try:
+                    role = UserRole(role_str)
+                except ValueError:
+                    role = UserRole.student
+
+                if not s_email:
+                    continue
+
+                existing = session.query(User).filter(User.email == s_email).first()
+                if not existing:
                     stu = User(
                         email=s_email,
                         student_id=s_id,
                         hashed_password=hash_password(s_pass),
                         full_name=s_name,
-                        role=UserRole.student,
+                        role=role,
                         is_active=True,
                     )
                     session.add(stu)
                     created += 1
+                else:
+                    existing.hashed_password = hash_password(s_pass)
+                    existing.full_name = s_name
+                    existing.role = role
+                    if s_id:
+                        existing.student_id = s_id
+                    session.add(existing)
 
     session.commit()
     print(f"  Created/verified users ({created} new added)")
@@ -195,9 +218,11 @@ def main():
         seed_courses_dataset(session)
         seed_demo_student_schedule(session)
         print("\nSeed complete!")
-        print("\nAccounts:")
-        for u in DEMO_USERS:
-            print(f"  {u['email']} / {u['password']} ({u['role'].value})")
+        print("\nSeeded Accounts:")
+        users = session.query(User).order_by(User.role, User.email).all()
+        for u in users:
+            s_id_str = f" [ID: {u.student_id}]" if u.student_id else ""
+            print(f"  {u.email} ({u.role.value}){s_id_str}")
     finally:
         session.close()
 

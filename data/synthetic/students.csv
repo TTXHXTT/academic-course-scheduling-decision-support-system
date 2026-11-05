@@ -1,21 +1,26 @@
-studentID,student_name,student_email,student_password,major,student_level
-007455611,Student Coyote,007455611@coyote.csusb.edu,123456,Computer Science,Senior
-001234567,Alice Johnson,001234567@coyote.csusb.edu,123456,Art History,Sophomore
-002345678,Brian Smith,002345678@coyote.csusb.edu,123456,Computer Science,Junior
-003456789,Carlos Rodriguez,003456789@coyote.csusb.edu,123456,Information Systems,Senior
-004567890,Diana Chen,004567890@coyote.csusb.edu,123456,Mathematics,Freshman
-005678901,Evan Davis,005678901@coyote.csusb.edu,123456,Computer Science,Freshman
-006789012,Fiona Taylor,006789012@coyote.csusb.edu,123456,General Studies,Sophomore
-007890123,George Wilson,007890123@coyote.csusb.edu,123456,Art History,Senior
-008901234,Hannah Martinez,008901234@coyote.csusb.edu,123456,Computer Science,Junior
-009012345,Ian Brown,009012345@coyote.csusb.edu,123456,Information Systems,Sophomore
-001112233,Jessica White,001112233@coyote.csusb.edu,123456,Biology,Freshman
-002223344,Kevin Garcia,002223344@coyote.csusb.edu,123456,Business Administration,Senior
-003334455,Laura Lee,003334455@coyote.csusb.edu,123456,Computer Science,Sophomore
-004445566,Marcus Miller,004445566@coyote.csusb.edu,123456,Cybersecurity,Junior
-005556677,Natalie Anderson,005556677@coyote.csusb.edu,123456,Mathematics,Senior
-006667788,Oliver Thomas,006667788@coyote.csusb.edu,123456,Art History,Junior
-007778899,Patricia Jackson,007778899@coyote.csusb.edu,123456,General Studies,Freshman
-008889900,Quinn Harris,008889900@coyote.csusb.edu,123456,Computer Science,Senior
-009990011,Rachel Clark,009990011@coyote.csusb.edu,123456,Information Systems,Freshman
-001020304,Samuel Lewis,001020304@coyote.csusb.edu,123456,Biology,Sophomore
+studentID,student_name,student_email,student_password,role,major,student_level
+007455611,Bao Ngo,007455611@coyote.csusb.edu,123456,student,Computer Science,Senior
+006890631,Brandon Varela Padilla,006890631@coyote.csusb.edu,123456,student,Computer Science,Senior
+009146235,Xiangyu Qu,009146235@coyote.csusb.edu,123456,student,Computer Science,Senior
+007543322,Savannah Hebert,007543322@coyote.csusb.edu,123456,student,Computer Science,Senior
+008770314,Shraddha Paithankar,008770314@coyote.csusb.edu,123456,student,Computer Science,Senior
+008123456,Erik Marvin,008123456@coyote.csusb.edu,123456,student,Computer Science,Senior
+001234567,Alice Johnson,001234567@coyote.csusb.edu,123456,student,Art History,Sophomore
+002345678,Brian Smith,002345678@coyote.csusb.edu,123456,student,Computer Science,Junior
+003456789,Carlos Rodriguez,003456789@coyote.csusb.edu,123456,student,Information Systems,Senior
+004567890,Diana Chen,004567890@coyote.csusb.edu,123456,student,Mathematics,Freshman
+005678901,Evan Davis,005678901@coyote.csusb.edu,123456,student,Computer Science,Freshman
+006789012,Fiona Taylor,006789012@coyote.csusb.edu,123456,student,General Studies,Sophomore
+007890123,George Wilson,007890123@coyote.csusb.edu,123456,student,Art History,Senior
+008901234,Hannah Martinez,008901234@coyote.csusb.edu,123456,student,Computer Science,Junior
+009012345,Ian Brown,009012345@coyote.csusb.edu,123456,student,Information Systems,Sophomore
+001112233,Jessica White,001112233@coyote.csusb.edu,123456,student,Biology,Freshman
+002223344,Kevin Garcia,002223344@coyote.csusb.edu,123456,student,Business Administration,Senior
+003334455,Laura Lee,003334455@coyote.csusb.edu,123456,student,Computer Science,Sophomore
+004445566,Marcus Miller,004445566@coyote.csusb.edu,123456,student,Cybersecurity,Junior
+005556677,Natalie Anderson,005556677@coyote.csusb.edu,123456,student,Mathematics,Senior
+006667788,Oliver Thomas,006667788@coyote.csusb.edu,123456,student,Art History,Junior
+007778899,Patricia Jackson,007778899@coyote.csusb.edu,123456,student,General Studies,Freshman
+008889900,Quinn Harris,008889900@coyote.csusb.edu,123456,student,Computer Science,Senior
+009990011,Rachel Clark,009990011@coyote.csusb.edu,123456,student,Information Systems,Freshman
+001020304,Samuel Lewis,001020304@coyote.csusb.edu,123456,student,Biology,Sophomore

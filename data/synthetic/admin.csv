@@ -1,0 +1,6 @@
+email,password,full_name,role,student_id
+admin@csusb.edu,Admin@CSUSB123,System Administrator,admin,
+000000000@coyote.csusb.edu,123456,Coyote Administrator,admin,000000000
+scheduler@csusb.edu,Scheduler@123,Alex Scheduler,academic_scheduler,
+chair@csusb.edu,Chair@123,Dr. Department Chair,department_chair,
+coordinator@csusb.edu,Coord@123,Pat Coordinator,program_coordinator,
