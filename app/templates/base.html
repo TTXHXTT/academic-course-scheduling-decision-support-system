@@ -23,11 +23,9 @@
       <li class="staff-only"><a href="/dashboard" id="nav-dashboard">Dashboard</a></li>
       <li class="staff-only"><a href="/imports" id="nav-imports" class="scheduler-only admin-only">Data Import</a></li>
       <li class="staff-only"><a href="/explorer" id="nav-explorer">Explorer</a></li>
-      <li class="staff-only"><a href="/analysis" id="nav-analysis">Demand Analysis</a></li>
       <li class="staff-only"><a href="/recommendations" id="nav-recommendations">Recommendations</a></li>
       <li class="staff-only"><a href="/scenarios" id="nav-scenarios">What-If Scenarios</a></li>
-      <li class="staff-only"><a href="/history" id="nav-history">History</a></li>
-      <li class="staff-only"><a href="/audit" id="nav-audit" class="chair-only admin-only">Audit Log</a></li>
+      <li class="staff-only"><a href="/audit" id="nav-audit">Audit Log</a></li>
     </ul>
 
     <div class="user-nav">
@@ -58,6 +56,12 @@
       if (activeLink) activeLink.classList.add("active");
     } else if (path.startsWith("/student/schedule")) {
       const activeLink = document.getElementById("nav-schedule");
+      if (activeLink) activeLink.classList.add("active");
+    } else if (path.startsWith("/analysis") || path.startsWith("/dashboard")) {
+      const activeLink = document.getElementById("nav-dashboard");
+      if (activeLink) activeLink.classList.add("active");
+    } else if (path.startsWith("/history") || path.startsWith("/audit")) {
+      const activeLink = document.getElementById("nav-audit");
       if (activeLink) activeLink.classList.add("active");
     } else {
       const navId = "nav-" + (path.split("/")[1] || "dashboard");

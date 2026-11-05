@@ -1,27 +1,74 @@
 {% extends "base.html" %}
 
-{% block title %}Audit Log - Academic Course Scheduling (ACS){% endblock %}
+{% block title %}Audit Trail & Analysis History - Academic Course Scheduling (ACS){% endblock %}
 
 {% block content %}
 <div class="page-header">
   <div>
     <h1 class="page-title">Administrative Audit Trail</h1>
-    <p class="page-subtitle">Security events, dataset imports, analysis runs, and recommendation decisions</p>
+    <p class="page-subtitle">System security events, dataset imports, recommendation decisions, and historical demand analysis runs</p>
   </div>
 </div>
 
-<div class="disclaimer-banner">
-  <div>
-    <strong>System Audit Logging (NFR-03):</strong> All authentication events, dataset modifications, analysis executions, and administrative recommendations status changes are recorded in an immutable audit trail.
+<!-- Compliance & Traceability Notices -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+  <div class="disclaimer-banner" style="margin-bottom: 0;">
+    <div>
+      <strong>System Audit Logging (NFR-03):</strong> All authentication events, dataset modifications, analysis executions, and administrative recommendation status changes are recorded in an immutable audit trail.
+    </div>
+  </div>
+  <div class="disclaimer-banner" style="margin-bottom: 0;">
+    <div>
+      <strong>Audit &amp; Method Traceability (DR-03):</strong> Each demand analysis records its exact parameter thresholds, software method version, input dataset ID, and timestamp to ensure reproducibility and transparency in administrative decision-support.
+    </div>
   </div>
 </div>
 
-<!-- Filters -->
-<div class="card" style="margin-bottom: 1.5rem;">
-  <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-    <div style="flex: 1; min-width: 200px;">
-      <label class="form-label" for="audit-action-filter">Filter by Action</label>
-      <select id="audit-action-filter" class="form-select" onchange="fetchAuditLogs()">
+<!-- SECTION 1: ANALYSIS HISTORY & RUN TRACEABILITY -->
+<div class="card" style="margin-bottom: 2rem;" id="analysis-history-card">
+  <div class="card-title" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+    <div>
+      <h2 style="font-size: 1.15rem; font-weight: 700; margin: 0; color: var(--primary);">Analysis History & Run Traceability</h2>
+      <span style="font-size: 0.8rem; color: var(--text-muted);">Historical runs, algorithm versions, and threshold parameters</span>
+    </div>
+    <div style="display: flex; gap: 0.5rem; align-items: center;">
+      <span class="badge badge-info" id="history-runs-count">0 Runs</span>
+      <a href="/dashboard" class="btn btn-outline btn-sm">Go to Dashboard</a>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Run ID</th>
+          <th>Dataset</th>
+          <th>Created</th>
+          <th>Completed</th>
+          <th>Courses Analyzed</th>
+          <th>Aggregate Util.</th>
+          <th>Method Version</th>
+          <th>Thresholds</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="history-tbody">
+        <tr><td colspan="9" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">Loading analysis history...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- SECTION 2: ADMINISTRATIVE AUDIT TRAIL -->
+<div class="card" id="administrative-audit-card">
+  <div class="card-title" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+    <div>
+      <h2 style="font-size: 1.15rem; font-weight: 700; margin: 0; color: var(--primary);">Administrative Audit Records</h2>
+      <span style="font-size: 0.8rem; color: var(--text-muted);">Detailed activity logs (<span id="audit-count">0</span> events)</span>
+    </div>
+    <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+      <label class="form-label" for="audit-action-filter" style="margin-bottom: 0; font-size: 0.8rem; font-weight: 600;">Filter Action:</label>
+      <select id="audit-action-filter" class="form-select" style="width: auto; min-width: 200px;" onchange="fetchAuditLogs()">
         <option value="">All Actions</option>
         <option value="AUTH_LOGIN">User Login</option>
         <option value="DATASET_UPLOAD">Dataset Upload</option>
@@ -29,13 +76,8 @@
         <option value="RECOMMENDATION_STATUS_CHANGE">Recommendation Status Change</option>
         <option value="SCENARIO_CREATE">Scenario Execution</option>
       </select>
+      <button class="btn btn-outline btn-sm" onclick="fetchAuditLogs()">Refresh</button>
     </div>
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-title">
-    <span>Audit Records (<span id="audit-count">0</span> events)</span>
   </div>
 
   <div class="table-container">
@@ -53,7 +95,7 @@
         </tr>
       </thead>
       <tbody id="audit-tbody">
-        <tr><td colspan="8" style="text-align: center; color: var(--text-muted);">Loading audit logs...</td></tr>
+        <tr><td colspan="8" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">Loading audit logs...</td></tr>
       </tbody>
     </table>
   </div>
@@ -62,15 +104,73 @@
 
 {% block extra_scripts %}
 <script>
+  let currentUser = null;
+
   document.addEventListener("DOMContentLoaded", async () => {
-    const user = API.requireAuth();
-    if (user && user.role !== "admin" && user.role !== "department_chair") {
-      showToast("Access restricted: Audit logs are restricted to Department Chairs and Administrators.", "error");
-      document.getElementById("audit-tbody").innerHTML = `<tr><td colspan="8" style="text-align:center; color: var(--danger);">Access Denied: Requires Chair or Admin privileges.</td></tr>`;
-      return;
+    currentUser = API.requireAuth();
+    // Load historical analysis runs for all staff
+    await loadAnalysisHistory();
+
+    // Check if user has administrative privileges for audit trail
+    if (currentUser && (currentUser.role === "admin" || currentUser.role === "department_chair")) {
+      await fetchAuditLogs();
+    } else {
+      document.getElementById("audit-tbody").innerHTML = `
+        <tr>
+          <td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-muted);">
+            <div style="max-width: 450px; margin: 0 auto;">
+              <span class="badge badge-warning" style="margin-bottom: 0.5rem;">Access Restricted</span>
+              <p style="margin: 0.25rem 0; font-size: 0.9rem;">Administrative security &amp; event logs are restricted to Department Chairs and System Administrators.</p>
+              <p style="margin: 0; font-size: 0.8rem; color: var(--text-muted);">You have full access to view historical demand analysis runs and parameters in the section above.</p>
+            </div>
+          </td>
+        </tr>`;
     }
-    await fetchAuditLogs();
   });
+
+  async function loadAnalysisHistory() {
+    try {
+      const runs = await API.getAnalysisRuns();
+      const tbody = document.getElementById("history-tbody");
+      tbody.innerHTML = "";
+
+      if (!runs || runs.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">No analysis runs found. <a href="/dashboard">Run an analysis on the Dashboard</a>.</td></tr>`;
+        document.getElementById("history-runs-count").textContent = "0 Runs";
+        return;
+      }
+
+      document.getElementById("history-runs-count").textContent = `${runs.length} ${runs.length === 1 ? 'Run' : 'Runs'}`;
+
+      runs.forEach(r => {
+        const tr = document.createElement("tr");
+        const summary = r.summary || {};
+        const aggUtil = summary.aggregate_utilization_pct != null ? `${summary.aggregate_utilization_pct.toFixed(1)}%` : "-";
+        const courses = summary.total_courses_analyzed != null ? summary.total_courses_analyzed.toLocaleString() : "-";
+        const createdDate = r.created_at || r.started_at;
+        const completedDate = r.completed_at;
+
+        tr.innerHTML = `
+          <td><strong>#${r.id}</strong></td>
+          <td>${r.dataset_name || `Dataset #${r.dataset_id}`}</td>
+          <td style="font-size: 0.8rem;">${createdDate ? new Date(createdDate).toLocaleString() : '-'}</td>
+          <td style="font-size: 0.8rem;">${completedDate ? new Date(completedDate).toLocaleTimeString() : '-'}</td>
+          <td>${courses}</td>
+          <td><strong>${aggUtil}</strong></td>
+          <td><span class="badge badge-info">v${r.method_version || '1.0.0'}</span></td>
+          <td style="font-size: 0.75rem; color: var(--text-muted);">
+            High: ${r.high_utilization_threshold}%, Low: ${r.low_utilization_threshold}%, Slope: ${r.increasing_demand_slope}
+          </td>
+          <td>
+            <a href="/dashboard?run_id=${r.id}" class="btn btn-outline btn-sm">Inspect on Dashboard</a>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    } catch (err) {
+      showToast("Error loading analysis history: " + err.message, "error");
+    }
+  }
 
   async function fetchAuditLogs() {
     const params = { page_size: 100 };
@@ -86,7 +186,7 @@
       tbody.innerHTML = "";
 
       if (items.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; color: var(--text-muted);">No audit records found.</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">No audit records found.</td></tr>`;
         return;
       }
 

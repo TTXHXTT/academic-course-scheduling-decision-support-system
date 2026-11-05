@@ -92,7 +92,7 @@ def explorer_page(request: Request):
 
 @app.get("/analysis", response_class=HTMLResponse)
 def analysis_page(request: Request):
-    return _page(request, "analysis")
+    return _page(request, "dashboard")
 
 @app.get("/recommendations", response_class=HTMLResponse)
 def recommendations_page(request: Request):
@@ -104,7 +104,7 @@ def scenarios_page(request: Request):
 
 @app.get("/history", response_class=HTMLResponse)
 def history_page(request: Request):
-    return _page(request, "history")
+    return _page(request, "audit")
 
 @app.get("/audit", response_class=HTMLResponse)
 def audit_page(request: Request):
