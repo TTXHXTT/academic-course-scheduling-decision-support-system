@@ -486,24 +486,24 @@
 
       // Load selected run summary for stats & charts
       const latestRun = selectedRun;
-      const summary = latestRun.summary || {};
 
-      // Fill stats
-      document.getElementById("stat-courses").textContent = (latestRun.courses_analyzed || summary.total_courses_analyzed || 0).toLocaleString();
-      document.getElementById("stat-sections").textContent = `${(summary.total_sections || 0).toLocaleString()} sections`;
-      document.getElementById("stat-terms").textContent = summary.terms_analyzed ? summary.terms_analyzed.length : 0;
-      document.getElementById("stat-terms-list").textContent = summary.terms_analyzed ? summary.terms_analyzed.join(", ") : "Across historical terms";
-      document.getElementById("stat-at-capacity").textContent = (summary.courses_frequently_at_capacity || 0).toLocaleString();
-      document.getElementById("stat-increasing-demand").textContent = (summary.courses_with_increasing_demand || 0).toLocaleString();
-      document.getElementById("stat-low-utilization").textContent = (summary.courses_with_low_utilization || 0).toLocaleString();
-      document.getElementById("stat-unmet-demand").textContent = (summary.courses_with_unmet_demand || 0).toLocaleString();
-      document.getElementById("stat-recommendations").textContent = (summary.total_recommendations_generated || 0).toLocaleString();
+      // Format parameters display
+      let paramsDisplay = "-";
+      if (latestRun.parameters_json) {
+        try {
+          const p = typeof latestRun.parameters_json === "string" ? JSON.parse(latestRun.parameters_json) : latestRun.parameters_json;
+          paramsDisplay = `High: ${p.high_utilization_threshold || 85}%, Low: ${p.low_utilization_threshold || 50}%, Slope: ${p.increasing_demand_slope || 2.0}, Full Cap: ${Math.round((p.full_capacity_threshold || 0.95) * 100)}%`;
+        } catch (e) {
+          paramsDisplay = String(latestRun.parameters_json);
+        }
+      } else {
+        paramsDisplay = "High: 85%, Low: 50%, Slope: 2.0";
+      }
 
       // Metadata
       document.getElementById("meta-run-id").textContent = `#${latestRun.id}`;
       document.getElementById("meta-run-timestamp").textContent = new Date(latestRun.completed_at || latestRun.started_at).toLocaleString();
-      document.getElementById("meta-run-params").textContent = latestRun.parameters_json || `High: ${latestRun.high_utilization_threshold || 85}%, Low: ${latestRun.low_utilization_threshold || 50}%`;
-      document.getElementById("meta-run-warnings").textContent = summary.data_quality_warnings ? summary.data_quality_warnings.length : 0;
+      document.getElementById("meta-run-params").textContent = paramsDisplay;
       document.getElementById("method-version-badge").textContent = `Method v${latestRun.method_version || '1.0.0'}`;
 
       // Load metrics for the latest run
@@ -525,39 +525,76 @@
       const metricsRes = await API.getCourseMetrics(analysisId, { page_size: 5000 });
       cachedMetrics = Array.isArray(metricsRes) ? metricsRes : (metricsRes.items || []);
 
-      updateKpis(cachedMetrics);
+      await updateKpis(cachedMetrics, analysisId);
       applyFilters();
     } catch (err) {
       showToast("Error loading metrics: " + err.message, "error");
     }
   }
 
-  function updateKpis(items) {
+  async function updateKpis(items, analysisId) {
     const total = items.length;
-    let high = 0, full = 0, increasing = 0, low = 0;
+    let high = 0, full = 0, increasing = 0, low = 0, unmet = 0;
+    let totalSections = 0;
+    let warningsCount = 0;
+    const termsSet = new Set();
 
     items.forEach(m => {
+      totalSections += (m.total_sections || 0);
+      if (m.insufficient_data) warningsCount++;
+      if (m.terms_list) {
+        try {
+          const parsed = typeof m.terms_list === "string" ? JSON.parse(m.terms_list) : m.terms_list;
+          if (Array.isArray(parsed)) {
+            parsed.forEach(t => { if (t) termsSet.add(String(t).trim()); });
+          } else {
+            termsSet.add(String(m.terms_list).trim());
+          }
+        } catch (e) {
+          m.terms_list.split(",").forEach(t => {
+            const clean = t.replace(/[\[\]"']/g, "").trim();
+            if (clean) termsSet.add(clean);
+          });
+        }
+      }
+
       if (m.avg_utilization_pct != null) {
         if (m.avg_utilization_pct >= 85) high++;
         else if (m.avg_utilization_pct <= 50) low++;
       }
       if (m.full_capacity_rate != null && m.full_capacity_rate >= 0.5) full++;
       if (m.demand_trend === "INCREASING") increasing++;
+      if (m.has_unmet_demand_data && ((m.total_unmet_demand || 0) > 0 || (m.avg_unmet_demand || 0) > 0)) unmet++;
     });
 
+    // KPI cards
     document.getElementById("kpi-total-val").textContent = total.toLocaleString();
     document.getElementById("kpi-high-val").textContent = high.toLocaleString();
     document.getElementById("kpi-full-val").textContent = full.toLocaleString();
     document.getElementById("kpi-trend-val").textContent = increasing.toLocaleString();
     document.getElementById("kpi-low-val").textContent = low.toLocaleString();
 
-    // Also update stats if they were empty
-    const statCoursesEl = document.getElementById("stat-courses");
-    if (statCoursesEl && (statCoursesEl.textContent === "-" || statCoursesEl.textContent === "0")) {
-      statCoursesEl.textContent = total.toLocaleString();
-      document.getElementById("stat-at-capacity").textContent = full.toLocaleString();
-      document.getElementById("stat-increasing-demand").textContent = increasing.toLocaleString();
-      document.getElementById("stat-low-utilization").textContent = low.toLocaleString();
+    // Executive stats grid
+    document.getElementById("stat-courses").textContent = total.toLocaleString();
+    document.getElementById("stat-sections").textContent = `${totalSections.toLocaleString()} sections`;
+    document.getElementById("stat-terms").textContent = termsSet.size.toLocaleString();
+    if (termsSet.size > 0) {
+      const sortedTerms = Array.from(termsSet).sort();
+      document.getElementById("stat-terms-list").textContent = sortedTerms.slice(0, 3).join(", ") + (sortedTerms.length > 3 ? ` +${sortedTerms.length - 3} more` : "");
+    }
+    document.getElementById("stat-at-capacity").textContent = full.toLocaleString();
+    document.getElementById("stat-increasing-demand").textContent = increasing.toLocaleString();
+    document.getElementById("stat-low-utilization").textContent = low.toLocaleString();
+    document.getElementById("stat-unmet-demand").textContent = unmet.toLocaleString();
+    document.getElementById("meta-run-warnings").textContent = warningsCount.toLocaleString();
+
+    // Fetch recommendations count for this analysis run
+    try {
+      const recs = await API.getRecommendations({ analysis_run_id: analysisId });
+      const recCount = Array.isArray(recs) ? recs.length : (recs && recs.items ? recs.items.length : 0);
+      document.getElementById("stat-recommendations").textContent = recCount.toLocaleString();
+    } catch (e) {
+      console.warn("Could not load recommendations count:", e);
     }
   }
 
@@ -785,7 +822,16 @@
     const evTerms = document.getElementById("ev-terms-list");
     let termsList = [];
     if (m.terms_list) {
-      termsList = Array.isArray(m.terms_list) ? m.terms_list : [m.terms_list];
+      if (Array.isArray(m.terms_list)) {
+        termsList = m.terms_list;
+      } else {
+        try {
+          const parsed = JSON.parse(m.terms_list);
+          termsList = Array.isArray(parsed) ? parsed : [parsed];
+        } catch (e) {
+          termsList = [m.terms_list];
+        }
+      }
     }
     evTerms.textContent = termsList.length > 0 ? termsList.join(", ") : "N/A";
 

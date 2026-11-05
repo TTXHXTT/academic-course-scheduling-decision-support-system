@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
 ACS Database Seed Script
-Seeds demonstration users, students dataset, and current_courses from courses.csv.
+Seeds administrators, students dataset, and 2025_2026_years_courses dataset from 2025_2026_years_courses.csv.
 """
 import sys
 import os
@@ -119,25 +119,26 @@ def seed_users(session):
 
 
 def seed_courses_dataset(session):
-    print("Seeding current_courses dataset from courses.csv...")
-    # Check if dataset named current_courses already exists
+    print("Seeding 2025_2026_years_courses dataset from 2025_2026_years_courses.csv...")
+    # Check if dataset named 2025_2026_years_courses already exists
     existing = session.query(Dataset).filter(
-        (Dataset.name == "current_courses") | (Dataset.name == "CSUSB Demo Dataset (Synthetic)")
+        (Dataset.name == "2025_2026_years_courses") | (Dataset.name == "current_courses") | (Dataset.name == "CSUSB Demo Dataset (Synthetic)")
     ).first()
     
     if existing:
-        if existing.name != "current_courses":
-            existing.name = "current_courses"
+        if existing.name != "2025_2026_years_courses":
+            existing.name = "2025_2026_years_courses"
             session.commit()
-        print("  current_courses dataset already loaded.")
+        print("  2025_2026_years_courses dataset already loaded.")
         return existing
 
     scheduler = session.query(User).filter(User.role == UserRole.academic_scheduler).first()
     
-    # Try current_courses.csv first, then courses.csv, then demo_dataset.csv
+    # Try 2025_2026_years_courses.csv first, then courses.csv, then demo_dataset.csv
     possible_paths = [
-        os.path.join(root_dir, "data", "synthetic", "current_courses.csv"),
+        os.path.join(root_dir, "data", "synthetic", "2025_2026_years_courses.csv"),
         os.path.join(root_dir, "data", "synthetic", "courses.csv"),
+        os.path.join(root_dir, "data", "synthetic", "current_courses.csv"),
         os.path.join(root_dir, "data", "synthetic", "demo_dataset.csv"),
     ]
     data_path = next((p for p in possible_paths if os.path.exists(p)), None)
@@ -150,15 +151,16 @@ def seed_courses_dataset(session):
         content = f.read()
 
     service = ImportService(session)
+    source_fn = os.path.basename(data_path)
     dataset, job = service.import_csv(
         file_content=content,
-        dataset_name="current_courses",
-        source_filename="courses.csv",
+        dataset_name="2025_2026_years_courses",
+        source_filename=source_fn,
         user=scheduler,
         is_synthetic=True,
-        description="Current course offerings and historical schedule dataset.",
+        description="2025-2026 academic years course offerings and historical schedule dataset.",
     )
-    print(f"  Imported current_courses dataset id={dataset.id}: {job.total_rows} rows, {job.valid_rows} valid")
+    print(f"  Imported 2025_2026_years_courses dataset id={dataset.id}: {job.total_rows} rows, {job.valid_rows} valid")
 
     if job.valid_rows > 0:
         print("  Running baseline demand analysis...")

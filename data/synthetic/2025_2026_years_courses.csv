@@ -766,12 +766,9 @@ COMM-6996,Continuous Enrollment for Graduate Candidacy Standing,04,Summer 2025,2
 CSE-1100,Critical Thinking Through Computer Programming,01,Spring 2026,2026,Spring,M,12:00-13:15,Hybrid,Palm Desert,51,60,54,3,Computer Science,Freshman
 CSE-1110L,Data Analysis Laboratory Using Spreadsheets,02,Summer 2025,2025,Summer,MWF,12:00-13:15,Hybrid,San Bernardino,12,30,13,1,Computer Science,Freshman
 CSE-1120L,Scientific Simulation,03,Spring 2025,2025,Spring,R,09:00-09:50,In-Person,San Bernardino,29,50,29,0,Computer Science,Freshman
-CSE-1250,Programming Basics,04,Fall 2026,2026,Fall,WF,18:00-20:45,In-Person,Palm Desert,15,35,15,0,Computer Science,Freshman
 CSE-1290,College Learning for Lives and Careers in the Information Age,01,Summer 2026,2026,Summer,T,09:00-09:50,In-Person,San Bernardino,24,32,24,0,Computer Science,Freshman
 CSE-1300,Introduction to Data Science,02,Spring 2025,2025,Spring,TR,15:00-16:15,In-Person,San Bernardino,15,32,15,0,Computer Science,Freshman
 CSE-1300L,Introduction to Data Science Lab,03,Summer 2026,2026,Summer,MW,10:00-10:50,In-Person,San Bernardino,50,60,50,0,Computer Science,Freshman
-CSE-2010,Computer Science I,04,Fall 2026,2026,Fall,MTWR,11:00-11:50,In-Person,San Bernardino,37,50,39,2,Computer Science,Sophomore
-CSE-2020,Computer Science II,01,Fall 2026,2026,Fall,R,10:00-10:50,In-Person,Palm Desert,30,30,30,0,Computer Science,Sophomore
 CSE-2130,Machine Organization,02,Summer 2026,2026,Summer,WF,10:00-10:50,Hybrid,San Bernardino,19,25,19,0,Computer Science,Sophomore
 CSE-3100,Digital Logic,03,Spring 2025,2025,Spring,M,13:30-14:45,In-Person,Palm Desert,25,50,26,1,Computer Science,Junior
 CSE-3350,Signals and Systems,04,Spring 2026,2026,Spring,W,16:30-17:45,In-Person,San Bernardino,14,25,14,0,Computer Science,Junior
@@ -2043,7 +2040,6 @@ HSCI-6993,Continuous Enrollment for Graduate Candidacy Standing,01,Fall 2025,202
 HSCI-6994,Continuous Enrollment for Graduate Candidacy Standing,02,Fall 2025,2025,Fall,W,08:00-08:50,In-Person,San Bernardino,31,50,33,2,Health Science,Graduate
 HSCI-6995,Continuous Enrollment for Graduate Candidacy Standing,03,Fall 2026,2026,Fall,T,15:00-16:15,In-Person,San Bernardino,47,60,51,4,Health Science,Graduate
 HSCI-6996,Continuous Enrollment for Graduate Candidacy Standing,04,Fall 2026,2026,Fall,M,15:00-16:15,In-Person,San Bernardino,25,45,26,1,Health Science,Graduate
-HIST-1400,World History to c. 1500,01,Fall 2025,2025,Fall,R,12:00-13:15,In-Person,San Bernardino,15,25,16,1,History,Freshman
 HIST-1440,World History from c.1500,02,Spring 2025,2025,Spring,W,10:00-10:50,In-Person,San Bernardino,13,40,21,8,History,Freshman
 HIST-1460,History of the United States: Pre- Colonization to Present,03,Spring 2026,2026,Spring,MWF,10:00-10:50,In-Person,San Bernardino,18,50,18,0,History,Freshman
 HIST-1460H,Honors History of the United States: Pre-Colonization to Present,04,Fall 2025,2025,Fall,R,08:00-08:50,In-Person,San Bernardino,35,35,35,0,History,Freshman
@@ -2595,7 +2591,6 @@ MATH-1403,Preparation for Calculus B,01,Spring 2026,2026,Spring,T,16:30-17:45,On
 MATH-1403L,Preparation for Calculus B Lab,02,Fall 2025,2025,Fall,WF,09:00-09:50,Hybrid,San Bernardino,17,32,20,3,Mathematics,Freshman
 MATH-1501,Critical Thinking Through Applications of Mathematical Logic,03,Spring 2026,2026,Spring,MWF,08:00-08:50,Hybrid,San Bernardino,30,30,30,0,Mathematics,Freshman
 MATH-1601,Modeling with Calculus,04,Spring 2026,2026,Spring,MW,08:00-08:50,In-Person,San Bernardino,22,30,25,3,Mathematics,Freshman
-MATH-2210,Calculus I,01,Summer 2026,2026,Summer,MW,10:00-10:50,In-Person,San Bernardino,29,32,29,0,Mathematics,Sophomore
 MATH-2210L,Calculus I Lab,02,Fall 2026,2026,Fall,F,18:00-20:45,In-Person,San Bernardino,22,35,22,0,Mathematics,Sophomore
 MATH-2220,Calculus II,03,Fall 2026,2026,Fall,MW,16:30-17:45,In-Person,Palm Desert,22,30,22,0,Mathematics,Sophomore
 MATH-2220L,Calculus II Lab,04,Spring 2026,2026,Spring,MWF,09:00-09:50,Hybrid,San Bernardino,31,40,32,1,Mathematics,Sophomore
@@ -3798,3 +3793,26 @@ WLL-5554,Independent Study,04,Summer 2026,2026,Summer,F,09:00-09:50,Hybrid,San B
 WLL-5561,International Experience,01,Spring 2026,2026,Spring,R,18:00-20:45,In-Person,San Bernardino,24,30,24,0,General Studies,Graduate
 WLL-5562,International Experience,02,Summer 2026,2026,Summer,MTWR,08:00-08:50,In-Person,San Bernardino,27,35,37,10,General Studies,Graduate
 WLL-5563,International Experience,03,Fall 2026,2026,Fall,TR,12:00-13:15,Online,San Bernardino,22,40,22,0,General Studies,Graduate
+CSE-2010,Computer Science I,01,Fall 2025,2025,Fall,MW,10:00-11:15,In-Person,San Bernardino,25,35,25,0,Computer Science,Sophomore
+CSE-2010,Computer Science I,02,Fall 2025,2025,Fall,TR,13:30-14:45,In-Person,San Bernardino,28,35,28,0,Computer Science,Sophomore
+CSE-2010,Computer Science I,01,Spring 2026,2026,Spring,MWF,09:00-09:50,Hybrid,San Bernardino,33,35,36,3,Computer Science,Sophomore
+CSE-2010,Computer Science I,01,Fall 2026,2026,Fall,MTWR,11:00-11:50,In-Person,San Bernardino,35,35,42,7,Computer Science,Sophomore
+CSE-2020,Computer Science II,01,Spring 2025,2025,Spring,TR,10:00-11:15,In-Person,San Bernardino,20,32,20,0,Computer Science,Sophomore
+CSE-2020,Computer Science II,01,Fall 2025,2025,Fall,MW,14:00-15:15,In-Person,San Bernardino,26,32,26,0,Computer Science,Sophomore
+CSE-2020,Computer Science II,01,Spring 2026,2026,Spring,TR,14:00-15:15,Hybrid,San Bernardino,30,32,34,4,Computer Science,Sophomore
+CSE-2020,Computer Science II,01,Fall 2026,2026,Fall,MW,12:00-13:15,In-Person,San Bernardino,32,32,38,6,Computer Science,Sophomore
+CSE-1250,Programming Basics,01,Fall 2025,2025,Fall,MWF,08:00-08:50,In-Person,San Bernardino,22,40,22,0,Computer Science,Freshman
+CSE-1250,Programming Basics,01,Spring 2026,2026,Spring,TR,09:00-10:15,Online,San Bernardino,31,40,33,2,Computer Science,Freshman
+CSE-1250,Programming Basics,01,Fall 2026,2026,Fall,MW,10:00-11:15,In-Person,San Bernardino,39,40,45,6,Computer Science,Freshman
+MATH-2210,Calculus I,01,Fall 2025,2025,Fall,MTWR,09:00-09:50,In-Person,San Bernardino,25,38,25,0,Mathematics,Freshman
+MATH-2210,Calculus I,01,Spring 2026,2026,Spring,MTWR,10:00-10:50,In-Person,San Bernardino,32,38,35,3,Mathematics,Freshman
+MATH-2210,Calculus I,01,Fall 2026,2026,Fall,MTWR,11:00-11:50,In-Person,San Bernardino,38,38,44,6,Mathematics,Freshman
+ENG-1010,College Writing,01,Fall 2025,2025,Fall,TR,11:00-12:15,In-Person,San Bernardino,20,30,20,0,English,Freshman
+ENG-1010,College Writing,01,Spring 2026,2026,Spring,MW,11:00-12:15,In-Person,San Bernardino,26,30,28,2,English,Freshman
+ENG-1010,College Writing,01,Fall 2026,2026,Fall,TR,09:30-10:45,In-Person,San Bernardino,30,30,35,5,English,Freshman
+ART-1100,Introduction to Art,01,Fall 2025,2025,Fall,MW,13:00-14:15,In-Person,San Bernardino,34,35,34,0,Art,Freshman
+ART-1100,Introduction to Art,01,Spring 2026,2026,Spring,MW,13:00-14:15,In-Person,San Bernardino,26,35,26,0,Art,Freshman
+ART-1100,Introduction to Art,01,Fall 2026,2026,Fall,MW,13:00-14:15,In-Person,San Bernardino,17,35,17,0,Art,Freshman
+HIST-1400,World Civilizations,01,Fall 2025,2025,Fall,TR,15:00-16:15,In-Person,San Bernardino,25,30,25,0,History,Sophomore
+HIST-1400,World Civilizations,01,Spring 2026,2026,Spring,TR,15:00-16:15,In-Person,San Bernardino,26,30,26,0,History,Sophomore
+HIST-1400,World Civilizations,01,Fall 2026,2026,Fall,TR,15:00-16:15,In-Person,San Bernardino,25,30,25,0,History,Sophomore

@@ -26,7 +26,8 @@ class AnalysisRunResponse(BaseModel):
     method_version: str
     courses_analyzed: int
     is_baseline: bool
-    error_message: Optional[str]
+    parameters_json: Optional[str] = None
+    error_message: Optional[str] = None
 
     model_config = {"from_attributes": True}
 
