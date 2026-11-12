@@ -41,6 +41,12 @@ class Recommendation(Base):
     # Flags
     insufficient_evidence = Column(Boolean, default=False)  # labeled when evidence is weak
 
+    # Review status & justification overrides (FR-06)
+    action_status = Column(String(50), default="PENDING", nullable=False)  # PENDING, ACCEPTED, REJECTED, MODIFIED
+    decision_notes = Column(Text, nullable=True)
+    reviewed_by_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    reviewed_at = Column(DateTime(timezone=True), nullable=True)
+
     # Source references (DR-03)
     dataset_id = Column(Integer, ForeignKey("datasets.id"), nullable=True)
     analysis_method_version = Column(String(50), nullable=True)

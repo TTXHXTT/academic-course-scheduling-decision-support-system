@@ -17,6 +17,7 @@ from app.api.deps import get_current_user
 router = APIRouter(prefix="/api/scenarios", tags=["scenarios"])
 
 
+@router.post("", response_model=ScenarioResponse)
 @router.post("/", response_model=ScenarioResponse)
 def create_scenario(
     data: ScenarioCreate,
@@ -44,6 +45,7 @@ def create_scenario(
     return scenario
 
 
+@router.get("", response_model=List[ScenarioResponse])
 @router.get("/", response_model=List[ScenarioResponse])
 def list_scenarios(
     db: Session = Depends(get_db),

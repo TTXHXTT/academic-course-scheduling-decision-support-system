@@ -38,7 +38,12 @@ def get_current_user(
     if user_id is None:
         raise credentials_exception
 
-    user = db.get(User, int(user_id))
+    user = None
+    if str(user_id).isdigit():
+        user = db.get(User, int(user_id))
+    if user is None:
+        user = db.query(User).filter((User.email == str(user_id)) | (User.student_id == str(user_id))).first()
+
     if user is None or not user.is_active:
         raise credentials_exception
     return user

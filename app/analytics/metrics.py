@@ -6,7 +6,6 @@ Formulas documented here are prototype assumptions, not approved CSUSB policies.
 Thresholds are configurable via app/core/config.py.
 
 SRS References: FR-04, DR-02, NFR-04
-Analytics Methodology version: 1.0.0
 """
 from __future__ import annotations
 from dataclasses import dataclass, field

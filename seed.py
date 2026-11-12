@@ -43,7 +43,7 @@ def seed_users(session):
                 email = (row.get("email") or "").strip()
                 if not email:
                     continue
-                password = row.get("password") or "Admin@CSUSB123"
+                password = row.get("password") or "123456"
                 full_name = row.get("full_name") or "Administrator"
                 role_str = (row.get("role") or "admin").strip()
                 student_id = (row.get("student_id") or "").strip() or None

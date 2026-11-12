@@ -55,3 +55,21 @@ def init_db():
     # Import all models so Base knows about them
     from app.models import user, dataset, course_record, analysis, recommendation, scenario, audit, student_schedule  # noqa: F401
     Base.metadata.create_all(bind=engine)
+
+    # Safe lightweight schema alignment for existing SQLite databases
+    try:
+        with engine.connect() as conn:
+            result = conn.exec_driver_sql("PRAGMA table_info(recommendations)")
+            existing_cols = {row[1] for row in result.fetchall()}
+            if existing_cols:
+                if "action_status" not in existing_cols:
+                    conn.exec_driver_sql("ALTER TABLE recommendations ADD COLUMN action_status VARCHAR(50) DEFAULT 'PENDING'")
+                if "decision_notes" not in existing_cols:
+                    conn.exec_driver_sql("ALTER TABLE recommendations ADD COLUMN decision_notes TEXT")
+                if "reviewed_by_id" not in existing_cols:
+                    conn.exec_driver_sql("ALTER TABLE recommendations ADD COLUMN reviewed_by_id INTEGER")
+                if "reviewed_at" not in existing_cols:
+                    conn.exec_driver_sql("ALTER TABLE recommendations ADD COLUMN reviewed_at TIMESTAMP")
+                conn.commit()
+    except Exception:
+        pass

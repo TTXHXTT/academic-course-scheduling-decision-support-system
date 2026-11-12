@@ -5,10 +5,8 @@ Pure analytics module - no HTTP framework, no database dependencies.
 Completely independently testable.
 
 SRS Reference: FR-04, Module E
-Method Version: 1.0.0
 
 All thresholds are prototype assumptions, documented and configurable.
-Not CSUSB-approved policies.
 """
 from __future__ import annotations
 from dataclasses import dataclass, field
@@ -26,7 +24,7 @@ from .rules import RecommendationRules, RuleResult
 class AnalysisParameters:
     """
     Configuration for one analysis run.
-    All values are prototype assumptions; none are CSUSB policies.
+    All values are prototype assumptions;
     These are displayed to users alongside results.
     """
     high_utilization_threshold: float = 85.0

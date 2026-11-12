@@ -32,7 +32,16 @@ class RecommendationResponse(BaseModel):
     key_metric_value: Optional[float]
     key_metric_threshold: Optional[float]
     insufficient_evidence: bool
+    action_status: str = "PENDING"
+    decision_notes: Optional[str] = None
+    reviewed_by_id: Optional[int] = None
+    reviewed_at: Optional[datetime] = None
     created_at: datetime
     evidence: List[RecommendationEvidenceResponse] = []
 
     model_config = {"from_attributes": True}
+
+
+class RecommendationStatusUpdate(BaseModel):
+    action_status: str
+    decision_notes: Optional[str] = None

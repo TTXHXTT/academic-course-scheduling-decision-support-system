@@ -11,6 +11,12 @@ VALID_SCENARIO_TYPES = [
     "limit_sections",
 ]
 
+TYPE_ALIASES = {
+    "adjust_capacity": "change_capacity",
+    "cancel_section": "limit_sections",
+    "reduce_section": "limit_sections",
+}
+
 
 class ScenarioCreate(BaseModel):
     name: str
@@ -22,9 +28,10 @@ class ScenarioCreate(BaseModel):
     @field_validator("scenario_type")
     @classmethod
     def valid_type(cls, v):
-        if v not in VALID_SCENARIO_TYPES:
+        mapped = TYPE_ALIASES.get(v, v)
+        if mapped not in VALID_SCENARIO_TYPES:
             raise ValueError(f"scenario_type must be one of: {VALID_SCENARIO_TYPES}")
-        return v
+        return mapped
 
 
 class ScenarioResultResponse(BaseModel):

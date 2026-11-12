@@ -210,27 +210,29 @@ class ScenarioService:
         course_id = parameters.get("course_id")
 
         if scenario_type == "add_section":
-            # Add a hypothetical section with specified or default capacity
-            new_capacity = parameters.get("capacity", 30)
-            assumed_enrollment = parameters.get("assumed_enrollment", 0)
+            # Add hypothetical section(s) with specified or default capacity
+            new_capacity = int(parameters.get("capacity") or parameters.get("section_capacity") or 30)
+            sections_to_add = int(parameters.get("sections_to_add", 1))
+            assumed_enrollment = int(parameters.get("assumed_enrollment", 0))
             term = parameters.get("term", "Hypothetical Term")
             course_name = next((s.course_name for s in sections if s.course_id == course_id), None)
-            new_section = SectionData(
-                course_id=course_id,
-                term=term,
-                year=None,
-                enrollment=assumed_enrollment,
-                capacity=new_capacity,
-                course_name=course_name,
-            )
-            modified.append(new_section)
+            for _ in range(max(1, sections_to_add)):
+                new_section = SectionData(
+                    course_id=course_id,
+                    term=term,
+                    year=None,
+                    enrollment=assumed_enrollment,
+                    capacity=new_capacity,
+                    course_name=course_name,
+                )
+                modified.append(new_section)
 
-        elif scenario_type == "change_capacity":
-            new_capacity = parameters.get("new_capacity")
-            if new_capacity and new_capacity > 0:
+        elif scenario_type in ("change_capacity", "adjust_capacity"):
+            new_capacity = parameters.get("new_capacity") or parameters.get("capacity") or parameters.get("section_capacity")
+            if new_capacity and int(new_capacity) > 0:
                 for s in modified:
                     if s.course_id == course_id:
-                        s.capacity = new_capacity
+                        s.capacity = int(new_capacity)
 
         elif scenario_type == "change_modality":
             new_modality = parameters.get("new_modality", "Online")
@@ -239,16 +241,14 @@ class ScenarioService:
                     s.modality = new_modality
 
         elif scenario_type == "demand_increase":
-            increase_pct = parameters.get("increase_pct", 10)
-            factor = 1 + (increase_pct / 100.0)
+            increase_pct = float(parameters.get("increase_pct") or parameters.get("increase_percentage") or 15)
+            factor = 1.0 + (increase_pct / 100.0)
             for s in modified:
                 if s.course_id == course_id and s.enrollment is not None:
                     s.enrollment = int(s.enrollment * factor)
-                    if s.capacity and s.enrollment > s.capacity:
-                        pass  # enrollment > capacity is valid - shows over-demand
 
-        elif scenario_type == "limit_sections":
-            max_sections = parameters.get("max_sections", 1)
+        elif scenario_type in ("limit_sections", "cancel_section", "reduce_section"):
+            max_sections = int(parameters.get("max_sections", 1))
             count = 0
             filtered = []
             for s in modified:
