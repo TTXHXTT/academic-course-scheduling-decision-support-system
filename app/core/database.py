@@ -20,7 +20,10 @@ def _get_engine_kwargs(database_url: str) -> dict:
             "connect_args": {"check_same_thread": False},
             "poolclass": StaticPool,
         }
-    return {}
+    return {
+        "pool_pre_ping": True,
+        "pool_recycle": 300,
+    }
 
 
 engine = create_engine(
@@ -57,19 +60,20 @@ def init_db():
     Base.metadata.create_all(bind=engine)
 
     # Safe lightweight schema alignment for existing SQLite databases
-    try:
-        with engine.connect() as conn:
-            result = conn.exec_driver_sql("PRAGMA table_info(recommendations)")
-            existing_cols = {row[1] for row in result.fetchall()}
-            if existing_cols:
-                if "action_status" not in existing_cols:
-                    conn.exec_driver_sql("ALTER TABLE recommendations ADD COLUMN action_status VARCHAR(50) DEFAULT 'PENDING'")
-                if "decision_notes" not in existing_cols:
-                    conn.exec_driver_sql("ALTER TABLE recommendations ADD COLUMN decision_notes TEXT")
-                if "reviewed_by_id" not in existing_cols:
-                    conn.exec_driver_sql("ALTER TABLE recommendations ADD COLUMN reviewed_by_id INTEGER")
-                if "reviewed_at" not in existing_cols:
-                    conn.exec_driver_sql("ALTER TABLE recommendations ADD COLUMN reviewed_at TIMESTAMP")
-                conn.commit()
-    except Exception:
-        pass
+    if settings.DATABASE_URL.startswith("sqlite"):
+        try:
+            with engine.connect() as conn:
+                result = conn.exec_driver_sql("PRAGMA table_info(recommendations)")
+                existing_cols = {row[1] for row in result.fetchall()}
+                if existing_cols:
+                    if "action_status" not in existing_cols:
+                        conn.exec_driver_sql("ALTER TABLE recommendations ADD COLUMN action_status VARCHAR(50) DEFAULT 'PENDING'")
+                    if "decision_notes" not in existing_cols:
+                        conn.exec_driver_sql("ALTER TABLE recommendations ADD COLUMN decision_notes TEXT")
+                    if "reviewed_by_id" not in existing_cols:
+                        conn.exec_driver_sql("ALTER TABLE recommendations ADD COLUMN reviewed_by_id INTEGER")
+                    if "reviewed_at" not in existing_cols:
+                        conn.exec_driver_sql("ALTER TABLE recommendations ADD COLUMN reviewed_at TIMESTAMP")
+                    conn.commit()
+        except Exception:
+            pass

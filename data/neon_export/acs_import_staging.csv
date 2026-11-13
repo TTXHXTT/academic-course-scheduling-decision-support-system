@@ -1,0 +1,543 @@
+source_sheet,source_excel_row,course_code,course_title,section_number,class_number,session_code,class_type,units,instructor_1,instructor_2,building,days,meeting_time,enrollment,enrollment_capacity,waitlist_source_value,modality,attribute,campus,fee
+spring-2027,2,CSE 1100,Critical Thinking Through Computer Programming,3,43131,1,Lecture,2,TBD,N/A,CE 105,M-W,10:30 AM - 11:45 AM,0,60,60/60,Classroom,GE-1B Critical Thinking,San Bernardino,45
+spring-2027,3,CSE 1100,Critical Thinking Through Computer Programming,4,43132,1,Activity,1,TBD,N/A,JB 360,M-W,1:00 PM - 1:50 PM,0,30,30/30,Classroom,GE-1B Critical Thinking,San Bernardino,0
+spring-2027,4,CSE 1250,Programming Basics,1,43130,1,Lecture,3,TBD,N/A,PS 204,Tu-Th,9:00 AM - 10:15 AM,0,30,60/60,Classroom,,San Bernardino,45
+spring-2027,5,CSE 1250,Programming Basics,2,43210,1,Activity,1,TBD,N/A,JB 360,Tu-Th,10:30 AM - 11:20 AM,0,30,30/30,Classroom,,San Bernardino,0
+spring-2027,6,CSE 1300,Introduction to Data Science,1,43214,1,Lecture,3,"Georgiou, George",N/A,CGI 106,M-W,10:30 AM - 11:45 AM,0,60,60/60,Classroom,GE-2 Mathematical/Quant. Reasoning,San Bernardino,0
+spring-2027,7,CSE 1300L,Introduction to Data Science Lab,1,43215,1,Activity,1,"Georgiou, George",N/A,JB 359,M,1:00 PM - 1:50 PM,0,30,30/30,Classroom,,San Bernardino,0
+spring-2027,8,CSE 2010,Computer Science I,1,43251,1,Discussion,3,"Li, Xiangyu",N/A,CE 110,M-W,2:30 PM - 3:45 PM,0,60,60/60,Classroom,,San Bernardino,45
+spring-2027,9,CSE 2010,Computer Science I,2,43252,1,Activity,1,"Li, Xiangyu",N/A,JB 359,M-W,4:00 PM - 4:50 PM,0,30,30/30,Classroom,,San Bernardino,0
+spring-2027,10,CSE 2010,Computer Science I,3,43253,1,Activity,1,TBD,N/A,JB 359,M-W,5:30 PM - 6:20 PM,0,30,30/30,Classroom,,San Bernardino,0
+spring-2027,11,CSE 2010,Computer Science I,10,43256,1,Discussion,3,TBD,N/A,CGI 106,Tu-Th,9:00 AM - 10:15 AM,0,60,60/60,Classroom,,San Bernardino,45
+spring-2027,12,CSE 2010,Computer Science I,11,43257,1,Activity,1,TBD,N/A,JB 358,Tu-Th,10:30 AM - 11:20 AM,0,30,30/30,Classroom,,San Bernardino,0
+spring-2027,13,CSE 2010,Computer Science I,62,43254,1,Discussion,3,"Ghazi, Mudassar",N/A,Online,N/A,N/A,0,60,60/60,Online,AB386,San Bernardino,45
+spring-2027,14,CSE 2010,Computer Science I,63,43255,1,Activity,1,TBD,N/A,Online,N/A,N/A,0,60,30/30,Online,AB386,San Bernardino,0
+spring-2027,15,CSE 2020,Computer Science II,3,43041,1,Discussion,3,TBD,N/A,CGI 106,Tu-Th,10:30 AM - 11:45 AM,0,60,30/30,Classroom,,San Bernardino,45
+spring-2027,16,CSE 2020,Computer Science II,5,43822,1,Activity,1,TBD,N/A,JB 358,Tu-Th,9:00 AM - 9:50 AM,0,30,30/30,Classroom,,San Bernardino,0
+spring-2027,17,CSE 2020,Computer Science II,6,43334,1,Activity,1,TBD,N/A,JB 358,Tu-Th,1:00 PM - 1:50 PM,0,30,30/30,Classroom,,San Bernardino,0
+spring-2027,18,CSE 2020,Computer Science II,60,43237,1,Discussion,3,"Salloum, Ronald",N/A,Online,N/A,N/A,0,60,30/30,Online,AB386,San Bernardino,45
+spring-2027,19,CSE 2020,Computer Science II,61,43238,1,Activity,1,"Salloum, Ronald",N/A,Online,N/A,N/A,0,60,30/30,Online,AB386,San Bernardino,0
+spring-2027,20,CSE 2130,Machine Organization,1,43190,1,Discussion,3,"Georgiou, Taline",N/A,JB 254,M-W,2:30 PM - 3:45 PM,0,45,45/45,Classroom,,San Bernardino,0
+spring-2027,21,CSE 2130,Machine Organization,2,43258,1,Discussion,3,"Georgiou, Taline",N/A,JB 254,M-W,1:00 PM - 2:15 PM,0,45,45/45,Classroom,,San Bernardino,0
+spring-2027,22,CSE 3100,Digital Logic,4,43192,1,Laboratory,1,"Qiao, Haiyan",N/A,JB 356,Tu-Th,9:00 AM - 10:15 AM,0,30,30/30,Classroom,,San Bernardino,0
+spring-2027,23,CSE 3100,Digital Logic,5,43333,1,Laboratory,1,"Qiao, Haiyan",N/A,JB 356,Tu-Th,10:30 AM - 11:45 AM,0,30,30/30,Classroom,,San Bernardino,0
+spring-2027,24,CSE 3100,Digital Logic,9,43527,1,Laboratory,1,TBD,N/A,JB 356,M-W,10:30 AM - 11:45 AM,0,30,30/30,Classroom,,San Bernardino,0
+spring-2027,25,CSE 3100,Digital Logic,10,43528,1,Laboratory,1,"Georgiou, Taline",N/A,JB 356,M-W,4:00 PM - 5:15 PM,0,30,30/30,Classroom,,San Bernardino,0
+spring-2027,26,CSE 3100,Digital Logic,62,43191,1,Discussion,3,"Qiao, Haiyan",N/A,Online,N/A,N/A,0,60,60/60,Online,AB386,San Bernardino,45
+spring-2027,27,CSE 3100,Digital Logic,64,43526,1,Discussion,3,TBD,N/A,Online,N/A,N/A,0,60,60/60,Online,AB386,San Bernardino,45
+spring-2027,28,CSE 3350,Signals and Systems,1,43042,1,Discussion,3,"Salloum, Ronald",N/A,JB 102,Tu-Th,1:00 PM - 2:15 PM,0,45,30/30,Classroom,,San Bernardino,0
+spring-2027,29,CSE 4010,Contemporary Computer Architecture,1,43176,1,Discussion,3,TBD,N/A,CS 130,M-W,4:00 PM - 5:15 PM,0,90,30/30,Classroom,,San Bernardino,45
+spring-2027,30,CSE 4010,Contemporary Computer Architecture,2,43177,1,Laboratory,1,TBD,N/A,JB 358,M-W,5:30 PM - 6:45 PM,0,30,30/30,Classroom,,San Bernardino,0
+spring-2027,31,CSE 4010,Contemporary Computer Architecture,63,43259,1,Laboratory,1,TBD,N/A,Online,N/A,N/A,0,80,30/30,Online,AB386,San Bernardino,0
+spring-2027,32,CSE 4030,Analog Circuit Design and Analysis,1,43043,1,Discussion,3,TBD,N/A,JB 262,M-W,1:00 PM - 2:15 PM,0,60,30/30,Classroom,,San Bernardino,45
+spring-2027,33,CSE 4030,Analog Circuit Design and Analysis,2,43044,1,Laboratory,1,TBD,N/A,JB 359,M-W,2:30 PM - 3:45 PM,0,30,30/30,Classroom,,San Bernardino,0
+spring-2027,34,CSE 4030,Analog Circuit Design and Analysis,3,43818,1,Laboratory,1,TBD,N/A,JB 359,M-W,10:30 AM - 11:45 AM,0,30,30/30,Classroom,,San Bernardino,0
+spring-2027,35,CSE 4100,Computer Networking and Security,2,43179,1,Discussion,3,TBD,N/A,CE 105,Tu-Th,4:00 PM - 5:15 PM,0,80,30/30,Classroom,,San Bernardino,0
+spring-2027,36,CSE 4100,Computer Networking and Security,60,43276,1,Discussion,3,"Wang, Suyang",N/A,Online,N/A,N/A,0,80,60/60,Online,AB386,San Bernardino,0
+spring-2027,37,CSE 4200,Computer Graphics,60,43279,1,Discussion,3,TBD,N/A,Online,N/A,N/A,0,80,60/60,Online,AB386,San Bernardino,0
+spring-2027,38,CSE 4310,Algorithm Analysis,2,43197,1,Discussion,3,TBD,N/A,CGI 209,Tu-Th,1:00 PM - 2:15 PM,0,45,50/50,Classroom,,San Bernardino,0
+spring-2027,39,CSE 4310,Algorithm Analysis,61,43278,1,Discussion,3,"Voigt, Kerstin",N/A,Online,N/A,N/A,0,60,60/60,Online,AB386,San Bernardino,0
+spring-2027,40,CSE 4410,Game Programming,1,43046,1,Discussion,3,TBD,N/A,CS 130,M-W,5:30 PM - 6:45 PM,0,60,30/30,Classroom,,San Bernardino,0
+spring-2027,41,CSE 4410,Game Programming,2,43160,1,Discussion,3,TBD,N/A,CS 128,Tu-Th,7:00 PM - 8:15 PM,0,60,30/30,Classroom,,San Bernardino,0
+spring-2027,42,CSE 4500,Platform Computing,2,43198,1,Discussion,3,TBD,N/A,CS 128,Tu-Th,5:30 PM - 6:45 PM,0,60,30/30,Classroom,,San Bernardino,0
+spring-2027,43,CSE 4550,Software Engineering,1,43047,1,Discussion,3,TBD,N/A,JB 254,Tu-Th,9:00 AM - 10:15 AM,0,45,30/30,Classroom,,San Bernardino,0
+spring-2027,44,CSE 4550,Software Engineering,60,43247,1,Discussion,3,"Jin, Jennifer",N/A,Online,N/A,N/A,0,45,45/45,Online,AB386,San Bernardino,0
+spring-2027,45,CSE 4560,Embedded Systems,60,43188,1,Discussion,3,"Sun, Qingquan",N/A,Online,N/A,N/A,0,60,30/30,Online,AB386,San Bernardino,45
+spring-2027,46,CSE 4560,Embedded Systems,61,43189,1,Laboratory,1,"Sun, Qingquan",N/A,Online,N/A,N/A,0,60,30/30,Online,AB386,San Bernardino,0
+spring-2027,47,CSE 4600,Operating Systems,60,43048,1,Discussion,3,"Khan, Bilal",N/A,PS 203,Th,10:30 AM - 11:45 AM,0,45,45/45,Classroom+Asynchronous Online,,San Bernardino,0
+spring-2027,48,CSE 4600,Operating Systems,61,43049,1,Discussion,3,"Khan, Bilal",N/A,PS 203,Tu,10:30 AM - 11:45 AM,0,45,30/30,Classroom+Asynchronous Online,,San Bernardino,0
+spring-2027,49,CSE 4880,Ethics Senior Seminar,2,43248,1,Discussion,3,TBD,N/A,CGI 209,Tu-Th,5:30 PM - 6:45 PM,0,60,60/60,Classroom,Writing Intensive,San Bernardino,0
+spring-2027,50,CSE 4880,Ethics Senior Seminar,60,43525,1,Discussion,3,"Muheidat, Fadi",N/A,Online,N/A,N/A,0,60,30/30,Online,"Writing Intensive, AB386",San Bernardino,0
+spring-2027,51,CSE 5000,Introduction to Formal Languages and Automata Theory,60,43249,1,Discussion,3,"Georgiou, George",N/A,Online,N/A,N/A,0,75,45/45,Online,AB386,San Bernardino,0
+spring-2027,52,CSE 5120,Introduction to Artificial Intelligence,1,43050,1,Discussion,3,"Li, Xiangyu",N/A,PS 203,M-W,1:00 PM - 2:15 PM,0,45,30/30,Classroom,,San Bernardino,0
+spring-2027,53,CSE 5120,Introduction to Artificial Intelligence,60,43273,1,Discussion,3,"Khan, Bilal",N/A,Online,N/A,N/A,0,45,45/45,Online,AB386,San Bernardino,0
+spring-2027,54,CSE 5140,Computational Intelligence,1,43447,1,Discussion,3,"Alzahrani, Nabeel",N/A,JB 262,Tu-Th,4:00 PM - 5:15 PM,0,60,30/30,Classroom,,San Bernardino,0
+spring-2027,55,CSE 5210,Digital System Design,1,43053,1,Discussion,3,TBD,N/A,CE 110,Tu-Th,4:00 PM - 5:15 PM,0,60,0/0,Classroom,,San Bernardino,45
+spring-2027,56,CSE 5210,Digital System Design,2,43111,1,Laboratory,1,TBD,N/A,JB 359,Tu-Th,5:30 PM - 6:45 PM,0,30,30/30,Classroom,,San Bernardino,0
+spring-2027,57,CSE 5210,Digital System Design,3,43817,1,Laboratory,1,TBD,N/A,JB 359,Tu-Th,2:30 PM - 3:45 PM,0,30,30/30,Classroom,,San Bernardino,0
+spring-2027,58,CSE 5250,Parallel Algorithms and Programming,2,43250,1,Discussion,3,TBD,N/A,CS 130,M-W,7:00 PM - 8:15 PM,0,60,60/60,Classroom,,San Bernardino,0
+spring-2027,59,CSE 5250,Parallel Algorithms and Programming,60,43274,1,Discussion,3,TBD,N/A,Online,N/A,N/A,0,80,20/20,Online,AB386,San Bernardino,0
+spring-2027,60,CSE 5350,Numerical Computation,1,43199,1,Discussion,3,TBD,N/A,PL 263,Tu-Th,1:00 PM - 2:15 PM,0,45,30/30,Classroom,,San Bernardino,0
+spring-2027,61,CSE 5408,Sustainable Engineering Design,1,43819,1,Lecture,3,"Wang, Suyang",N/A,JB 262,M-W,4:00 PM - 5:15 PM,0,60,20/20,Classroom,,San Bernardino,45
+spring-2027,64,CSE 5700,Compilers,60,43275,1,Discussion,3,TBD,N/A,Online,N/A,N/A,0,85,60/60,Online,AB386,San Bernardino,0
+spring-2027,65,CSE 5720,Database Systems,2,43260,1,Discussion,3,"Ghazi, Mudassar",N/A,JB 254,Tu-Th,7:00 PM - 8:15 PM,0,45,45/45,Classroom,,San Bernardino,0
+spring-2027,66,CSE 5720,Database Systems,60,43277,1,Discussion,3,"Jin, Jennifer",N/A,Online,N/A,N/A,0,70,30/30,Online,AB386,San Bernardino,0
+spring-2027,67,CSE 6220,Data Visualization,1,43823,1,Lecture,3,TBD,N/A,PL 263,Tu-Th,5:30 PM - 6:45 PM,0,45,45/45,Classroom,,San Bernardino,0
+spring-2027,68,CSE 6330,Data Mining,60,43824,1,Lecture,3,TBD,N/A,Online,N/A,N/A,0,45,45/45,Online,AB386,San Bernardino,0
+spring-2027,69,CSE 6600,Operating Systems Concepts and Theory,2,43234,1,Discussion,3,"Muheidat, Fadi",N/A,CS 128,M-W,4:00 PM - 5:15 PM,0,60,30/30,Classroom,,San Bernardino,0
+spring-2027,70,CSE 6890,Graduate Seminar,1,43196,1,Seminar,1,TBD,N/A,JB 361,Tu,1:00 PM - 1:50 PM,0,18,45/45,Classroom,,San Bernardino,0
+spring-2027,71,CSE 6964,Masters Project,2,43567,1,Supervision,4,TBD,N/A,,N/A,N/A,0,10,0/0,Classroom,,San Bernardino,0
+spring-2027,72,CSE 6964,Masters Project,3,43580,1,Supervision,4,TBD,N/A,,N/A,N/A,0,10,0/0,Classroom,,San Bernardino,0
+spring-2027,73,CSE 6973,Thesis,1,43533,1,Supervision,3,TBD,N/A,,N/A,N/A,0,10,0/0,Classroom,,San Bernardino,0
+spring-2027,74,CSE 6973,Thesis,2,43534,1,Supervision,3,TBD,N/A,,N/A,N/A,0,10,0/0,Classroom,,San Bernardino,0
+spring-2027,75,CSE 6976,Thesis,4,43581,1,Supervision,6,TBD,N/A,,N/A,N/A,0,10,0/0,Classroom,,San Bernardino,0
+spring-2027,76,CSE 6980,Comprehensive Examination,1,43051,1,Supervision,0,"Jin, Jennifer",N/A,,N/A,N/A,0,18,30/30,Classroom,,San Bernardino,0
+spring-2027,77,CSE 6990,Continuous Enrollment for Graduate Candidacy Standing,1,43300,1,Supervision,0,"Jin, Jennifer",N/A,,N/A,N/A,0,18,0/0,Classroom,,San Bernardino,0
+winter-2027,2,CSE 2130,Machine Organization,60,20057,3W1,Discussion,3,"Georgiou, Taline",N/A,Online,N/A,N/A,0,45,0/0,Online,,San Bernardino,0
+winter-2027,3,CSE 4030,Analog Circuit Design and Analysis,60,20049,3W1,Discussion,3,"Hou, Yunfei",N/A,Online,N/A,N/A,0,45,0/0,Online,,San Bernardino,0
+winter-2027,4,CSE 4310,Algorithm Analysis,60,20054,3W1,Discussion,3,"Muheidat, Fadi",N/A,Online,N/A,N/A,0,45,0/0,Online,,San Bernardino,0
+winter-2027,5,CSE 4600,Operating Systems,60,20051,3W1,Discussion,3,"Zhang, Yan",N/A,Online,N/A,N/A,0,45,0/0,Online,,San Bernardino,0
+winter-2027,6,CSE 5000,Introduction to Formal Languages and Automata Theory,60,20056,3W1,Discussion,3,"Georgiou, George",N/A,Online,N/A,N/A,0,45,0/0,Online,,San Bernardino,0
+winter-2027,7,CSE 5120,Introduction to Artificial Intelligence,60,20055,3W1,Discussion,3,"Salloum, Ronald",N/A,Online,N/A,N/A,0,45,0/0,Online,,San Bernardino,0
+winter-2027,8,CSE 5160,Machine Learning,60,20058,3W1,Discussion,3,"Qiao, Haiyan",N/A,Online,N/A,N/A,0,45,0/0,Online,,San Bernardino,0
+winter-2027,9,CSE 5250,Parallel Algorithms and Programming,60,20050,3W1,Discussion,3,"Li, Xiangyu",N/A,Online,N/A,N/A,0,45,0/0,Online,,San Bernardino,0
+winter-2027,10,CSE 5350,Numerical Computation,60,20053,3W1,Discussion,3,"Sun, Qingquan",N/A,Online,N/A,N/A,0,45,0/0,Online,,San Bernardino,0
+winter-2027,11,CSE 5700,Compilers,60,20052,3W1,Discussion,3,"Wang, Suyang",N/A,Online,N/A,N/A,0,45,0/0,Online,,San Bernardino,0
+winter-2027,12,CSE 5720,Database Systems,60,20059,3W1,Discussion,3,"Jin, Jennifer",N/A,Online,N/A,N/A,0,45,45/45,Online,,San Bernardino,0
+fall-2026,2,CSE 1100,Critical Thinking Through Computer Programming,1,8339,1,Lecture,2,"Watson, Peter",N/A,JB 102,Tu-Th,9:00 AM - 10:15 AM,53,60,0/0,Classroom,GE-1B Critical Thinking,San Bernardino,45
+fall-2026,3,CSE 1100,Critical Thinking Through Computer Programming,2,8419,1,Activity,1,"Watson, Peter",N/A,JB 360,Tu-Th,10:30 AM - 11:20 AM,24,30,0/0,Classroom,GE-1B Critical Thinking,San Bernardino,0
+fall-2026,4,CSE 1100,Critical Thinking Through Computer Programming,3,8421,1,Activity,1,"Watson, Peter",N/A,JB 360,Tu-Th,1:00 PM - 1:50 PM,29,30,0/0,Classroom,GE-1B Critical Thinking,San Bernardino,0
+fall-2026,5,CSE 1250,Programming Basics,1,8338,1,Lecture,3,"Watson, Peter",N/A,CE 105,M-W,10:30 AM - 11:45 AM,58,60,60/60,Classroom,Tutoring Available,San Bernardino,45
+fall-2026,6,CSE 1250,Programming Basics,2,8342,1,Activity,1,"Watson, Peter",N/A,JB 360,M-W,1:00 PM - 1:50 PM,29,30,30/30,Classroom,Tutoring Available,San Bernardino,0
+fall-2026,7,CSE 1250,Programming Basics,3,8343,1,Activity,1,"Watson, Peter",N/A,JB 360,M-W,2:30 PM - 3:20 PM,29,30,30/30,Classroom,Tutoring Available,San Bernardino,0
+fall-2026,8,CSE 1250,Programming Basics,5,8639,1,Lecture,3,"Watson, Peter",N/A,JB 262,Tu-Th,4:00 PM - 5:15 PM,59,60,30/30,Classroom,Tutoring Available,San Bernardino,45
+fall-2026,9,CSE 1250,Programming Basics,6,8640,1,Activity,1,"Watson, Peter",N/A,JB 360,Tu-Th,5:30 PM - 6:20 PM,29,30,30/30,Classroom,Tutoring Available,San Bernardino,0
+fall-2026,10,CSE 1250,Programming Basics,60,8641,1,Activity,1,"Zhang, Yan",N/A,Online,N/A,N/A,30,30,30/30,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2026,11,CSE 1300,Introduction to Data Science,1,8865,1,Lecture,3,"Alzahrani, Nabeel",N/A,CE 105,M-W,9:00 AM - 10:15 AM,34,60,0/0,Classroom,"GE-2 Mathematical/Quant. Reasoning, Tutoring Available",San Bernardino,0
+fall-2026,12,CSE 1300L,Introduction to Data Science Lab,1,8866,1,Activity,1,"Tellez, Roman",N/A,JB 356,M-W,1:00 PM - 1:50 PM,31,40,0/0,Classroom,,San Bernardino,0
+fall-2026,13,CSE 2010,Computer Science I,1,8465,1,Discussion,3,"Hou, Yunfei",N/A,JB 140,M-W,9:00 AM - 10:15 AM,45,60,0/0,Classroom,Tutoring Available,San Bernardino,45
+fall-2026,14,CSE 2010,Computer Science I,2,8466,1,Activity,1,"Hou, Yunfei",N/A,JB 359,M-W,10:30 AM - 11:45 AM,24,30,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2026,15,CSE 2010,Computer Science I,3,11886,1,Activity,1,"Orijuela, Giovanni",N/A,JB 356,M-W,12:00 PM - 12:50 PM,21,30,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2026,16,CSE 2010,Computer Science I,60,8808,1,Discussion,3,"Li, Xiangyu",N/A,Online,N/A,N/A,46,60,0/0,Online,"AB386, Tutoring Available",San Bernardino,45
+fall-2026,17,CSE 2010,Computer Science I,61,8809,1,Activity,1,"Li, Xiangyu",N/A,Online,N/A,N/A,46,60,0/0,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2026,18,CSE 2010,Computer Science I,62,12823,1,Discussion,3,"Devlin, Kathleen",N/A,Online,N/A,N/A,39,70,0/0,Online,"AB386, Tutoring Available",San Bernardino,45
+fall-2026,19,CSE 2010,Computer Science I,63,12824,1,Activity,1,"Devlin, Kathleen",N/A,Online,N/A,N/A,39,70,0/0,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2026,20,CSE 2020,Computer Science II,7,8884,1,Discussion,3,"Devlin, Kathleen",N/A,JB 102,Tu-Th,10:30 AM - 11:45 AM,24,60,60/60,Classroom,Tutoring Available,San Bernardino,45
+fall-2026,21,CSE 2020,Computer Science II,9,11887,1,Activity,1,"Perez-Gamboa, Sonia",N/A,JB 359,Tu-Th,1:00 PM - 1:50 PM,24,30,30/30,Classroom,Tutoring Available,San Bernardino,0
+fall-2026,22,CSE 2020,Computer Science II,60,8633,1,Discussion,3,"Salloum, Ronald",N/A,Online,N/A,N/A,58,60,60/60,Online,"AB386, Tutoring Available",San Bernardino,45
+fall-2026,23,CSE 2020,Computer Science II,61,8634,1,Activity,1,"Salloum, Ronald",N/A,Online,N/A,N/A,58,60,60/60,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2026,24,CSE 2130,Machine Organization,1,8348,1,Discussion,3,"Georgiou, Taline",N/A,PS 203,M-W,1:00 PM - 2:15 PM,38,45,45/45,Classroom,Tutoring Available,San Bernardino,0
+fall-2026,25,CSE 2130,Machine Organization,60,8648,1,Discussion,3,"Georgiou, Taline",N/A,Online,N/A,N/A,45,46,45/45,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2026,26,CSE 3100,Digital Logic,8,12744,1,Discussion,3,"Georgiou, Taline",N/A,PS 204,M-W,9:00 AM - 10:15 AM,30,30,60/60,Classroom,Tutoring Available,San Bernardino,45
+fall-2026,27,CSE 3100,Digital Logic,9,12745,1,Laboratory,1,"Georgiou, Taline",N/A,JB 356,M-W,10:30 AM - 11:45 AM,27,30,30/30,Classroom,Tutoring Available,San Bernardino,0
+fall-2026,28,CSE 3100,Digital Logic,11,13030,1,Discussion,3,"Georgiou, Taline",N/A,JB 102,M-W,2:30 PM - 3:45 PM,51,52,52/52,Classroom,Tutoring Available,San Bernardino,45
+fall-2026,29,CSE 3100,Digital Logic,62,13026,1,Laboratory,1,"Georgiou, Taline",N/A,Online,N/A,N/A,54,56,0/0,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2026,30,CSE 3350,Signals and Systems,1,9069,1,Discussion,3,"Salloum, Ronald",N/A,Online,Tu-Th,1:00 PM - 2:15 PM,41,45,45/45,Classroom,,San Bernardino,0
+fall-2026,31,CSE 3650,Systems Administration I,60,13191,1,Discussion,2,"Abdoli, Alireza",N/A,Online,M-W,4:00 PM - 5:15 PM,25,30,0/0,Online Synchronous Section,AB386,San Bernardino,45
+fall-2026,32,CSE 3650,Systems Administration I,61,13192,1,Activity,1,"Abdoli, Alireza",N/A,Online,M-W,5:30 PM - 6:20 PM,25,30,0/0,Online Synchronous Section,AB386,San Bernardino,0
+fall-2026,33,CSE 4010,Contemporary Computer Architecture,1,8890,1,Discussion,3,"Orijuela, Lawrence",N/A,SB 127,M-W,5:30 PM - 6:45 PM,60,60,60/60,Classroom,Tutoring Available,San Bernardino,45
+fall-2026,34,CSE 4010,Contemporary Computer Architecture,60,8345,1,Discussion,3,"Abdoli, Alireza",N/A,Online,N/A,N/A,75,72,60/60,Online,"AB386, Tutoring Available",San Bernardino,45
+fall-2026,35,CSE 4010,Contemporary Computer Architecture,61,8355,1,Laboratory,1,"Abdoli, Alireza",N/A,Online,N/A,N/A,75,72,60/60,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2026,36,CSE 4010,Contemporary Computer Architecture,62,8891,1,Laboratory,1,"Orijuela, Lawrence",N/A,Online,N/A,N/A,60,60,40/40,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2026,37,CSE 4050,Web Application Development,1,8788,1,Discussion,3,"Motin Howlader, Abdul",N/A,JB 262,M-W,5:30 PM - 6:45 PM,42,60,60/60,Classroom,,San Bernardino,0
+fall-2026,38,CSE 4050,Web Application Development,2,8344,1,Discussion,3,"Ghazi, Mudassar",N/A,JB 262,M-W,7:00 PM - 8:15 PM,42,60,60/60,Classroom,,San Bernardino,0
+fall-2026,39,CSE 4100,Computer Networking and Security,1,8646,1,Discussion,3,"Ngobi, Said",N/A,CE 110,Tu-Th,4:00 PM - 5:15 PM,32,60,60/60,Classroom,,San Bernardino,0
+fall-2026,40,CSE 4100,Computer Networking and Security,2,8645,1,Discussion,3,"Ngobi, Said",N/A,HP 124,Tu-Th,5:30 PM - 6:45 PM,24,60,60/60,Classroom,,San Bernardino,0
+fall-2026,41,CSE 4310,Algorithm Analysis,60,8598,1,Discussion,3,"Muheidat, Fadi",N/A,Online,N/A,N/A,42,46,45/45,Online,AB386,San Bernardino,0
+fall-2026,42,CSE 4310,Algorithm Analysis,61,8351,1,Discussion,3,"Voigt, Kerstin",N/A,Online,N/A,N/A,44,45,45/45,Online,AB386,San Bernardino,0
+fall-2026,43,CSE 4400,Game Design,1,8341,1,Discussion,3,"Orijuela, Giovanni",N/A,HP 124,Tu-Th,7:00 PM - 8:15 PM,62,64,60/60,Classroom,,San Bernardino,0
+fall-2026,44,CSE 4550,Software Engineering,1,8790,1,Discussion,3,"Jin, Jennifer",N/A,JB 113,Tu-Th,9:00 AM - 10:15 AM,43,45,30/30,Classroom,,San Bernardino,0
+fall-2026,45,CSE 4550,Software Engineering,2,8436,1,Discussion,3,"Jin, Jennifer",N/A,JB 113,Tu-Th,10:30 AM - 11:45 AM,45,45,30/30,Classroom,,San Bernardino,0
+fall-2026,46,CSE 4560,Embedded Systems,1,8434,1,Laboratory,1,"Sun, Qingquan",N/A,JB 358,Tu-Th,10:30 AM - 11:20 AM,22,30,30/30,Classroom,,San Bernardino,0
+fall-2026,47,CSE 4560,Embedded Systems,2,9029,1,Laboratory,1,"Sun, Qingquan",N/A,JB 358,Tu-Th,1:00 PM - 1:50 PM,28,30,30/30,Classroom,,San Bernardino,0
+fall-2026,48,CSE 4560,Embedded Systems,60,8433,1,Discussion,3,"Sun, Qingquan",N/A,Online,N/A,N/A,50,60,60/60,Online,AB386 Exception Request,San Bernardino,45
+fall-2026,49,CSE 4600,Operating Systems,1,8437,1,Discussion,3,"Khan, Bilal",N/A,CGI 106,M-W,10:30 AM - 11:45 AM,31,45,30/30,Classroom,,San Bernardino,0
+fall-2026,50,CSE 4600,Operating Systems,60,8764,1,Discussion,3,"Zhang, Yan",N/A,Online,N/A,N/A,45,45,0/0,Online,AB386,San Bernardino,0
+fall-2026,51,CSE 4600,Operating Systems,61,8353,1,Discussion,3,"Zhang, Yan",N/A,Online,N/A,N/A,43,45,45/45,Online,AB386,San Bernardino,0
+fall-2026,52,CSE 4880,Ethics Senior Seminar,1,8655,1,Discussion,3,"Orijuela, Lawrence",N/A,CS 130,Tu-Th,7:00 PM - 8:15 PM,45,60,60/60,Classroom,Writing Intensive,San Bernardino,0
+fall-2026,53,CSE 5000,Introduction to Formal Languages and Automata Theory,60,8422,1,Discussion,3,"Georgiou, George",N/A,Online,N/A,N/A,46,45,0/0,Online,AB386,San Bernardino,0
+fall-2026,54,CSE 5000,Introduction to Formal Languages and Automata Theory,61,8423,1,Discussion,3,"Georgiou, George",N/A,Online,N/A,N/A,45,45,60/60,Online,AB386,San Bernardino,0
+fall-2026,55,CSE 5120,Introduction to Artificial Intelligence,1,8435,1,Discussion,3,"Khan, Bilal",N/A,PS 204,M-W,1:00 PM - 2:15 PM,15,45,30/30,Classroom,,San Bernardino,0
+fall-2026,56,CSE 5120,Introduction to Artificial Intelligence,60,8888,1,Discussion,3,"Khan, Bilal",N/A,Online,N/A,N/A,57,60,45/45,Online,AB386,San Bernardino,0
+fall-2026,57,CSE 5160,Machine Learning,1,8352,1,Discussion,3,"Zhang, Yan",N/A,PL 263,Tu-Th,9:00 AM - 10:15 AM,23,45,45/45,Classroom,,San Bernardino,0
+fall-2026,58,CSE 5160,Machine Learning,60,8721,1,Discussion,3,"Qiao, Haiyan",N/A,Online,N/A,N/A,45,45,45/45,Online,AB386,San Bernardino,0
+fall-2026,59,CSE 5208,Introduction to Computer Engineering Design,1,8609,1,Discussion,3,"Ghasemianmoghaddam, Nazanin",N/A,CE 110,Tu-Th,1:00 PM - 2:15 PM,32,60,60/60,Classroom,Writing Intensive,San Bernardino,45
+fall-2026,60,CSE 5208,Introduction to Computer Engineering Design,2,8610,1,Laboratory,1,"Ghasemianmoghaddam, Nazanin",N/A,JB 356,Tu-Th,2:30 PM - 3:45 PM,32,30,30/30,Classroom,Writing Intensive,San Bernardino,0
+fall-2026,61,CSE 5208,Introduction to Computer Engineering Design,3,9082,1,Discussion,3,"Wang, Suyang",N/A,CGI 209,M-W,5:30 PM - 6:45 PM,24,60,60/60,Classroom,Writing Intensive,San Bernardino,45
+fall-2026,62,CSE 5208,Introduction to Computer Engineering Design,4,9083,1,Laboratory,1,"Wang, Suyang",N/A,JB 356,M-W,7:00 PM - 7:50 PM,24,30,30/30,Classroom,Writing Intensive,San Bernardino,0
+fall-2026,63,CSE 5210,Digital System Design,60,13027,1,Discussion,3,"Ghasemianmoghaddam, Nazanin",N/A,Online,Tu-Th,4:00 PM - 5:15 PM,36,45,45/45,Online Synchronous Section,AB386,San Bernardino,45
+fall-2026,64,CSE 5210,Digital System Design,61,13028,1,Laboratory,1,"Ghasemianmoghaddam, Nazanin",N/A,Online,Tu-Th,5:30 PM - 6:45 PM,36,60,60/60,Online Synchronous Section,AB386,San Bernardino,0
+fall-2026,65,CSE 5250,Parallel Algorithms and Programming,61,8624,1,Discussion,3,"Li, Xiangyu",N/A,Online,N/A,N/A,52,47,60/60,Online,AB386,San Bernardino,0
+fall-2026,66,CSE 5350,Numerical Computation,60,8765,1,Discussion,3,"Sun, Qingquan",N/A,Online,N/A,N/A,45,45,45/45,Online,AB386,San Bernardino,0
+fall-2026,67,CSE 5410,Robotics and Control,1,8664,1,Discussion,3,"Qiao, Haiyan",N/A,CGI 110,Tu-Th,10:30 AM - 11:45 AM,61,62,60/60,Classroom,,San Bernardino,45
+fall-2026,68,CSE 5410,Robotics and Control,2,8665,1,Laboratory,1,"Qiao, Haiyan",N/A,JB 358,Tu-Th,9:00 AM - 10:15 AM,28,30,30/30,Classroom,,San Bernardino,0
+fall-2026,69,CSE 5410,Robotics and Control,60,9028,1,Laboratory,1,"Chilcutt, Michelle",N/A,Online,N/A,N/A,33,33,30/30,Online,AB386,San Bernardino,0
+fall-2026,70,CSE 5500,Advanced Bioinformatics I: Sequence Analysis,1,8881,1,Discussion,3,"Li, Xiangyu",N/A,JB 258,M-W,2:30 PM - 3:45 PM,18,45,45/45,Classroom,,San Bernardino,0
+fall-2026,71,CSE 5700,Compilers,2,9091,1,Discussion,3,"Orijuela, Giovanni",N/A,JB 262,Tu-Th,5:30 PM - 6:45 PM,21,60,60/60,Classroom,,San Bernardino,0
+fall-2026,72,CSE 5700,Compilers,60,8350,1,Discussion,3,"Wang, Suyang",N/A,Online,N/A,N/A,60,60,60/60,Online,AB386,San Bernardino,0
+fall-2026,73,CSE 5720,Database Systems,2,8349,1,Discussion,3,"Muheidat, Fadi",N/A,UH 042,Tu-Th,1:00 PM - 2:15 PM,44,45,30/30,Classroom,,San Bernardino,0
+fall-2026,74,CSE 5720,Database Systems,60,8791,1,Discussion,3,"Jin, Jennifer",N/A,Online,N/A,N/A,50,47,30/30,Online,AB386,San Bernardino,0
+fall-2026,75,CSE 5750,Internship in Computer Science and Engineering,1,13177,1,Supervision,3,"Dajani, Khalil",N/A,OC TBA,N/A,N/A,0,5,0/0,Classroom,,San Bernardino,0
+fall-2026,76,CSE 5953,Independent Study,4,13142,1,Supervision,3,"Zhang, Yan",N/A,,N/A,N/A,3,3,0/0,Classroom,,San Bernardino,0
+fall-2026,77,CSE 6010,Foundations of Data Science,1,9036,1,Lecture,3,"Abdoli, Alireza",N/A,JB 102,Tu-Th,1:00 PM - 2:15 PM,36,50,50/50,Classroom,,San Bernardino,0
+fall-2026,78,CSE 6020,Computation and Complexity Theory,61,8882,1,Discussion,3,"Ngobi, Said",N/A,Online,M-W,7:00 PM - 8:15 PM,38,75,60/60,Online Synchronous Section,AB386,San Bernardino,0
+fall-2026,79,CSE 6100,Modern Computer Architecture,60,12775,1,Discussion,3,"Motin Howlader, Abdul",N/A,Online,N/A,N/A,33,60,60/60,Online,AB386,San Bernardino,0
+fall-2026,80,CSE 6300,Theory of Algorithms and Their Analysis,1,8592,1,Discussion,3,"Salloum, Ronald",N/A,JB 262,Tu-Th,2:30 PM - 3:45 PM,18,45,45/45,Classroom,,San Bernardino,0
+fall-2026,81,CSE 6550,Software Engineering Concepts,1,8647,1,Discussion,3,"Muheidat, Fadi",N/A,HP 124,Tu-Th,4:00 PM - 5:15 PM,30,65,60/60,Classroom,,San Bernardino,0
+fall-2026,82,CSE 6890,Graduate Seminar,1,8816,1,Seminar,1,"Jin, Jennifer",N/A,JB 258,Th,2:30 PM - 3:20 PM,15,60,60/60,Classroom,,San Bernardino,0
+fall-2026,83,CSE 6950,Graduate Independent Study,4,13169,1,Supervision,3,"Salloum, Ronald",N/A,OC TBA,N/A,N/A,2,5,0/0,Classroom,,San Bernardino,0
+fall-2026,84,CSE 6964,Masters Project,1,8441,1,Supervision,4,"Jin, Jennifer",N/A,TBD,N/A,N/A,2,1,0/0,Classroom,,San Bernardino,0
+fall-2026,85,CSE 6976,Thesis,2,13284,1,Supervision,6,"Zhang, Yan",N/A,,N/A,N/A,1,2,0/0,Classroom,,San Bernardino,0
+fall-2026,86,CSE 6980,Comprehensive Examination,1,8443,1,Supervision,0,"Jin, Jennifer",N/A,,N/A,N/A,17,60,0/0,Classroom,,San Bernardino,0
+fall-2026,87,CSE 6990,Continuous Enrollment for Graduate Candidacy Standing,1,9133,1,Supervision,0,"Jin, Jennifer",N/A,,N/A,N/A,0,1,0/0,Classroom,,San Bernardino,0
+summer-2026,2,CSE 2010,Computer Science I,60,60406,5W1,Discussion,3,"Georgiou, George",N/A,Online,N/A,N/A,15,45,30/30,Online,State Support,San Bernardino,45
+summer-2026,3,CSE 2010,Computer Science I,61,60407,5W1,Activity,1,"Qiao, Haiyan",N/A,Online,N/A,N/A,15,45,30/30,Online,State Support,San Bernardino,0
+summer-2026,4,CSE 2020,Computer Science II,62,60500,5W2,Discussion,3,"Salloum, Ronald",N/A,Online,N/A,N/A,18,45,30/30,Online,State Support,San Bernardino,45
+summer-2026,5,CSE 2020,Computer Science II,64,60502,5W2,Activity,1,"Salloum, Ronald",N/A,Online,N/A,N/A,18,45,30/30,Online,State Support,San Bernardino,0
+summer-2026,6,CSE 3100,Digital Logic,60,60408,5W1,Discussion,3,"Georgiou, Taline",N/A,Online,N/A,N/A,28,45,30/30,Online,State Support,San Bernardino,45
+summer-2026,7,CSE 3100,Digital Logic,61,60409,5W1,Laboratory,1,"Georgiou, Taline",N/A,Online,N/A,N/A,28,45,30/30,Online,State Support,San Bernardino,0
+summer-2026,8,CSE 4030,Analog Circuit Design and Analysis,60,60387,5W1,Discussion,3,"Hou, Yunfei",N/A,Online,N/A,N/A,20,45,30/30,Online,State Support,San Bernardino,45
+summer-2026,9,CSE 4030,Analog Circuit Design and Analysis,61,60418,5W1,Laboratory,1,"Hou, Yunfei",N/A,Online,N/A,N/A,20,45,30/30,Online,State Support,San Bernardino,0
+summer-2026,10,CSE 4100,Computer Networking and Security,61,60389,5W2,Discussion,3,"Muheidat, Fadi",N/A,Online,N/A,N/A,42,45,30/30,Online,State Support,San Bernardino,0
+summer-2026,11,CSE 4310,Algorithm Analysis,60,60391,5W1,Discussion,3,"Muheidat, Fadi",N/A,Online,N/A,N/A,19,45,30/30,Online,State Support,San Bernardino,0
+summer-2026,12,CSE 4560,Embedded Systems,62,60401,5W2,Discussion,3,"Sun, Qingquan",N/A,Online,N/A,N/A,42,45,30/30,Online,State Support,San Bernardino,45
+summer-2026,13,CSE 4560,Embedded Systems,63,60403,5W2,Laboratory,1,"Sun, Qingquan",N/A,Online,N/A,N/A,42,45,30/30,Online,State Support,San Bernardino,0
+summer-2026,14,CSE 4600,Operating Systems,61,60394,5W2,Discussion,3,"Zhang, Yan",N/A,Online,N/A,N/A,33,45,30/30,Online,State Support,San Bernardino,0
+summer-2026,15,CSE 4880,Ethics Senior Seminar,60,60388,5W1,Discussion,3,"Muheidat, Fadi",N/A,Online,N/A,N/A,45,45,30/30,Online,"Writing Intensive, State Support",San Bernardino,0
+summer-2026,16,CSE 5000,Introduction to Formal Languages and Automata Theory,60,60404,5W1,Discussion,3,"Georgiou, George",N/A,Online,N/A,N/A,36,45,30/30,Online,State Support,San Bernardino,0
+summer-2026,17,CSE 5120,Introduction to Artificial Intelligence,60,60395,5W1,Discussion,3,"Salloum, Ronald",N/A,Online,N/A,N/A,19,45,30/30,Online,State Support,San Bernardino,0
+summer-2026,18,CSE 5120,Introduction to Artificial Intelligence,62,60402,5W2,Discussion,3,"Li, Xiangyu",N/A,Online,N/A,N/A,25,45,30/30,Online,State Support,San Bernardino,0
+summer-2026,19,CSE 5160,Machine Learning,60,60411,5W1,Discussion,3,"Qiao, Haiyan",N/A,Online,N/A,N/A,24,45,30/30,Online,State Support,San Bernardino,0
+summer-2026,20,CSE 5160,Machine Learning,61,60412,5W2,Discussion,3,"Qiao, Haiyan",N/A,Online,N/A,N/A,21,45,30/30,Online,State Support,San Bernardino,0
+summer-2026,21,CSE 5350,Numerical Computation,62,60399,5W1,Discussion,3,"Sun, Qingquan",N/A,Online,N/A,N/A,34,45,30/30,Online,State Support,San Bernardino,0
+summer-2026,22,CSE 5700,Compilers,60,60421,5W1,Discussion,3,"Wang, Suyang",N/A,Online,N/A,N/A,26,45,30/30,Online,State Support,San Bernardino,0
+summer-2026,23,CSE 5720,Database Systems,60,60413,5W1,Discussion,3,"Jin, Jennifer",N/A,Online,N/A,N/A,25,45,30/30,Online,State Support,San Bernardino,0
+spring-2026,2,CSE 1100,Critical Thinking Through Computer Programming,3,44520,1,Lecture,2,"Watson, Peter",N/A,JB 140,M-W,10:30 AM - 11:45 AM,29,60,60/60,Classroom,GE-1B Critical Thinking,San Bernardino,45
+spring-2026,3,CSE 1100,Critical Thinking Through Computer Programming,4,44521,1,Activity,1,"Watson, Peter",N/A,JB 360,M-W,1:00 PM - 1:50 PM,29,30,30/30,Classroom,GE-1B Critical Thinking,San Bernardino,0
+spring-2026,4,CSE 1250,Programming Basics,1,44518,1,Lecture,3,"Watson, Peter",N/A,PS 010,Tu-Th,9:00 AM - 10:15 AM,44,60,60/60,Classroom,Tutoring Available,San Bernardino,45
+spring-2026,5,CSE 1250,Programming Basics,2,44617,1,Activity,1,"Watson, Peter",N/A,JB 360,Tu-Th,10:30 AM - 11:20 AM,31,30,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,6,CSE 1250,Programming Basics,4,44618,1,Activity,1,"Watson, Peter",N/A,JB 360,Tu-Th,2:30 PM - 3:20 PM,13,30,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,7,CSE 1300,Introduction to Data Science,1,44623,1,Lecture,3,"Abdoli, Alireza",N/A,CGI 106,M-W,10:30 AM - 11:45 AM,50,60,60/60,Classroom,"GE-2 Mathematical/Quant. Reasoning, Tutoring Available",San Bernardino,0
+spring-2026,8,CSE 1300L,Introduction to Data Science Lab,1,44624,1,Activity,1,"Wang, Suyang",N/A,JB 359,M,1:00 PM - 1:50 PM,23,30,30/30,Classroom,,San Bernardino,0
+spring-2026,9,CSE 2010,Computer Science I,1,44680,1,Discussion,3,"Li, Xiangyu",N/A,CE 110,M-W,2:30 PM - 3:45 PM,51,60,60/60,Classroom,Tutoring Available,San Bernardino,45
+spring-2026,10,CSE 2010,Computer Science I,2,44681,1,Activity,1,"Li, Xiangyu",N/A,JB 359,M-W,4:00 PM - 4:50 PM,31,30,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,11,CSE 2010,Computer Science I,3,44682,1,Activity,1,"Li, Xiangyu",N/A,JB 359,M-W,5:30 PM - 6:20 PM,20,30,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,12,CSE 2010,Computer Science I,10,44687,1,Discussion,3,"Ghasemianmoghaddam, Nazanin",N/A,JB 109,Tu-Th,9:00 AM - 10:15 AM,28,60,60/60,Classroom,Tutoring Available,San Bernardino,45
+spring-2026,13,CSE 2010,Computer Science I,11,44688,1,Activity,1,"Ghasemianmoghaddam, Nazanin",N/A,JB 358,Tu-Th,10:30 AM - 11:20 AM,28,30,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,14,CSE 2010,Computer Science I,62,44685,1,Discussion,3,"Li, Xiangyu",N/A,Online,N/A,N/A,55,60,0/0,Online,"AB386, Tutoring Available",San Bernardino,45
+spring-2026,15,CSE 2010,Computer Science I,63,44686,1,Activity,1,"Li, Xiangyu",N/A,Online,N/A,N/A,55,60,30/30,Online,"AB386, Tutoring Available",San Bernardino,0
+spring-2026,16,CSE 2020,Computer Science II,3,44410,1,Discussion,3,"Devlin, Kathleen",N/A,PS 010,Tu-Th,10:30 AM - 11:45 AM,22,60,30/30,Classroom,Tutoring Available,San Bernardino,45
+spring-2026,17,CSE 2020,Computer Science II,6,45032,1,Activity,1,"Perez-Gamboa, Sonia",N/A,JB 358,Tu-Th,1:00 PM - 1:50 PM,22,30,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,18,CSE 2020,Computer Science II,60,44652,1,Discussion,3,"Salloum, Ronald",N/A,Online,N/A,N/A,51,60,30/30,Online,"AB386, Tutoring Available",San Bernardino,45
+spring-2026,19,CSE 2020,Computer Science II,61,44653,1,Activity,1,"Perez-Gamboa, Sonia",N/A,Online,N/A,N/A,51,60,30/30,Online,"AB386, Tutoring Available",San Bernardino,0
+spring-2026,20,CSE 2130,Machine Organization,1,44592,1,Discussion,3,"Georgiou, Taline",N/A,JB 254,M-W,2:30 PM - 3:45 PM,35,45,45/45,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,21,CSE 2130,Machine Organization,2,44692,1,Discussion,3,"Georgiou, Taline",N/A,HP 124,M-W,1:00 PM - 2:15 PM,27,45,45/45,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,22,CSE 3100,Digital Logic,4,44594,1,Laboratory,1,"Qiao, Haiyan",N/A,JB 356,Tu-Th,9:00 AM - 10:15 AM,29,30,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,23,CSE 3100,Digital Logic,5,45015,1,Laboratory,1,"Qiao, Haiyan",N/A,JB 356,Tu-Th,10:30 AM - 11:45 AM,27,30,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,24,CSE 3100,Digital Logic,9,46351,1,Laboratory,1,"Georgiou, Taline",N/A,TBD,M-W,10:30 AM - 11:20 AM,29,24,0/0,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,25,CSE 3100,Digital Logic,10,46352,1,Laboratory,1,"Georgiou, Taline",N/A,TBD,M-W,4:00 PM - 4:50 PM,18,16,0/0,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,26,CSE 3100,Digital Logic,62,44593,1,Discussion,3,"Qiao, Haiyan",N/A,Online,N/A,N/A,56,60,0/0,Online,"AB386, Tutoring Available",San Bernardino,45
+spring-2026,27,CSE 3100,Digital Logic,64,46350,1,Discussion,3,"Georgiou, Taline",N/A,Online,N/A,N/A,47,46,0/0,Online,"AB386, Tutoring Available",San Bernardino,45
+spring-2026,28,CSE 3350,Signals and Systems,1,44412,1,Discussion,3,"Kim, Hee Jean",N/A,JB 102,Tu-Th,1:00 PM - 2:15 PM,31,45,30/30,Classroom,,San Bernardino,0
+spring-2026,29,CSE 4010,Contemporary Computer Architecture,1,44577,1,Discussion,3,"Abu Shanab, Ahmad",N/A,CS 130,M-W,4:00 PM - 5:15 PM,84,90,30/30,Classroom,Tutoring Available,San Bernardino,45
+spring-2026,30,CSE 4010,Contemporary Computer Architecture,2,44578,1,Laboratory,1,"Abu Shanab, Ahmad",N/A,JB 358,M-W,5:30 PM - 6:45 PM,27,30,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,31,CSE 4010,Contemporary Computer Architecture,63,44693,1,Laboratory,1,"Abu Shanab, Ahmad",N/A,Online,N/A,N/A,57,80,30/30,Online,"AB386, Tutoring Available",San Bernardino,0
+spring-2026,32,CSE 4030,Analog Circuit Design and Analysis,1,44413,1,Discussion,3,"Ghasemianmoghaddam, Nazanin",N/A,CH 135,M-W,1:00 PM - 2:15 PM,33,60,30/30,Classroom,,San Bernardino,45
+spring-2026,33,CSE 4030,Analog Circuit Design and Analysis,2,44414,1,Laboratory,1,"Ghasemianmoghaddam, Nazanin",N/A,JB 359,M-W,2:30 PM - 3:45 PM,33,30,0/0,Classroom,,San Bernardino,0
+spring-2026,34,CSE 4100,Computer Networking and Security,2,44580,1,Discussion,3,"Kim, Hee Jean",N/A,CE 105,Tu-Th,4:00 PM - 5:15 PM,53,80,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,35,CSE 4100,Computer Networking and Security,60,44725,1,Discussion,3,"Kim, Hee Jean",N/A,Online,M-W,7:00 PM - 8:15 PM,73,80,60/60,Online Synchronous Section,"AB386, Tutoring Available",San Bernardino,0
+spring-2026,36,CSE 4200,Computer Graphics,60,44729,1,Discussion,3,"Abu Shanab, Ahmad",N/A,Online,N/A,N/A,77,80,60/60,Online,AB386,San Bernardino,0
+spring-2026,37,CSE 4200,Computer Graphics,61,46077,1,Discussion,3,"Abdoli, Alireza",N/A,Online,N/A,N/A,79,80,20/20,Online,AB386,San Bernardino,0
+spring-2026,38,CSE 4310,Algorithm Analysis,1,44415,1,Discussion,3,"Voigt, Kerstin",N/A,CGI 106,Tu-Th,10:30 AM - 11:45 AM,18,45,45/45,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,39,CSE 4310,Algorithm Analysis,2,44602,1,Discussion,3,"Zhang, Yan",N/A,CE 355,Tu-Th,1:00 PM - 2:15 PM,34,40,45/45,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,40,CSE 4310,Algorithm Analysis,61,44727,1,Discussion,3,"Voigt, Kerstin",N/A,Online,N/A,N/A,56,55,60/60,Online,"AB386, Tutoring Available",San Bernardino,0
+spring-2026,41,CSE 4410,Game Programming,1,44416,1,Discussion,3,"Abdoli, Alireza",N/A,CS 130,M-W,5:30 PM - 6:45 PM,56,60,30/30,Classroom,,San Bernardino,0
+spring-2026,42,CSE 4410,Game Programming,2,44554,1,Discussion,3,"Orijuela, Giovanni",N/A,CS 128,Tu-Th,7:00 PM - 8:15 PM,60,60,30/30,Classroom,,San Bernardino,0
+spring-2026,43,CSE 4500,Platform Computing,1,44598,1,Discussion,3,"Motin Howlader, Abdul",N/A,CGI 110,M-W,7:00 PM - 8:15 PM,36,60,60/60,Classroom,,San Bernardino,0
+spring-2026,44,CSE 4500,Platform Computing,2,44604,1,Discussion,3,"Motin Howlader, Abdul",N/A,CS 128,Tu-Th,5:30 PM - 6:45 PM,44,60,30/30,Classroom,,San Bernardino,0
+spring-2026,45,CSE 4550,Software Engineering,1,44417,1,Discussion,3,"Jin, Jennifer",N/A,JB 140,Tu-Th,9:00 AM - 10:15 AM,43,45,30/30,Classroom,,San Bernardino,0
+spring-2026,46,CSE 4550,Software Engineering,60,44675,1,Discussion,3,"Jin, Jennifer",N/A,Online,N/A,N/A,61,60,60/60,Online,AB386,San Bernardino,0
+spring-2026,47,CSE 4560,Embedded Systems,60,44589,1,Discussion,3,"Sun, Qingquan",N/A,Online,N/A,N/A,59,60,30/30,Online,AB386,San Bernardino,45
+spring-2026,48,CSE 4560,Embedded Systems,61,44590,1,Laboratory,1,"Sun, Qingquan",N/A,Online,N/A,N/A,59,60,30/30,Online,AB386,San Bernardino,0
+spring-2026,49,CSE 4600,Operating Systems,60,44418,1,Discussion,3,"Zhang, Yan",N/A,PS 203,Th,10:30 AM - 11:45 AM,28,45,45/45,Classroom+Asynchronous Online,Tutoring Available,San Bernardino,0
+spring-2026,50,CSE 4600,Operating Systems,61,44419,1,Discussion,3,"Zhang, Yan",N/A,PS 203,Tu,10:30 AM - 11:45 AM,26,45,30/30,Classroom+Asynchronous Online,Tutoring Available,San Bernardino,0
+spring-2026,51,CSE 4610,Advanced Operating Systems,1,44495,1,Discussion,3,"Motin Howlader, Abdul",N/A,PL 263,Tu-Th,4:00 PM - 5:15 PM,11,45,30/30,Classroom,,San Bernardino,0
+spring-2026,52,CSE 4880,Ethics Senior Seminar,2,44676,1,Discussion,3,"Orijuela, Lawrence",N/A,JB 113,Tu-Th,5:30 PM - 6:45 PM,60,60,60/60,Classroom,Writing Intensive,San Bernardino,0
+spring-2026,53,CSE 4880,Ethics Senior Seminar,60,46349,1,Discussion,3,"Georgiou, Taline",N/A,Online,N/A,N/A,44,41,0/0,Online,"Writing Intensive, AB386",San Bernardino,0
+spring-2026,54,CSE 5000,Introduction to Formal Languages and Automata Theory,2,44677,1,Discussion,3,"Ngobi, Said",N/A,PL 263,M-W,7:00 PM - 8:15 PM,47,45,45/45,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,55,CSE 5120,Introduction to Artificial Intelligence,1,44421,1,Discussion,3,"Khan, Bilal",N/A,CGI 110,M-W,1:00 PM - 2:15 PM,29,45,30/30,Classroom,,San Bernardino,0
+spring-2026,56,CSE 5120,Introduction to Artificial Intelligence,60,44718,1,Discussion,3,"Khan, Bilal",N/A,Online,N/A,N/A,46,45,0/0,Online,AB386,San Bernardino,0
+spring-2026,57,CSE 5120,Introduction to Artificial Intelligence,61,46293,1,Discussion,3,"Khan, Bilal",N/A,Online,N/A,N/A,19,19,20/20,Online,,San Bernardino,0
+spring-2026,58,CSE 5140,Computational Intelligence,1,45825,1,Discussion,3,"Alzahrani, Nabeel",N/A,JB 140,Tu-Th,4:00 PM - 5:15 PM,13,60,30/30,Classroom,,San Bernardino,0
+spring-2026,59,CSE 5160,Machine Learning,61,44715,1,Discussion,3,"Qiao, Haiyan",N/A,Online,N/A,N/A,45,45,45/45,Online,"AB386, Tutoring Available",San Bernardino,0
+spring-2026,60,CSE 5210,Digital System Design,1,44430,1,Discussion,3,"Abu Shanab, Ahmad",N/A,CE 110,Tu-Th,4:00 PM - 5:15 PM,30,60,0/0,Classroom,,San Bernardino,45
+spring-2026,61,CSE 5210,Digital System Design,2,44493,1,Laboratory,1,"Abu Shanab, Ahmad",N/A,JB 359,Tu-Th,5:30 PM - 6:45 PM,30,32,30/30,Classroom,,San Bernardino,0
+spring-2026,62,CSE 5250,Parallel Algorithms and Programming,2,44678,1,Discussion,3,"Orijuela, Giovanni",N/A,CS 130,M-W,7:00 PM - 8:15 PM,30,60,60/60,Classroom,,San Bernardino,0
+spring-2026,63,CSE 5250,Parallel Algorithms and Programming,60,44722,1,Discussion,3,"Orijuela, Giovanni",N/A,Online,N/A,N/A,83,80,20/20,Online,AB386,San Bernardino,0
+spring-2026,64,CSE 5350,Numerical Computation,1,44605,1,Discussion,3,"Ngobi, Said",N/A,CE 113,Tu-Th,1:00 PM - 2:15 PM,12,48,30/30,Classroom,,San Bernardino,0
+spring-2026,65,CSE 5408,Sustainable Engineering Design,1,44619,1,Discussion,3,"Hou, Yunfei",N/A,JB 356,Tu-Th,1:00 PM - 2:15 PM,36,40,30/30,Classroom,,San Bernardino,45
+spring-2026,66,CSE 5408,Sustainable Engineering Design,2,44620,1,Laboratory,1,"Hou, Yunfei",N/A,JB 356,Tu-Th,2:30 PM - 3:20 PM,36,40,30/30,Classroom,,San Bernardino,0
+spring-2026,67,CSE 5408,Sustainable Engineering Design,4,45903,1,Discussion,3,"Wang, Suyang",N/A,JB 109,M-W,5:30 PM - 6:45 PM,21,30,15/15,Classroom,,San Bernardino,45
+spring-2026,68,CSE 5408,Sustainable Engineering Design,5,45902,1,Laboratory,1,"Wang, Suyang",N/A,JB 358,M-W,7:00 PM - 7:50 PM,21,30,15/15,Classroom,,San Bernardino,0
+spring-2026,69,CSE 5510,Advanced Bioinformatics II: Numerical Modeling,60,45826,1,Discussion,3,"Orijuela, Lawrence",N/A,Online,N/A,N/A,14,60,45/45,Online,AB386,San Bernardino,0
+spring-2026,70,CSE 5700,Compilers,1,44579,1,Discussion,3,"Abdoli, Alireza",N/A,JB 109,M-W,7:00 PM - 8:15 PM,24,60,45/45,Classroom,,San Bernardino,0
+spring-2026,71,CSE 5700,Compilers,60,44723,1,Discussion,3,"Wang, Suyang",N/A,Online,N/A,N/A,84,85,60/60,Online,AB386,San Bernardino,0
+spring-2026,72,CSE 5720,Database Systems,2,44695,1,Discussion,3,"Motin Howlader, Abdul",N/A,JB 254,Tu-Th,7:00 PM - 8:15 PM,41,45,45/45,Classroom,Tutoring Available,San Bernardino,0
+spring-2026,73,CSE 5720,Database Systems,60,44726,1,Discussion,3,"Jin, Jennifer",N/A,Online,N/A,N/A,67,70,30/30,Online,"AB386, Tutoring Available",San Bernardino,0
+spring-2026,74,CSE 5951,Independent Study,3,46196,1,Supervision,1,"Li, Xiangyu",N/A,,N/A,N/A,1,10,0/0,Classroom,,San Bernardino,0
+spring-2026,75,CSE 5953,Independent Study,1,46197,1,Supervision,3,"Jin, Jennifer",N/A,,N/A,N/A,2,10,0/0,Classroom,,San Bernardino,0
+spring-2026,76,CSE 5953,Independent Study,2,46404,1,Supervision,3,"Hou, Yunfei",N/A,,N/A,N/A,3,5,0/0,Classroom,,San Bernardino,0
+spring-2026,77,CSE 5953,Independent Study,3,46405,1,Supervision,3,"Zhang, Yan",N/A,,N/A,N/A,1,5,0/0,Classroom,,San Bernardino,0
+spring-2026,78,CSE 5953,Independent Study,4,46479,1,Supervision,3,"Sun, Qingquan",N/A,,N/A,N/A,2,5,0/0,Classroom,,San Bernardino,0
+spring-2026,79,CSE 5953,Independent Study,5,46480,1,Supervision,3,"Wang, Suyang",N/A,,N/A,N/A,2,5,0/0,Classroom,,San Bernardino,0
+spring-2026,80,CSE 6300,Theory of Algorithms and Their Analysis,1,44429,1,Discussion,3,"Salloum, Ronald",N/A,CS 130,Tu-Th,2:30 PM - 3:45 PM,24,45,30/30,Classroom,,San Bernardino,0
+spring-2026,81,CSE 6320,Big Data Management,60,46099,1,Lecture,3,"Ngobi, Said",N/A,Online,N/A,N/A,63,60,0/0,Online,,San Bernardino,0
+spring-2026,82,CSE 6400,Artificial Intelligence,1,44582,1,Discussion,3,"Salloum, Ronald",N/A,CS 130,Tu-Th,1:00 PM - 2:15 PM,19,45,30/30,Classroom,,San Bernardino,0
+spring-2026,83,CSE 6600,Operating Systems Concepts and Theory,2,44648,1,Discussion,3,"Ghasemianmoghaddam, Nazanin",N/A,CS 128,M-W,4:00 PM - 5:15 PM,50,60,30/30,Classroom,,San Bernardino,0
+spring-2026,84,CSE 6890,Graduate Seminar,1,44601,1,Seminar,1,"Jin, Jennifer",N/A,JB 361,N/A,N/A,14,18,45/45,Classroom,,San Bernardino,0
+spring-2026,85,CSE 6950,Graduate Independent Study,1,46476,1,Supervision,3,"Zhang, Yan",N/A,,N/A,N/A,1,5,0/0,Classroom,,San Bernardino,0
+spring-2026,86,CSE 6964,Masters Project,2,46462,1,Supervision,4,"Zhang, Yan",N/A,,N/A,N/A,1,10,0/0,Classroom,,San Bernardino,0
+spring-2026,87,CSE 6964,Masters Project,3,46489,1,Supervision,4,"Salloum, Ronald",N/A,,N/A,N/A,1,10,0/0,Classroom,,San Bernardino,0
+spring-2026,88,CSE 6973,Thesis,1,46363,1,Supervision,3,"Zhang, Yan",N/A,TBD,N/A,N/A,1,10,0/0,Classroom,,San Bernardino,0
+spring-2026,89,CSE 6973,Thesis,2,46364,1,Supervision,3,"Khan, Bilal",N/A,TBD,N/A,N/A,1,10,0/0,Classroom,,San Bernardino,0
+spring-2026,90,CSE 6976,Thesis,4,46497,1,Supervision,6,"Qiao, Haiyan",N/A,,N/A,N/A,1,10,0/0,Classroom,,San Bernardino,0
+spring-2026,91,CSE 6980,Comprehensive Examination,1,44428,1,Supervision,0,"Jin, Jennifer",N/A,JB 361,N/A,N/A,24,18,30/30,Classroom,,San Bernardino,0
+spring-2026,92,CSE 6990,Continuous Enrollment for Graduate Candidacy Standing,1,44772,1,Supervision,0,"Jin, Jennifer",N/A,JB 361,N/A,N/A,3,2,0/0,Classroom,,San Bernardino,0
+winter-2026,2,CSE 4310,Algorithm Analysis,60,20066,3W1,Discussion,3,"Muheidat, Fadi",N/A,Online,N/A,N/A,9,30,0/0,Online,AB386,San Bernardino,0
+winter-2026,3,CSE 4600,Operating Systems,60,20018,3W1,Discussion,3,"Zhang, Yan",N/A,Online,N/A,N/A,8,30,30/30,Online,State Support,San Bernardino,0
+winter-2026,4,CSE 5000,Introduction to Formal Languages and Automata Theory,60,20019,3W1,Discussion,3,"Georgiou, Taline",N/A,Online,N/A,N/A,13,30,30/30,Online,State Support,San Bernardino,0
+winter-2026,5,CSE 5120,Introduction to Artificial Intelligence,60,20067,3W1,Discussion,3,"Salloum, Ronald",N/A,Online,N/A,N/A,14,30,0/0,Online,AB386,San Bernardino,0
+winter-2026,6,CSE 5160,Machine Learning,60,20072,3W1,Discussion,3,"Qiao, Haiyan",N/A,Online,N/A,N/A,24,30,0/0,Online,AB386,San Bernardino,0
+winter-2026,7,CSE 5350,Numerical Computation,60,20020,3W1,Discussion,3,"Sun, Qingquan",N/A,Online,N/A,N/A,25,30,30/30,Online,State Support,San Bernardino,0
+winter-2026,8,CSE 5720,Database Systems,60,20022,3W1,Discussion,3,"Jin, Jennifer",N/A,Online,N/A,N/A,17,30,30/30,Online,State Support,San Bernardino,0
+fall-2025,2,CSE 1100,Critical Thinking Through Computer Programming,1,83407,1,Lecture,2,"Watson, Peter",N/A,JB 102,Tu-Th,9:00 AM - 10:15 AM,60,90,0/0,Classroom,GE-1B Critical Thinking,San Bernardino,45
+fall-2025,3,CSE 1100,Critical Thinking Through Computer Programming,2,83504,1,Activity,1,"Watson, Peter",N/A,JB 360,Tu-Th,10:30 AM - 11:20 AM,29,30,30/30,Classroom,GE-1B Critical Thinking,San Bernardino,0
+fall-2025,4,CSE 1100,Critical Thinking Through Computer Programming,3,83506,1,Activity,1,"Watson, Peter",N/A,JB 360,Tu-Th,1:00 PM - 1:50 PM,16,30,30/30,Classroom,GE-1B Critical Thinking,San Bernardino,0
+fall-2025,5,CSE 1100,Critical Thinking Through Computer Programming,4,83505,1,Activity,1,"Watson, Peter",N/A,JB 360,Tu-Th,2:30 PM - 3:20 PM,15,30,30/30,Classroom,GE-1B Critical Thinking,San Bernardino,0
+fall-2025,6,CSE 1250,Programming Basics,1,83406,1,Lecture,3,"Watson, Peter",N/A,JB 102,M-W,10:30 AM - 11:45 AM,105,150,0/0,Classroom,Tutoring Available,San Bernardino,45
+fall-2025,7,CSE 1250,Programming Basics,2,83411,1,Activity,1,"Watson, Peter",N/A,JB 360,M-W,1:00 PM - 1:50 PM,29,30,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,8,CSE 1250,Programming Basics,3,83412,1,Activity,1,"Watson, Peter",N/A,JB 360,M-W,2:30 PM - 3:20 PM,29,30,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,9,CSE 1250,Programming Basics,4,83680,1,Activity,1,"Orijuela, Giovanni",N/A,JB 360,M-W,4:00 PM - 4:50 PM,29,30,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,10,CSE 1250,Programming Basics,5,83848,1,Lecture,3,"Watson, Peter",N/A,JB 262,Tu-Th,4:00 PM - 5:15 PM,50,60,0/0,Classroom,Tutoring Available,San Bernardino,45
+fall-2025,11,CSE 1250,Programming Basics,6,83849,1,Activity,1,"Orijuela, Lawrence",N/A,JB 360,Tu-Th,5:30 PM - 6:20 PM,29,30,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,12,CSE 1250,Programming Basics,7,83850,1,Activity,1,"Perez-Gamboa, Sonia",N/A,JB 360,Tu-Th,7:00 PM - 7:50 PM,21,30,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,13,CSE 1250,Programming Basics,8,84379,1,Activity,1,"Orijuela, Giovanni",N/A,JB 360,M-W,5:30 PM - 6:20 PM,18,30,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,14,CSE 1300,Introduction to Data Science,1,84320,1,Lecture,3,"Georgiou, George",N/A,CGI 203,M-W,10:30 AM - 11:45 AM,37,40,0/0,Classroom,"GE-2 Mathematical/Quant. Reasoning, Tutoring Available",San Bernardino,0
+fall-2025,15,CSE 1300L,Introduction to Data Science Lab,1,84321,1,Activity,1,"Georgiou, George",N/A,JB 356,M,1:00 PM - 1:50 PM,28,40,0/0,Classroom,,San Bernardino,0
+fall-2025,16,CSE 2010,Computer Science I,1,83569,1,Discussion,3,"Li, Xiangyu",N/A,CGI 207,M-W,1:00 PM - 2:15 PM,25,60,0/0,Classroom,Tutoring Available,San Bernardino,45
+fall-2025,17,CSE 2010,Computer Science I,2,83570,1,Activity,1,"Li, Xiangyu",N/A,JB 356,M-W,2:30 PM - 3:20 PM,25,30,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,18,CSE 2010,Computer Science I,60,84146,1,Discussion,3,"Georgiou, George",N/A,Online,N/A,N/A,35,60,0/0,Online,"AB386, Tutoring Available",San Bernardino,45
+fall-2025,19,CSE 2010,Computer Science I,61,84147,1,Activity,1,"Georgiou, George",N/A,Online,N/A,N/A,35,60,0/0,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2025,20,CSE 2020,Computer Science II,1,83836,1,Discussion,3,"Devlin, Kathleen",N/A,CGI 210,Tu-Th,2:30 PM - 3:45 PM,63,64,0/0,Classroom,Tutoring Available,San Bernardino,45
+fall-2025,21,CSE 2020,Computer Science II,2,83837,1,Activity,1,"Orijuela, Giovanni",N/A,JB 358,Tu-Th,4:00 PM - 4:50 PM,33,32,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,22,CSE 2020,Computer Science II,3,84244,1,Activity,1,"Orijuela, Giovanni",N/A,JB 358,Tu-Th,5:30 PM - 6:20 PM,30,32,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,23,CSE 2020,Computer Science II,7,84383,1,Discussion,3,"Devlin, Kathleen",N/A,JB 102,M-W,1:00 PM - 2:15 PM,34,66,0/0,Classroom,Tutoring Available,San Bernardino,45
+fall-2025,24,CSE 2020,Computer Science II,8,84384,1,Activity,1,"Perez-Gamboa, Sonia",N/A,JB 359,M-W,2:30 PM - 3:20 PM,34,33,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,25,CSE 2130,Machine Organization,1,83421,1,Discussion,3,"Georgiou, Taline",N/A,JB 109,M-W,1:00 PM - 2:15 PM,43,45,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,27,CSE 2130,Machine Organization,61,84133,1,Discussion,3,"Ngobi, Said",N/A,Online,N/A,N/A,45,45,0/0,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2025,28,CSE 3100,Digital Logic,1,84308,1,Discussion,3,"Georgiou, Taline",N/A,JB 140,M-W,9:00 AM - 10:15 AM,30,60,0/0,Classroom,Tutoring Available,San Bernardino,45
+fall-2025,29,CSE 3100,Digital Logic,2,84310,1,Laboratory,1,"Georgiou, Taline",N/A,JB 356,M-W,10:30 AM - 11:20 AM,30,30,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,30,CSE 3100,Digital Logic,3,83417,1,Discussion,3,"Ghasemianmoghaddam, Nazanin",N/A,CE 105,Tu-Th,9:00 AM - 10:15 AM,31,90,0/0,Classroom,Tutoring Available,San Bernardino,45
+fall-2025,31,CSE 3100,Digital Logic,4,83418,1,Laboratory,1,"John Babu, Megha",N/A,JB 356,Tu-Th,10:30 AM - 11:20 AM,31,30,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,32,CSE 3100,Digital Logic,60,83867,1,Discussion,3,"Georgiou, Taline",N/A,Online,N/A,N/A,59,60,0/0,Online,"AB386, Tutoring Available",San Bernardino,45
+fall-2025,33,CSE 3100,Digital Logic,61,83868,1,Laboratory,1,"Georgiou, Taline",N/A,Online,N/A,N/A,59,60,0/0,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2025,34,CSE 3350,Signals and Systems,60,85783,1,Discussion,3,"Salloum, Ronald",N/A,Online,N/A,N/A,38,45,0/0,Online,AB386,San Bernardino,0
+fall-2025,35,CSE 4010,Contemporary Computer Architecture,1,84406,1,Discussion,3,"Abu Shanab, Ahmad",N/A,CGI 110,Tu-Th,4:00 PM - 5:15 PM,71,80,0/0,Classroom,Tutoring Available,San Bernardino,45
+fall-2025,36,CSE 4010,Contemporary Computer Architecture,2,84407,1,Laboratory,1,"Abu Shanab, Ahmad",N/A,JB 356,Tu-Th,5:30 PM - 6:20 PM,40,40,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,37,CSE 4010,Contemporary Computer Architecture,3,85130,1,Laboratory,1,"Abu Shanab, Ahmad",N/A,JB 356,Tu-Th,7:00 PM - 7:50 PM,31,40,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,38,CSE 4010,Contemporary Computer Architecture,60,83414,1,Discussion,3,"Ghasemianmoghaddam, Nazanin",N/A,Online,N/A,N/A,75,75,19/19,Online,"AB386, Tutoring Available",San Bernardino,45
+fall-2025,39,CSE 4010,Contemporary Computer Architecture,61,83431,1,Laboratory,1,"Ghasemianmoghaddam, Nazanin",N/A,Online,N/A,N/A,75,75,19/19,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2025,40,CSE 4050,Web Application Development,1,84097,1,Discussion,3,"Motin Howlader, Abdul",N/A,JB 113,M-W,5:30 PM - 6:45 PM,60,60,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,41,CSE 4050,Web Application Development,2,83413,1,Discussion,3,"Ghazi, Mudassar",N/A,CGI 110,M-W,7:00 PM - 8:15 PM,45,80,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,42,CSE 4100,Computer Networking and Security,1,83863,1,Discussion,3,"Ngobi, Said",N/A,JB 140,Tu-Th,4:00 PM - 5:15 PM,47,60,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,43,CSE 4100,Computer Networking and Security,2,83862,1,Discussion,3,"Ngobi, Said",N/A,JB 113,Tu-Th,5:30 PM - 6:45 PM,40,60,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,44,CSE 4310,Algorithm Analysis,60,83791,1,Discussion,3,"Voigt, Kerstin",N/A,Online,N/A,N/A,43,45,0/0,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2025,45,CSE 4310,Algorithm Analysis,61,83426,1,Discussion,3,"Voigt, Kerstin",N/A,Online,N/A,N/A,45,45,0/0,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2025,46,CSE 4400,Game Design,1,83409,1,Discussion,3,"Orijuela, Giovanni",N/A,CGI 210,Tu-Th,7:00 PM - 8:15 PM,83,96,0/0,Classroom,,San Bernardino,0
+fall-2025,49,CSE 4560,Embedded Systems,1,83522,1,Discussion,3,"Sun, Qingquan",N/A,JB 140,Tu-Th,9:00 AM - 10:15 AM,38,60,0/0,Classroom,,San Bernardino,45
+fall-2025,50,CSE 4560,Embedded Systems,2,83523,1,Laboratory,1,"Sun, Qingquan",N/A,JB 358,Tu-Th,10:30 AM - 11:20 AM,29,30,0/0,Classroom,,San Bernardino,0
+fall-2025,51,CSE 4560,Embedded Systems,3,85132,1,Laboratory,1,"Sun, Qingquan",N/A,JB 358,Tu-Th,1:00 PM - 1:50 PM,9,30,0/0,Classroom,,San Bernardino,0
+fall-2025,52,CSE 4600,Operating Systems,1,83526,1,Discussion,3,"Khan, Bilal",N/A,CGI 106,M-W,10:30 AM - 11:45 AM,27,45,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,53,CSE 4600,Operating Systems,60,84048,1,Discussion,3,"Khan, Bilal",N/A,Online,N/A,N/A,43,45,0/0,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2025,54,CSE 4600,Operating Systems,61,83428,1,Discussion,3,"Zhang, Yan",N/A,Online,N/A,N/A,45,45,0/0,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2025,55,CSE 4600,Operating Systems,62,84387,1,Discussion,3,"Zhang, Yan",N/A,Online,N/A,N/A,44,45,0/0,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2025,57,CSE 4880,Ethics Senior Seminar,1,83880,1,Discussion,3,"Orijuela, Lawrence",N/A,JB 102,Tu-Th,7:00 PM - 8:15 PM,50,80,0/0,Classroom,Writing Intensive,San Bernardino,0
+fall-2025,59,CSE 5000,Introduction to Formal Languages and Automata Theory,61,83509,1,Discussion,3,"Ngobi, Said",N/A,Online,N/A,N/A,73,75,0/0,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2025,60,CSE 5120,Introduction to Artificial Intelligence,1,83524,1,Discussion,3,"Khan, Bilal",N/A,JB 113,M-W,1:00 PM - 2:15 PM,34,45,0/0,Classroom,,San Bernardino,0
+fall-2025,62,CSE 5160,Machine Learning,1,83427,1,Discussion,3,"Zhang, Yan",N/A,JB 109,Tu-Th,9:00 AM - 10:15 AM,26,45,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,63,CSE 5160,Machine Learning,60,83994,1,Discussion,3,"Jin, Jennifer",N/A,Online,N/A,N/A,44,45,0/0,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2025,64,CSE 5160,Machine Learning,61,83573,1,Discussion,3,"Qiao, Haiyan",N/A,Online,N/A,N/A,45,45,0/0,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2025,67,CSE 5208,Introduction to Computer Engineering Design,3,85881,1,Discussion,3,"Wang, Suyang",N/A,JB 258,M-W,5:30 PM - 6:45 PM,25,40,0/0,Classroom,Writing Intensive,San Bernardino,45
+fall-2025,68,CSE 5208,Introduction to Computer Engineering Design,4,85882,1,Laboratory,1,"Wang, Suyang",N/A,JB 356,M-W,7:00 PM - 7:50 PM,25,40,0/0,Classroom,Writing Intensive,San Bernardino,0
+fall-2025,69,CSE 5210,Digital System Design,1,83408,1,Discussion,3,"Ghasemianmoghaddam, Nazanin",N/A,JB 109,Tu-Th,4:00 PM - 5:15 PM,33,60,0/0,Classroom,,San Bernardino,45
+fall-2025,70,CSE 5210,Digital System Design,2,84233,1,Laboratory,1,"Ghasemianmoghaddam, Nazanin",N/A,JB 359,Tu-Th,5:30 PM - 6:20 PM,33,30,0/0,Classroom,,San Bernardino,0
+fall-2025,71,CSE 5250,Parallel Algorithms and Programming,61,83823,1,Discussion,3,"Abu Shanab, Ahmad",N/A,Online,N/A,N/A,97,95,0/0,Online,AB386,San Bernardino,0
+fall-2025,73,CSE 5410,Robotics and Control,1,83901,1,Discussion,3,"Qiao, Haiyan",N/A,JB 113,Tu-Th,10:30 AM - 11:45 AM,55,60,0/0,Classroom,,San Bernardino,45
+fall-2025,74,CSE 5410,Robotics and Control,2,83902,1,Laboratory,1,"Qiao, Haiyan",N/A,JB 358,Tu-Th,9:00 AM - 10:15 AM,30,30,0/0,Classroom,,San Bernardino,0
+fall-2025,75,CSE 5410,Robotics and Control,3,85131,1,Laboratory,1,"John Babu, Megha",N/A,JB 358,Tu-Th,7:30 AM - 8:20 AM,25,30,0/0,Classroom,,San Bernardino,0
+fall-2025,76,CSE 5500,Advanced Bioinformatics I: Sequence Analysis,60,84369,1,Discussion,3,"Orijuela, Lawrence",N/A,Online,N/A,N/A,50,45,0/0,Online,AB386,San Bernardino,0
+fall-2025,77,CSE 5700,Compilers,1,83424,1,Discussion,3,"Abdoli, Alireza",N/A,JB 262,M-W,4:00 PM - 5:15 PM,61,60,15/15,Classroom,,San Bernardino,0
+fall-2025,78,CSE 5700,Compilers,2,85914,1,Discussion,3,"Wang, Suyang",N/A,JB 262,M-W,2:30 PM - 3:45 PM,46,45,0/0,Classroom,,San Bernardino,0
+fall-2025,79,CSE 5720,Database Systems,1,84103,1,Discussion,3,"Ghazi, Mudassar",N/A,JB 111,Tu-Th,7:00 PM - 8:15 PM,21,60,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,80,CSE 5720,Database Systems,2,83423,1,Discussion,3,"Orijuela, Giovanni",N/A,CE 116,M-W,1:00 PM - 2:15 PM,59,60,0/0,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,81,CSE 5750,Internship in Computer Science and Engineering,1,83702,1,Supervision,3,"Dajani, Khalil",N/A,,N/A,N/A,2,1,0/0,Classroom,,San Bernardino,0
+fall-2025,82,CSE 5953,Independent Study,1,83531,1,Supervision,3,"Qiao, Haiyan",N/A,,N/A,N/A,0,1,0/0,Classroom,,San Bernardino,0
+fall-2025,83,CSE 5953,Independent Study,2,86308,1,Supervision,3,"Zhang, Yan",N/A,,N/A,N/A,3,10,0/0,Classroom,,San Bernardino,0
+fall-2025,84,CSE 6010,Foundations of Data Science,1,85345,1,Lecture,3,"Abdoli, Alireza",N/A,JB 262,M-W,5:30 PM - 6:45 PM,61,60,0/0,Classroom,,San Bernardino,0
+fall-2025,85,CSE 6020,Computation and Complexity Theory,61,84377,1,Discussion,3,"Ghasemianmoghaddam, Nazanin",N/A,Online,M-W,7:00 PM - 8:15 PM,16,75,0/0,Online Synchronous Section,AB386,San Bernardino,0
+fall-2025,86,CSE 6100,Modern Computer Architecture,1,83866,1,Discussion,3,"Motin Howlader, Abdul",N/A,CGI 110,Tu-Th,7:00 PM - 8:15 PM,53,75,0/0,Classroom,,San Bernardino,0
+fall-2025,87,CSE 6300,Theory of Algorithms and Their Analysis,60,83784,1,Discussion,3,"Salloum, Ronald",N/A,CGI 218,Th,2:30 PM - 3:45 PM,16,45,0/0,Classroom+Synchronous,,San Bernardino,0
+fall-2025,88,CSE 6400,Artificial Intelligence,60,83568,1,Discussion,3,"Salloum, Ronald",N/A,CGI 203,Th,1:00 PM - 2:15 PM,35,45,0/0,Classroom+Synchronous,,San Bernardino,0
+fall-2025,89,CSE 6550,Software Engineering Concepts,1,83864,1,Discussion,3,"Alzahrani, Nabeel",N/A,UH 106,Tu-Th,4:00 PM - 5:15 PM,17,65,0/0,Classroom,,San Bernardino,0
+fall-2025,90,CSE 6890,Graduate Seminar,1,84174,1,Seminar,1,"Jin, Jennifer",N/A,,N/A,N/A,14,60,0/0,Classroom,,San Bernardino,0
+fall-2025,91,CSE 6964,Masters Project,1,83532,1,Supervision,4,"Dajani, Khalil",N/A,,N/A,N/A,0,1,0/0,Classroom,,San Bernardino,0
+fall-2025,92,CSE 6964,Masters Project,2,83699,1,Supervision,4,TBD,N/A,,N/A,N/A,0,1,0/0,Classroom,,San Bernardino,0
+fall-2025,93,CSE 6964,Masters Project,3,83700,1,Supervision,4,TBD,N/A,,N/A,N/A,0,1,0/0,Classroom,,San Bernardino,0
+fall-2025,94,CSE 6964,Masters Project,4,84503,1,Supervision,4,TBD,N/A,,N/A,N/A,0,10,0/0,Classroom,,San Bernardino,0
+fall-2025,96,CSE 6973,Thesis,1,84180,1,Supervision,3,TBD,N/A,,N/A,N/A,2,1,0/0,Classroom,,San Bernardino,0
+fall-2025,97,CSE 6976,Thesis,1,83533,1,Supervision,6,"Dajani, Khalil",N/A,,N/A,N/A,0,10,0/0,Classroom,,San Bernardino,0
+fall-2025,98,CSE 6980,Comprehensive Examination,1,83534,1,Supervision,0,"Jin, Jennifer",N/A,,N/A,N/A,25,60,0/0,Classroom,,San Bernardino,0
+fall-2025,99,CSE 6990,Continuous Enrollment for Graduate Candidacy Standing,1,86054,1,Supervision,0,"Dajani, Khalil",N/A,,N/A,N/A,1,1,0/0,Classroom,,San Bernardino,0
+summer-2025,2,CSE 2010,Computer Science I,60,60443,5W2,Discussion,3,"Georgiou, George",N/A,Online,N/A,N/A,14,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,45
+summer-2025,3,CSE 2010,Computer Science I,61,60444,5W2,Activity,1,"Georgiou, George",N/A,Online,N/A,N/A,14,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,0
+summer-2025,4,CSE 2020,Computer Science II,60,60420,5W1,Discussion,3,"Zhang, Yan",N/A,Online,N/A,N/A,18,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,45
+summer-2025,5,CSE 2020,Computer Science II,61,60421,5W1,Activity,1,"Zhang, Yan",N/A,Online,N/A,N/A,18,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,0
+summer-2025,6,CSE 2130,Machine Organization,60,60455,5W2,Discussion,3,"Georgiou, Taline",N/A,Online,N/A,N/A,20,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,0
+summer-2025,7,CSE 3100,Digital Logic,60,60425,5W1,Discussion,3,"Georgiou, Taline",N/A,Online,N/A,N/A,32,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,45
+summer-2025,8,CSE 3100,Digital Logic,61,60426,5W1,Laboratory,1,"Georgiou, Taline",N/A,Online,N/A,N/A,32,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,0
+summer-2025,9,CSE 4030,Analog Circuit Design and Analysis,60,60473,5W1,Discussion,3,"Hou, Yunfei",N/A,Online,M-W,9:00 AM - 10:15 AM,20,45,30/30,Online Synchronous Section,State Support,San Bernardino,45
+summer-2025,10,CSE 4030,Analog Circuit Design and Analysis,61,60474,5W1,Laboratory,1,"Hou, Yunfei",N/A,Online,N/A,N/A,20,45,30/30,Online,State Support,San Bernardino,0
+summer-2025,11,CSE 4100,Computer Networking and Security,60,60411,5W2,Discussion,3,"Muheidat, Fadi",N/A,Online,N/A,N/A,38,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,0
+summer-2025,12,CSE 4310,Algorithm Analysis,60,60401,5W2,Discussion,3,"Salloum, Ronald",N/A,Online,N/A,N/A,17,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,0
+summer-2025,13,CSE 4310,Algorithm Analysis,61,60408,5W1,Discussion,3,"Muheidat, Fadi",N/A,Online,N/A,N/A,24,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,0
+summer-2025,14,CSE 4560,Embedded Systems,62,60601,5W1,Discussion,3,"Sun, Qingquan",N/A,Online,N/A,N/A,45,45,30/30,Online,State Support,San Bernardino,45
+summer-2025,15,CSE 4560,Embedded Systems,63,60602,5W1,Laboratory,1,"Sun, Qingquan",N/A,Online,N/A,N/A,45,45,30/30,Online,State Support,San Bernardino,0
+summer-2025,16,CSE 4600,Operating Systems,60,60422,5W2,Discussion,3,"Zhang, Yan",N/A,Online,N/A,N/A,36,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,0
+summer-2025,17,CSE 4880,Ethics Senior Seminar,60,60409,5W1,Discussion,3,"Muheidat, Fadi",N/A,Online,N/A,N/A,34,45,30/30,Online,"Writing Intensive, State Support",San Bernardino,0
+summer-2025,18,CSE 4880,Ethics Senior Seminar,61,60410,5W2,Discussion,3,"Muheidat, Fadi",N/A,Online,N/A,N/A,43,45,30/30,Online,"Writing Intensive, State Support",San Bernardino,0
+summer-2025,19,CSE 5000,Introduction to Formal Languages and Automata Theory,60,60442,5W1,Discussion,3,"Georgiou, George",N/A,Online,N/A,N/A,35,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,0
+summer-2025,20,CSE 5000,Introduction to Formal Languages and Automata Theory,61,60456,5W1,Discussion,3,"Georgiou, George",N/A,Online,N/A,N/A,23,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,0
+summer-2025,21,CSE 5120,Introduction to Artificial Intelligence,60,60400,5W1,Discussion,3,"Salloum, Ronald",N/A,Online,N/A,N/A,35,45,30/30,Online,State Support,San Bernardino,0
+fall-2025,95,CSE 6972,Thesis,1,84337,1,Supervision,2,TBD,N/A,,N/A,N/A,0,5,5/5,Classroom,,San Bernardino,0
+summer-2025,22,CSE 5120,Introduction to Artificial Intelligence,61,60553,5W2,Discussion,3,"Salloum, Ronald",N/A,Online,N/A,N/A,34,45,30/30,Online,State Support,San Bernardino,0
+summer-2025,23,CSE 5160,Machine Learning,60,60416,5W1,Discussion,3,"Qiao, Haiyan",N/A,Online,N/A,N/A,20,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,0
+summer-2025,24,CSE 5160,Machine Learning,61,60417,5W2,Discussion,3,"Qiao, Haiyan",N/A,Online,N/A,N/A,22,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,0
+summer-2025,25,CSE 5350,Numerical Computation,61,60415,5W2,Discussion,3,"Sun, Qingquan",N/A,Online,N/A,N/A,34,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,0
+summer-2025,26,CSE 5350,Numerical Computation,62,60603,5W2,Discussion,3,"Sun, Qingquan",N/A,Online,N/A,N/A,24,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,0
+summer-2025,27,CSE 5720,Database Systems,60,60418,5W1,Discussion,3,"Jin, Jennifer",N/A,Online,N/A,N/A,32,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,0
+summer-2025,28,CSE 5720,Database Systems,61,60419,5W2,Discussion,3,"Jin, Jennifer",N/A,Online,N/A,N/A,25,45,30/30,Online,"State Support, Tutoring Available",San Bernardino,0
+spring-2025,2,CSE 1100,Critical Thinking Through Computer Programming,3,43189,1,Lecture,2,"Watson, Peter",N/A,JB 258,M-W,10:30 AM - 11:45 AM,30,30,30/30,Classroom,,San Bernardino,45
+spring-2025,3,CSE 1100,Critical Thinking Through Computer Programming,4,43190,1,Activity,1,"Watson, Peter",N/A,JB 360,M-W,1:00 PM - 1:50 PM,30,30,30/30,Classroom,,San Bernardino,0
+spring-2025,4,CSE 1250,Programming Basics,1,43186,1,Lecture,3,"Watson, Peter",N/A,JB 113,Tu-Th,9:00 AM - 10:15 AM,44,60,60/60,Classroom,Tutoring Available,San Bernardino,45
+spring-2025,5,CSE 1250,Programming Basics,2,43481,1,Activity,1,"Watson, Peter",N/A,JB 360,Tu-Th,10:30 AM - 11:20 AM,28,30,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,6,CSE 1250,Programming Basics,4,43483,1,Activity,1,"Watson, Peter",N/A,JB 360,Tu-Th,2:30 PM - 3:20 PM,16,30,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,7,CSE 1290,College Learning for Lives and Careers in the Information Age,1,42910,1,Seminar,3,"Devlin, Kathleen",N/A,JB 109,M-W,9:00 AM - 10:15 AM,26,45,30/30,Classroom,,San Bernardino,0
+spring-2025,8,CSE 1290,College Learning for Lives and Careers in the Information Age,2,43061,1,Seminar,3,"Devlin, Kathleen",N/A,PS 223,M-W,1:00 PM - 2:15 PM,25,45,30/30,Classroom,,San Bernardino,0
+spring-2025,9,CSE 1300,Introduction to Data Science,1,43540,1,Lecture,3,"Chen, Qiuxiao",N/A,CGI 106,M-W,10:30 AM - 11:45 AM,40,46,60/60,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,10,CSE 1300L,Introduction to Data Science Lab,1,43541,1,Activity,1,"Chen, Qiuxiao",N/A,JB 359,M,1:00 PM - 1:50 PM,22,23,30/30,Classroom,,San Bernardino,0
+spring-2025,11,CSE 1300L,Introduction to Data Science Lab,2,43974,1,Activity,1,"Chen, Qiuxiao",N/A,JB 359,W,1:00 PM - 1:50 PM,16,22,30/30,Classroom,,San Bernardino,0
+spring-2025,12,CSE 2010,Computer Science I,1,43945,1,Discussion,3,"Li, Xiangyu",N/A,CE 110,M-W,2:30 PM - 3:45 PM,48,60,30/30,Classroom,"Supplemental Instruction, Tutoring Available",San Bernardino,45
+spring-2025,13,CSE 2010,Computer Science I,2,43946,1,Activity,1,"Li, Xiangyu",N/A,JB 359,M-W,4:00 PM - 4:50 PM,29,30,0/0,Classroom,"Supplemental Instruction, Tutoring Available",San Bernardino,0
+spring-2025,14,CSE 2010,Computer Science I,3,43947,1,Activity,1,"Li, Xiangyu",N/A,JB 359,M-W,5:30 PM - 6:20 PM,19,30,30/30,Classroom,"Supplemental Instruction, Tutoring Available",San Bernardino,0
+spring-2025,17,CSE 2010,Computer Science I,10,43954,1,Discussion,3,"Perez-Gamboa, Sonia",N/A,HP 124,Tu-Th,5:30 PM - 6:45 PM,43,65,60/60,Classroom,"Supplemental Instruction, Tutoring Available",San Bernardino,45
+spring-2025,18,CSE 2010,Computer Science I,11,43955,1,Activity,1,"Akhter, Farheen",N/A,JB 359,Tu-Th,4:00 PM - 4:50 PM,16,33,30/30,Classroom,"Supplemental Instruction, Tutoring Available",San Bernardino,0
+spring-2025,19,CSE 2010,Computer Science I,12,43956,1,Activity,1,"Bhatt, Vishwa",N/A,JB 358,Tu-Th,7:00 PM - 7:50 PM,27,32,30/30,Classroom,"Supplemental Instruction, Tutoring Available",San Bernardino,0
+spring-2025,20,CSE 2010,Computer Science I,60,43948,1,Discussion,3,"Kim, Hee Jean",N/A,Online,M-W,9:00 AM - 10:15 AM,28,80,60/60,Online Synchronous Section,"AB386, Supplemental Instruction, Tutoring Available",San Bernardino,45
+spring-2025,21,CSE 2010,Computer Science I,61,43949,1,Activity,1,"Kim, Hee Jean",N/A,Online,M-W,10:30 AM - 11:20 AM,28,80,30/30,Online Synchronous Section,"AB386, Supplemental Instruction, Tutoring Available",San Bernardino,0
+spring-2025,24,CSE 2020,Computer Science II,1,42913,1,Discussion,3,"Ghasemianmoghaddam, Nazanin",N/A,JB 113,M-W,10:30 AM - 11:45 AM,27,40,30/30,Classroom,Tutoring Available,San Bernardino,45
+spring-2025,25,CSE 2020,Computer Science II,2,42914,1,Activity,1,"Akhter, Farheen",N/A,JB 356,M-W,1:00 PM - 1:50 PM,27,40,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,26,CSE 2020,Computer Science II,3,42915,1,Discussion,3,"Kim, Hee Jean",N/A,JB 140,Tu-Th,2:30 PM - 3:45 PM,28,40,30/30,Classroom,Tutoring Available,San Bernardino,45
+spring-2025,27,CSE 2020,Computer Science II,4,42916,1,Activity,1,"Bhatt, Vishwa",N/A,JB 356,Tu-Th,4:00 PM - 4:50 PM,28,40,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,28,CSE 2020,Computer Science II,60,43692,1,Discussion,3,"Motin Howlader, Abdul",N/A,Online,M-W,4:00 PM - 5:15 PM,27,60,30/30,Online Synchronous Section,"AB386, Tutoring Available",San Bernardino,45
+spring-2025,29,CSE 2020,Computer Science II,61,43693,1,Activity,1,"Akhter, Farheen",N/A,Online,M-W,5:30 PM - 6:20 PM,27,60,30/30,Online Synchronous Section,"AB386, Tutoring Available",San Bernardino,0
+spring-2025,34,CSE 3100,Digital Logic,6,43936,1,Discussion,3,"Abdoli, Alireza",N/A,CGI 210,M-W,5:30 PM - 6:45 PM,38,40,30/30,Classroom,Tutoring Available,San Bernardino,45
+spring-2025,35,CSE 3100,Digital Logic,7,43937,1,Laboratory,1,"Akhter, Farheen",N/A,JB 356,M-W,4:00 PM - 4:50 PM,38,40,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,38,CSE 3100,Digital Logic,62,43405,1,Discussion,3,"Qiao, Haiyan",N/A,CE 107,Tu,10:30 AM - 11:45 AM,22,30,30/30,Classroom+Synchronous,Tutoring Available,San Bernardino,45
+spring-2025,39,CSE 3100,Digital Logic,63,43406,1,Laboratory,1,"Qiao, Haiyan",N/A,JB 360,Tu,9:00 AM - 10:15 AM,22,30,30/30,Classroom+Synchronous,Tutoring Available,San Bernardino,0
+spring-2025,40,CSE 3350,Signals and Systems,1,42917,1,Discussion,3,"Kim, Hee Jean",N/A,JB 113,Tu-Th,1:00 PM - 2:15 PM,26,45,30/30,Classroom,,San Bernardino,0
+spring-2025,41,CSE 3660,Systems Administration II,1,43187,1,Discussion,2,"Han, Ken",N/A,JB 140,Tu-Th,5:30 PM - 6:45 PM,11,30,30/30,Classroom,,San Bernardino,45
+spring-2025,42,CSE 3660,Systems Administration II,2,43240,1,Activity,1,"Han, Ken",N/A,JB 356,Tu-Th,7:00 PM - 7:50 PM,11,30,30/30,Classroom,,San Bernardino,0
+spring-2025,43,CSE 4010,Contemporary Computer Architecture,1,43330,1,Discussion,3,"Abu Shanab, Ahmad",N/A,JB 109,M-W,4:00 PM - 5:15 PM,52,60,30/30,Classroom,Tutoring Available,San Bernardino,45
+spring-2025,44,CSE 4010,Contemporary Computer Architecture,2,43331,1,Laboratory,1,"Abu Shanab, Ahmad",N/A,JB 358,M-W,5:30 PM - 6:20 PM,27,30,0/0,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,45,CSE 4010,Contemporary Computer Architecture,3,43965,1,Laboratory,1,"Abu Shanab, Ahmad",N/A,JB 359,M-W,7:00 PM - 7:50 PM,25,30,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,46,CSE 4010,Contemporary Computer Architecture,60,44912,1,Discussion,3,"Orijuela, Lawrence",N/A,Online,N/A,N/A,98,98,60/60,Online,"AB386, Tutoring Available",San Bernardino,45
+spring-2025,47,CSE 4010,Contemporary Computer Architecture,61,44913,1,Laboratory,1,"Orijuela, Lawrence",N/A,Online,N/A,N/A,98,98,60/60,Online,"AB386, Tutoring Available",San Bernardino,0
+spring-2025,48,CSE 4030,Analog Circuit Design and Analysis,1,42920,1,Discussion,3,"Ghasemianmoghaddam, Nazanin",N/A,JB 140,M-W,1:00 PM - 2:15 PM,26,30,30/30,Classroom,,San Bernardino,45
+spring-2025,49,CSE 4030,Analog Circuit Design and Analysis,2,42921,1,Laboratory,1,"Ghasemianmoghaddam, Nazanin",N/A,JB 359,M-W,2:30 PM - 3:20 PM,26,30,30/30,Classroom,,San Bernardino,0
+spring-2025,50,CSE 4100,Computer Networking and Security,2,43333,1,Discussion,3,"Kim, Hee Jean",N/A,CE 105,Tu-Th,4:00 PM - 5:15 PM,63,80,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,51,CSE 4100,Computer Networking and Security,60,44963,1,Discussion,3,"Ngobi, Said",N/A,Online,M-W,7:00 PM - 8:15 PM,59,60,60/60,Online Synchronous Section,"AB386, Tutoring Available",San Bernardino,0
+spring-2025,52,CSE 4200,Computer Graphics,60,44996,1,Discussion,3,"Abu Shanab, Ahmad",N/A,Online,N/A,N/A,73,72,30/30,Online,"AB386, Tutoring Available",San Bernardino,0
+spring-2025,53,CSE 4310,Algorithm Analysis,1,42924,1,Discussion,3,"Voigt, Kerstin",N/A,CGI 106,Tu-Th,10:30 AM - 11:45 AM,29,30,0/0,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,54,CSE 4310,Algorithm Analysis,60,43424,1,Discussion,3,"Voigt, Kerstin",N/A,Online,N/A,N/A,31,30,0/0,Online,"AB386, Tutoring Available",San Bernardino,0
+spring-2025,55,CSE 4310,Algorithm Analysis,61,44972,1,Discussion,3,"Ghazi, Mudassar",N/A,Online,N/A,N/A,62,65,60/60,Online,"AB386, Tutoring Available",San Bernardino,0
+spring-2025,56,CSE 4410,Game Programming,1,42925,1,Discussion,3,"Orijuela, Giovanni",N/A,JB 109,M-W,5:30 PM - 6:45 PM,58,60,30/30,Classroom,,San Bernardino,0
+spring-2025,57,CSE 4410,Game Programming,2,43254,1,Discussion,3,"Orijuela, Giovanni",N/A,CGI 208,Tu-Th,7:00 PM - 8:15 PM,49,60,30/30,Classroom,,San Bernardino,0
+spring-2025,59,CSE 4500,Platform Computing,2,43440,1,Discussion,3,"Motin Howlader, Abdul",N/A,JB 262,Tu-Th,5:30 PM - 6:45 PM,39,60,30/30,Classroom,,San Bernardino,0
+spring-2025,60,CSE 4550,Software Engineering,1,42926,1,Discussion,3,"Ngobi, Said",N/A,CGI 210,Tu-Th,2:30 PM - 3:45 PM,75,80,30/30,Classroom,,San Bernardino,0
+spring-2025,62,CSE 4560,Embedded Systems,1,43386,1,Discussion,3,"Sun, Qingquan",N/A,JB 140,Tu-Th,9:00 AM - 10:15 AM,24,33,30/30,Classroom,,San Bernardino,45
+spring-2025,63,CSE 4560,Embedded Systems,2,43387,1,Laboratory,1,"Sun, Qingquan",N/A,JB 359,Tu-Th,10:30 AM - 11:20 AM,24,33,30/30,Classroom,,San Bernardino,0
+spring-2025,64,CSE 4600,Operating Systems,1,43656,1,Discussion,3,"Orijuela, Giovanni",N/A,CGI 110,Tu-Th,5:30 PM - 6:45 PM,45,50,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,65,CSE 4600,Operating Systems,2,42929,1,Discussion,3,"Zhang, Yan",N/A,JB 102,Tu-Th,10:30 AM - 11:45 AM,25,45,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,67,CSE 4610,Advanced Operating Systems,1,43057,1,Discussion,3,"Motin Howlader, Abdul",N/A,JB 258,Tu-Th,4:00 PM - 5:15 PM,14,45,30/30,Classroom,,San Bernardino,0
+spring-2025,68,CSE 4820,Senior Project,1,42930,1,Supervision,3,"Jin, Jennifer",N/A,JB 361,N/A,N/A,0,10,0/0,Classroom,,San Bernardino,0
+spring-2025,69,CSE 4820,Senior Project,2,45339,1,Supervision,3,"Li, Xiangyu",N/A,,N/A,N/A,1,1,0/0,Classroom,,San Bernardino,0
+spring-2025,70,CSE 4880,Ethics Senior Seminar,1,43327,1,Discussion,3,"Orijuela, Lawrence",N/A,CGI 203,M-W,5:30 PM - 6:45 PM,59,60,30/30,Classroom,Writing Intensive,San Bernardino,0
+spring-2025,71,CSE 4880,Ethics Senior Seminar,2,43940,1,Discussion,3,"Orijuela, Lawrence",N/A,JB 258,Tu-Th,5:30 PM - 6:45 PM,61,66,60/60,Classroom,Writing Intensive,San Bernardino,0
+spring-2025,73,CSE 5000,Introduction to Formal Languages and Automata Theory,2,43941,1,Discussion,3,"Babaeian, Mohsen",N/A,JB 262,M-W,7:00 PM - 8:15 PM,24,45,45/45,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,74,CSE 5120,Introduction to Artificial Intelligence,1,42931,1,Discussion,3,"Li, Xiangyu",N/A,JB 258,M-W,1:00 PM - 2:15 PM,38,45,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,75,CSE 5120,Introduction to Artificial Intelligence,3,43969,1,Discussion,3,"Khan, Bilal",N/A,CGI 210,M-W,10:30 AM - 11:45 AM,35,45,45/45,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,76,CSE 5120,Introduction to Artificial Intelligence,60,44908,1,Discussion,3,"Khan, Bilal",N/A,Online,Tu-Th,7:00 PM - 8:15 PM,43,45,30/30,Online Synchronous Section,"AB386, Tutoring Available",San Bernardino,0
+spring-2025,77,CSE 5160,Machine Learning,1,43013,1,Discussion,3,"Zhang, Yan",N/A,CE 113,Tu-Th,9:00 AM - 10:15 AM,42,45,30/30,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,79,CSE 5210,Digital System Design,1,42949,1,Discussion,3,"Abu Shanab, Ahmad",N/A,JB 113,Tu-Th,4:00 PM - 5:15 PM,30,33,30/30,Classroom,,San Bernardino,45
+spring-2025,80,CSE 5210,Digital System Design,2,43055,1,Laboratory,1,"Bhatt, Vishwa",N/A,JB 359,Tu-Th,5:30 PM - 6:20 PM,30,33,30/30,Classroom,,San Bernardino,0
+spring-2025,81,CSE 5250,Parallel Algorithms and Programming,2,43943,1,Discussion,3,"Orijuela, Giovanni",N/A,JB 111,M-W,7:00 PM - 8:15 PM,39,60,60/60,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,82,CSE 5250,Parallel Algorithms and Programming,60,44941,1,Discussion,3,"Orijuela, Giovanni",N/A,Online,N/A,N/A,72,68,60/60,Online,"AB386, Tutoring Available",San Bernardino,0
+spring-2025,83,CSE 5350,Numerical Computation,60,43444,1,Discussion,3,"Sun, Qingquan",N/A,Online,N/A,N/A,45,45,30/30,Online,AB386,San Bernardino,0
+spring-2025,84,CSE 5408,Sustainable Engineering Design,1,43484,1,Discussion,3,"Hou, Yunfei",N/A,JB 356,Tu-Th,9:00 AM - 10:15 AM,30,34,30/30,Classroom,,San Bernardino,45
+spring-2025,85,CSE 5408,Sustainable Engineering Design,2,43485,1,Laboratory,1,"Hou, Yunfei",N/A,JB 356,Tu-Th,10:30 AM - 11:20 AM,30,34,30/30,Classroom,,San Bernardino,0
+spring-2025,86,CSE 5700,Compilers,1,43332,1,Discussion,3,"Chen, Qiuxiao",N/A,JB 140,M-W,4:00 PM - 5:15 PM,42,45,0/0,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,87,CSE 5700,Compilers,60,44942,1,Discussion,3,"Ngobi, Said",N/A,Online,N/A,N/A,75,70,60/60,Online,"AB386, Tutoring Available",San Bernardino,0
+spring-2025,88,CSE 5720,Database Systems,2,43970,1,Discussion,3,"Motin Howlader, Abdul",N/A,JB 262,Tu-Th,7:00 PM - 8:15 PM,40,45,45/45,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,89,CSE 5720,Database Systems,60,44965,1,Discussion,3,"Motin Howlader, Abdul",N/A,Online,N/A,N/A,86,85,65/65,Online,"AB386, Tutoring Available",San Bernardino,0
+spring-2025,90,CSE 5750,Internship in Computer Science and Engineering,1,42933,1,Supervision,3,"Dajani, Khalil",N/A,JB 361,N/A,N/A,5,10,0/0,Classroom,,San Bernardino,0
+spring-2025,91,CSE 5750,Internship in Computer Science and Engineering,2,43425,1,Supervision,3,"Qiao, Haiyan",N/A,JB 361,N/A,N/A,1,10,0/0,Classroom,,San Bernardino,0
+spring-2025,92,CSE 5750,Internship in Computer Science and Engineering,3,45342,1,Supervision,3,"Hou, Yunfei",N/A,,N/A,N/A,1,1,0/0,Classroom,,San Bernardino,0
+spring-2025,93,CSE 5953,Independent Study,1,42934,1,Supervision,3,"Ghazi, Mudassar",N/A,JB 361,N/A,N/A,1,10,0/0,Classroom,,San Bernardino,0
+spring-2025,94,CSE 5953,Independent Study,2,43264,1,Supervision,3,"Zhang, Yan",N/A,JB 361,N/A,N/A,1,1,0/0,Classroom,,San Bernardino,0
+spring-2025,95,CSE 5953,Independent Study,3,45134,1,Supervision,3,"Qiao, Haiyan",N/A,JB 361,N/A,N/A,3,3,0/0,Classroom,,San Bernardino,0
+spring-2025,96,CSE 6020,Computation and Complexity Theory,60,45098,1,Discussion,3,"Babaeian, Mohsen",N/A,Online,N/A,N/A,30,85,0/0,Online,AB386,San Bernardino,0
+spring-2025,97,CSE 6300,Theory of Algorithms and Their Analysis,60,42942,1,Discussion,3,"Salloum, Ronald",N/A,CE 116,Th,2:30 PM - 3:45 PM,39,45,30/30,Classroom+Synchronous,,San Bernardino,0
+spring-2025,98,CSE 6400,Artificial Intelligence,60,43342,1,Discussion,3,"Salloum, Ronald",N/A,CE 116,Th,1:00 PM - 2:15 PM,35,45,30/30,Classroom+Synchronous,,San Bernardino,0
+spring-2025,99,CSE 6550,Software Engineering Concepts,1,43944,1,Discussion,3,"Alzahrani, Nabeel",N/A,SB 128,Tu-Th,4:00 PM - 5:15 PM,27,60,60/60,Classroom,,San Bernardino,0
+spring-2025,100,CSE 6600,Operating Systems Concepts and Theory,2,43661,1,Discussion,3,"Ghasemianmoghaddam, Nazanin",N/A,CGI 110,M-W,4:00 PM - 5:15 PM,55,70,30/30,Classroom,,San Bernardino,0
+spring-2025,101,CSE 6890,Graduate Seminar,1,43420,1,Seminar,1,"Jin, Jennifer",N/A,JB 361,N/A,N/A,63,18,45/45,Classroom,,San Bernardino,0
+spring-2025,102,CSE 6940,Graduate Research Methods in Computer Science,1,42935,1,Supervision,3,"Abdoli, Alireza",N/A,JB 361,N/A,N/A,24,18,0/0,Classroom,,San Bernardino,0
+spring-2025,103,CSE 6950,Graduate Independent Study,1,43081,1,Supervision,3,"Sun, Qingquan",N/A,JB 361,N/A,N/A,8,10,0/0,Classroom,,San Bernardino,0
+spring-2025,104,CSE 6950,Graduate Independent Study,2,43082,1,Supervision,3,"Dajani, Khalil",N/A,JB 361,N/A,N/A,26,10,0/0,Classroom,,San Bernardino,0
+spring-2025,105,CSE 6950,Graduate Independent Study,3,43728,1,Supervision,3,"Georgiou, George",N/A,JB 361,N/A,N/A,2,1,0/0,Classroom,,San Bernardino,0
+spring-2025,106,CSE 6950,Graduate Independent Study,4,44982,1,Supervision,3,"Zhang, Yan",N/A,JB 361,N/A,N/A,7,5,0/0,Classroom,,San Bernardino,0
+spring-2025,107,CSE 6964,Masters Project,1,42936,1,Supervision,4,"Sun, Qingquan",N/A,JB 361,N/A,N/A,2,10,0/0,Classroom,,San Bernardino,0
+spring-2025,108,CSE 6964,Masters Project,2,43265,1,Supervision,4,"Jin, Jennifer",N/A,JB 361,N/A,N/A,2,10,0/0,Classroom,,San Bernardino,0
+spring-2025,109,CSE 6964,Masters Project,3,43267,1,Supervision,4,"Zhang, Yan",N/A,JB 361,N/A,N/A,1,1,0/0,Classroom,,San Bernardino,0
+spring-2025,110,CSE 6964,Masters Project,4,45133,1,Supervision,4,"Qiao, Haiyan",N/A,JB 361,N/A,N/A,1,3,0/0,Classroom,,San Bernardino,0
+spring-2025,111,CSE 6964,Masters Project,5,45341,1,Supervision,4,"Salloum, Ronald",N/A,,N/A,N/A,2,1,0/0,Classroom,,San Bernardino,0
+spring-2025,112,CSE 6964,Masters Project,6,45353,1,Supervision,4,"Khan, Bilal",N/A,,N/A,N/A,1,1,0/0,Classroom,,San Bernardino,0
+spring-2025,113,CSE 6974,Thesis,1,42939,1,Supervision,4,"Chen, Qiuxiao",N/A,JB 361,N/A,N/A,1,1,0/0,Classroom,,San Bernardino,0
+spring-2025,114,CSE 6976,Thesis,1,42940,1,Supervision,6,"Zhang, Yan",N/A,JB 361,N/A,N/A,1,1,0/0,Classroom,,San Bernardino,0
+spring-2025,115,CSE 6976,Thesis,2,45248,1,Supervision,6,"Hou, Yunfei",N/A,JB 361,N/A,N/A,1,1,0/0,Classroom,,San Bernardino,0
+spring-2025,116,CSE 6980,Comprehensive Examination,1,42941,1,Supervision,0,"Jin, Jennifer",N/A,JB 361,N/A,N/A,64,10,0/0,Classroom,,San Bernardino,0
+spring-2025,117,CSE 6990,Continuous Enrollment for Graduate Candidacy Standing,1,45269,1,Supervision,0,"Jin, Jennifer",N/A,,N/A,N/A,1,2,0/0,Classroom,,San Bernardino,0
+winter-2025,2,CSE 2130,Machine Organization,60,20056,3W1,Discussion,3,"Georgiou, Taline",N/A,Online,N/A,N/A,18,30,30/30,Online,,San Bernardino,0
+winter-2025,3,CSE 4310,Algorithm Analysis,60,20061,3W1,Discussion,3,"Muheidat, Fadi",N/A,Online,N/A,N/A,22,30,30/30,Online,,San Bernardino,0
+winter-2025,4,CSE 4560,Embedded Systems,60,20067,3W1,Discussion,3,"Sun, Qingquan",N/A,Online,N/A,N/A,23,30,30/30,Online,,San Bernardino,45
+winter-2025,5,CSE 4560,Embedded Systems,61,20069,3W1,Laboratory,1,"Orijuela, Giovanni",N/A,Online,N/A,N/A,23,30,30/30,Online,,San Bernardino,0
+winter-2025,6,CSE 5000,Introduction to Formal Languages and Automata Theory,60,20057,3W1,Discussion,3,"Georgiou, George",N/A,Online,N/A,N/A,29,30,30/30,Online,,San Bernardino,0
+winter-2025,7,CSE 5120,Introduction to Artificial Intelligence,60,20086,3W1,Discussion,3,"Salloum, Ronald",N/A,Online,N/A,N/A,19,30,30/30,Online,AB386,San Bernardino,0
+winter-2025,8,CSE 5160,Machine Learning,60,20058,3W1,Discussion,3,"Qiao, Haiyan",N/A,Online,N/A,N/A,30,30,30/30,Online,,San Bernardino,0
+winter-2025,9,CSE 5720,Database Systems,60,20063,3W1,Discussion,3,"Jin, Jennifer",N/A,Online,N/A,N/A,31,30,30/30,Online,,San Bernardino,0
+spring-2027,62,CSE 5408,Sustainable Engineering Design,2,43820,1,Laboratory,1,"Wang, Suyang",N/A,JB 356,M-W,5:30 PM - 6:45 PM,0,30,10/10,Classroom,,San Bernardino,0
+spring-2027,63,CSE 5408,Sustainable Engineering Design,3,43821,1,Laboratory,1,TBD,N/A,JB 356,M-W,2:30 PM - 3:45 PM,0,30,10/10,Classroom,,San Bernardino,0
+fall-2025,26,CSE 2130,Machine Organization,60,83865,1,Discussion,3,"Georgiou, Taline",N/A,Online,N/A,N/A,45,45,2/2,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2025,47,CSE 4550,Software Engineering,1,84102,1,Discussion,3,"Abdoli, Alireza",N/A,JB 258,M-W,1:00 PM - 2:15 PM,65,66,1/1,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,48,CSE 4550,Software Engineering,2,83525,1,Discussion,3,"Jin, Jennifer",N/A,JB 258,Tu-Th,9:00 AM - 10:15 AM,46,45,1/1,Classroom,Tutoring Available,San Bernardino,0
+fall-2025,56,CSE 4820,Senior Project,1,83546,1,Supervision,3,"Li, Xiangyu",N/A,,N/A,N/A,1,10,10/10,Classroom,,San Bernardino,0
+fall-2025,58,CSE 5000,Introduction to Formal Languages and Automata Theory,60,83508,1,Discussion,3,"Georgiou, George",N/A,Online,N/A,N/A,46,45,2/2,Online,"AB386, Tutoring Available",San Bernardino,0
+fall-2025,61,CSE 5120,Introduction to Artificial Intelligence,60,84400,1,Discussion,3,"Li, Xiangyu",N/A,Online,N/A,N/A,48,45,4/4,Online,AB386,San Bernardino,0
+fall-2025,65,CSE 5208,Introduction to Computer Engineering Design,1,83806,1,Discussion,3,"Hou, Yunfei",N/A,JB 356,Tu-Th,1:00 PM - 2:15 PM,40,40,2/2,Classroom,Writing Intensive,San Bernardino,45
+fall-2025,66,CSE 5208,Introduction to Computer Engineering Design,2,83807,1,Laboratory,1,"Hou, Yunfei",N/A,JB 356,Tu-Th,2:30 PM - 3:20 PM,40,40,2/2,Classroom,Writing Intensive,San Bernardino,0
+fall-2025,72,CSE 5350,Numerical Computation,60,84049,1,Discussion,3,"Sun, Qingquan",N/A,Online,N/A,N/A,50,45,4/4,Online,AB386,San Bernardino,0
+spring-2025,15,CSE 2010,Computer Science I,7,43951,1,Discussion,3,"Georgiou, George",N/A,CE 241,Tu-Th,9:00 AM - 10:15 AM,27,31,1/1,Classroom,"Supplemental Instruction, Tutoring Available",San Bernardino,45
+spring-2025,16,CSE 2010,Computer Science I,8,43952,1,Activity,1,"Georgiou, George",N/A,JB 358,Tu-Th,10:30 AM - 11:20 AM,27,31,1/1,Classroom,"Supplemental Instruction, Tutoring Available",San Bernardino,0
+spring-2025,22,CSE 2010,Computer Science I,63,43957,1,Discussion,3,"Georgiou, George",N/A,Online,N/A,N/A,30,31,1/1,Online,"AB386, Supplemental Instruction, Tutoring Available",San Bernardino,45
+spring-2025,23,CSE 2010,Computer Science I,64,43958,1,Activity,1,"Georgiou, George",N/A,Online,N/A,N/A,30,31,1/1,Online,"AB386, Supplemental Instruction, Tutoring Available",San Bernardino,0
+spring-2025,30,CSE 2130,Machine Organization,1,43403,1,Discussion,3,"Georgiou, Taline",N/A,JB 140,M-W,2:30 PM - 3:45 PM,31,32,4/4,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,31,CSE 2130,Machine Organization,2,43963,1,Discussion,3,"Georgiou, Taline",N/A,JB 358,M-W,1:00 PM - 2:15 PM,32,32,5/5,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,32,CSE 3100,Digital Logic,1,43199,1,Discussion,3,"Georgiou, Taline",N/A,JB 140,M-W,9:00 AM - 10:15 AM,30,30,1/1,Classroom,Tutoring Available,San Bernardino,45
+spring-2025,33,CSE 3100,Digital Logic,2,43200,1,Laboratory,1,"Georgiou, Taline",N/A,JB 356,M-W,10:30 AM - 11:20 AM,30,30,1/1,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,36,CSE 3100,Digital Logic,60,43407,1,Discussion,3,"Georgiou, Taline",N/A,Online,N/A,N/A,32,32,5/5,Online,"AB386, Tutoring Available",San Bernardino,45
+spring-2025,37,CSE 3100,Digital Logic,61,43408,1,Laboratory,1,"Georgiou, Taline",N/A,Online,N/A,N/A,32,32,5/5,Online,"AB386, Tutoring Available",San Bernardino,0
+spring-2025,58,CSE 4500,Platform Computing,1,43412,1,Discussion,3,"Orijuela, Lawrence",N/A,CGI 110,M-W,7:00 PM - 8:15 PM,72,65,10/10,Classroom,,San Bernardino,0
+spring-2025,61,CSE 4550,Software Engineering,3,43939,1,Discussion,3,"Jin, Jennifer",N/A,JB 102,M-W,10:30 AM - 11:45 AM,57,60,1/1,Classroom,,San Bernardino,0
+spring-2025,66,CSE 4600,Operating Systems,60,42928,1,Discussion,3,"Zhang, Yan",N/A,Online,N/A,N/A,49,45,4/4,Online,"AB386, Tutoring Available",San Bernardino,0
+spring-2025,72,CSE 5000,Introduction to Formal Languages and Automata Theory,1,43056,1,Discussion,3,"Georgiou, George",N/A,JB 138,Tu-Th,1:00 PM - 2:15 PM,33,30,3/3,Classroom,Tutoring Available,San Bernardino,0
+spring-2025,78,CSE 5160,Machine Learning,61,44857,1,Discussion,3,"Qiao, Haiyan",N/A,Online,N/A,N/A,31,30,1/1,Online,"AB386, Tutoring Available",San Bernardino,0

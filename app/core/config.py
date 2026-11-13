@@ -4,6 +4,14 @@ Implements NFR-01 (no hardcoded credentials) and COM-01 (documented assumptions)
 """
 import os
 from functools import lru_cache
+from dotenv import load_dotenv
+
+# Load .env file from project root
+_env_file = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), ".env")
+if os.path.exists(_env_file):
+    load_dotenv(_env_file, override=True)
+else:
+    load_dotenv(override=True)
 
 
 class Settings:

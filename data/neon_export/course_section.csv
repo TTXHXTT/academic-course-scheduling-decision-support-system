@@ -1,0 +1,1684 @@
+section_id,term_id,course_id,class_number,section_number,session_code,class_type,units,instructor_1_id,instructor_2_id,building,meeting_days,meeting_time,modality,attributes,campus,fee,import_batch_id,source_excel_row,is_combined,historical_source_row
+294,9,CSE 1100,83407,1,1,Lecture,2.0,34,,JB 102,Tu-Th,9:00 AM - 10:15 AM,Classroom,GE-1B Critical Thinking,San Bernardino,45.00,1,2,False,579
+295,9,CSE 1100,83504,2,1,Activity,1.0,34,,JB 360,Tu-Th,10:30 AM - 11:20 AM,Classroom,GE-1B Critical Thinking,San Bernardino,0.00,1,3,False,580
+296,9,CSE 1100,83506,3,1,Activity,1.0,34,,JB 360,Tu-Th,1:00 PM - 1:50 PM,Classroom,GE-1B Critical Thinking,San Bernardino,0.00,1,4,False,581
+297,9,CSE 1100,83505,4,1,Activity,1.0,34,,JB 360,Tu-Th,2:30 PM - 3:20 PM,Classroom,GE-1B Critical Thinking,San Bernardino,0.00,1,5,False,582
+298,9,CSE 1250,83406,1,1,Lecture,3.0,34,,JB 102,M-W,10:30 AM - 11:45 AM,Classroom,Tutoring Available,San Bernardino,45.00,1,6,False,583
+299,9,CSE 1250,83411,2,1,Activity,1.0,34,,JB 360,M-W,1:00 PM - 1:50 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,7,False,584
+300,9,CSE 1250,83412,3,1,Activity,1.0,34,,JB 360,M-W,2:30 PM - 3:20 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,8,False,585
+301,9,CSE 1250,83680,4,1,Activity,1.0,25,,JB 360,M-W,4:00 PM - 4:50 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,9,False,586
+302,9,CSE 1250,83848,5,1,Lecture,3.0,34,,JB 262,Tu-Th,4:00 PM - 5:15 PM,Classroom,Tutoring Available,San Bernardino,45.00,1,10,False,587
+303,9,CSE 1250,83849,6,1,Activity,1.0,26,,JB 360,Tu-Th,5:30 PM - 6:20 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,11,False,588
+304,9,CSE 1250,83850,7,1,Activity,1.0,27,,JB 360,Tu-Th,7:00 PM - 7:50 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,12,False,589
+305,9,CSE 1250,84379,8,1,Activity,1.0,25,,JB 360,M-W,5:30 PM - 6:20 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,13,False,590
+306,9,CSE 1300,84320,1,1,Lecture,3.0,11,,CGI 203,M-W,10:30 AM - 11:45 AM,Classroom,"GE-2 Mathematical/Quant. Reasoning, Tutoring Available",San Bernardino,0.00,1,14,False,591
+307,9,CSE 1300L,84321,1,1,Activity,1.0,11,,JB 356,M,1:00 PM - 1:50 PM,Classroom,,San Bernardino,0.00,1,15,False,592
+308,9,CSE 2010,83569,1,1,Discussion,3.0,21,,CGI 207,M-W,1:00 PM - 2:15 PM,Classroom,Tutoring Available,San Bernardino,45.00,1,16,False,593
+309,9,CSE 2010,83570,2,1,Activity,1.0,21,,JB 356,M-W,2:30 PM - 3:20 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,17,False,594
+310,9,CSE 2010,84146,60,1,Discussion,3.0,11,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,45.00,1,18,False,595
+311,9,CSE 2010,84147,61,1,Activity,1.0,11,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,19,False,596
+312,9,CSE 2020,83836,1,1,Discussion,3.0,10,,CGI 210,Tu-Th,2:30 PM - 3:45 PM,Classroom,Tutoring Available,San Bernardino,45.00,1,20,False,597
+313,9,CSE 2020,83837,2,1,Activity,1.0,25,,JB 358,Tu-Th,4:00 PM - 4:50 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,21,False,598
+314,9,CSE 2020,84244,3,1,Activity,1.0,25,,JB 358,Tu-Th,5:30 PM - 6:20 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,22,False,599
+315,9,CSE 2020,84383,7,1,Discussion,3.0,10,,JB 102,M-W,1:00 PM - 2:15 PM,Classroom,Tutoring Available,San Bernardino,45.00,1,23,False,600
+316,9,CSE 2020,84384,8,1,Activity,1.0,27,,JB 359,M-W,2:30 PM - 3:20 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,24,False,601
+317,9,CSE 2130,83421,1,1,Discussion,3.0,12,,JB 109,M-W,1:00 PM - 2:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,25,False,602
+319,9,CSE 2130,84133,61,1,Discussion,3.0,24,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,27,False,604
+320,9,CSE 3100,84308,1,1,Discussion,3.0,12,,JB 140,M-W,9:00 AM - 10:15 AM,Classroom,Tutoring Available,San Bernardino,45.00,1,28,False,605
+321,9,CSE 3100,84310,2,1,Laboratory,1.0,12,,JB 356,M-W,10:30 AM - 11:20 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,29,False,606
+322,9,CSE 3100,83417,3,1,Discussion,3.0,13,,CE 105,Tu-Th,9:00 AM - 10:15 AM,Classroom,Tutoring Available,San Bernardino,45.00,1,30,False,607
+323,9,CSE 3100,83418,4,1,Laboratory,1.0,18,,JB 356,Tu-Th,10:30 AM - 11:20 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,31,False,608
+324,9,CSE 3100,83867,60,1,Discussion,3.0,12,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,45.00,1,32,False,609
+325,9,CSE 3100,83868,61,1,Laboratory,1.0,12,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,33,False,610
+326,9,CSE 3350,85783,60,1,Discussion,3.0,29,,Online,,,Online,AB386,San Bernardino,0.00,1,34,False,611
+327,9,CSE 4010,84406,1,1,Discussion,3.0,2,,CGI 110,Tu-Th,4:00 PM - 5:15 PM,Classroom,Tutoring Available,San Bernardino,45.00,1,35,False,612
+328,9,CSE 4010,84407,2,1,Laboratory,1.0,2,,JB 356,Tu-Th,5:30 PM - 6:20 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,36,False,613
+329,9,CSE 4010,85130,3,1,Laboratory,1.0,2,,JB 356,Tu-Th,7:00 PM - 7:50 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,37,False,614
+330,9,CSE 4010,83414,60,1,Discussion,3.0,13,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,45.00,1,38,False,615
+331,9,CSE 4010,83431,61,1,Laboratory,1.0,13,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,39,False,616
+332,9,CSE 4050,84097,1,1,Discussion,3.0,22,,JB 113,M-W,5:30 PM - 6:45 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,40,False,617
+333,9,CSE 4050,83413,2,1,Discussion,3.0,14,,CGI 110,M-W,7:00 PM - 8:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,41,False,618
+334,9,CSE 4100,83863,1,1,Discussion,3.0,24,,JB 140,Tu-Th,4:00 PM - 5:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,42,False,619
+335,9,CSE 4100,83862,2,1,Discussion,3.0,24,,JB 113,Tu-Th,5:30 PM - 6:45 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,43,False,620
+336,9,CSE 4310,83791,60,1,Discussion,3.0,32,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,44,False,621
+337,9,CSE 4310,83426,61,1,Discussion,3.0,32,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,45,False,622
+338,9,CSE 4400,83409,1,1,Discussion,3.0,25,,CGI 210,Tu-Th,7:00 PM - 8:15 PM,Classroom,,San Bernardino,0.00,1,46,False,623
+341,9,CSE 4560,83522,1,1,Discussion,3.0,30,,JB 140,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,45.00,1,49,False,626
+342,9,CSE 4560,83523,2,1,Laboratory,1.0,30,,JB 358,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,0.00,1,50,False,627
+343,9,CSE 4560,85132,3,1,Laboratory,1.0,30,,JB 358,Tu-Th,1:00 PM - 1:50 PM,Classroom,,San Bernardino,0.00,1,51,False,628
+344,9,CSE 4600,83526,1,1,Discussion,3.0,19,,CGI 106,M-W,10:30 AM - 11:45 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,52,False,629
+345,9,CSE 4600,84048,60,1,Discussion,3.0,19,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,53,False,630
+346,9,CSE 4600,83428,61,1,Discussion,3.0,35,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,54,False,631
+347,9,CSE 4600,84387,62,1,Discussion,3.0,35,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,55,False,632
+349,9,CSE 4880,83880,1,1,Discussion,3.0,26,,JB 102,Tu-Th,7:00 PM - 8:15 PM,Classroom,Writing Intensive,San Bernardino,0.00,1,57,False,634
+351,9,CSE 5000,83509,61,1,Discussion,3.0,24,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,59,False,636
+352,9,CSE 5120,83524,1,1,Discussion,3.0,19,,JB 113,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,0.00,1,60,False,637
+354,9,CSE 5160,83427,1,1,Discussion,3.0,35,,JB 109,Tu-Th,9:00 AM - 10:15 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,62,False,639
+355,9,CSE 5160,83994,60,1,Discussion,3.0,17,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,63,False,640
+356,9,CSE 5160,83573,61,1,Discussion,3.0,28,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,64,False,641
+359,9,CSE 5208,85881,3,1,Discussion,3.0,33,,JB 258,M-W,5:30 PM - 6:45 PM,Classroom,Writing Intensive,San Bernardino,45.00,1,67,False,644
+360,9,CSE 5208,85882,4,1,Laboratory,1.0,33,,JB 356,M-W,7:00 PM - 7:50 PM,Classroom,Writing Intensive,San Bernardino,0.00,1,68,False,645
+361,9,CSE 5210,83408,1,1,Discussion,3.0,13,,JB 109,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,45.00,1,69,False,646
+362,9,CSE 5210,84233,2,1,Laboratory,1.0,13,,JB 359,Tu-Th,5:30 PM - 6:20 PM,Classroom,,San Bernardino,0.00,1,70,False,647
+363,9,CSE 5250,83823,61,1,Discussion,3.0,2,,Online,,,Online,AB386,San Bernardino,0.00,1,71,False,648
+365,9,CSE 5410,83901,1,1,Discussion,3.0,28,,JB 113,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,45.00,1,73,False,650
+366,9,CSE 5410,83902,2,1,Laboratory,1.0,28,,JB 358,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,0.00,1,74,False,651
+367,9,CSE 5410,85131,3,1,Laboratory,1.0,18,,JB 358,Tu-Th,7:30 AM - 8:20 AM,Classroom,,San Bernardino,0.00,1,75,False,652
+368,9,CSE 5500,84369,60,1,Discussion,3.0,26,,Online,,,Online,AB386,San Bernardino,0.00,1,76,False,653
+369,9,CSE 5700,83424,1,1,Discussion,3.0,1,,JB 262,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,0.00,1,77,False,654
+370,9,CSE 5700,85914,2,1,Discussion,3.0,33,,JB 262,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,0.00,1,78,False,655
+371,9,CSE 5720,84103,1,1,Discussion,3.0,14,,JB 111,Tu-Th,7:00 PM - 8:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,79,False,656
+372,9,CSE 5720,83423,2,1,Discussion,3.0,25,,CE 116,M-W,1:00 PM - 2:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,80,False,657
+373,9,CSE 5750,83702,1,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,0.00,1,81,False,658
+374,9,CSE 5953,83531,1,1,Supervision,3.0,28,,,,,Classroom,,San Bernardino,0.00,1,82,False,659
+375,9,CSE 5953,86308,2,1,Supervision,3.0,35,,,,,Classroom,,San Bernardino,0.00,1,83,False,660
+376,9,CSE 6010,85345,1,1,Lecture,3.0,1,,JB 262,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,0.00,1,84,False,661
+377,9,CSE 6020,84377,61,1,Discussion,3.0,13,,Online,M-W,7:00 PM - 8:15 PM,Online Synchronous Section,AB386,San Bernardino,0.00,1,85,False,662
+378,9,CSE 6100,83866,1,1,Discussion,3.0,22,,CGI 110,Tu-Th,7:00 PM - 8:15 PM,Classroom,,San Bernardino,0.00,1,86,False,663
+379,9,CSE 6300,83784,60,1,Discussion,3.0,29,,CGI 218,Th,2:30 PM - 3:45 PM,Classroom+Synchronous,,San Bernardino,0.00,1,87,False,664
+380,9,CSE 6400,83568,60,1,Discussion,3.0,29,,CGI 203,Th,1:00 PM - 2:15 PM,Classroom+Synchronous,,San Bernardino,0.00,1,88,False,665
+381,9,CSE 6550,83864,1,1,Discussion,3.0,4,,UH 106,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,0.00,1,89,False,666
+382,9,CSE 6890,84174,1,1,Seminar,1.0,17,,,,,Classroom,,San Bernardino,0.00,1,90,False,667
+383,9,CSE 6964,83532,1,1,Supervision,4.0,9,,,,,Classroom,,San Bernardino,0.00,1,91,False,668
+384,9,CSE 6964,83699,2,1,Supervision,4.0,,,,,,Classroom,,San Bernardino,0.00,1,92,False,669
+385,9,CSE 6964,83700,3,1,Supervision,4.0,,,,,,Classroom,,San Bernardino,0.00,1,93,False,670
+386,9,CSE 6964,84503,4,1,Supervision,4.0,,,,,,Classroom,,San Bernardino,0.00,1,94,False,671
+387,9,CSE 6972,84337,1,1,Supervision,2.0,,,,,,Classroom,,San Bernardino,0.00,1,95,False,672
+388,9,CSE 6973,84180,1,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,0.00,1,96,False,673
+389,9,CSE 6976,83533,1,1,Supervision,6.0,9,,,,,Classroom,,San Bernardino,0.00,1,97,False,674
+390,9,CSE 6980,83534,1,1,Supervision,0.0,17,,,,,Classroom,,San Bernardino,0.00,1,98,False,675
+391,9,CSE 6990,86054,1,1,Supervision,0.0,9,,,,,Classroom,,San Bernardino,0.00,1,99,False,676
+88,10,CSE 1100,8339,1,1,Lecture,2.0,34,,JB 102,Tu-Th,9:00 AM - 10:15 AM,Classroom,GE-1B Critical Thinking,San Bernardino,45.00,1,2,False,677
+89,10,CSE 1100,8419,2,1,Activity,1.0,34,,JB 360,Tu-Th,10:30 AM - 11:20 AM,Classroom,GE-1B Critical Thinking,San Bernardino,0.00,1,3,False,678
+90,10,CSE 1100,8421,3,1,Activity,1.0,34,,JB 360,Tu-Th,1:00 PM - 1:50 PM,Classroom,GE-1B Critical Thinking,San Bernardino,0.00,1,4,False,679
+91,10,CSE 1250,8338,1,1,Lecture,3.0,34,,CE 105,M-W,10:30 AM - 11:45 AM,Classroom,Tutoring Available,San Bernardino,45.00,1,5,False,680
+92,10,CSE 1250,8342,2,1,Activity,1.0,34,,JB 360,M-W,1:00 PM - 1:50 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,6,False,681
+93,10,CSE 1250,8343,3,1,Activity,1.0,34,,JB 360,M-W,2:30 PM - 3:20 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,7,False,682
+94,10,CSE 1250,8639,5,1,Lecture,3.0,34,,JB 262,Tu-Th,4:00 PM - 5:15 PM,Classroom,Tutoring Available,San Bernardino,45.00,1,8,False,683
+95,10,CSE 1250,8640,6,1,Activity,1.0,34,,JB 360,Tu-Th,5:30 PM - 6:20 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,9,False,684
+96,10,CSE 1250,8641,60,1,Activity,1.0,35,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,10,False,685
+97,10,CSE 1300,8865,1,1,Lecture,3.0,4,,CE 105,M-W,9:00 AM - 10:15 AM,Classroom,"GE-2 Mathematical/Quant. Reasoning, Tutoring Available",San Bernardino,0.00,1,11,False,686
+98,10,CSE 1300L,8866,1,1,Activity,1.0,31,,JB 356,M-W,1:00 PM - 1:50 PM,Classroom,,San Bernardino,0.00,1,12,False,687
+99,10,CSE 2010,8465,1,1,Discussion,3.0,16,,JB 140,M-W,9:00 AM - 10:15 AM,Classroom,Tutoring Available,San Bernardino,45.00,1,13,False,688
+100,10,CSE 2010,8466,2,1,Activity,1.0,16,,JB 359,M-W,10:30 AM - 11:45 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,14,False,689
+101,10,CSE 2010,11886,3,1,Activity,1.0,25,,JB 356,M-W,12:00 PM - 12:50 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,15,False,690
+102,10,CSE 2010,8808,60,1,Discussion,3.0,21,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,45.00,1,16,False,691
+103,10,CSE 2010,8809,61,1,Activity,1.0,21,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,17,False,692
+104,10,CSE 2010,12823,62,1,Discussion,3.0,10,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,45.00,1,18,False,693
+105,10,CSE 2010,12824,63,1,Activity,1.0,10,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,19,False,694
+106,10,CSE 2020,8884,7,1,Discussion,3.0,10,,JB 102,Tu-Th,10:30 AM - 11:45 AM,Classroom,Tutoring Available,San Bernardino,45.00,1,20,False,695
+107,10,CSE 2020,11887,9,1,Activity,1.0,27,,JB 359,Tu-Th,1:00 PM - 1:50 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,21,False,696
+108,10,CSE 2020,8633,60,1,Discussion,3.0,29,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,45.00,1,22,False,697
+109,10,CSE 2020,8634,61,1,Activity,1.0,29,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,23,False,698
+110,10,CSE 2130,8348,1,1,Discussion,3.0,2,,PS 203,M-W,1:00 PM - 2:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,24,False,699
+111,10,CSE 2130,8648,60,1,Discussion,3.0,12,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,25,False,700
+112,10,CSE 3100,12744,8,1,Discussion,3.0,2,,PS 204,M-W,9:00 AM - 10:15 AM,Classroom,Tutoring Available,San Bernardino,45.00,1,26,False,701
+113,10,CSE 3100,12745,9,1,Laboratory,1.0,2,,JB 356,M-W,10:30 AM - 11:45 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,27,False,702
+114,10,CSE 3100,13030,11,1,Discussion,3.0,2,,JB 102,M-W,2:30 PM - 3:45 PM,Classroom,Tutoring Available,San Bernardino,45.00,1,28,False,703
+115,10,CSE 3100,13026,62,1,Laboratory,1.0,12,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,29,False,704
+116,10,CSE 3350,9069,1,1,Discussion,3.0,29,,Online,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,0.00,1,30,False,705
+117,10,CSE 3650,13191,60,1,Discussion,2.0,1,,Online,M-W,4:00 PM - 5:15 PM,Online Synchronous Section,AB386,San Bernardino,45.00,1,31,False,706
+118,10,CSE 3650,13192,61,1,Activity,1.0,1,,Online,M-W,5:30 PM - 6:20 PM,Online Synchronous Section,AB386,San Bernardino,0.00,1,32,False,707
+119,10,CSE 4010,8890,1,1,Discussion,3.0,26,,SB 127,M-W,5:30 PM - 6:45 PM,Classroom,Tutoring Available,San Bernardino,45.00,1,33,False,708
+120,10,CSE 4010,8345,60,1,Discussion,3.0,1,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,45.00,1,34,False,709
+121,10,CSE 4010,8355,61,1,Laboratory,1.0,1,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,35,False,710
+122,10,CSE 4010,8891,62,1,Laboratory,1.0,26,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,36,False,711
+123,10,CSE 4050,8788,1,1,Discussion,3.0,22,,JB 262,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,0.00,1,37,False,712
+124,10,CSE 4050,8344,2,1,Discussion,3.0,14,,JB 262,M-W,7:00 PM - 8:15 PM,Classroom,,San Bernardino,0.00,1,38,False,713
+125,10,CSE 4100,8646,1,1,Discussion,3.0,24,,CE 110,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,0.00,1,39,False,714
+126,10,CSE 4100,8645,2,1,Discussion,3.0,24,,HP 124,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,0.00,1,40,False,715
+127,10,CSE 4310,8598,60,1,Discussion,3.0,23,,Online,,,Online,AB386,San Bernardino,0.00,1,41,False,716
+128,10,CSE 4310,8351,61,1,Discussion,3.0,32,,Online,,,Online,AB386,San Bernardino,0.00,1,42,False,717
+129,10,CSE 4400,8341,1,1,Discussion,3.0,25,,HP 124,Tu-Th,7:00 PM - 8:15 PM,Classroom,,San Bernardino,0.00,1,43,False,718
+130,10,CSE 4550,8790,1,1,Discussion,3.0,17,,JB 113,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,0.00,1,44,False,719
+131,10,CSE 4550,8436,2,1,Discussion,3.0,17,,JB 113,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,0.00,1,45,False,720
+132,10,CSE 4560,8434,1,1,Laboratory,1.0,30,,JB 358,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,0.00,1,46,False,721
+133,10,CSE 4560,9029,2,1,Laboratory,1.0,30,,JB 358,Tu-Th,1:00 PM - 1:50 PM,Classroom,,San Bernardino,0.00,1,47,False,722
+134,10,CSE 4560,8433,60,1,Discussion,3.0,30,,Online,,,Online,AB386 Exception Request,San Bernardino,45.00,1,48,False,723
+135,10,CSE 4600,8437,1,1,Discussion,3.0,19,,CGI 106,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,0.00,1,49,False,724
+136,10,CSE 4600,8764,60,1,Discussion,3.0,35,,Online,,,Online,AB386,San Bernardino,0.00,1,50,False,725
+137,10,CSE 4600,8353,61,1,Discussion,3.0,35,,Online,,,Online,AB386,San Bernardino,0.00,1,51,False,726
+138,10,CSE 4880,8655,1,1,Discussion,3.0,26,,CS 130,Tu-Th,7:00 PM - 8:15 PM,Classroom,Writing Intensive,San Bernardino,0.00,1,52,False,727
+139,10,CSE 5000,8422,60,1,Discussion,3.0,11,,Online,,,Online,AB386,San Bernardino,0.00,1,53,False,728
+140,10,CSE 5000,8423,61,1,Discussion,3.0,11,,Online,,,Online,AB386,San Bernardino,0.00,1,54,False,729
+141,10,CSE 5120,8435,1,1,Discussion,3.0,19,,PS 204,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,0.00,1,55,False,730
+142,10,CSE 5120,8888,60,1,Discussion,3.0,19,,Online,,,Online,AB386,San Bernardino,0.00,1,56,False,731
+143,10,CSE 5160,8352,1,1,Discussion,3.0,35,,PL 263,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,0.00,1,57,False,732
+144,10,CSE 5160,8721,60,1,Discussion,3.0,28,,Online,,,Online,AB386,San Bernardino,0.00,1,58,False,733
+145,10,CSE 5208,8609,1,1,Discussion,3.0,13,,CE 110,Tu-Th,1:00 PM - 2:15 PM,Classroom,Writing Intensive,San Bernardino,45.00,1,59,False,734
+146,10,CSE 5208,8610,2,1,Laboratory,1.0,13,,JB 356,Tu-Th,2:30 PM - 3:45 PM,Classroom,Writing Intensive,San Bernardino,0.00,1,60,False,735
+147,10,CSE 5208,9082,3,1,Discussion,3.0,33,,CGI 209,M-W,5:30 PM - 6:45 PM,Classroom,Writing Intensive,San Bernardino,45.00,1,61,False,736
+148,10,CSE 5208,9083,4,1,Laboratory,1.0,33,,JB 356,M-W,7:00 PM - 7:50 PM,Classroom,Writing Intensive,San Bernardino,0.00,1,62,False,737
+149,10,CSE 5210,13027,60,1,Discussion,3.0,13,,Online,Tu-Th,4:00 PM - 5:15 PM,Online Synchronous Section,AB386,San Bernardino,45.00,1,63,False,738
+150,10,CSE 5210,13028,61,1,Laboratory,1.0,13,,Online,Tu-Th,5:30 PM - 6:45 PM,Online Synchronous Section,AB386,San Bernardino,0.00,1,64,False,739
+151,10,CSE 5250,8624,61,1,Discussion,3.0,21,,Online,,,Online,AB386,San Bernardino,0.00,1,65,False,740
+152,10,CSE 5350,8765,60,1,Discussion,3.0,30,,Online,,,Online,AB386,San Bernardino,0.00,1,66,False,741
+153,10,CSE 5410,8664,1,1,Discussion,3.0,28,,CGI 110,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,45.00,1,67,False,742
+154,10,CSE 5410,8665,2,1,Laboratory,1.0,28,,JB 358,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,0.00,1,68,False,743
+155,10,CSE 5410,9028,60,1,Laboratory,1.0,8,,Online,,,Online,AB386,San Bernardino,0.00,1,69,False,744
+156,10,CSE 5500,8881,1,1,Discussion,3.0,21,,JB 258,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,0.00,1,70,False,745
+157,10,CSE 5700,9091,2,1,Discussion,3.0,25,,JB 262,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,0.00,1,71,False,746
+158,10,CSE 5700,8350,60,1,Discussion,3.0,33,,Online,,,Online,AB386,San Bernardino,0.00,1,72,False,747
+159,10,CSE 5720,8349,2,1,Discussion,3.0,23,,UH 042,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,0.00,1,73,False,748
+160,10,CSE 5720,8791,60,1,Discussion,3.0,17,,Online,,,Online,AB386,San Bernardino,0.00,1,74,False,749
+161,10,CSE 5750,13177,1,1,Supervision,3.0,9,,OC TBA,,,Classroom,,San Bernardino,0.00,1,75,False,750
+162,10,CSE 5953,13142,4,1,Supervision,3.0,35,,,,,Classroom,,San Bernardino,0.00,1,76,False,751
+163,10,CSE 6010,9036,1,1,Lecture,3.0,1,,JB 102,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,0.00,1,77,False,754
+164,10,CSE 6020,8882,61,1,Discussion,3.0,24,,Online,M-W,7:00 PM - 8:15 PM,Online Synchronous Section,AB386,San Bernardino,0.00,1,78,False,755
+165,10,CSE 6100,12775,60,1,Discussion,3.0,22,,Online,,,Online,AB386,San Bernardino,0.00,1,79,False,756
+166,10,CSE 6300,8592,1,1,Discussion,3.0,29,,JB 262,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,0.00,1,80,False,757
+167,10,CSE 6550,8647,1,1,Discussion,3.0,23,,HP 124,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,0.00,1,81,False,758
+168,10,CSE 6890,8816,1,1,Seminar,1.0,17,,JB 258,Th,2:30 PM - 3:20 PM,Classroom,,San Bernardino,0.00,1,82,False,759
+169,10,CSE 6950,13169,4,1,Supervision,3.0,29,,OC TBA,,,Classroom,,San Bernardino,0.00,1,83,False,760
+170,10,CSE 6964,8441,1,1,Supervision,4.0,17,,TBD,,,Classroom,,San Bernardino,0.00,1,84,False,761
+171,10,CSE 6976,13284,2,1,Supervision,6.0,35,,,,,Classroom,,San Bernardino,0.00,1,85,False,764
+172,10,CSE 6980,8443,1,1,Supervision,0.0,17,,,,,Classroom,,San Bernardino,0.00,1,86,False,765
+173,10,CSE 6990,9133,1,1,Supervision,0.0,17,,,,,Classroom,,San Bernardino,0.00,1,87,False,766
+419,2,CSE 1100,43189,3,1,Lecture,2.0,34,,JB 258,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,45.00,1,2,False,1204
+420,2,CSE 1100,43190,4,1,Activity,1.0,34,,JB 360,M-W,1:00 PM - 1:50 PM,Classroom,,San Bernardino,0.00,1,3,False,1205
+421,2,CSE 1250,43186,1,1,Lecture,3.0,34,,JB 113,Tu-Th,9:00 AM - 10:15 AM,Classroom,Tutoring Available,San Bernardino,45.00,1,4,False,1206
+422,2,CSE 1250,43481,2,1,Activity,1.0,34,,JB 360,Tu-Th,10:30 AM - 11:20 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,5,False,1207
+423,2,CSE 1250,43483,4,1,Activity,1.0,34,,JB 360,Tu-Th,2:30 PM - 3:20 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,6,False,1208
+424,2,CSE 1290,42910,1,1,Seminar,3.0,10,,JB 109,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,0.00,1,7,False,1209
+425,2,CSE 1290,43061,2,1,Seminar,3.0,10,,PS 223,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,0.00,1,8,False,1210
+426,2,CSE 1300,43540,1,1,Lecture,3.0,7,,CGI 106,M-W,10:30 AM - 11:45 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,9,False,1211
+427,2,CSE 1300L,43541,1,1,Activity,1.0,7,,JB 359,M,1:00 PM - 1:50 PM,Classroom,,San Bernardino,0.00,1,10,False,1212
+428,2,CSE 1300L,43974,2,1,Activity,1.0,7,,JB 359,W,1:00 PM - 1:50 PM,Classroom,,San Bernardino,0.00,1,11,False,1213
+429,2,CSE 2010,43945,1,1,Discussion,3.0,21,,CE 110,M-W,2:30 PM - 3:45 PM,Classroom,"Supplemental Instruction, Tutoring Available",San Bernardino,45.00,1,12,False,1214
+430,2,CSE 2010,43946,2,1,Activity,1.0,21,,JB 359,M-W,4:00 PM - 4:50 PM,Classroom,"Supplemental Instruction, Tutoring Available",San Bernardino,0.00,1,13,False,1215
+431,2,CSE 2010,43947,3,1,Activity,1.0,21,,JB 359,M-W,5:30 PM - 6:20 PM,Classroom,"Supplemental Instruction, Tutoring Available",San Bernardino,0.00,1,14,False,1216
+434,2,CSE 2010,43954,10,1,Discussion,3.0,27,,HP 124,Tu-Th,5:30 PM - 6:45 PM,Classroom,"Supplemental Instruction, Tutoring Available",San Bernardino,45.00,1,17,False,1219
+435,2,CSE 2010,43955,11,1,Activity,1.0,3,,JB 359,Tu-Th,4:00 PM - 4:50 PM,Classroom,"Supplemental Instruction, Tutoring Available",San Bernardino,0.00,1,18,False,1220
+436,2,CSE 2010,43956,12,1,Activity,1.0,6,,JB 358,Tu-Th,7:00 PM - 7:50 PM,Classroom,"Supplemental Instruction, Tutoring Available",San Bernardino,0.00,1,19,False,1221
+437,2,CSE 2010,43948,60,1,Discussion,3.0,20,,Online,M-W,9:00 AM - 10:15 AM,Online Synchronous Section,"AB386, Supplemental Instruction, Tutoring Available",San Bernardino,45.00,1,20,False,1222
+438,2,CSE 2010,43949,61,1,Activity,1.0,20,,Online,M-W,10:30 AM - 11:20 AM,Online Synchronous Section,"AB386, Supplemental Instruction, Tutoring Available",San Bernardino,0.00,1,21,False,1223
+441,2,CSE 2020,42913,1,1,Discussion,3.0,13,,JB 113,M-W,10:30 AM - 11:45 AM,Classroom,Tutoring Available,San Bernardino,45.00,1,24,False,1226
+442,2,CSE 2020,42914,2,1,Activity,1.0,3,,JB 356,M-W,1:00 PM - 1:50 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,25,False,1227
+443,2,CSE 2020,42915,3,1,Discussion,3.0,20,,JB 140,Tu-Th,2:30 PM - 3:45 PM,Classroom,Tutoring Available,San Bernardino,45.00,1,26,False,1228
+444,2,CSE 2020,42916,4,1,Activity,1.0,6,,JB 356,Tu-Th,4:00 PM - 4:50 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,27,False,1229
+445,2,CSE 2020,43692,60,1,Discussion,3.0,22,,Online,M-W,4:00 PM - 5:15 PM,Online Synchronous Section,"AB386, Tutoring Available",San Bernardino,45.00,1,28,False,1230
+446,2,CSE 2020,43693,61,1,Activity,1.0,3,,Online,M-W,5:30 PM - 6:20 PM,Online Synchronous Section,"AB386, Tutoring Available",San Bernardino,0.00,1,29,False,1231
+448,2,CSE 2130,43963,2,1,Discussion,3.0,12,,JB 358,M-W,1:00 PM - 2:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,31,False,1233
+449,2,CSE 3100,43199,1,1,Discussion,3.0,12,,JB 140,M-W,9:00 AM - 10:15 AM,Classroom,Tutoring Available,San Bernardino,45.00,1,32,False,1234
+450,2,CSE 3100,43200,2,1,Laboratory,1.0,12,,JB 356,M-W,10:30 AM - 11:20 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,33,False,1235
+451,2,CSE 3100,43936,6,1,Discussion,3.0,1,,CGI 210,M-W,5:30 PM - 6:45 PM,Classroom,Tutoring Available,San Bernardino,45.00,1,34,False,1236
+452,2,CSE 3100,43937,7,1,Laboratory,1.0,3,,JB 356,M-W,4:00 PM - 4:50 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,35,False,1237
+453,2,CSE 3100,43407,60,1,Discussion,3.0,12,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,45.00,1,36,False,1238
+454,2,CSE 3100,43408,61,1,Laboratory,1.0,12,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,37,False,1239
+455,2,CSE 3100,43405,62,1,Discussion,3.0,28,,CE 107,Tu,10:30 AM - 11:45 AM,Classroom+Synchronous,Tutoring Available,San Bernardino,45.00,1,38,False,1240
+456,2,CSE 3100,43406,63,1,Laboratory,1.0,28,,JB 360,Tu,9:00 AM - 10:15 AM,Classroom+Synchronous,Tutoring Available,San Bernardino,0.00,1,39,False,1241
+457,2,CSE 3350,42917,1,1,Discussion,3.0,20,,JB 113,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,0.00,1,40,False,1242
+458,2,CSE 3660,43187,1,1,Discussion,2.0,15,,JB 140,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,45.00,1,41,False,1243
+459,2,CSE 3660,43240,2,1,Activity,1.0,15,,JB 356,Tu-Th,7:00 PM - 7:50 PM,Classroom,,San Bernardino,0.00,1,42,False,1244
+460,2,CSE 4010,43330,1,1,Discussion,3.0,2,,JB 109,M-W,4:00 PM - 5:15 PM,Classroom,Tutoring Available,San Bernardino,45.00,1,43,False,1245
+461,2,CSE 4010,43331,2,1,Laboratory,1.0,2,,JB 358,M-W,5:30 PM - 6:20 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,44,False,1246
+462,2,CSE 4010,43965,3,1,Laboratory,1.0,2,,JB 359,M-W,7:00 PM - 7:50 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,45,False,1247
+463,2,CSE 4010,44912,60,1,Discussion,3.0,26,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,45.00,1,46,False,1248
+464,2,CSE 4010,44913,61,1,Laboratory,1.0,26,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,47,False,1249
+465,2,CSE 4030,42920,1,1,Discussion,3.0,13,,JB 140,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,45.00,1,48,False,1250
+466,2,CSE 4030,42921,2,1,Laboratory,1.0,13,,JB 359,M-W,2:30 PM - 3:20 PM,Classroom,,San Bernardino,0.00,1,49,False,1251
+467,2,CSE 4100,43333,2,1,Discussion,3.0,20,,CE 105,Tu-Th,4:00 PM - 5:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,50,False,1252
+468,2,CSE 4100,44963,60,1,Discussion,3.0,24,,Online,M-W,7:00 PM - 8:15 PM,Online Synchronous Section,"AB386, Tutoring Available",San Bernardino,0.00,1,51,False,1253
+469,2,CSE 4200,44996,60,1,Discussion,3.0,2,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,52,False,1254
+470,2,CSE 4310,42924,1,1,Discussion,3.0,32,,CGI 106,Tu-Th,10:30 AM - 11:45 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,53,False,1255
+471,2,CSE 4310,43424,60,1,Discussion,3.0,32,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,54,False,1256
+472,2,CSE 4310,44972,61,1,Discussion,3.0,14,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,55,False,1257
+473,2,CSE 4410,42925,1,1,Discussion,3.0,25,,JB 109,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,0.00,1,56,False,1258
+474,2,CSE 4410,43254,2,1,Discussion,3.0,25,,CGI 208,Tu-Th,7:00 PM - 8:15 PM,Classroom,,San Bernardino,0.00,1,57,False,1259
+475,2,CSE 4500,43412,1,1,Discussion,3.0,26,,CGI 110,M-W,7:00 PM - 8:15 PM,Classroom,,San Bernardino,0.00,1,58,False,1260
+476,2,CSE 4500,43440,2,1,Discussion,3.0,22,,JB 262,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,0.00,1,59,False,1261
+477,2,CSE 4550,42926,1,1,Discussion,3.0,24,,CGI 210,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,0.00,1,60,False,1262
+478,2,CSE 4550,43939,3,1,Discussion,3.0,17,,JB 102,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,0.00,1,61,False,1263
+479,2,CSE 4560,43386,1,1,Discussion,3.0,30,,JB 140,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,45.00,1,62,False,1264
+480,2,CSE 4560,43387,2,1,Laboratory,1.0,30,,JB 359,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,0.00,1,63,False,1265
+481,2,CSE 4600,43656,1,1,Discussion,3.0,25,,CGI 110,Tu-Th,5:30 PM - 6:45 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,64,False,1266
+482,2,CSE 4600,42929,2,1,Discussion,3.0,35,,JB 102,Tu-Th,10:30 AM - 11:45 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,65,False,1267
+483,2,CSE 4600,42928,60,1,Discussion,3.0,35,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,66,False,1268
+484,2,CSE 4610,43057,1,1,Discussion,3.0,22,,JB 258,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,0.00,1,67,False,1269
+485,2,CSE 4820,42930,1,1,Supervision,3.0,17,,JB 361,,,Classroom,,San Bernardino,0.00,1,68,False,1270
+486,2,CSE 4820,45339,2,1,Supervision,3.0,21,,,,,Classroom,,San Bernardino,0.00,1,69,False,1271
+487,2,CSE 4880,43327,1,1,Discussion,3.0,26,,CGI 203,M-W,5:30 PM - 6:45 PM,Classroom,Writing Intensive,San Bernardino,0.00,1,70,False,1272
+488,2,CSE 4880,43940,2,1,Discussion,3.0,26,,JB 258,Tu-Th,5:30 PM - 6:45 PM,Classroom,Writing Intensive,San Bernardino,0.00,1,71,False,1273
+489,2,CSE 5000,43056,1,1,Discussion,3.0,11,,JB 138,Tu-Th,1:00 PM - 2:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,72,False,1274
+490,2,CSE 5000,43941,2,1,Discussion,3.0,5,,JB 262,M-W,7:00 PM - 8:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,73,False,1275
+491,2,CSE 5120,42931,1,1,Discussion,3.0,21,,JB 258,M-W,1:00 PM - 2:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,74,False,1276
+492,2,CSE 5120,43969,3,1,Discussion,3.0,19,,CGI 210,M-W,10:30 AM - 11:45 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,75,False,1277
+493,2,CSE 5120,44908,60,1,Discussion,3.0,19,,Online,Tu-Th,7:00 PM - 8:15 PM,Online Synchronous Section,"AB386, Tutoring Available",San Bernardino,0.00,1,76,False,1278
+494,2,CSE 5160,43013,1,1,Discussion,3.0,35,,CE 113,Tu-Th,9:00 AM - 10:15 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,77,False,1279
+495,2,CSE 5160,44857,61,1,Discussion,3.0,28,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,78,False,1280
+496,2,CSE 5210,42949,1,1,Discussion,3.0,2,,JB 113,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,45.00,1,79,False,1281
+497,2,CSE 5210,43055,2,1,Laboratory,1.0,6,,JB 359,Tu-Th,5:30 PM - 6:20 PM,Classroom,,San Bernardino,0.00,1,80,False,1282
+498,2,CSE 5250,43943,2,1,Discussion,3.0,25,,JB 111,M-W,7:00 PM - 8:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,81,False,1283
+499,2,CSE 5250,44941,60,1,Discussion,3.0,25,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,82,False,1284
+500,2,CSE 5350,43444,60,1,Discussion,3.0,30,,Online,,,Online,AB386,San Bernardino,0.00,1,83,False,1285
+501,2,CSE 5408,43484,1,1,Discussion,3.0,16,,JB 356,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,45.00,1,84,False,1286
+502,2,CSE 5408,43485,2,1,Laboratory,1.0,16,,JB 356,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,0.00,1,85,False,1287
+503,2,CSE 5700,43332,1,1,Discussion,3.0,7,,JB 140,M-W,4:00 PM - 5:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,86,False,1288
+504,2,CSE 5700,44942,60,1,Discussion,3.0,24,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,87,False,1289
+505,2,CSE 5720,43970,2,1,Discussion,3.0,22,,JB 262,Tu-Th,7:00 PM - 8:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,88,False,1290
+506,2,CSE 5720,44965,60,1,Discussion,3.0,22,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,89,False,1291
+508,2,CSE 5750,43425,2,1,Supervision,3.0,28,,JB 361,,,Classroom,,San Bernardino,0.00,1,91,False,1293
+509,2,CSE 5750,45342,3,1,Supervision,3.0,16,,,,,Classroom,,San Bernardino,0.00,1,92,False,1294
+510,2,CSE 5953,42934,1,1,Supervision,3.0,14,,JB 361,,,Classroom,,San Bernardino,0.00,1,93,False,1295
+511,2,CSE 5953,43264,2,1,Supervision,3.0,35,,JB 361,,,Classroom,,San Bernardino,0.00,1,94,False,1296
+512,2,CSE 5953,45134,3,1,Supervision,3.0,28,,JB 361,,,Classroom,,San Bernardino,0.00,1,95,False,1297
+513,2,CSE 6020,45098,60,1,Discussion,3.0,5,,Online,,,Online,AB386,San Bernardino,0.00,1,96,False,1298
+514,2,CSE 6300,42942,60,1,Discussion,3.0,29,,CE 116,Th,2:30 PM - 3:45 PM,Classroom+Synchronous,,San Bernardino,0.00,1,97,False,1299
+515,2,CSE 6400,43342,60,1,Discussion,3.0,29,,CE 116,Th,1:00 PM - 2:15 PM,Classroom+Synchronous,,San Bernardino,0.00,1,98,False,1300
+516,2,CSE 6550,43944,1,1,Discussion,3.0,4,,SB 128,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,0.00,1,99,False,1301
+517,2,CSE 6600,43661,2,1,Discussion,3.0,13,,CGI 110,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,0.00,1,100,False,1302
+518,2,CSE 6890,43420,1,1,Seminar,1.0,17,,JB 361,,,Classroom,,San Bernardino,0.00,1,101,False,1303
+519,2,CSE 6940,42935,1,1,Supervision,3.0,1,,JB 361,,,Classroom,,San Bernardino,0.00,1,102,False,1304
+520,2,CSE 6950,43081,1,1,Supervision,3.0,30,,JB 361,,,Classroom,,San Bernardino,0.00,1,103,False,1305
+521,2,CSE 6950,43082,2,1,Supervision,3.0,9,,JB 361,,,Classroom,,San Bernardino,0.00,1,104,False,1306
+522,2,CSE 6950,43728,3,1,Supervision,3.0,11,,JB 361,,,Classroom,,San Bernardino,0.00,1,105,False,1307
+523,2,CSE 6950,44982,4,1,Supervision,3.0,35,,JB 361,,,Classroom,,San Bernardino,0.00,1,106,False,1308
+524,2,CSE 6964,42936,1,1,Supervision,4.0,30,,JB 361,,,Classroom,,San Bernardino,0.00,1,107,False,1309
+525,2,CSE 6964,43265,2,1,Supervision,4.0,17,,JB 361,,,Classroom,,San Bernardino,0.00,1,108,False,1310
+526,2,CSE 6964,43267,3,1,Supervision,4.0,35,,JB 361,,,Classroom,,San Bernardino,0.00,1,109,False,1311
+527,2,CSE 6964,45133,4,1,Supervision,4.0,28,,JB 361,,,Classroom,,San Bernardino,0.00,1,110,False,1312
+528,2,CSE 6964,45341,5,1,Supervision,4.0,29,,,,,Classroom,,San Bernardino,0.00,1,111,False,1313
+529,2,CSE 6964,45353,6,1,Supervision,4.0,19,,,,,Classroom,,San Bernardino,0.00,1,112,False,1314
+530,2,CSE 6974,42939,1,1,Supervision,4.0,7,,JB 361,,,Classroom,,San Bernardino,0.00,1,113,False,1315
+531,2,CSE 6976,42940,1,1,Supervision,6.0,35,,JB 361,,,Classroom,,San Bernardino,0.00,1,114,False,1316
+532,2,CSE 6976,45248,2,1,Supervision,6.0,16,,JB 361,,,Classroom,,San Bernardino,0.00,1,115,False,1317
+533,2,CSE 6980,42941,1,1,Supervision,0.0,17,,JB 361,,,Classroom,,San Bernardino,0.00,1,116,False,1318
+534,2,CSE 6990,45269,1,1,Supervision,0.0,17,,,,,Classroom,,San Bernardino,0.00,1,117,False,1319
+196,1,CSE 1100,44520,3,1,Lecture,2.0,34,,JB 140,M-W,10:30 AM - 11:45 AM,Classroom,GE-1B Critical Thinking,San Bernardino,45.00,1,2,False,1320
+197,1,CSE 1100,44521,4,1,Activity,1.0,34,,JB 360,M-W,1:00 PM - 1:50 PM,Classroom,GE-1B Critical Thinking,San Bernardino,0.00,1,3,False,1321
+198,1,CSE 1250,44518,1,1,Lecture,3.0,34,,PS 010,Tu-Th,9:00 AM - 10:15 AM,Classroom,Tutoring Available,San Bernardino,45.00,1,4,False,1322
+199,1,CSE 1250,44617,2,1,Activity,1.0,34,,JB 360,Tu-Th,10:30 AM - 11:20 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,5,False,1323
+200,1,CSE 1250,44618,4,1,Activity,1.0,34,,JB 360,Tu-Th,2:30 PM - 3:20 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,6,False,1324
+201,1,CSE 1300,44623,1,1,Lecture,3.0,1,,CGI 106,M-W,10:30 AM - 11:45 AM,Classroom,"GE-2 Mathematical/Quant. Reasoning, Tutoring Available",San Bernardino,0.00,1,7,False,1325
+202,1,CSE 1300L,44624,1,1,Activity,1.0,33,,JB 359,M,1:00 PM - 1:50 PM,Classroom,,San Bernardino,0.00,1,8,False,1326
+203,1,CSE 2010,44680,1,1,Discussion,3.0,21,,CE 110,M-W,2:30 PM - 3:45 PM,Classroom,Tutoring Available,San Bernardino,45.00,1,9,False,1327
+204,1,CSE 2010,44681,2,1,Activity,1.0,21,,JB 359,M-W,4:00 PM - 4:50 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,10,False,1328
+205,1,CSE 2010,44682,3,1,Activity,1.0,21,,JB 359,M-W,5:30 PM - 6:20 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,11,False,1329
+206,1,CSE 2010,44687,10,1,Discussion,3.0,13,,JB 109,Tu-Th,9:00 AM - 10:15 AM,Classroom,Tutoring Available,San Bernardino,45.00,1,12,False,1330
+207,1,CSE 2010,44688,11,1,Activity,1.0,13,,JB 358,Tu-Th,10:30 AM - 11:20 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,13,False,1331
+208,1,CSE 2010,44685,62,1,Discussion,3.0,21,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,45.00,1,14,False,1332
+209,1,CSE 2010,44686,63,1,Activity,1.0,21,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,15,False,1333
+210,1,CSE 2020,44410,3,1,Discussion,3.0,10,,PS 010,Tu-Th,10:30 AM - 11:45 AM,Classroom,Tutoring Available,San Bernardino,45.00,1,16,False,1334
+211,1,CSE 2020,45032,6,1,Activity,1.0,27,,JB 358,Tu-Th,1:00 PM - 1:50 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,17,False,1335
+212,1,CSE 2020,44652,60,1,Discussion,3.0,29,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,45.00,1,18,False,1336
+213,1,CSE 2020,44653,61,1,Activity,1.0,27,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,19,False,1337
+214,1,CSE 2130,44592,1,1,Discussion,3.0,12,,JB 254,M-W,2:30 PM - 3:45 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,20,False,1338
+215,1,CSE 2130,44692,2,1,Discussion,3.0,12,,HP 124,M-W,1:00 PM - 2:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,21,False,1339
+216,1,CSE 3100,44594,4,1,Laboratory,1.0,28,,JB 356,Tu-Th,9:00 AM - 10:15 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,22,False,1340
+217,1,CSE 3100,45015,5,1,Laboratory,1.0,28,,JB 356,Tu-Th,10:30 AM - 11:45 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,23,False,1341
+218,1,CSE 3100,46351,9,1,Laboratory,1.0,12,,TBD,M-W,10:30 AM - 11:20 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,24,False,1342
+219,1,CSE 3100,46352,10,1,Laboratory,1.0,12,,TBD,M-W,4:00 PM - 4:50 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,25,False,1343
+220,1,CSE 3100,44593,62,1,Discussion,3.0,28,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,45.00,1,26,False,1344
+221,1,CSE 3100,46350,64,1,Discussion,3.0,12,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,45.00,1,27,False,1345
+222,1,CSE 3350,44412,1,1,Discussion,3.0,20,,JB 102,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,0.00,1,28,False,1346
+223,1,CSE 4010,44577,1,1,Discussion,3.0,2,,CS 130,M-W,4:00 PM - 5:15 PM,Classroom,Tutoring Available,San Bernardino,45.00,1,29,False,1347
+224,1,CSE 4010,44578,2,1,Laboratory,1.0,2,,JB 358,M-W,5:30 PM - 6:45 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,30,False,1348
+225,1,CSE 4010,44693,63,1,Laboratory,1.0,2,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,31,False,1349
+226,1,CSE 4030,44413,1,1,Discussion,3.0,13,,CH 135,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,45.00,1,32,False,1350
+227,1,CSE 4030,44414,2,1,Laboratory,1.0,13,,JB 359,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,0.00,1,33,False,1351
+228,1,CSE 4100,44580,2,1,Discussion,3.0,20,,CE 105,Tu-Th,4:00 PM - 5:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,34,False,1352
+229,1,CSE 4100,44725,60,1,Discussion,3.0,20,,Online,M-W,7:00 PM - 8:15 PM,Online Synchronous Section,"AB386, Tutoring Available",San Bernardino,0.00,1,35,False,1353
+230,1,CSE 4200,44729,60,1,Discussion,3.0,2,,Online,,,Online,AB386,San Bernardino,0.00,1,36,False,1354
+231,1,CSE 4200,46077,61,1,Discussion,3.0,1,,Online,,,Online,AB386,San Bernardino,0.00,1,37,False,1355
+232,1,CSE 4310,44415,1,1,Discussion,3.0,32,,CGI 106,Tu-Th,10:30 AM - 11:45 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,38,False,1356
+233,1,CSE 4310,44602,2,1,Discussion,3.0,35,,CE 355,Tu-Th,1:00 PM - 2:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,39,False,1357
+234,1,CSE 4310,44727,61,1,Discussion,3.0,32,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,40,False,1358
+235,1,CSE 4410,44416,1,1,Discussion,3.0,1,,CS 130,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,0.00,1,41,False,1359
+236,1,CSE 4410,44554,2,1,Discussion,3.0,25,,CS 128,Tu-Th,7:00 PM - 8:15 PM,Classroom,,San Bernardino,0.00,1,42,False,1360
+237,1,CSE 4500,44598,1,1,Discussion,3.0,22,,CGI 110,M-W,7:00 PM - 8:15 PM,Classroom,,San Bernardino,0.00,1,43,False,1361
+238,1,CSE 4500,44604,2,1,Discussion,3.0,22,,CS 128,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,0.00,1,44,False,1362
+239,1,CSE 4550,44417,1,1,Discussion,3.0,17,,JB 140,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,0.00,1,45,False,1363
+240,1,CSE 4550,44675,60,1,Discussion,3.0,17,,Online,,,Online,AB386,San Bernardino,0.00,1,46,False,1364
+241,1,CSE 4560,44589,60,1,Discussion,3.0,30,,Online,,,Online,AB386,San Bernardino,45.00,1,47,False,1365
+242,1,CSE 4560,44590,61,1,Laboratory,1.0,30,,Online,,,Online,AB386,San Bernardino,0.00,1,48,False,1366
+243,1,CSE 4600,44418,60,1,Discussion,3.0,35,,PS 203,Th,10:30 AM - 11:45 AM,Classroom+Asynchronous Online,Tutoring Available,San Bernardino,0.00,1,49,False,1367
+244,1,CSE 4600,44419,61,1,Discussion,3.0,35,,PS 203,Tu,10:30 AM - 11:45 AM,Classroom+Asynchronous Online,Tutoring Available,San Bernardino,0.00,1,50,False,1368
+245,1,CSE 4610,44495,1,1,Discussion,3.0,22,,PL 263,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,0.00,1,51,False,1369
+246,1,CSE 4880,44676,2,1,Discussion,3.0,26,,JB 113,Tu-Th,5:30 PM - 6:45 PM,Classroom,Writing Intensive,San Bernardino,0.00,1,52,False,1370
+247,1,CSE 4880,46349,60,1,Discussion,3.0,12,,Online,,,Online,"Writing Intensive, AB386",San Bernardino,0.00,1,53,False,1371
+248,1,CSE 5000,44677,2,1,Discussion,3.0,24,,PL 263,M-W,7:00 PM - 8:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,54,False,1372
+249,1,CSE 5120,44421,1,1,Discussion,3.0,19,,CGI 110,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,0.00,1,55,False,1373
+250,1,CSE 5120,44718,60,1,Discussion,3.0,19,,Online,,,Online,AB386,San Bernardino,0.00,1,56,False,1374
+251,1,CSE 5120,46293,61,1,Discussion,3.0,19,,Online,,,Online,,San Bernardino,0.00,1,57,False,1375
+252,1,CSE 5140,45825,1,1,Discussion,3.0,4,,JB 140,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,0.00,1,58,False,1376
+253,1,CSE 5160,44715,61,1,Discussion,3.0,28,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,59,False,1377
+254,1,CSE 5210,44430,1,1,Discussion,3.0,2,,CE 110,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,45.00,1,60,False,1378
+255,1,CSE 5210,44493,2,1,Laboratory,1.0,2,,JB 359,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,0.00,1,61,False,1379
+256,1,CSE 5250,44678,2,1,Discussion,3.0,25,,CS 130,M-W,7:00 PM - 8:15 PM,Classroom,,San Bernardino,0.00,1,62,False,1380
+257,1,CSE 5250,44722,60,1,Discussion,3.0,25,,Online,,,Online,AB386,San Bernardino,0.00,1,63,False,1381
+258,1,CSE 5350,44605,1,1,Discussion,3.0,24,,CE 113,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,0.00,1,64,False,1382
+259,1,CSE 5408,44619,1,1,Discussion,3.0,16,,JB 356,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,45.00,1,65,False,1383
+260,1,CSE 5408,44620,2,1,Laboratory,1.0,16,,JB 356,Tu-Th,2:30 PM - 3:20 PM,Classroom,,San Bernardino,0.00,1,66,False,1384
+261,1,CSE 5408,45903,4,1,Discussion,3.0,33,,JB 109,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,45.00,1,67,False,1385
+262,1,CSE 5408,45902,5,1,Laboratory,1.0,33,,JB 358,M-W,7:00 PM - 7:50 PM,Classroom,,San Bernardino,0.00,1,68,False,1386
+263,1,CSE 5510,45826,60,1,Discussion,3.0,26,,Online,,,Online,AB386,San Bernardino,0.00,1,69,False,1387
+264,1,CSE 5700,44579,1,1,Discussion,3.0,1,,JB 109,M-W,7:00 PM - 8:15 PM,Classroom,,San Bernardino,0.00,1,70,False,1388
+265,1,CSE 5700,44723,60,1,Discussion,3.0,33,,Online,,,Online,AB386,San Bernardino,0.00,1,71,False,1389
+266,1,CSE 5720,44695,2,1,Discussion,3.0,22,,JB 254,Tu-Th,7:00 PM - 8:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,72,False,1390
+267,1,CSE 5720,44726,60,1,Discussion,3.0,17,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,73,False,1391
+268,1,CSE 5951,46196,3,1,Supervision,1.0,21,,,,,Classroom,,San Bernardino,0.00,1,74,False,1392
+269,1,CSE 5953,46197,1,1,Supervision,3.0,17,,,,,Classroom,,San Bernardino,0.00,1,75,False,1393
+270,1,CSE 5953,46404,2,1,Supervision,3.0,16,,,,,Classroom,,San Bernardino,0.00,1,76,False,1394
+271,1,CSE 5953,46405,3,1,Supervision,3.0,35,,,,,Classroom,,San Bernardino,0.00,1,77,False,1395
+272,1,CSE 5953,46479,4,1,Supervision,3.0,30,,,,,Classroom,,San Bernardino,0.00,1,78,False,1396
+273,1,CSE 5953,46480,5,1,Supervision,3.0,33,,,,,Classroom,,San Bernardino,0.00,1,79,False,1397
+274,1,CSE 6300,44429,1,1,Discussion,3.0,29,,CS 130,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,0.00,1,80,False,1398
+275,1,CSE 6320,46099,60,1,Lecture,3.0,24,,Online,,,Online,,San Bernardino,0.00,1,81,False,1399
+276,1,CSE 6400,44582,1,1,Discussion,3.0,29,,CS 130,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,0.00,1,82,False,1400
+277,1,CSE 6600,44648,2,1,Discussion,3.0,13,,CS 128,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,0.00,1,83,False,1401
+278,1,CSE 6890,44601,1,1,Seminar,1.0,17,,JB 361,,,Classroom,,San Bernardino,0.00,1,84,False,1402
+279,1,CSE 6950,46476,1,1,Supervision,3.0,35,,,,,Classroom,,San Bernardino,0.00,1,85,False,1403
+280,1,CSE 6964,46462,2,1,Supervision,4.0,35,,,,,Classroom,,San Bernardino,0.00,1,86,False,1404
+281,1,CSE 6964,46489,3,1,Supervision,4.0,29,,,,,Classroom,,San Bernardino,0.00,1,87,False,1405
+282,1,CSE 6973,46363,1,1,Supervision,3.0,35,,TBD,,,Classroom,,San Bernardino,0.00,1,88,False,1406
+283,1,CSE 6973,46364,2,1,Supervision,3.0,19,,TBD,,,Classroom,,San Bernardino,0.00,1,89,False,1407
+284,1,CSE 6976,46497,4,1,Supervision,6.0,28,,,,,Classroom,,San Bernardino,0.00,1,90,False,1409
+285,1,CSE 6980,44428,1,1,Supervision,0.0,17,,JB 361,,,Classroom,,San Bernardino,0.00,1,91,False,1410
+286,1,CSE 6990,44772,1,1,Supervision,0.0,17,,JB 361,,,Classroom,,San Bernardino,0.00,1,92,False,1411
+392,8,CSE 2010,60443,60,5W2,Discussion,3.0,11,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,45.00,1,2,False,1530
+393,8,CSE 2010,60444,61,5W2,Activity,1.0,11,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,0.00,1,3,False,1531
+394,8,CSE 2020,60420,60,5W1,Discussion,3.0,35,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,45.00,1,4,False,1532
+395,8,CSE 2020,60421,61,5W1,Activity,1.0,35,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,0.00,1,5,False,1533
+396,8,CSE 2130,60455,60,5W2,Discussion,3.0,12,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,0.00,1,6,False,1534
+397,8,CSE 3100,60425,60,5W1,Discussion,3.0,12,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,45.00,1,7,False,1535
+398,8,CSE 3100,60426,61,5W1,Laboratory,1.0,12,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,0.00,1,8,False,1536
+399,8,CSE 4030,60473,60,5W1,Discussion,3.0,16,,Online,M-W,9:00 AM - 10:15 AM,Online Synchronous Section,State Support,San Bernardino,45.00,1,9,False,1537
+400,8,CSE 4030,60474,61,5W1,Laboratory,1.0,16,,Online,,,Online,State Support,San Bernardino,0.00,1,10,False,1538
+401,8,CSE 4100,60411,60,5W2,Discussion,3.0,23,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,0.00,1,11,False,1539
+402,8,CSE 4310,60401,60,5W2,Discussion,3.0,29,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,0.00,1,12,False,1540
+403,8,CSE 4310,60408,61,5W1,Discussion,3.0,23,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,0.00,1,13,False,1541
+404,8,CSE 4560,60601,62,5W1,Discussion,3.0,30,,Online,,,Online,State Support,San Bernardino,45.00,1,14,False,1542
+405,8,CSE 4560,60602,63,5W1,Laboratory,1.0,30,,Online,,,Online,State Support,San Bernardino,0.00,1,15,False,1543
+406,8,CSE 4600,60422,60,5W2,Discussion,3.0,35,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,0.00,1,16,False,1544
+407,8,CSE 4880,60409,60,5W1,Discussion,3.0,23,,Online,,,Online,"Writing Intensive, State Support",San Bernardino,0.00,1,17,False,1545
+408,8,CSE 4880,60410,61,5W2,Discussion,3.0,23,,Online,,,Online,"Writing Intensive, State Support",San Bernardino,0.00,1,18,False,1546
+409,8,CSE 5000,60442,60,5W1,Discussion,3.0,11,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,0.00,1,19,False,1547
+410,8,CSE 5000,60456,61,5W1,Discussion,3.0,11,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,0.00,1,20,False,1548
+411,8,CSE 5120,60400,60,5W1,Discussion,3.0,29,,Online,,,Online,State Support,San Bernardino,0.00,1,21,False,1549
+412,8,CSE 5120,60553,61,5W2,Discussion,3.0,29,,Online,,,Online,State Support,San Bernardino,0.00,1,22,False,1550
+413,8,CSE 5160,60416,60,5W1,Discussion,3.0,28,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,0.00,1,23,False,1551
+414,8,CSE 5160,60417,61,5W2,Discussion,3.0,28,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,0.00,1,24,False,1552
+415,8,CSE 5350,60415,61,5W2,Discussion,3.0,30,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,0.00,1,25,False,1553
+416,8,CSE 5350,60603,62,5W2,Discussion,3.0,30,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,0.00,1,26,False,1554
+417,8,CSE 5720,60418,60,5W1,Discussion,3.0,17,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,0.00,1,27,False,1555
+418,8,CSE 5720,60419,61,5W2,Discussion,3.0,17,,Online,,,Online,"State Support, Tutoring Available",San Bernardino,0.00,1,28,False,1556
+174,4,CSE 2010,60406,60,5W1,Discussion,3.0,11,,Online,,,Online,State Support,San Bernardino,45.00,1,2,False,1557
+175,4,CSE 2010,60407,61,5W1,Activity,1.0,28,,Online,,,Online,State Support,San Bernardino,0.00,1,3,False,1558
+176,4,CSE 2020,60500,62,5W2,Discussion,3.0,29,,Online,,,Online,State Support,San Bernardino,45.00,1,4,False,1559
+177,4,CSE 2020,60502,64,5W2,Activity,1.0,29,,Online,,,Online,State Support,San Bernardino,0.00,1,5,False,1560
+178,4,CSE 3100,60408,60,5W1,Discussion,3.0,12,,Online,,,Online,State Support,San Bernardino,45.00,1,6,False,1561
+179,4,CSE 3100,60409,61,5W1,Laboratory,1.0,12,,Online,,,Online,State Support,San Bernardino,0.00,1,7,False,1562
+180,4,CSE 4030,60387,60,5W1,Discussion,3.0,16,,Online,,,Online,State Support,San Bernardino,45.00,1,8,False,1563
+181,4,CSE 4030,60418,61,5W1,Laboratory,1.0,16,,Online,,,Online,State Support,San Bernardino,0.00,1,9,False,1564
+182,4,CSE 4100,60389,61,5W2,Discussion,3.0,23,,Online,,,Online,State Support,San Bernardino,0.00,1,10,False,1565
+183,4,CSE 4310,60391,60,5W1,Discussion,3.0,23,,Online,,,Online,State Support,San Bernardino,0.00,1,11,False,1566
+184,4,CSE 4560,60401,62,5W2,Discussion,3.0,30,,Online,,,Online,State Support,San Bernardino,45.00,1,12,False,1567
+185,4,CSE 4560,60403,63,5W2,Laboratory,1.0,30,,Online,,,Online,State Support,San Bernardino,0.00,1,13,False,1568
+186,4,CSE 4600,60394,61,5W2,Discussion,3.0,35,,Online,,,Online,State Support,San Bernardino,0.00,1,14,False,1569
+187,4,CSE 4880,60388,60,5W1,Discussion,3.0,23,,Online,,,Online,"Writing Intensive, State Support",San Bernardino,0.00,1,15,False,1570
+188,4,CSE 5000,60404,60,5W1,Discussion,3.0,11,,Online,,,Online,State Support,San Bernardino,0.00,1,16,False,1571
+189,4,CSE 5120,60395,60,5W1,Discussion,3.0,29,,Online,,,Online,State Support,San Bernardino,0.00,1,17,False,1572
+190,4,CSE 5120,60402,62,5W2,Discussion,3.0,21,,Online,,,Online,State Support,San Bernardino,0.00,1,18,False,1573
+191,4,CSE 5160,60411,60,5W1,Discussion,3.0,28,,Online,,,Online,State Support,San Bernardino,0.00,1,19,False,1574
+192,4,CSE 5160,60412,61,5W2,Discussion,3.0,28,,Online,,,Online,State Support,San Bernardino,0.00,1,20,False,1575
+193,4,CSE 5350,60399,62,5W1,Discussion,3.0,30,,Online,,,Online,State Support,San Bernardino,0.00,1,21,False,1576
+194,4,CSE 5700,60421,60,5W1,Discussion,3.0,33,,Online,,,Online,State Support,San Bernardino,0.00,1,22,False,1577
+195,4,CSE 5720,60413,60,5W1,Discussion,3.0,17,,Online,,,Online,State Support,San Bernardino,0.00,1,23,False,1578
+535,7,CSE 2130,20056,60,3W1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,0.00,1,2,False,1597
+536,7,CSE 4310,20061,60,3W1,Discussion,3.0,23,,Online,,,Online,,San Bernardino,0.00,1,3,False,1598
+537,7,CSE 4560,20067,60,3W1,Discussion,3.0,30,,Online,,,Online,,San Bernardino,45.00,1,4,False,1599
+538,7,CSE 4560,20069,61,3W1,Laboratory,1.0,25,,Online,,,Online,,San Bernardino,0.00,1,5,False,1600
+539,7,CSE 5000,20057,60,3W1,Discussion,3.0,11,,Online,,,Online,,San Bernardino,0.00,1,6,False,1601
+540,7,CSE 5120,20086,60,3W1,Discussion,3.0,29,,Online,,,Online,AB386,San Bernardino,0.00,1,7,False,1602
+541,7,CSE 5160,20058,60,3W1,Discussion,3.0,28,,Online,,,Online,,San Bernardino,0.00,1,8,False,1603
+542,7,CSE 5720,20063,60,3W1,Discussion,3.0,17,,Online,,,Online,,San Bernardino,0.00,1,9,False,1604
+287,3,CSE 4310,20066,60,3W1,Discussion,3.0,23,,Online,,,Online,AB386,San Bernardino,0.00,1,2,False,1605
+288,3,CSE 4600,20018,60,3W1,Discussion,3.0,35,,Online,,,Online,State Support,San Bernardino,0.00,1,3,False,1606
+289,3,CSE 5000,20019,60,3W1,Discussion,3.0,12,,Online,,,Online,State Support,San Bernardino,0.00,1,4,False,1607
+290,3,CSE 5120,20067,60,3W1,Discussion,3.0,29,,Online,,,Online,AB386,San Bernardino,0.00,1,5,False,1608
+291,3,CSE 5160,20072,60,3W1,Discussion,3.0,28,,Online,,,Online,AB386,San Bernardino,0.00,1,6,False,1609
+292,3,CSE 5350,20020,60,3W1,Discussion,3.0,30,,Online,,,Online,State Support,San Bernardino,0.00,1,7,False,1610
+293,3,CSE 5720,20022,60,3W1,Discussion,3.0,17,,Online,,,Online,State Support,San Bernardino,0.00,1,8,False,1611
+1085,25,CSE 1100,,1,1,Lecture,2.0,34,,Online,Tu-Th,9:00 AM - 9:50 AM,Online,,San Bernardino,,3,2,False,2
+1086,25,CSE 1100,,2,1,Activity,1.0,34,,Online,Tu-Th,10:30 AM - 11:20 AM,Online,,San Bernardino,,3,3,False,3
+1087,25,CSE 1100,,3,1,Activity,1.0,34,,Online,Tu-Th,2:30 PM - 3:20 PM,Online,,San Bernardino,,3,4,False,4
+1088,25,CSE 1100,,4,1,Activity,1.0,34,,Online,Tu-Th,1:00 PM - 1:50 PM,Online,,San Bernardino,,3,5,False,5
+1089,25,CSE 1250,,1,1,Lecture,3.0,102,,Online,M-W,10:30 AM - 11:45 AM,Online,,San Bernardino,,3,6,False,6
+1090,25,CSE 1250,,2,1,Activity,1.0,102,,Online,M-W,12:00 PM - 12:50 PM,Online,,San Bernardino,,3,7,False,7
+1091,25,CSE 1250,,3,1,Activity,1.0,102,,Online,M-W,1:00 PM - 1:50 PM,Online,,San Bernardino,,3,8,False,8
+1092,25,CSE 1290,,1,1,Seminar,3.0,10,,Online,M-W,9:00 AM - 10:15 AM,Online,,San Bernardino,,3,9,False,9
+1093,25,CSE 1290,,2,1,Seminar,3.0,10,,Online,M-W,10:30 AM - 11:45 AM,Online,,San Bernardino,,3,10,False,10
+1094,25,CSE 1300,,1,1,Lecture,3.0,87,,Online,M-W,4:00 PM - 5:15 PM,Online,,San Bernardino,,3,11,False,11
+1095,25,CSE 2000Q2S,,1,1,Lecture,1.5,26,,Online,F,10:30 AM - 11:45 AM,Online,,San Bernardino,,3,12,False,12
+1096,25,CSE 2000Q2S,,2,1,Activity,0.5,26,,Online,F,12:00 PM - 12:50 PM,Online,,San Bernardino,,3,13,False,13
+1097,25,CSE 2010,,10,1,Activity,1.0,11,,Online,M-W,10:30 AM - 11:20 AM,Online,,San Bernardino,,3,17,False,17
+1098,25,CSE 2010,,11,1,Activity,1.0,87,,Online,M-W,10:30 AM - 11:20 AM,Online,,San Bernardino,,3,18,False,18
+1099,25,CSE 2010,,3,1,Discussion,3.0,84,,Online,Tu-Th,5:30 PM - 6:45 PM,Online,,San Bernardino,,3,14,False,14
+1100,25,CSE 2010,,4,1,Activity,1.0,84,,Online,Tu-Th,7:00 PM - 7:50 PM,Online,,San Bernardino,,3,15,False,15
+1101,25,CSE 2010,,9,1,Discussion,3.0,11,,Online,M-W,9:00 AM - 10:15 AM,Online,,San Bernardino,,3,16,False,16
+1102,25,CSE 2020,,1,1,Discussion,3.0,29,,Online,M-W,5:30 PM - 6:45 PM,Online,,San Bernardino,,3,19,False,19
+1103,25,CSE 2020,,2,1,Activity,1.0,29,,Online,M-W,7:00 PM - 7:50 PM,Online,,San Bernardino,,3,20,False,20
+1104,25,CSE 2020,,4,1,Discussion,3.0,32,,Online,Tu-Th,10:30 AM - 11:45 AM,Online,,San Bernardino,,3,21,False,21
+1105,25,CSE 2020,,5,1,Activity,1.0,32,,Online,Tu-Th,1:00 PM - 1:50 PM,Online,,San Bernardino,,3,22,False,22
+1106,25,CSE 2130,,1,1,Discussion,3.0,12,,Online,Tu-Th,1:00 PM - 2:15 PM,Online,,San Bernardino,,3,23,False,23
+1107,25,CSE 2130,,2,1,Discussion,3.0,12,,Online,M-W,1:00 PM - 2:15 PM,Online,,San Bernardino,,3,24,False,24
+1108,25,CSE 2130,,3,1,Discussion,3.0,99,,Online,Tu-Th,2:30 PM - 3:45 PM,Online,,San Bernardino,,3,25,False,25
+1109,25,CSE 3100,,1,1,Discussion,3.0,12,,Online,M-W,9:00 AM - 10:15 AM,Online,,San Bernardino,,3,26,False,26
+1110,25,CSE 3100,,2,1,Laboratory,1.0,12,,Online,M-W,10:30 AM - 11:45 AM,Online,,San Bernardino,,3,27,False,27
+1111,25,CSE 3100,,3,1,Discussion,3.0,12,,Online,Tu-Th,9:00 AM - 10:15 AM,Online,,San Bernardino,,3,28,False,28
+1112,25,CSE 3100,,4,1,Laboratory,1.0,12,,Online,Tu-Th,10:30 AM - 11:45 AM,Online,,San Bernardino,,3,29,False,29
+1113,25,CSE 3350,,1,1,Discussion,3.0,29,,Online,M-W,2:30 PM - 3:45 PM,Online,,San Bernardino,,3,30,False,30
+1114,25,CSE 3650,,1,1,Discussion,2.0,15,,Online,Tu-Th,5:30 PM - 6:20 PM,Online,,San Bernardino,,3,31,False,31
+1115,25,CSE 3650,,2,1,Activity,1.0,15,,Online,Tu-Th,6:30 PM - 7:20 PM,Online,,San Bernardino,,3,32,False,32
+1116,25,CSE 4010,,1,1,Discussion,3.0,85,,Online,M-W,1:00 PM - 2:15 PM,Online,,San Bernardino,,3,33,False,33
+1117,25,CSE 4010,,2,1,Laboratory,1.0,74,,Online,M-W,2:30 PM - 3:45 PM,Online,,San Bernardino,,3,34,False,34
+1118,25,CSE 4010,,3,1,Laboratory,1.0,74,,Online,M-W,4:00 PM - 5:15 PM,Online,,San Bernardino,,3,35,False,35
+1119,25,CSE 4030,,1,1,Discussion,3.0,16,,Online,M-W,9:00 AM - 10:15 AM,Online,,San Bernardino,,3,36,False,36
+1120,25,CSE 4030,,2,1,Laboratory,1.0,16,,Online,M-W,10:30 AM - 11:45 AM,Online,,San Bernardino,,3,37,False,37
+1121,25,CSE 4050,,1,1,Discussion,3.0,82,,Online,M-W,10:30 AM - 11:45 AM,Online,,San Bernardino,,3,38,False,38
+1122,25,CSE 4100,,1,1,Discussion,3.0,16,,Online,M-W,2:30 PM - 3:45 PM,Online,,San Bernardino,,3,39,False,39
+1123,25,CSE 4310,,1,1,Discussion,3.0,23,,Online,Tu-Th,1:00 PM - 2:15 PM,Online,,San Bernardino,,3,40,False,40
+507,2,CSE 5750,42933,1,1,Supervision,3.0,9,,JB 361,,,Classroom,,San Bernardino,0.00,1,90,False,1292
+1124,25,CSE 4400,,1,1,Discussion,3.0,82,,Online,M-W,4:00 PM - 5:15 PM,Online,,San Bernardino,,3,41,False,41
+1125,25,CSE 4550,,2,1,Discussion,3.0,19,,Online,Tu-Th,10:30 AM - 11:45 AM,Online,,San Bernardino,,3,42,False,42
+1126,25,CSE 4550,,3,1,Discussion,3.0,17,,Online,Tu-Th,1:00 PM - 2:15 PM,Online,,San Bernardino,,3,43,False,43
+1127,25,CSE 4550,,4,1,Discussion,3.0,17,,Online,Tu-Th,2:30 PM - 3:45 PM,Online,,San Bernardino,,3,44,False,44
+1128,25,CSE 4560,,1,1,Discussion,3.0,30,,Online,M-W,9:00 AM - 10:15 AM,Online,,San Bernardino,,3,45,False,45
+1129,25,CSE 4560,,2,1,Laboratory,1.0,30,,Online,M-W,10:30 AM - 11:45 AM,Online,,San Bernardino,,3,46,False,46
+1130,25,CSE 4560,,3,1,Laboratory,1.0,30,,Online,M-W,1:00 PM - 2:15 PM,Online,,San Bernardino,,3,47,False,47
+1131,25,CSE 4600,,1,1,Discussion,3.0,19,,Online,M-W,4:00 PM - 5:15 PM,Online,,San Bernardino,,3,48,False,48
+1132,25,CSE 4600,,2,1,Discussion,3.0,35,,Online,Tu-Th,10:30 AM - 11:45 AM,Online,,San Bernardino,,3,49,False,49
+1133,25,CSE 4600,,3,1,Discussion,3.0,19,,Online,M-W,10:30 AM - 11:45 AM,Online,,San Bernardino,,3,50,False,50
+1134,25,CSE 4600,,4,1,Discussion,3.0,35,,Online,Tu-Th,1:00 PM - 2:15 PM,Online,,San Bernardino,,3,51,False,51
+1135,25,CSE 4610,,1,1,Discussion,3.0,88,,Online,Tu-Th,9:00 AM - 10:15 AM,Online,,San Bernardino,,3,52,True,52
+1136,25,CSE 4820,,1,1,Supervision,3.0,28,,Online,,,Online,,San Bernardino,,3,53,False,53
+1137,25,CSE 4820,,2,1,Supervision,3.0,35,,,,,Online,,San Bernardino,,3,54,False,54
+1138,25,CSE 4820,,3,1,Supervision,3.0,85,,,,,Online,,San Bernardino,,3,55,False,55
+1139,25,CSE 4880,,1,1,Discussion,3.0,75,,Online,F,9:00 AM - 11:45 AM,Online,,San Bernardino,,3,56,False,56
+1140,25,CSE 5000,,1,1,Discussion,3.0,11,,Online,M-W,1:00 PM - 2:15 PM,Online,,San Bernardino,,3,57,False,57
+1141,25,CSE 5000,,2,1,Discussion,3.0,11,,Online,M-W,2:30 PM - 3:45 PM,Online,,San Bernardino,,3,58,False,58
+1142,25,CSE 5010,,1,1,Discussion,3.0,88,,Online,Tu-Th,4:00 PM - 5:15 PM,Online,,San Bernardino,,3,59,True,59
+1143,25,CSE 5100,,1,1,Discussion,3.0,99,,Online,M-W,9:00 AM - 10:15 AM,Online,,San Bernardino,,3,60,True,60
+1144,25,CSE 5120,,1,1,Discussion,3.0,32,,Online,Tu-Th,2:30 PM - 3:45 PM,Online,,San Bernardino,,3,61,False,61
+1145,25,CSE 5120,,2,1,Discussion,3.0,32,,Online,Tu-Th,4:00 PM - 5:15 PM,Online,,San Bernardino,,3,62,False,62
+1146,25,CSE 5160,,1,1,Discussion,3.0,35,,Online,Tu-Th,4:00 PM - 5:15 PM,Online,,San Bernardino,,3,63,False,63
+1147,25,CSE 5208,,1,1,Discussion,3.0,23,,Online,Tu-Th,9:00 AM - 10:15 AM,Online,,San Bernardino,,3,64,False,64
+1148,25,CSE 5208,,2,1,Laboratory,1.0,23,,Online,Tu-Th,10:30 AM - 11:45 AM,Online,,San Bernardino,,3,65,False,65
+1149,25,CSE 5208,,3,1,Discussion,3.0,73,,Online,Tu-Th,2:30 PM - 3:45 PM,Online,,San Bernardino,,3,66,False,66
+1150,25,CSE 5208,,4,1,Laboratory,1.0,73,,Online,Tu-Th,4:00 PM - 5:15 PM,Online,,San Bernardino,,3,67,False,67
+1151,25,CSE 5210,,1,1,Discussion,3.0,73,,Online,M-W,1:00 PM - 2:15 PM,Online,,San Bernardino,,3,68,False,68
+1152,25,CSE 5210,,2,1,Laboratory,1.0,73,,Online,M-W,2:30 PM - 3:45 PM,Online,,San Bernardino,,3,69,False,69
+1153,25,CSE 5210,,4,1,Discussion,3.0,83,,Online,Tu-Th,4:00 PM - 5:15 PM,Online,,San Bernardino,,3,70,False,70
+1154,25,CSE 5210,,5,1,Laboratory,1.0,83,,Online,Tu-Th,5:30 PM - 6:45 PM,Online,,San Bernardino,,3,71,False,71
+1155,25,CSE 5350,,1,1,Discussion,3.0,30,,Online,M-W,4:00 PM - 5:15 PM,Online,,San Bernardino,,3,72,False,72
+1156,25,CSE 5410,,1,1,Discussion,3.0,83,,Online,M-W,1:00 PM - 2:15 PM,Online,,San Bernardino,,3,73,False,73
+1157,25,CSE 5410,,3,1,Laboratory,1.0,83,,Online,M-W,5:30 PM - 6:45 PM,Online,,San Bernardino,,3,74,False,74
+1158,25,CSE 5700,,1,1,Discussion,3.0,85,,Online,Tu-Th,10:30 AM - 11:45 AM,Online,,San Bernardino,,3,75,False,75
+1159,25,CSE 5720,,2,1,Discussion,3.0,17,,Online,Tu-Th,5:30 PM - 6:45 PM,Online,,San Bernardino,,3,76,False,76
+1160,25,CSE 5750,,1,1,Supervision,3.0,81,,,,,Online,,San Bernardino,,3,77,False,77
+1161,25,CSE 5951,,1,1,Supervision,1.0,,,Online,,,Online,,San Bernardino,,3,78,False,78
+1162,25,CSE 5951,,2,1,Supervision,1.0,,,Online,,,Online,,San Bernardino,,3,79,False,79
+1,6,CSE 1100,43131,3,1,Lecture,2.0,,,CE 105,M-W,10:30 AM - 11:45 AM,Classroom,GE-1B Critical Thinking,San Bernardino,45.00,1,2,False,
+2,6,CSE 1100,43132,4,1,Activity,1.0,,,JB 360,M-W,1:00 PM - 1:50 PM,Classroom,GE-1B Critical Thinking,San Bernardino,0.00,1,3,False,
+3,6,CSE 1250,43130,1,1,Lecture,3.0,,,PS 204,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,45.00,1,4,False,
+4,6,CSE 1250,43210,2,1,Activity,1.0,,,JB 360,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,0.00,1,5,False,
+5,6,CSE 1300,43214,1,1,Lecture,3.0,11,,CGI 106,M-W,10:30 AM - 11:45 AM,Classroom,GE-2 Mathematical/Quant. Reasoning,San Bernardino,0.00,1,6,False,
+6,6,CSE 1300L,43215,1,1,Activity,1.0,11,,JB 359,M,1:00 PM - 1:50 PM,Classroom,,San Bernardino,0.00,1,7,False,
+7,6,CSE 2010,43251,1,1,Discussion,3.0,21,,CE 110,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,45.00,1,8,False,
+8,6,CSE 2010,43252,2,1,Activity,1.0,21,,JB 359,M-W,4:00 PM - 4:50 PM,Classroom,,San Bernardino,0.00,1,9,False,
+9,6,CSE 2010,43253,3,1,Activity,1.0,,,JB 359,M-W,5:30 PM - 6:20 PM,Classroom,,San Bernardino,0.00,1,10,False,
+10,6,CSE 2010,43256,10,1,Discussion,3.0,,,CGI 106,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,45.00,1,11,False,
+11,6,CSE 2010,43257,11,1,Activity,1.0,,,JB 358,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,0.00,1,12,False,
+12,6,CSE 2010,43254,62,1,Discussion,3.0,14,,Online,,,Online,AB386,San Bernardino,45.00,1,13,False,
+13,6,CSE 2010,43255,63,1,Activity,1.0,,,Online,,,Online,AB386,San Bernardino,0.00,1,14,False,
+14,6,CSE 2020,43041,3,1,Discussion,3.0,,,CGI 106,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,45.00,1,15,False,
+15,6,CSE 2020,43822,5,1,Activity,1.0,,,JB 358,Tu-Th,9:00 AM - 9:50 AM,Classroom,,San Bernardino,0.00,1,16,False,
+16,6,CSE 2020,43334,6,1,Activity,1.0,,,JB 358,Tu-Th,1:00 PM - 1:50 PM,Classroom,,San Bernardino,0.00,1,17,False,
+17,6,CSE 2020,43237,60,1,Discussion,3.0,29,,Online,,,Online,AB386,San Bernardino,45.00,1,18,False,
+18,6,CSE 2020,43238,61,1,Activity,1.0,29,,Online,,,Online,AB386,San Bernardino,0.00,1,19,False,
+19,6,CSE 2130,43190,1,1,Discussion,3.0,12,,JB 254,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,0.00,1,20,False,
+20,6,CSE 2130,43258,2,1,Discussion,3.0,12,,JB 254,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,0.00,1,21,False,
+21,6,CSE 3100,43192,4,1,Laboratory,1.0,28,,JB 356,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,0.00,1,22,False,
+22,6,CSE 3100,43333,5,1,Laboratory,1.0,28,,JB 356,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,0.00,1,23,False,
+23,6,CSE 3100,43527,9,1,Laboratory,1.0,,,JB 356,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,0.00,1,24,False,
+24,6,CSE 3100,43528,10,1,Laboratory,1.0,12,,JB 356,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,0.00,1,25,False,
+25,6,CSE 3100,43191,62,1,Discussion,3.0,28,,Online,,,Online,AB386,San Bernardino,45.00,1,26,False,
+26,6,CSE 3100,43526,64,1,Discussion,3.0,,,Online,,,Online,AB386,San Bernardino,45.00,1,27,False,
+27,6,CSE 3350,43042,1,1,Discussion,3.0,29,,JB 102,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,0.00,1,28,False,
+28,6,CSE 4010,43176,1,1,Discussion,3.0,,,CS 130,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,45.00,1,29,False,
+29,6,CSE 4010,43177,2,1,Laboratory,1.0,,,JB 358,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,0.00,1,30,False,
+30,6,CSE 4010,43259,63,1,Laboratory,1.0,,,Online,,,Online,AB386,San Bernardino,0.00,1,31,False,
+31,6,CSE 4030,43043,1,1,Discussion,3.0,,,JB 262,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,45.00,1,32,False,
+32,6,CSE 4030,43044,2,1,Laboratory,1.0,,,JB 359,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,0.00,1,33,False,
+33,6,CSE 4030,43818,3,1,Laboratory,1.0,,,JB 359,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,0.00,1,34,False,
+34,6,CSE 4100,43179,2,1,Discussion,3.0,,,CE 105,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,0.00,1,35,False,
+35,6,CSE 4100,43276,60,1,Discussion,3.0,33,,Online,,,Online,AB386,San Bernardino,0.00,1,36,False,
+36,6,CSE 4200,43279,60,1,Discussion,3.0,,,Online,,,Online,AB386,San Bernardino,0.00,1,37,False,
+37,6,CSE 4310,43197,2,1,Discussion,3.0,,,CGI 209,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,0.00,1,38,False,
+38,6,CSE 4310,43278,61,1,Discussion,3.0,32,,Online,,,Online,AB386,San Bernardino,0.00,1,39,False,
+39,6,CSE 4410,43046,1,1,Discussion,3.0,,,CS 130,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,0.00,1,40,False,
+40,6,CSE 4410,43160,2,1,Discussion,3.0,,,CS 128,Tu-Th,7:00 PM - 8:15 PM,Classroom,,San Bernardino,0.00,1,41,False,
+41,6,CSE 4500,43198,2,1,Discussion,3.0,,,CS 128,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,0.00,1,42,False,
+42,6,CSE 4550,43047,1,1,Discussion,3.0,,,JB 254,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,0.00,1,43,False,
+43,6,CSE 4550,43247,60,1,Discussion,3.0,17,,Online,,,Online,AB386,San Bernardino,0.00,1,44,False,
+44,6,CSE 4560,43188,60,1,Discussion,3.0,30,,Online,,,Online,AB386,San Bernardino,45.00,1,45,False,
+45,6,CSE 4560,43189,61,1,Laboratory,1.0,30,,Online,,,Online,AB386,San Bernardino,0.00,1,46,False,
+46,6,CSE 4600,43048,60,1,Discussion,3.0,19,,PS 203,Th,10:30 AM - 11:45 AM,Classroom+Asynchronous Online,,San Bernardino,0.00,1,47,False,
+47,6,CSE 4600,43049,61,1,Discussion,3.0,19,,PS 203,Tu,10:30 AM - 11:45 AM,Classroom+Asynchronous Online,,San Bernardino,0.00,1,48,False,
+48,6,CSE 4880,43248,2,1,Discussion,3.0,,,CGI 209,Tu-Th,5:30 PM - 6:45 PM,Classroom,Writing Intensive,San Bernardino,0.00,1,49,False,
+49,6,CSE 4880,43525,60,1,Discussion,3.0,23,,Online,,,Online,"Writing Intensive, AB386",San Bernardino,0.00,1,50,False,
+50,6,CSE 5000,43249,60,1,Discussion,3.0,11,,Online,,,Online,AB386,San Bernardino,0.00,1,51,False,
+51,6,CSE 5120,43050,1,1,Discussion,3.0,21,,PS 203,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,0.00,1,52,False,
+52,6,CSE 5120,43273,60,1,Discussion,3.0,19,,Online,,,Online,AB386,San Bernardino,0.00,1,53,False,
+53,6,CSE 5140,43447,1,1,Discussion,3.0,4,,JB 262,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,0.00,1,54,False,
+54,6,CSE 5210,43053,1,1,Discussion,3.0,,,CE 110,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,45.00,1,55,False,
+55,6,CSE 5210,43111,2,1,Laboratory,1.0,,,JB 359,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,0.00,1,56,False,
+56,6,CSE 5210,43817,3,1,Laboratory,1.0,,,JB 359,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,0.00,1,57,False,
+57,6,CSE 5250,43250,2,1,Discussion,3.0,,,CS 130,M-W,7:00 PM - 8:15 PM,Classroom,,San Bernardino,0.00,1,58,False,
+58,6,CSE 5250,43274,60,1,Discussion,3.0,,,Online,,,Online,AB386,San Bernardino,0.00,1,59,False,
+59,6,CSE 5350,43199,1,1,Discussion,3.0,,,PL 263,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,0.00,1,60,False,
+60,6,CSE 5408,43819,1,1,Lecture,3.0,33,,JB 262,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,45.00,1,61,False,
+63,6,CSE 5700,43275,60,1,Discussion,3.0,,,Online,,,Online,AB386,San Bernardino,0.00,1,64,False,
+64,6,CSE 5720,43260,2,1,Discussion,3.0,14,,JB 254,Tu-Th,7:00 PM - 8:15 PM,Classroom,,San Bernardino,0.00,1,65,False,
+65,6,CSE 5720,43277,60,1,Discussion,3.0,17,,Online,,,Online,AB386,San Bernardino,0.00,1,66,False,
+66,6,CSE 6220,43823,1,1,Lecture,3.0,,,PL 263,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,0.00,1,67,False,
+67,6,CSE 6330,43824,60,1,Lecture,3.0,,,Online,,,Online,AB386,San Bernardino,0.00,1,68,False,
+68,6,CSE 6600,43234,2,1,Discussion,3.0,23,,CS 128,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,0.00,1,69,False,
+69,6,CSE 6890,43196,1,1,Seminar,1.0,,,JB 361,Tu,1:00 PM - 1:50 PM,Classroom,,San Bernardino,0.00,1,70,False,
+70,6,CSE 6964,43567,2,1,Supervision,4.0,,,,,,Classroom,,San Bernardino,0.00,1,71,False,
+71,6,CSE 6964,43580,3,1,Supervision,4.0,,,,,,Classroom,,San Bernardino,0.00,1,72,False,
+72,6,CSE 6973,43533,1,1,Supervision,3.0,,,,,,Classroom,,San Bernardino,0.00,1,73,False,
+73,6,CSE 6973,43534,2,1,Supervision,3.0,,,,,,Classroom,,San Bernardino,0.00,1,74,False,
+74,6,CSE 6976,43581,4,1,Supervision,6.0,,,,,,Classroom,,San Bernardino,0.00,1,75,False,
+75,6,CSE 6980,43051,1,1,Supervision,0.0,17,,,,,Classroom,,San Bernardino,0.00,1,76,False,
+76,6,CSE 6990,43300,1,1,Supervision,0.0,17,,,,,Classroom,,San Bernardino,0.00,1,77,False,
+77,5,CSE 2130,20057,60,3W1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,0.00,1,2,False,
+78,5,CSE 4030,20049,60,3W1,Discussion,3.0,16,,Online,,,Online,,San Bernardino,0.00,1,3,False,
+79,5,CSE 4310,20054,60,3W1,Discussion,3.0,23,,Online,,,Online,,San Bernardino,0.00,1,4,False,
+80,5,CSE 4600,20051,60,3W1,Discussion,3.0,35,,Online,,,Online,,San Bernardino,0.00,1,5,False,
+81,5,CSE 5000,20056,60,3W1,Discussion,3.0,11,,Online,,,Online,,San Bernardino,0.00,1,6,False,
+82,5,CSE 5120,20055,60,3W1,Discussion,3.0,29,,Online,,,Online,,San Bernardino,0.00,1,7,False,
+83,5,CSE 5160,20058,60,3W1,Discussion,3.0,28,,Online,,,Online,,San Bernardino,0.00,1,8,False,
+84,5,CSE 5250,20050,60,3W1,Discussion,3.0,21,,Online,,,Online,,San Bernardino,0.00,1,9,False,
+85,5,CSE 5350,20053,60,3W1,Discussion,3.0,30,,Online,,,Online,,San Bernardino,0.00,1,10,False,
+86,5,CSE 5700,20052,60,3W1,Discussion,3.0,33,,Online,,,Online,,San Bernardino,0.00,1,11,False,
+87,5,CSE 5720,20059,60,3W1,Discussion,3.0,17,,Online,,,Online,,San Bernardino,0.00,1,12,False,
+1754,37,CSE 6995,,1,1,Supervision,5.0,,,,,,Online,,San Bernardino,,3,855,False,855
+61,6,CSE 5408,43820,2,1,Laboratory,1.0,33,,JB 356,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,0.00,1,62,False,
+62,6,CSE 5408,43821,3,1,Laboratory,1.0,,,JB 356,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,0.00,1,63,False,
+318,9,CSE 2130,83865,60,1,Discussion,3.0,12,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,26,False,603
+339,9,CSE 4550,84102,1,1,Discussion,3.0,1,,JB 258,M-W,1:00 PM - 2:15 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,47,False,624
+340,9,CSE 4550,83525,2,1,Discussion,3.0,17,,JB 258,Tu-Th,9:00 AM - 10:15 AM,Classroom,Tutoring Available,San Bernardino,0.00,1,48,False,625
+348,9,CSE 4820,83546,1,1,Supervision,3.0,21,,,,,Classroom,,San Bernardino,0.00,1,56,False,633
+350,9,CSE 5000,83508,60,1,Discussion,3.0,11,,Online,,,Online,"AB386, Tutoring Available",San Bernardino,0.00,1,58,False,635
+353,9,CSE 5120,84400,60,1,Discussion,3.0,21,,Online,,,Online,AB386,San Bernardino,0.00,1,61,False,638
+357,9,CSE 5208,83806,1,1,Discussion,3.0,16,,JB 356,Tu-Th,1:00 PM - 2:15 PM,Classroom,Writing Intensive,San Bernardino,45.00,1,65,False,642
+358,9,CSE 5208,83807,2,1,Laboratory,1.0,16,,JB 356,Tu-Th,2:30 PM - 3:20 PM,Classroom,Writing Intensive,San Bernardino,0.00,1,66,False,643
+364,9,CSE 5350,84049,60,1,Discussion,3.0,30,,Online,,,Online,AB386,San Bernardino,0.00,1,72,False,649
+432,2,CSE 2010,43951,7,1,Discussion,3.0,11,,CE 241,Tu-Th,9:00 AM - 10:15 AM,Classroom,"Supplemental Instruction, Tutoring Available",San Bernardino,45.00,1,15,False,1217
+433,2,CSE 2010,43952,8,1,Activity,1.0,11,,JB 358,Tu-Th,10:30 AM - 11:20 AM,Classroom,"Supplemental Instruction, Tutoring Available",San Bernardino,0.00,1,16,False,1218
+439,2,CSE 2010,43957,63,1,Discussion,3.0,11,,Online,,,Online,"AB386, Supplemental Instruction, Tutoring Available",San Bernardino,45.00,1,22,False,1224
+440,2,CSE 2010,43958,64,1,Activity,1.0,11,,Online,,,Online,"AB386, Supplemental Instruction, Tutoring Available",San Bernardino,0.00,1,23,False,1225
+447,2,CSE 2130,43403,1,1,Discussion,3.0,12,,JB 140,M-W,2:30 PM - 3:45 PM,Classroom,Tutoring Available,San Bernardino,0.00,1,30,False,1232
+1163,25,CSE 5951,,3,1,Supervision,1.0,,,Online,,,Online,,San Bernardino,,3,80,False,80
+1164,25,CSE 5951,,4,1,Supervision,1.0,,,Online,,,Online,,San Bernardino,,3,81,False,81
+1165,25,CSE 5952,,1,1,Supervision,2.0,11,,Online,,,Online,,San Bernardino,,3,82,False,82
+1166,25,CSE 5952,,2,1,Supervision,2.0,35,,Online,,,Online,,San Bernardino,,3,83,False,83
+1167,25,CSE 5952,,3,1,Supervision,2.0,,,Online,,,Online,,San Bernardino,,3,84,False,84
+1168,25,CSE 5952,,4,1,Supervision,2.0,,,Online,,,Online,,San Bernardino,,3,85,False,85
+1169,25,CSE 5953,,1,1,Supervision,3.0,35,,Online,,,Online,,San Bernardino,,3,86,False,86
+1170,25,CSE 5953,,2,1,Supervision,3.0,,,Online,,,Online,,San Bernardino,,3,87,False,87
+1171,25,CSE 5953,,3,1,Supervision,3.0,,,Online,,,Online,,San Bernardino,,3,88,False,88
+1172,25,CSE 5953,,4,1,Supervision,3.0,,,Online,,,Online,,San Bernardino,,3,89,False,89
+1173,25,CSE 6020,,1,1,Discussion,3.0,88,,Online,Tu-Th,4:00 PM - 5:15 PM,Online,,San Bernardino,,3,90,True,90
+1174,25,CSE 6100,,1,1,Discussion,3.0,99,,Online,M-W,9:00 AM - 10:15 AM,Online,,San Bernardino,,3,91,True,91
+1175,25,CSE 6250,,1,1,Discussion,3.0,85,,Online,M-W,5:30 PM - 6:45 PM,Online,,San Bernardino,,3,92,True,92
+1176,25,CSE 6600,,1,1,Discussion,3.0,88,,Online,Tu-Th,9:00 AM - 10:15 AM,Online,,San Bernardino,,3,93,True,93
+1177,25,CSE 6890,,1,1,Seminar,1.0,,,Online,,,Online,,San Bernardino,,3,94,False,94
+1178,25,CSE 6940,,1,1,Supervision,3.0,,,Online,,,Online,,San Bernardino,,3,95,False,95
+1179,25,CSE 6940,,2,1,Supervision,3.0,,,Online,,,Online,,San Bernardino,,3,96,False,96
+1180,25,CSE 6950,,1,1,Supervision,3.0,29,,Online,,,Online,,San Bernardino,,3,97,False,97
+1181,25,CSE 6950,,2,1,Supervision,3.0,85,,Online,,,Online,,San Bernardino,,3,98,False,98
+1182,25,CSE 6962,,1,1,Supervision,2.0,,,,,,Online,,San Bernardino,,3,99,False,99
+1183,25,CSE 6964,,1,1,Supervision,4.0,,,,,,Online,,San Bernardino,,3,100,False,100
+1184,25,CSE 6972,,1,1,Supervision,2.0,,,,,,Online,,San Bernardino,,3,101,False,101
+1185,25,CSE 6973,,1,1,Supervision,3.0,,,,,,Online,,San Bernardino,,3,102,False,102
+1186,25,CSE 6974,,1,1,Supervision,4.0,,,,,,Online,,San Bernardino,,3,103,False,103
+1187,25,CSE 6976,,1,1,Supervision,6.0,85,,,,,Online,,San Bernardino,,3,104,False,104
+1188,25,CSE 6980,,1,1,Supervision,0.0,,,,,,Online,,San Bernardino,,3,105,False,105
+1189,25,CSE 6990,,1,1,Supervision,0.0,,,,,,Online,,San Bernardino,,3,106,False,106
+1190,25,CSE 6991,,1,1,Supervision,1.0,,,,,,Online,,San Bernardino,,3,107,False,107
+1191,25,CSE 6992,,1,1,Supervision,2.0,,,,,,Online,,San Bernardino,,3,108,False,108
+1192,25,CSE 6993,,1,1,Supervision,3.0,,,,,,Online,,San Bernardino,,3,109,False,109
+1193,25,CSE 6994,,1,1,Supervision,4.0,,,,,,Online,,San Bernardino,,3,110,False,110
+1194,25,CSE 6995,,1,1,Supervision,5.0,,,,,,Online,,San Bernardino,,3,111,False,111
+1195,25,CSE 6996,,1,1,Supervision,6.0,,,,,,Online,,San Bernardino,,3,112,False,112
+1196,34,CSE 1100,,1,1,Lecture,2.0,34,,PS 204,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,113,False,113
+1197,34,CSE 1100,,2,1,Activity,1.0,34,,JB 360,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,114,False,114
+1198,34,CSE 1100,,3,1,Activity,1.0,34,,JB 360,Tu-Th,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,115,False,115
+1199,34,CSE 1100,,4,1,Activity,1.0,34,,JB 360,Tu-Th,2:30 PM - 3:20 PM,Classroom,,San Bernardino,,3,116,False,116
+1200,34,CSE 1250,,1,1,Lecture,3.0,34,,JB 102,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,117,False,117
+1201,34,CSE 1250,,2,1,Activity,1.0,34,,JB 360,M-W,12:00 PM - 12:50 PM,Classroom,,San Bernardino,,3,118,False,118
+1202,34,CSE 1250,,3,1,Activity,1.0,34,,JB 360,M-W,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,119,False,119
+1203,34,CSE 1250,,4,1,Activity,1.0,34,,JB 360,M-W,2:30 PM - 3:20 PM,Classroom,,San Bernardino,,3,120,False,120
+1204,34,CSE 1290,,1,1,Seminar,3.0,10,,JB 113,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,121,False,121
+1205,34,CSE 1290,,2,1,Seminar,3.0,10,,CE 105,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,122,False,122
+1206,34,CSE 2010,,12,1,Discussion,3.0,27,,JB 254,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,125,False,125
+1207,34,CSE 2010,,13,1,Activity,1.0,26,,JB 358,M-W,7:00 PM - 7:50 PM,Classroom,,San Bernardino,,3,126,False,126
+1208,34,CSE 2010,,18,1,Discussion,3.0,84,,HP 124,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,127,False,127
+1209,34,CSE 2010,,19,1,Activity,1.0,26,,JB 359,Tu-Th,7:00 PM - 7:50 PM,Classroom,,San Bernardino,,3,128,False,128
+1210,34,CSE 2010,,5,1,Discussion,3.0,99,,JB 262,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,123,False,123
+1211,34,CSE 2010,,6,1,Activity,1.0,99,,JB 359,M-W,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,124,False,124
+1212,34,CSE 2020,,1,1,Discussion,3.0,29,,CE 110,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,129,False,129
+1213,34,CSE 2020,,2,1,Activity,1.0,29,,JB 358,M-W,4:00 PM - 4:50 PM,Classroom,,San Bernardino,,3,130,False,130
+1214,34,CSE 2020,,4,1,Discussion,3.0,32,,JB 113,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,131,False,131
+1215,34,CSE 2020,,5,1,Activity,1.0,32,,JB 358,Tu-Th,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,132,False,132
+1216,34,CSE 2020,,7,1,Discussion,3.0,35,,CS 128,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,133,False,133
+1217,34,CSE 2020,,8,1,Activity,1.0,35,,JB 359,M-W,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,134,False,134
+1218,34,CSE 2130,,1,1,Discussion,3.0,12,,JB 262,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,135,False,135
+1219,34,CSE 2130,,2,1,Discussion,3.0,12,,JB 113,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,136,False,136
+1220,34,CSE 2130,,3,1,Discussion,3.0,12,,JB 113,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,137,False,137
+1221,34,CSE 3100,,1,1,Discussion,3.0,28,,HP 124,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,138,False,138
+1222,34,CSE 3100,,2,1,Laboratory,1.0,28,,JB 356,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,139,False,139
+1223,34,CSE 3100,,3,1,Discussion,3.0,12,,JB 262,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,140,False,140
+1224,34,CSE 3100,,4,1,Laboratory,1.0,12,,JB 356,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,141,False,141
+1225,34,CSE 3350,,1,1,Discussion,3.0,29,,CE 110,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,142,False,142
+1226,34,CSE 3650,,1,1,Discussion,2.0,15,,JB 262,Tu-Th,5:30 PM - 6:20 PM,Classroom,,San Bernardino,,3,143,False,143
+1227,34,CSE 3650,,2,1,Activity,1.0,15,,JB 356,Tu-Th,6:35 PM - 7:25 PM,Classroom,,San Bernardino,,3,144,False,144
+1228,34,CSE 4010,,1,1,Discussion,3.0,23,,JB 358,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,145,False,145
+1229,34,CSE 4010,,2,1,Laboratory,1.0,23,,JB 358,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,146,False,146
+1230,34,CSE 4010,,60,1,Discussion,3.0,71,,Online,,,Online,,San Bernardino,,3,147,False,147
+1231,34,CSE 4010,,61,1,Laboratory,1.0,71,,Online,,,Online,,San Bernardino,,3,148,False,148
+1232,34,CSE 4030,,1,1,Discussion,3.0,16,,HP 125,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,149,False,149
+1233,34,CSE 4030,,2,1,Laboratory,1.0,16,,JB 360,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,150,False,150
+1234,34,CSE 4050,,1,1,Discussion,3.0,82,,JB 113,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,151,False,151
+1235,34,CSE 4100,,1,1,Discussion,3.0,16,,JB 262,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,152,False,152
+1236,34,CSE 4100,,2,1,Discussion,3.0,16,,JB 262,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,153,False,153
+1237,34,CSE 4310,,1,1,Discussion,3.0,23,,JB 359,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,154,False,154
+1238,34,CSE 4400,,1,1,Discussion,3.0,82,,JB 113,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,155,False,155
+1239,34,CSE 4550,,1,1,Discussion,3.0,17,,JB 254,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,156,False,156
+1240,34,CSE 4550,,2,1,Discussion,3.0,17,,JB 146,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,157,False,157
+1241,34,CSE 4550,,3,1,Discussion,3.0,19,,CGI 110,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,158,False,158
+1242,34,CSE 4560,,1,1,Discussion,3.0,30,,JB 114,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,159,False,159
+1243,34,CSE 4560,,2,1,Laboratory,1.0,30,,JB 358,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,160,False,160
+1244,34,CSE 4560,,5,1,Discussion,3.0,30,,JB 385,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,161,False,161
+1245,34,CSE 4560,,6,1,Laboratory,1.0,30,,JB 356,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,162,False,162
+1246,34,CSE 4600,,1,1,Discussion,3.0,19,,CGI 103,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,163,False,163
+1247,34,CSE 4600,,2,1,Discussion,3.0,35,,JB 114,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,164,False,164
+1248,34,CSE 4600,,3,1,Discussion,3.0,19,,CGI 103,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,165,False,165
+1249,34,CSE 4610,,1,1,Discussion,3.0,88,,JB 358,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,166,False,166
+1250,34,CSE 4820,,1,1,Supervision,3.0,17,,,,,Online Synchronous Section,,San Bernardino,,3,167,False,167
+1251,34,CSE 4820,,2,1,Supervision,3.0,23,,,,,Classroom,,San Bernardino,,3,168,False,168
+1252,34,CSE 4820,,3,1,Supervision,3.0,19,,,,,Classroom,,San Bernardino,,3,169,False,169
+1253,34,CSE 4880,,2,1,Discussion,3.0,99,,JB 114,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,170,False,170
+1254,34,CSE 4880,,3,1,Discussion,3.0,99,,PS 204,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,171,False,171
+1255,34,CSE 4880,,60,1,Discussion,3.0,71,,Online,,,Online,,San Bernardino,,3,172,False,172
+1256,34,CSE 5000,,1,1,Discussion,3.0,90,,JB 114,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,173,False,173
+1257,34,CSE 5000,,2,1,Discussion,3.0,90,,JB 114,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,174,False,174
+1258,34,CSE 5000,,3,1,Discussion,3.0,88,,CGI 203,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,175,False,175
+1259,34,CSE 5100,,1,1,Discussion,3.0,23,,PS 204,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,176,True,176
+1260,34,CSE 5120,,1,1,Discussion,3.0,32,,JB 102,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,177,False,177
+1261,34,CSE 5120,,2,1,Discussion,3.0,32,,JB 146,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,178,False,178
+1262,34,CSE 5160,,1,1,Discussion,3.0,35,,JB 146,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,179,False,179
+1363,29,CSE 4820,,3,1,Supervision,3.0,17,,,,,Classroom,,San Bernardino,,3,280,False,280
+1263,34,CSE 5208,,1,1,Discussion,3.0,73,,JB 359,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,180,False,180
+1264,34,CSE 5208,,2,1,Laboratory,1.0,73,,JB 359,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,181,False,181
+1265,34,CSE 5210,,4,1,Discussion,3.0,73,,JB 262,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,182,False,182
+1266,34,CSE 5210,,5,1,Laboratory,1.0,73,,JB 359,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,183,False,183
+1267,34,CSE 5250,,1,1,Discussion,3.0,85,,PS 203,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,184,False,184
+1268,34,CSE 5410,,3,1,Discussion,3.0,28,,CS 122,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,185,False,185
+1269,34,CSE 5410,,4,1,Laboratory,1.0,28,,JB 359,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,186,False,186
+1270,34,CSE 5700,,1,1,Discussion,3.0,85,,CGI 106,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,187,True,187
+1271,34,CSE 5700,,60,1,Discussion,3.0,71,,Online,,,Online,,San Bernardino,,3,188,True,188
+1272,34,CSE 5720,,1,1,Discussion,3.0,17,,JB 262,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,189,False,189
+1273,34,CSE 5750,,1,1,Supervision,3.0,35,,,,,Classroom,,San Bernardino,,3,190,False,190
+1274,34,CSE 5750,,2,1,Supervision,3.0,19,,,,,Classroom,,San Bernardino,,3,191,False,191
+1275,34,CSE 5952,,1,1,Supervision,2.0,,,,,,Classroom,,San Bernardino,,3,192,False,192
+1276,34,CSE 5953,,1,1,Supervision,3.0,19,,,,,Classroom,,San Bernardino,,3,193,False,193
+1277,34,CSE 5953,,2,1,Supervision,3.0,17,,,,,Classroom,,San Bernardino,,3,194,False,194
+1278,34,CSE 5953,,3,1,Supervision,3.0,35,,,,,Classroom,,San Bernardino,,3,195,False,195
+1279,34,CSE 5953,,4,1,Supervision,3.0,28,,,,,Classroom,,San Bernardino,,3,196,False,196
+1280,34,CSE 5953,,5,1,Supervision,3.0,16,,,,,Classroom,,San Bernardino,,3,197,False,197
+1281,34,CSE 6020,,1,1,Discussion,3.0,85,,JB 102,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,198,False,198
+1282,34,CSE 6100,,2,1,Discussion,3.0,23,,PS 204,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,199,True,199
+1283,34,CSE 6400,,2,1,Discussion,3.0,29,,CS 128,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,200,False,200
+1284,34,CSE 6700,,1,1,Discussion,3.0,85,,CGI 106,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,201,True,201
+1285,34,CSE 6700,,60,1,Discussion,3.0,71,,Online,,,Online,,San Bernardino,,3,202,True,202
+1286,34,CSE 6950,,1,1,Supervision,3.0,28,,,,,Classroom,,San Bernardino,,3,203,False,203
+1287,34,CSE 6964,,1,1,Supervision,4.0,85,,,,,Classroom,,San Bernardino,,3,204,False,204
+1288,34,CSE 6964,,2,1,Supervision,4.0,30,,,,,Classroom,,San Bernardino,,3,205,False,205
+1289,34,CSE 6964,,3,1,Supervision,4.0,16,,,,,Classroom,,San Bernardino,,3,206,False,206
+1290,34,CSE 6964,,4,1,Supervision,4.0,29,,,,,Classroom,,San Bernardino,,3,207,False,207
+1291,34,CSE 6964,,5,1,Supervision,4.0,28,,,,,Classroom,,San Bernardino,,3,208,False,208
+1292,34,CSE 6964,,6,1,Supervision,4.0,35,,,,,Classroom,,San Bernardino,,3,209,False,209
+1293,34,CSE 6976,,1,1,Supervision,6.0,,,,,,Classroom,,San Bernardino,,3,210,False,210
+1294,34,CSE 6980,,1,1,Supervision,0.0,85,,TBD,,,Classroom,,San Bernardino,,3,211,False,211
+1295,29,CSE 1100,,1,1,Lecture,2.0,34,,CGI 110,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,212,False,212
+1296,29,CSE 1100,,2,1,Activity,1.0,34,,JB 360,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,213,False,213
+1297,29,CSE 1100,,3,1,Activity,1.0,34,,JB 360,Tu-Th,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,214,False,214
+1298,29,CSE 1100,,4,1,Activity,1.0,34,,JB 360,Tu-Th,2:30 PM - 3:20 PM,Classroom,,San Bernardino,,3,215,False,215
+1299,29,CSE 1250,,1,1,Lecture,3.0,34,,CE 105,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,216,False,216
+1300,29,CSE 1250,,2,1,Activity,1.0,34,,JB 360,M-W,12:00 PM - 12:50 PM,Classroom,,San Bernardino,,3,217,False,217
+1301,29,CSE 1250,,3,1,Activity,1.0,34,,JB 360,M-W,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,218,False,218
+1302,29,CSE 1250,,4,1,Activity,1.0,34,,JB 360,M-W,2:30 PM - 3:20 PM,Classroom,,San Bernardino,,3,219,False,219
+1303,29,CSE 1250,,53,1,Lecture,3.0,34,,Online,,,Online,,San Bernardino,,3,220,False,220
+1304,29,CSE 1250,,54,1,Activity,1.0,91,,Online,,,Online,,San Bernardino,,3,221,True,221
+1305,29,CSE 1250,,55,1,Activity,1.0,91,,Online,,,Online,,San Bernardino,,3,222,True,222
+1306,29,CSE 1250,,56,1,Activity,1.0,79,,Online,,,Online,,San Bernardino,,3,223,True,223
+1307,29,CSE 1250,,60,1,Lecture,3.0,10,,Online,,,Online,,San Bernardino,,3,224,False,224
+1308,29,CSE 1250,,61,1,Activity,1.0,79,,Online,,,Online,,San Bernardino,,3,225,True,225
+1309,29,CSE 1250,,62,1,Activity,1.0,97,,Online,,,Online,,San Bernardino,,3,226,True,226
+1310,29,CSE 1250,,63,1,Activity,1.0,97,,Online,,,Online,,San Bernardino,,3,227,True,227
+1311,29,CSE 1250,,64,1,Activity,1.0,92,,Online,,,Online,,San Bernardino,,3,228,True,228
+1312,29,CSE 1250,,65,1,Activity,1.0,92,,Online,,,Online,,San Bernardino,,3,229,True,229
+1313,29,CSE 1250,,66,1,Activity,1.0,10,,Online,,,Online,,San Bernardino,,3,230,False,230
+1314,29,CSE 1290,,1,1,Seminar,3.0,10,,JB 113,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,231,False,231
+1315,29,CSE 1290,,2,1,Seminar,3.0,10,,JB 116,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,232,False,232
+1316,29,CSE 2010,,1,1,Discussion,3.0,11,,JB 262,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,233,False,233
+1317,29,CSE 2010,,12,1,Discussion,3.0,27,,CGI 106,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,235,False,235
+1318,29,CSE 2010,,13,1,Activity,1.0,25,,JB 358,M-W,7:00 PM - 7:50 PM,Classroom,,San Bernardino,,3,236,False,236
+1319,29,CSE 2010,,2,1,Activity,1.0,11,,JB 359,M-W,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,234,False,234
+1320,29,CSE 2020,,1,1,Discussion,3.0,32,,JB 358,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,237,False,237
+1321,29,CSE 2020,,2,1,Activity,1.0,32,,JB 358,Tu-Th,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,238,False,238
+1322,29,CSE 2020,,62,1,Discussion,3.0,26,,Online,,,Online,,San Bernardino,,3,241,False,241
+1323,29,CSE 2020,,63,1,Activity,1.0,26,,Online,Tu-Th,1:00 PM - 1:50 PM,Online Synchronous Section,,San Bernardino,,3,242,False,242
+1324,29,CSE 2020,,7,1,Discussion,3.0,32,,CS 128,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,239,False,239
+1325,29,CSE 2020,,8,1,Activity,1.0,32,,JB 359,M-W,12:00 PM - 12:50 PM,Classroom,,San Bernardino,,3,240,False,240
+1326,29,CSE 2130,,60,1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,243,False,243
+1327,29,CSE 2130,,61,1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,244,False,244
+1328,29,CSE 2130,,64,1,Discussion,3.0,24,,Online,,,Online,,San Bernardino,,3,245,False,245
+1329,29,CSE 3100,,1,1,Discussion,3.0,12,,JB 143,M-W,9:00 AM - 10:00 AM,Classroom,,San Bernardino,,3,246,False,246
+1330,29,CSE 3100,,2,1,Laboratory,1.0,12,,JB 356,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,247,False,247
+1331,29,CSE 3100,,3,1,Discussion,3.0,12,,JB 140,Tu-Th,9:00 AM - 10:00 AM,Classroom,,San Bernardino,,3,248,False,248
+1332,29,CSE 3100,,4,1,Laboratory,1.0,12,,JB 356,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,249,False,249
+1333,29,CSE 3100,,60,1,Discussion,3.0,28,,Online,,,Online,,San Bernardino,,3,250,False,250
+1334,29,CSE 3100,,61,1,Laboratory,1.0,28,,Online,,,Online,,San Bernardino,,3,251,False,251
+1335,29,CSE 3100,,62,1,Discussion,3.0,5,,Online,,,Online,,San Bernardino,,3,252,False,252
+1336,29,CSE 3100,,63,1,Laboratory,1.0,5,,Online,,,Online,,San Bernardino,,3,253,False,253
+1337,29,CSE 3350,,60,1,Discussion,3.0,20,,Online,,,Online,,San Bernardino,,3,254,False,254
+1338,29,CSE 3650,,1,1,Discussion,2.0,15,,JB 359,Tu-Th,5:30 PM - 6:20 PM,Classroom,,San Bernardino,,3,255,False,255
+1339,29,CSE 3650,,2,1,Activity,1.0,15,,JB 356,Tu-Th,6:35 PM - 7:25 PM,Classroom,,San Bernardino,,3,256,False,256
+1340,29,CSE 4010,,1,1,Discussion,3.0,23,,JB 113,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,257,False,257
+1341,29,CSE 4010,,2,1,Laboratory,1.0,23,,JB 358,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,258,False,258
+1342,29,CSE 4010,,60,1,Discussion,3.0,26,,Online,,,Online,,San Bernardino,,3,259,False,259
+1343,29,CSE 4010,,61,1,Laboratory,1.0,26,,Online,,,Online,,San Bernardino,,3,260,False,260
+1344,29,CSE 4030,,1,1,Discussion,3.0,83,,JB 254,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,261,False,261
+1345,29,CSE 4030,,2,1,Laboratory,1.0,83,,JB 360,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,262,False,262
+1346,29,CSE 4050,,1,1,Discussion,3.0,100,,CGI 106,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,263,False,263
+1347,29,CSE 4100,,60,1,Discussion,3.0,20,,Online,,,Online,,San Bernardino,,3,264,False,264
+1348,29,CSE 4100,,61,1,Discussion,3.0,20,,Online,,,Online,,San Bernardino,,3,265,False,265
+1349,29,CSE 4310,,1,1,Discussion,3.0,20,,PS 204,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,266,False,266
+1350,29,CSE 4310,,2,1,Discussion,3.0,32,,JB 254,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,267,False,267
+1351,29,CSE 4400,,1,1,Discussion,3.0,25,,JB 262,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,268,False,268
+1352,29,CSE 4550,,1,1,Discussion,3.0,17,,JB 254,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,269,False,269
+1353,29,CSE 4550,,2,1,Discussion,3.0,17,,JB 383,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,270,False,270
+1354,29,CSE 4560,,1,1,Discussion,3.0,30,,CGI 110,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,271,False,271
+1355,29,CSE 4560,,2,1,Laboratory,1.0,30,,JB 358,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,272,False,272
+1356,29,CSE 4560,,5,1,Discussion,3.0,30,,CGI 110,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,273,False,273
+1357,29,CSE 4560,,6,1,Laboratory,1.0,30,,JB 356,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,274,False,274
+1358,29,CSE 4600,,2,1,Discussion,3.0,35,,JB 262,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,275,False,275
+1359,29,CSE 4600,,3,1,Discussion,3.0,19,,CGI 106,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,276,False,276
+1360,29,CSE 4610,,1,1,Discussion,3.0,88,,JB 358,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,277,False,277
+1361,29,CSE 4820,,1,1,Supervision,3.0,35,,,,,Classroom,,San Bernardino,,3,278,False,278
+1362,29,CSE 4820,,2,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,279,False,279
+1364,29,CSE 4880,,61,1,Discussion,3.0,26,,Online,,,Online,,San Bernardino,,3,281,False,281
+1365,29,CSE 5000,,1,1,Discussion,3.0,11,,JB 102,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,282,False,282
+1366,29,CSE 5000,,2,1,Discussion,3.0,11,,CGI 106,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,283,False,283
+1367,29,CSE 5000,,3,1,Discussion,3.0,88,,JB 146,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,284,False,284
+1368,29,CSE 5100,,1,1,Discussion,3.0,23,,PS 204,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,285,True,285
+1369,29,CSE 5120,,1,1,Discussion,3.0,19,,CE 105,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,286,False,286
+1370,29,CSE 5160,,1,1,Discussion,3.0,35,,CGI 110,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,287,False,287
+1371,29,CSE 5160,,2,1,Discussion,3.0,35,,PL 211,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,288,False,288
+1372,29,CSE 5208,,1,1,Discussion,3.0,73,,JB 359,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,289,False,289
+1373,29,CSE 5208,,2,1,Laboratory,1.0,73,,JB 359,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,290,False,290
+1374,29,CSE 5208,,60,1,Discussion,3.0,101,,Online,,,Online,,San Bernardino,,3,291,False,291
+1375,29,CSE 5208,,61,1,Laboratory,1.0,24,,Online,,,Online,,San Bernardino,,3,292,False,292
+1376,29,CSE 5210,,1,1,Discussion,3.0,73,,CE 116,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,293,False,293
+1377,29,CSE 5210,,2,1,Laboratory,1.0,73,,JB 359,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,294,False,294
+1378,29,CSE 5250,,1,1,Discussion,3.0,25,,JB 358,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,295,False,295
+1379,29,CSE 5250,,2,1,Discussion,3.0,25,,Online,,,Online,,San Bernardino,,3,296,False,296
+1380,29,CSE 5410,,1,1,Discussion,3.0,28,,PS 203,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,297,False,297
+1381,29,CSE 5410,,2,1,Laboratory,1.0,28,,JB 358,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,298,False,298
+1382,29,CSE 5410,,60,1,Discussion,3.0,83,,Online,,,Online,,San Bernardino,,3,299,False,299
+1383,29,CSE 5410,,61,1,Laboratory,1.0,83,,Online,,,Online,,San Bernardino,,3,300,False,300
+1384,29,CSE 5700,,1,1,Discussion,3.0,24,,JB 254,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,301,False,301
+1385,29,CSE 5700,,60,1,Discussion,3.0,24,,Online,,,Online,,San Bernardino,,3,302,False,302
+1386,29,CSE 5720,,60,1,Discussion,3.0,17,,Online,,,Online,,San Bernardino,,3,303,False,303
+1387,29,CSE 5750,,2,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,304,False,304
+1388,29,CSE 5952,,1,1,Supervision,2.0,,,,,,Classroom,,San Bernardino,,3,305,False,305
+1389,29,CSE 5953,,1,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,306,False,306
+1390,29,CSE 5953,,2,1,Supervision,3.0,28,,,,,Classroom,,San Bernardino,,3,307,False,307
+1391,29,CSE 5953,,3,1,Supervision,3.0,35,,,,,Classroom,,San Bernardino,,3,308,False,308
+1392,29,CSE 6020,,1,1,Discussion,3.0,5,,,,,Online,,San Bernardino,,3,309,False,309
+1393,29,CSE 6100,,1,1,Discussion,3.0,23,,PS 204,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,310,True,310
+1394,29,CSE 6100,,2,1,Discussion,3.0,23,,HP 125,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,311,False,311
+1395,29,CSE 6300,,1,1,Discussion,3.0,29,,CGI 208,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,312,False,312
+1396,29,CSE 6400,,1,1,Discussion,3.0,29,,HP 125,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,313,False,313
+1397,29,CSE 6400,,2,1,Discussion,3.0,29,,HP 125,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,314,False,314
+1398,29,CSE 6550,,1,1,Discussion,3.0,4,,TBD,Tu-Th,4:00 PM - 5:00 PM,Online Synchronous Section,,San Bernardino,,3,315,False,315
+1399,29,CSE 6940,,1,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,316,False,316
+1400,29,CSE 6950,,1,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,317,False,317
+1401,29,CSE 6964,,1,1,Supervision,4.0,9,,,,,Classroom,,San Bernardino,,3,318,False,318
+1402,29,CSE 6964,,2,1,Supervision,4.0,17,,,,,Classroom,,San Bernardino,,3,319,False,319
+1403,29,CSE 6964,,3,1,Supervision,4.0,35,,,,,Classroom,,San Bernardino,,3,320,False,320
+1404,29,CSE 6964,,7,1,Supervision,4.0,28,,,,,Classroom,,San Bernardino,,3,321,False,321
+1405,29,CSE 6976,,1,1,Supervision,6.0,,,,,,Classroom,,San Bernardino,,3,322,False,322
+1406,29,CSE 6980,,1,1,Supervision,0.0,,,TBD,,,Classroom,,San Bernardino,,3,323,False,323
+1407,42,CSE 1100,,1,1,Lecture,2.0,34,,JB 102,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,324,False,324
+1408,42,CSE 1100,,2,1,Activity,1.0,34,,JB 360,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,325,False,325
+1409,42,CSE 1100,,3,1,Activity,1.0,34,,JB 360,Tu-Th,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,326,False,326
+1410,42,CSE 1100,,4,1,Activity,1.0,34,,JB 360,Tu-Th,2:30 PM - 3:20 PM,Classroom,,San Bernardino,,3,327,False,327
+1411,42,CSE 1250,,1,1,Lecture,3.0,34,,CE 105,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,328,False,328
+1412,42,CSE 1250,,2,1,Activity,1.0,34,,JB 360,M-W,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,329,False,329
+1413,42,CSE 1250,,3,1,Activity,1.0,77,,JB 360,M-W,2:30 PM - 3:20 PM,Classroom,,San Bernardino,,3,330,False,330
+1414,42,CSE 1250,,4,1,Activity,1.0,77,,JB 360,M-W,4:00 PM - 4:50 PM,Classroom,,San Bernardino,,3,331,False,331
+1415,42,CSE 1250,,53,1,Lecture,3.0,34,,Online,,,Online,,San Bernardino,,3,332,False,332
+1416,42,CSE 1250,,54,1,Activity,1.0,34,,Online,,,Online,,San Bernardino,,3,333,False,333
+1417,42,CSE 1250,,55,1,Activity,1.0,10,,Online,,,Online,,San Bernardino,,3,334,False,334
+1418,42,CSE 1250,,56,1,Activity,1.0,10,,Online,,,Online,,San Bernardino,,3,335,False,335
+1419,42,CSE 1290,,1,1,Seminar,3.0,10,,JB 113,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,336,False,336
+1420,42,CSE 1290,,2,1,Seminar,3.0,10,,CE 108,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,337,False,337
+1421,42,CSE 1290,,60,1,Seminar,3.0,10,,Online,Tu-Th,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,338,False,338
+1422,42,CSE 2010,,3,1,Discussion,3.0,27,,JB 262,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,339,False,339
+1423,42,CSE 2010,,4,1,Activity,1.0,89,,JB 358,M-W,7:00 PM - 7:50 PM,Classroom,,San Bernardino,,3,340,False,340
+1424,42,CSE 2010,,5,1,Discussion,3.0,16,,JB 385,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,341,False,341
+1425,42,CSE 2010,,6,1,Activity,1.0,16,,JB 359,M-W,4:00 PM - 4:50 PM,Classroom,,San Bernardino,,3,342,False,342
+1426,42,CSE 2010,,60,1,Discussion,3.0,20,,Online,M-W,1:00 PM - 2:15 PM,Online Synchronous Section,,San Bernardino,,3,343,False,343
+1427,42,CSE 2010,,61,1,Activity,1.0,20,,Online,M-W,2:30 PM - 3:20 PM,Online Synchronous Section,,San Bernardino,,3,344,False,344
+1428,42,CSE 2010,,62,1,Discussion,3.0,77,,Online,,,Online,,San Bernardino,,3,345,False,345
+1429,42,CSE 2010,,63,1,Activity,1.0,89,,Online,,,Online,,San Bernardino,,3,346,False,346
+1430,42,CSE 2020,,60,1,Discussion,3.0,22,,Online,M-W,5:30 PM - 6:45 PM,Online Synchronous Section,,San Bernardino,,3,347,False,347
+1431,42,CSE 2020,,61,1,Activity,1.0,22,,Online,M-W,7:00 PM - 7:50 PM,Online Synchronous Section,,San Bernardino,,3,348,False,348
+1432,42,CSE 2020,,62,1,Discussion,3.0,14,,Online,,,Online,,San Bernardino,,3,349,False,349
+1433,42,CSE 2020,,63,1,Activity,1.0,14,,Online,,,Online,,San Bernardino,,3,350,False,350
+1434,42,CSE 2020,,64,1,Discussion,3.0,76,,Online,,,Online,,San Bernardino,,3,351,False,351
+1435,42,CSE 2020,,65,1,Activity,1.0,80,,Online,,,Online,,San Bernardino,,3,352,False,352
+1436,42,CSE 2020,,66,1,Discussion,3.0,20,,Online,Tu-Th,10:30 AM - 11:45 AM,Online Synchronous Section,,San Bernardino,,3,353,False,353
+1437,42,CSE 2020,,67,1,Activity,1.0,80,,Online,Tu-Th,1:00 PM - 1:50 PM,Online Synchronous Section,,San Bernardino,,3,354,False,354
+1438,42,CSE 2130,,3,1,Discussion,3.0,24,,CGI 106,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,355,False,355
+1439,42,CSE 2130,,60,1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,356,False,356
+1440,42,CSE 2130,,61,1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,357,False,357
+1441,42,CSE 2130,,62,1,Discussion,3.0,26,,Online,,,Online,,San Bernardino,,3,358,False,358
+1442,42,CSE 3100,,1,1,Discussion,3.0,12,,JB 262,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,359,False,359
+1443,42,CSE 3100,,2,1,Laboratory,1.0,12,,JB 356,M-W,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,360,False,360
+1444,42,CSE 3100,,60,1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,363,False,363
+1445,42,CSE 3100,,61,1,Laboratory,1.0,12,,Online,,,Online,,San Bernardino,,3,364,False,364
+1446,42,CSE 3100,,7,1,Discussion,3.0,86,,JB 258,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,361,False,361
+1447,42,CSE 3100,,8,1,Laboratory,1.0,96,,JB 356,Tu-Th,5:30 PM - 6:20 PM,Classroom,,San Bernardino,,3,362,False,362
+1448,42,CSE 3350,,60,1,Discussion,3.0,20,,Online,Tu-Th,1:00 PM - 2:15 PM,Online Synchronous Section,,San Bernardino,,3,365,False,365
+1449,42,CSE 3650,,1,1,Discussion,2.0,15,,JB 359,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,366,False,366
+1450,42,CSE 3650,,2,1,Activity,1.0,15,,JB 356,Tu-Th,7:00 PM - 7:50 PM,Classroom,,San Bernardino,,3,367,False,367
+1451,42,CSE 4010,,60,1,Discussion,3.0,26,,Online,,,Online,,San Bernardino,,3,368,False,368
+1452,42,CSE 4010,,61,1,Laboratory,1.0,78,,Online,,,Online,,San Bernardino,,3,369,False,369
+1453,42,CSE 4010,,62,1,Discussion,3.0,26,,Online,,,Online,,San Bernardino,,3,370,False,370
+1454,42,CSE 4010,,63,1,Laboratory,1.0,26,,Online,,,Online,,San Bernardino,,3,371,False,371
+1455,42,CSE 4030,,1,1,Discussion,3.0,16,,Online,M-W,9:00 AM - 10:15 AM,Bichronous,,San Bernardino,,3,372,False,372
+1456,42,CSE 4030,,2,1,Laboratory,1.0,16,,JB 360,M-W,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,373,False,373
+1457,42,CSE 4050,,60,1,Discussion,3.0,14,,CGI 207,Th,5:30 PM - 6:45 PM,Bichronous,,San Bernardino,,3,374,False,374
+1458,42,CSE 4050,,61,1,Discussion,3.0,100,,CGI 207,W,5:30 PM - 6:45 PM,Bichronous,,San Bernardino,,3,375,False,375
+1459,42,CSE 4100,,60,1,Discussion,3.0,22,,Online,M-W,4:00 PM - 5:15 PM,Online Synchronous Section,,San Bernardino,,3,376,False,376
+1460,42,CSE 4100,,61,1,Discussion,3.0,22,,Online,Tu-Th,4:00 PM - 5:15 PM,Online Synchronous Section,,San Bernardino,,3,377,False,377
+1461,42,CSE 4310,,1,1,Discussion,3.0,32,,CE 115,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,378,False,378
+1753,37,CSE 6994,,1,1,Supervision,4.0,,,,,,Online,,San Bernardino,,3,854,False,854
+1462,42,CSE 4310,,2,1,Discussion,3.0,32,,JB 254,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,379,False,379
+1463,42,CSE 4310,,60,1,Discussion,3.0,20,,Online,Tu-Th,2:30 PM - 3:45 PM,Online Synchronous Section,,San Bernardino,,3,380,False,380
+1464,42,CSE 4400,,1,1,Discussion,3.0,25,,JB 262,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,381,False,381
+1465,42,CSE 4400,,2,1,Discussion,3.0,25,,PL 293,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,382,False,382
+1466,42,CSE 4550,,1,1,Discussion,3.0,17,,JB 254,Tu,9:00 AM - 10:15 AM,Classroom+Asynchronous Online,,San Bernardino,,3,383,False,383
+1467,42,CSE 4550,,2,1,Discussion,3.0,17,,JB 383,Tu,10:30 AM - 11:45 AM,Classroom+Asynchronous Online,,San Bernardino,,3,384,False,384
+1468,42,CSE 4550,,60,1,Discussion,3.0,17,,Online,,,Online,,San Bernardino,,3,385,False,385
+1469,42,CSE 4560,,1,1,Discussion,3.0,30,,JB 140,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,386,False,386
+1470,42,CSE 4560,,2,1,Laboratory,1.0,30,,JB 358,M-W,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,387,False,387
+1471,42,CSE 4560,,60,1,Discussion,3.0,30,,Online,M-W,1:00 PM - 2:15 PM,Online,,San Bernardino,,3,388,False,388
+1472,42,CSE 4560,,61,1,Laboratory,1.0,30,,Online,M-W,2:30 PM - 3:45 PM,Online,,San Bernardino,,3,389,False,389
+1473,42,CSE 4600,,1,1,Discussion,3.0,35,,JB 111,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,390,False,390
+1474,42,CSE 4600,,2,1,Discussion,3.0,35,,JB 262,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,391,False,391
+1475,42,CSE 4600,,3,1,Discussion,3.0,19,,CGI 106,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,392,False,392
+1476,42,CSE 4610,,1,1,Discussion,3.0,88,,JB 140,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,393,False,393
+1477,42,CSE 4820,,1,1,Supervision,3.0,19,,,,,Classroom,,San Bernardino,,3,394,False,394
+1478,42,CSE 4820,,2,1,Supervision,3.0,28,,,,,Classroom,,San Bernardino,,3,395,False,395
+1479,42,CSE 4820,,3,1,Supervision,3.0,17,,,,,Classroom,,San Bernardino,,3,396,False,396
+1480,42,CSE 4820,,4,1,Supervision,3.0,35,,,,,Classroom,,San Bernardino,,3,397,False,397
+1481,42,CSE 4880,,1,1,Discussion,3.0,26,,JB 258,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,398,False,398
+1482,42,CSE 5000,,2,1,Discussion,3.0,25,,JB 262,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,399,False,399
+1483,42,CSE 5000,,3,1,Discussion,3.0,88,,JB 146,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,400,False,400
+1484,42,CSE 5000,,60,1,Discussion,3.0,76,,Online,M-W,2:30 PM - 3:45 PM,Online Synchronous Section,,San Bernardino,,3,401,False,401
+1485,42,CSE 5100,,1,1,Discussion,3.0,85,,JB 146,M,9:00 AM - 10:15 AM,Classroom+Synchronous,,San Bernardino,,3,402,False,402
+1486,42,CSE 5120,,1,1,Discussion,3.0,19,,CGI 207,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,403,False,403
+1487,42,CSE 5150,,1,1,Discussion,3.0,32,,CGI 209,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,404,False,404
+1488,42,CSE 5160,,1,1,Discussion,3.0,35,,CGI 110,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,405,False,405
+1489,42,CSE 5160,,60,1,Discussion,3.0,28,,Online,M,1:00 PM - 2:15 PM,Bichronous,,San Bernardino,,3,406,False,406
+1490,42,CSE 5160,,61,1,Discussion,3.0,22,,Online,Tu-Th,5:30 PM - 6:45 PM,Online Synchronous Section,,San Bernardino,,3,407,False,407
+1491,42,CSE 5208,,62,1,Discussion,3.0,5,,Online,Tu-Th,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,408,False,408
+1492,42,CSE 5208,,63,1,Laboratory,1.0,5,,Online,Tu-Th,10:30 AM - 11:20 AM,Online Synchronous Section,,San Bernardino,,3,409,False,409
+1493,42,CSE 5210,,60,1,Discussion,3.0,76,,Online,,,Online,,San Bernardino,,3,410,False,410
+1494,42,CSE 5210,,61,1,Laboratory,1.0,96,,Online,,,Online,,San Bernardino,,3,411,False,411
+1495,42,CSE 5250,,1,1,Discussion,3.0,25,,JB 358,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,412,False,412
+1496,42,CSE 5250,,60,1,Discussion,3.0,25,,Online,,,Online,,San Bernardino,,3,413,False,413
+1497,42,CSE 5350,,60,1,Discussion,3.0,86,,Online,Tu-Th,10:30 AM - 11:45 AM,Online Synchronous Section,,San Bernardino,,3,414,False,414
+1498,42,CSE 5408,,60,1,Discussion,3.0,24,,Online,,,Online,,San Bernardino,,3,415,False,415
+1499,42,CSE 5408,,61,1,Laboratory,1.0,24,,Online,,,Online,,San Bernardino,,3,416,False,416
+1500,42,CSE 5410,,1,1,Discussion,3.0,86,,Online,M-W,2:30 PM - 3:45 PM,Online Synchronous Section,,San Bernardino,,3,417,False,417
+1501,42,CSE 5410,,2,1,Laboratory,1.0,78,,JB 358,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,418,False,418
+1502,42,CSE 5410,,3,1,Discussion,3.0,28,,JB 383,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,419,False,419
+1503,42,CSE 5410,,4,1,Laboratory,1.0,28,,JB 358,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,420,False,420
+1504,42,CSE 5700,,60,1,Discussion,3.0,24,,Online,,,Online,,San Bernardino,,3,421,False,421
+1505,42,CSE 5700,,61,1,Discussion,3.0,24,,Online,,,Online,,San Bernardino,,3,422,False,422
+1506,42,CSE 5720,,60,1,Discussion,3.0,17,,Online,,,Online,,San Bernardino,,3,423,False,423
+1507,42,CSE 5720,,61,1,Discussion,3.0,76,,Online,,,Online,,San Bernardino,,3,424,False,424
+1508,42,CSE 5750,,1,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,425,False,425
+1509,42,CSE 5952,,1,1,Supervision,2.0,,,,,,Classroom,,San Bernardino,,3,426,False,426
+1510,42,CSE 5953,,1,1,Supervision,3.0,19,,,,,Classroom,,San Bernardino,,3,427,False,427
+1511,42,CSE 5953,,2,1,Supervision,3.0,,,,,,Classroom,,San Bernardino,,3,428,False,428
+1512,42,CSE 5953,,3,1,Supervision,3.0,,,,,,Classroom,,San Bernardino,,3,429,False,429
+1513,42,CSE 6020,,60,1,Discussion,3.0,5,,Online,M-W,5:30 PM - 6:45 PM,Online Synchronous Section,,San Bernardino,,3,430,False,430
+1514,42,CSE 6100,,60,1,Discussion,3.0,85,,JB 262,M,10:30 AM - 11:45 AM,Classroom+Synchronous,,San Bernardino,,3,431,False,431
+1515,42,CSE 6100,,61,1,Discussion,3.0,85,,Online,,,Online,,San Bernardino,,3,432,False,432
+1516,42,CSE 6300,,1,1,Discussion,3.0,29,,CGI 110,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,433,False,433
+1517,42,CSE 6400,,1,1,Discussion,3.0,29,,CGI 203,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,434,False,434
+1518,42,CSE 6400,,2,1,Discussion,3.0,29,,CGI 203,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,435,False,435
+1519,42,CSE 6550,,1,1,Discussion,3.0,4,,CGI 208,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,436,False,436
+1520,42,CSE 6890,,1,1,Seminar,1.0,17,,,,,Classroom,,San Bernardino,,3,437,False,437
+1521,42,CSE 6940,,1,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,438,False,438
+1522,42,CSE 6950,,1,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,439,False,439
+1523,42,CSE 6950,,2,1,Supervision,3.0,16,,,,,Classroom,,San Bernardino,,3,440,False,440
+1524,42,CSE 6950,,3,1,Supervision,3.0,30,,,,,Classroom,,San Bernardino,,3,441,False,441
+1525,42,CSE 6950,,4,1,Supervision,3.0,29,,,,,Classroom,,San Bernardino,,3,442,False,442
+1526,42,CSE 6950,,5,1,Supervision,3.0,19,,,,,Classroom,,San Bernardino,,3,443,False,443
+1527,42,CSE 6964,,1,1,Supervision,4.0,17,,,,,Classroom,,San Bernardino,,3,444,False,444
+1528,42,CSE 6964,,2,1,Supervision,4.0,19,,,,,Classroom,,San Bernardino,,3,445,False,445
+1529,42,CSE 6964,,3,1,Supervision,4.0,30,,,,,Classroom,,San Bernardino,,3,446,False,446
+1530,42,CSE 6964,,4,1,Supervision,4.0,35,,,,,Classroom,,San Bernardino,,3,447,False,447
+1531,42,CSE 6964,,5,1,Supervision,4.0,29,,,,,Classroom,,San Bernardino,,3,448,False,448
+1532,42,CSE 6964,,6,1,Supervision,4.0,16,,,,,Classroom,,San Bernardino,,3,449,False,449
+1533,42,CSE 6964,,7,1,Supervision,4.0,9,,,,,Classroom,,San Bernardino,,3,450,False,450
+1534,42,CSE 6973,,1,1,Supervision,3.0,19,,,,,Classroom,,San Bernardino,,3,451,False,451
+1535,42,CSE 6976,,1,1,Supervision,6.0,16,,,,,Classroom,,San Bernardino,,3,452,False,452
+1536,42,CSE 6976,,2,1,Supervision,6.0,28,,,,,Classroom,,San Bernardino,,3,453,False,453
+1537,42,CSE 6980,,1,1,Supervision,0.0,17,,TBD,,,Classroom,,San Bernardino,,3,454,False,454
+1538,22,CSE 1100,,1,1,Lecture,2.0,34,,JB 102,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,455,False,455
+1539,22,CSE 1100,,2,1,Activity,1.0,34,,JB 360,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,456,False,456
+1540,22,CSE 1100,,3,1,Activity,1.0,34,,JB 360,Tu-Th,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,457,False,457
+1541,22,CSE 1100,,4,1,Activity,1.0,34,,JB 360,Tu-Th,2:30 PM - 3:20 PM,Classroom,,San Bernardino,,3,458,False,458
+1542,22,CSE 1250,,1,1,Lecture,3.0,34,,JB 102,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,459,False,459
+1543,22,CSE 1250,,2,1,Activity,1.0,34,,JB 360,M-W,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,460,False,460
+1544,22,CSE 1250,,3,1,Activity,1.0,34,,JB 360,M-W,2:30 PM - 3:20 PM,Classroom,,San Bernardino,,3,461,False,461
+1545,22,CSE 1250,,4,1,Activity,1.0,6,,JB 360,M-W,4:00 PM - 4:50 PM,Classroom,,San Bernardino,,3,462,False,462
+1546,22,CSE 1250,,5,1,Lecture,3.0,34,,JB 262,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,463,False,463
+1547,22,CSE 1250,,6,1,Activity,1.0,6,,JB 360,Tu-Th,5:30 PM - 6:20 PM,Classroom,,San Bernardino,,3,464,False,464
+1548,22,CSE 1250,,60,1,Activity,1.0,14,,Online,,,Online,,San Bernardino,,3,466,False,466
+1549,22,CSE 1250,,7,1,Activity,1.0,89,,JB 360,Tu-Th,7:00 PM - 7:50 PM,Classroom,,San Bernardino,,3,465,False,465
+1550,22,CSE 1290,,1,1,Seminar,3.0,10,,JB 113,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,467,False,467
+1551,22,CSE 1290,,2,1,Seminar,3.0,10,,JB 113,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,468,False,468
+1552,22,CSE 1300,,1,1,Lecture,3.0,7,,JB 258,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,469,False,469
+1553,22,CSE 1300L,,1,1,Activity,1.0,89,,JB 356,M,4:00 PM - 4:50 PM,Classroom,,San Bernardino,,3,470,False,470
+1554,22,CSE 2010,,1,1,Discussion,3.0,7,,JB 109,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,471,False,471
+1555,22,CSE 2010,,10,1,Activity,1.0,21,,JB 360,Tu-Th,4:00 PM - 4:50 PM,Classroom,,San Bernardino,,3,476,False,476
+1556,22,CSE 2010,,2,1,Activity,1.0,13,,JB 359,M-W,2:30 PM - 3:20 PM,Classroom,,San Bernardino,,3,472,False,472
+1557,22,CSE 2010,,60,1,Discussion,3.0,11,,Online,,,Online,,San Bernardino,,3,477,False,477
+1558,22,CSE 2010,,61,1,Activity,1.0,11,,Online,,,Online,,San Bernardino,,3,478,False,478
+1559,22,CSE 2010,,7,1,Discussion,3.0,11,,JB 262,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,473,False,473
+1560,22,CSE 2010,,8,1,Activity,1.0,11,,JB 359,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,474,False,474
+1561,22,CSE 2010,,9,1,Discussion,3.0,21,,JB 356,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,475,False,475
+1562,22,CSE 2020,,1,1,Discussion,3.0,20,,JB 113,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,479,False,479
+1563,22,CSE 2020,,2,1,Activity,1.0,20,,JB 358,Tu-Th,4:00 PM - 4:50 PM,Classroom,,San Bernardino,,3,480,False,480
+1564,22,CSE 2020,,60,1,Discussion,3.0,32,,Online,,,Online,,San Bernardino,,3,483,False,483
+1565,22,CSE 2020,,61,1,Activity,1.0,93,,Online,,,Online,,San Bernardino,,3,484,False,484
+1566,22,CSE 2020,,62,1,Discussion,3.0,32,,Online,,,Online,,San Bernardino,,3,485,False,485
+1567,22,CSE 2020,,63,1,Activity,1.0,93,,Online,,,Online,,San Bernardino,,3,486,False,486
+1568,22,CSE 2020,,65,1,Activity,1.0,14,,Online,Tu-Th,5:30 PM - 6:20 PM,Online Synchronous Section,,San Bernardino,,3,487,False,487
+1569,22,CSE 2020,,7,1,Discussion,3.0,13,,JB 383,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,481,False,481
+1570,22,CSE 2020,,8,1,Activity,1.0,6,,JB 360,M-W,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,482,False,482
+1571,22,CSE 2130,,1,1,Discussion,3.0,24,,JB 258,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,488,False,488
+1572,22,CSE 2130,,2,1,Discussion,3.0,24,,JB 111,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,489,False,489
+1573,22,CSE 2130,,60,1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,490,False,490
+1574,22,CSE 2130,,61,1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,491,False,491
+1575,22,CSE 3100,,1,1,Discussion,3.0,12,,JB 111,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,492,False,492
+1576,22,CSE 3100,,2,1,Laboratory,1.0,12,,JB 356,M-W,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,493,False,493
+1577,22,CSE 3100,,3,1,Discussion,3.0,1,,JB 113,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,494,False,494
+1578,22,CSE 3100,,4,1,Laboratory,1.0,3,,JB 358,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,495,False,495
+1579,22,CSE 3100,,5,1,Laboratory,1.0,3,,JB 356,Tu-Th,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,496,False,496
+1580,22,CSE 3100,,60,1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,499,False,499
+1581,22,CSE 3100,,61,1,Laboratory,1.0,12,,Online,,,Online,,San Bernardino,,3,500,False,500
+1582,22,CSE 3100,,7,1,Discussion,3.0,26,,JB 360,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,497,False,497
+1583,22,CSE 3100,,8,1,Laboratory,1.0,25,,JB 360,M-W,7:00 PM - 7:50 PM,Classroom,,San Bernardino,,3,498,False,498
+1584,22,CSE 3350,,1,1,Discussion,3.0,20,,CGI 106,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,501,False,501
+1585,22,CSE 3650,,1,1,Discussion,2.0,15,,JB 358,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,502,False,502
+1586,22,CSE 3650,,2,1,Activity,1.0,15,,JB 356,M-W,5:30 PM - 6:20 PM,Classroom,,San Bernardino,,3,503,False,503
+1587,22,CSE 4010,,6,1,Discussion,3.0,2,,JB 356,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,504,False,504
+1588,22,CSE 4010,,60,1,Discussion,3.0,26,,Online,,,Online,,San Bernardino,,3,506,False,506
+1589,22,CSE 4010,,61,1,Laboratory,1.0,26,,Online,,,Online,,San Bernardino,,3,507,False,507
+1590,22,CSE 4010,,66,1,Laboratory,1.0,3,,Online,,,Online,,San Bernardino,,3,508,False,508
+1591,22,CSE 4010,,7,1,Laboratory,1.0,2,,JB 356,Tu-Th,7:00 PM - 7:50 PM,Classroom,,San Bernardino,,3,505,False,505
+1592,22,CSE 4030,,1,1,Discussion,3.0,13,,CE 116,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,509,False,509
+1593,22,CSE 4030,,2,1,Laboratory,1.0,13,,JB 359,M-W,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,510,False,510
+1594,22,CSE 4050,,1,1,Discussion,3.0,100,,PL 293,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,511,False,511
+1595,22,CSE 4050,,2,1,Discussion,3.0,26,,CGI 209,M-W,7:00 PM - 8:15 PM,Classroom,,San Bernardino,,3,512,False,512
+1596,22,CSE 4100,,1,1,Discussion,3.0,22,,JB 109,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,513,False,513
+1597,22,CSE 4100,,2,1,Discussion,3.0,22,,CGI 207,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,514,False,514
+1598,22,CSE 4310,,1,1,Discussion,3.0,13,,JB 102,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,515,False,515
+1599,22,CSE 4310,,2,1,Discussion,3.0,20,,CE 105,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,516,False,516
+1600,22,CSE 4400,,1,1,Discussion,3.0,25,,CGI 210,Tu-Th,7:00 PM - 8:15 PM,Classroom,,San Bernardino,,3,517,False,517
+1601,22,CSE 4550,,1,1,Discussion,3.0,1,,JB 102,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,518,False,518
+1602,22,CSE 4550,,2,1,Discussion,3.0,17,,JB 109,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,519,False,519
+1603,22,CSE 4560,,1,1,Discussion,3.0,30,,JB 140,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,520,False,520
+1604,22,CSE 4560,,2,1,Laboratory,1.0,30,,JB 358,M-W,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,521,False,521
+1605,22,CSE 4560,,3,1,Discussion,3.0,2,,JB 383,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,522,False,522
+1606,22,CSE 4560,,4,1,Laboratory,1.0,2,,JB 359,M-W,7:00 PM - 7:50 PM,Classroom,,San Bernardino,,3,523,False,523
+1607,22,CSE 4560,,60,1,Discussion,3.0,30,,Online,,,Online,,San Bernardino,,3,524,False,524
+1608,22,CSE 4560,,61,1,Laboratory,1.0,30,,Online,,,Online,,San Bernardino,,3,525,False,525
+1609,22,CSE 4600,,1,1,Discussion,3.0,19,,CGI 106,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,526,False,526
+1610,22,CSE 4600,,60,1,Discussion,3.0,35,,Online,Tu-Th,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,527,False,527
+1611,22,CSE 4600,,61,1,Discussion,3.0,35,,Online,Tu-Th,10:30 AM - 11:45 AM,Online Synchronous Section,,San Bernardino,,3,528,False,528
+1612,22,CSE 4600,,62,1,Discussion,3.0,25,,Online,,,Online,,San Bernardino,,3,529,False,529
+1613,22,CSE 4610,,1,1,Discussion,3.0,25,,CGI 110,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,530,False,530
+1614,22,CSE 4880,,1,1,Discussion,3.0,26,,CGI 110,Tu-Th,7:00 PM - 8:15 PM,Classroom,,San Bernardino,,3,531,False,531
+1615,22,CSE 5000,,60,1,Discussion,3.0,11,,Online,,,Online,,San Bernardino,,3,532,False,532
+1616,22,CSE 5000,,61,1,Discussion,3.0,13,,Online,,,Online,,San Bernardino,,3,533,False,533
+1617,22,CSE 5120,,1,1,Discussion,3.0,19,,CE 116,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,534,False,534
+1618,22,CSE 5120,,60,1,Discussion,3.0,19,,Online,M-W,2:30 PM - 3:45 PM,Online Synchronous Section,,San Bernardino,,3,535,False,535
+1619,22,CSE 5160,,1,1,Discussion,3.0,35,,CGI 110,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,536,False,536
+1620,22,CSE 5160,,2,1,Discussion,3.0,17,,JB 386,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,537,False,537
+1621,22,CSE 5160,,61,1,Discussion,3.0,28,,Online,Tu,2:30 PM - 3:45 PM,Bichronous,,San Bernardino,,3,538,False,538
+1622,22,CSE 5208,,1,1,Discussion,3.0,16,,JB 356,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,539,False,539
+1623,22,CSE 5208,,2,1,Laboratory,1.0,16,,JB 356,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,540,False,540
+1624,22,CSE 5210,,1,1,Discussion,3.0,2,,JB 109,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,541,False,541
+1625,22,CSE 5210,,3,1,Laboratory,1.0,2,,Online,,,Online,,San Bernardino,,3,542,False,542
+1626,22,CSE 5250,,61,1,Discussion,3.0,25,,Online,,,Online,,San Bernardino,,3,543,False,543
+1627,22,CSE 5350,,1,1,Discussion,3.0,20,,JB 140,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,544,False,544
+1628,22,CSE 5410,,3,1,Discussion,3.0,28,,JB 262,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,545,False,545
+1629,22,CSE 5410,,4,1,Laboratory,1.0,28,,JB 358,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,546,False,546
+1630,22,CSE 5410,,60,1,Discussion,3.0,1,,Online,M-W,2:30 PM - 3:45 PM,Online Synchronous Section,,San Bernardino,,3,547,False,547
+1631,22,CSE 5410,,61,1,Laboratory,1.0,1,,Online,M-W,4:00 PM - 5:15 PM,Online Synchronous Section,,San Bernardino,,3,548,False,548
+1632,22,CSE 5500,,60,1,Discussion,3.0,21,,Online,,,Online,,San Bernardino,,3,549,False,549
+1633,22,CSE 5700,,1,1,Discussion,3.0,7,,JB 113,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,550,False,550
+1634,22,CSE 5720,,1,1,Discussion,3.0,22,,JB 111,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,551,False,551
+1635,22,CSE 5720,,2,1,Discussion,3.0,14,,JB 262,F,5:30 PM - 8:15 PM,Classroom,,San Bernardino,,3,552,False,552
+1636,22,CSE 5750,,1,1,Supervision,3.0,24,,JB 361,,,Classroom,,San Bernardino,,3,553,False,553
+1637,22,CSE 5951,,1,1,Supervision,1.0,35,,,,,Classroom,,San Bernardino,,3,554,False,554
+1638,22,CSE 5953,,1,1,Supervision,3.0,21,,,,,Classroom,,San Bernardino,,3,555,False,555
+1639,22,CSE 5953,,2,1,Supervision,3.0,35,,,,,Classroom,,San Bernardino,,3,556,False,556
+1640,22,CSE 5953,,3,1,Supervision,3.0,28,,,,,Classroom,,San Bernardino,,3,557,False,557
+1641,22,CSE 6020,,60,1,Discussion,3.0,5,,Online,M-W,5:30 PM - 6:45 PM,Bichronous,,San Bernardino,,3,558,False,558
+1642,22,CSE 6020,,61,1,Discussion,3.0,5,,Online,M-W,7:00 PM - 8:15 PM,Bichronous,,San Bernardino,,3,559,False,559
+1643,22,CSE 6100,,1,1,Discussion,3.0,24,,JB 102,Tu-Th,7:00 PM - 8:15 PM,Classroom,,San Bernardino,,3,560,False,560
+1644,22,CSE 6300,,1,1,Discussion,3.0,29,,CGI 210,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,561,False,561
+1645,22,CSE 6300,,2,1,Discussion,3.0,29,,CGI 210,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,562,False,562
+1646,22,CSE 6400,,1,1,Discussion,3.0,29,,CGI 218,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,563,False,563
+1647,22,CSE 6550,,1,1,Discussion,3.0,4,,JB 102,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,564,False,564
+1648,22,CSE 6890,,1,1,Seminar,1.0,17,,JB 361,,,Classroom,,San Bernardino,,3,565,False,565
+1649,22,CSE 6940,,1,1,Supervision,3.0,24,,JB 361,,,Classroom,,San Bernardino,,3,566,False,566
+1650,22,CSE 6950,,1,1,Supervision,3.0,30,,JB 361,,,Classroom,,San Bernardino,,3,567,False,567
+1651,22,CSE 6950,,2,1,Supervision,3.0,14,,JB 361,,,Classroom,,San Bernardino,,3,568,False,568
+1652,22,CSE 6950,,3,1,Supervision,3.0,28,,,,,Classroom,,San Bernardino,,3,569,False,569
+1653,22,CSE 6950,,4,1,Supervision,3.0,17,,,,,Classroom,,San Bernardino,,3,570,False,570
+1654,22,CSE 6950,,5,1,Supervision,3.0,35,,,,,Classroom,,San Bernardino,,3,571,False,571
+1655,22,CSE 6964,,1,1,Supervision,4.0,30,,JB 361,,,Classroom,,San Bernardino,,3,572,False,572
+1656,22,CSE 6964,,2,1,Supervision,4.0,17,,,,,Classroom,,San Bernardino,,3,573,False,573
+1657,22,CSE 6964,,3,1,Supervision,4.0,35,,,,,Classroom,,San Bernardino,,3,574,False,574
+1658,22,CSE 6964,,4,1,Supervision,4.0,19,,,,,Classroom,,San Bernardino,,3,575,False,575
+1659,22,CSE 6964,,8,1,Supervision,4.0,7,,,,,Classroom,,San Bernardino,,3,576,False,576
+1660,22,CSE 6972,,2,1,Supervision,2.0,7,,,,,Classroom,,San Bernardino,,3,577,False,577
+1661,22,CSE 6980,,1,1,Supervision,0.0,17,,,,,Classroom,,San Bernardino,,3,578,False,578
+1662,10,CSE 5953,,5,1,Supervision,3.0,30,,,,,Classroom,,San Bernardino,,3,752,False,752
+1663,10,CSE 5953,,6,1,Supervision,3.0,33,,,,,Classroom,,San Bernardino,,3,753,False,753
+1664,10,CSE 6964,,2,1,Supervision,4.0,19,,,,,Classroom,,San Bernardino,,3,762,False,762
+1665,10,CSE 6973,,1,1,Supervision,3.0,19,,,,,Classroom,,San Bernardino,,3,763,False,763
+1666,37,CSE 1100,,1,1,Lecture,2.0,34,,Online,Tu-Th,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,767,False,767
+1667,37,CSE 1100,,2,1,Activity,1.0,34,,Online,Tu-Th,10:30 AM - 11:20 AM,Online Synchronous Section,,San Bernardino,,3,768,False,768
+1668,37,CSE 1250,,1,1,Lecture,3.0,12,,Online,M-W,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,769,False,769
+1669,37,CSE 1250,,2,1,Activity,1.0,12,,Online,M,10:30 AM - 12:10 PM,Online Synchronous Section,,San Bernardino,,3,770,False,770
+1670,37,CSE 1250,,3,1,Activity,1.0,12,,Online,W,10:30 AM - 12:10 PM,Online Synchronous Section,,San Bernardino,,3,771,False,771
+1671,37,CSE 1250,,4,1,Activity,1.0,12,,Online,M-W,1:00 PM - 1:50 PM,Online Synchronous Section,,San Bernardino,,3,772,False,772
+1672,37,CSE 1290,,1,1,Seminar,3.0,10,,Online,M-W,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,773,False,773
+1673,37,CSE 1290,,2,1,Seminar,3.0,10,,Online,M-W,10:30 AM - 11:45 AM,Online Synchronous Section,,San Bernardino,,3,774,False,774
+1674,37,CSE 2010,,1,1,Discussion,3.0,11,,Online,,,Online,,San Bernardino,,3,775,False,775
+1675,37,CSE 2010,,2,1,Activity,1.0,11,,Online,,,Online,,San Bernardino,,3,776,False,776
+1676,37,CSE 2010,,4,1,Discussion,3.0,11,,Online,,,Online,,San Bernardino,,3,777,False,777
+1677,37,CSE 2010,,5,1,Activity,1.0,11,,Online,,,Online,,San Bernardino,,3,778,False,778
+1678,37,CSE 2010,,7,1,Discussion,3.0,73,,Online,Tu-Th,5:30 PM - 6:45 PM,Online Synchronous Section,,San Bernardino,,3,779,False,779
+1679,37,CSE 2010,,8,1,Activity,1.0,26,,Online,Tu-Th,7:00 PM - 7:50 PM,Online Synchronous Section,,San Bernardino,,3,780,False,780
+1680,37,CSE 2020,,1,1,Discussion,3.0,32,,Online,,,Online,,San Bernardino,,3,781,False,781
+1681,37,CSE 2020,,2,1,Activity,1.0,32,,Online,,,Online,,San Bernardino,,3,782,False,782
+1682,37,CSE 2020,,4,1,Discussion,3.0,32,,Online,,,Online,,San Bernardino,,3,783,False,783
+1683,37,CSE 2020,,5,1,Activity,1.0,32,,Online,,,Online,,San Bernardino,,3,784,False,784
+1684,37,CSE 2020,,7,1,Discussion,3.0,83,,Online,Tu-Th,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,785,False,785
+1685,37,CSE 2020,,8,1,Activity,1.0,83,,Online,Tu-Th,10:30 AM - 11:20 AM,Online Synchronous Section,,San Bernardino,,3,786,False,786
+1686,37,CSE 2130,,1,1,Discussion,3.0,99,,Online,M-W,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,787,False,787
+1687,37,CSE 2130,,2,1,Discussion,3.0,99,,Online,M-W,1:00 PM - 2:15 PM,Online Synchronous Section,,San Bernardino,,3,788,False,788
+1688,37,CSE 3100,,1,1,Discussion,3.0,28,,Online,,,Online,,San Bernardino,,3,789,False,789
+1689,37,CSE 3100,,2,1,Laboratory,1.0,28,,Online,,,Online,,San Bernardino,,3,790,False,790
+1690,37,CSE 3100,,3,1,Discussion,3.0,95,,Online,Tu-Th,10:30 AM - 11:45 AM,Online Synchronous Section,,San Bernardino,,3,791,False,791
+1691,37,CSE 3100,,4,1,Laboratory,1.0,95,,Online,Tu,1:00 PM - 3:45 PM,Online Synchronous Section,,San Bernardino,,3,792,False,792
+1692,37,CSE 3100,,5,1,Discussion,3.0,95,,Online,M-W,1:00 PM - 2:15 PM,Online Synchronous Section,,San Bernardino,,3,793,False,793
+1693,37,CSE 3100,,6,1,Laboratory,1.0,95,,Online,Th,5:00 PM - 6:45 PM,Online Synchronous Section,,San Bernardino,,3,794,False,794
+1694,37,CSE 3350,,1,1,Discussion,3.0,29,,Online,Tu-Th,1:00 PM - 2:15 PM,Online Synchronous Section,,San Bernardino,,3,795,False,795
+1695,37,CSE 4010,,1,1,Discussion,3.0,23,,Online,M-W,1:00 PM - 2:15 PM,Online Synchronous Section,,San Bernardino,,3,796,False,796
+1696,37,CSE 4010,,2,1,Laboratory,1.0,23,,Online,M-W,2:30 PM - 3:45 PM,Online Synchronous Section,,San Bernardino,,3,797,False,797
+1697,37,CSE 4030,,1,1,Discussion,3.0,16,,Online,M-W,2:30 PM - 3:45 PM,Online Synchronous Section,,San Bernardino,,3,798,False,798
+1698,37,CSE 4030,,2,1,Laboratory,1.0,16,,Online,M-W,4:00 PM - 5:15 PM,Online Synchronous Section,,San Bernardino,,3,799,False,799
+1699,37,CSE 4100,,1,1,Discussion,3.0,16,,Online,M-W,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,800,False,800
+1700,37,CSE 4100,,2,1,Discussion,3.0,16,,Online,M-W,5:30 PM - 6:45 PM,Online Synchronous Section,,San Bernardino,,3,801,False,801
+1701,37,CSE 4200,,1,1,Discussion,3.0,95,,Online,M-W,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,802,False,802
+1702,37,CSE 4310,,1,1,Discussion,3.0,29,,Online,Tu-Th,5:30 PM - 6:45 PM,Online Synchronous Section,,San Bernardino,,3,803,False,803
+1703,37,CSE 4410,,1,1,Discussion,3.0,82,,Online,Tu-Th,5:30 PM - 6:45 PM,Online Synchronous Section,,San Bernardino,,3,804,False,804
+1704,37,CSE 4500,,1,1,Discussion,3.0,82,,Online,M-W,5:30 PM - 6:45 PM,Online Synchronous Section,,San Bernardino,,3,805,False,805
+1705,37,CSE 4550,,1,1,Discussion,3.0,17,,Online,M-W,1:00 PM - 2:15 PM,Online Synchronous Section,,San Bernardino,,3,806,False,806
+1706,37,CSE 4550,,2,1,Discussion,3.0,17,,Online,M-W,4:00 PM - 5:15 PM,Online Synchronous Section,,San Bernardino,,3,807,False,807
+1707,37,CSE 4560,,1,1,Discussion,3.0,30,,Online,Tu-Th,2:30 PM - 3:45 PM,Online Synchronous Section,,San Bernardino,,3,808,False,808
+1708,37,CSE 4560,,2,1,Laboratory,1.0,30,,Online,Tu-Th,4:00 PM - 5:15 PM,Online Synchronous Section,,San Bernardino,,3,809,False,809
+1709,37,CSE 4600,,1,1,Discussion,3.0,19,,Online,M-W,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,810,False,810
+1710,37,CSE 4600,,2,1,Discussion,3.0,35,,Online,Tu-Th,10:30 AM - 11:45 AM,Online Synchronous Section,,San Bernardino,,3,811,False,811
+1711,37,CSE 4600,,3,1,Discussion,3.0,35,,Online,Tu-Th,4:00 PM - 5:15 PM,Online Synchronous Section,,San Bernardino,,3,812,False,812
+1712,37,CSE 4610,,1,1,Discussion,3.0,88,,Online,Tu-Th,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,813,False,813
+1713,37,CSE 4820,,1,1,Supervision,3.0,17,,Online,,,Online,,San Bernardino,,3,814,False,814
+1714,37,CSE 4880,,3,1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,815,False,815
+1715,37,CSE 4880,,4,1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,816,False,816
+1716,37,CSE 5000,,1,1,Discussion,3.0,11,,Online,,,Online,,San Bernardino,,3,817,False,817
+1717,37,CSE 5120,,1,1,Discussion,3.0,19,,Online,Tu-Th,1:00 PM - 2:15 PM,Online Synchronous Section,,San Bernardino,,3,818,False,818
+1718,37,CSE 5120,,2,1,Discussion,3.0,19,,Online,Tu-Th,2:30 PM - 3:45 PM,Online Synchronous Section,,San Bernardino,,3,819,False,819
+1719,37,CSE 5160,,1,1,Discussion,3.0,35,,Online,Tu-Th,2:30 PM - 3:45 PM,Online Synchronous Section,,San Bernardino,,3,820,False,820
+1720,37,CSE 5210,,1,1,Discussion,3.0,28,,Online,,,Online,,San Bernardino,,3,821,False,821
+1721,37,CSE 5210,,2,1,Laboratory,1.0,28,,Online,,,Online,,San Bernardino,,3,822,False,822
+1722,37,CSE 5350,,1,1,Discussion,3.0,30,,Online,Tu-Th,10:30 AM - 11:45 AM,Online Synchronous Section,,San Bernardino,,3,823,False,823
+1723,37,CSE 5408,,1,1,Discussion,3.0,23,,Online,M-W,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,824,False,824
+1724,37,CSE 5408,,2,1,Laboratory,1.0,23,,Online,M-W,10:30 AM - 11:45 AM,Online Synchronous Section,,San Bernardino,,3,825,False,825
+1725,37,CSE 5408,,3,1,Discussion,3.0,73,,Online,Tu-Th,2:30 PM - 3:45 PM,Online Synchronous Section,,San Bernardino,,3,826,False,826
+1726,37,CSE 5408,,4,1,Laboratory,1.0,73,,Online,Tu-Th,4:00 PM - 5:15 PM,Online Synchronous Section,,San Bernardino,,3,827,False,827
+1727,37,CSE 5720,,2,1,Discussion,3.0,17,,Online,M-W,10:30 AM - 11:45 AM,Online Synchronous Section,,San Bernardino,,3,828,False,828
+1728,37,CSE 5750,,1,1,Supervision,3.0,17,,Online,,,Online,,San Bernardino,,3,829,False,829
+1729,37,CSE 5750,,2,1,Supervision,3.0,,,Online,,,Online,,San Bernardino,,3,830,False,830
+1730,37,CSE 5940,,1,1,Discussion,3.0,30,,Online,M-W,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,831,False,831
+1731,37,CSE 5952,,1,1,Supervision,2.0,,,,,,Online,,San Bernardino,,3,832,False,832
+1732,37,CSE 5953,,1,1,Supervision,3.0,29,,,,,Online,,San Bernardino,,3,833,False,833
+1733,37,CSE 5953,,2,1,Supervision,3.0,28,,Online,,,Online,,San Bernardino,,3,834,False,834
+1734,37,CSE 5953,,3,1,Supervision,3.0,23,,Online,,,Classroom,,San Bernardino,,3,835,False,835
+1735,37,CSE 6030,,1,1,Discussion,3.0,85,,Online,M-W,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,836,False,836
+1736,37,CSE 6300,,1,1,Discussion,3.0,88,,Online,M-W,1:00 PM - 2:15 PM,Online Synchronous Section,,San Bernardino,,3,837,False,837
+1737,37,CSE 6550,,1,1,Discussion,3.0,85,,Online,Tu-Th,4:00 PM - 5:15 PM,Online Synchronous Section,,San Bernardino,,3,838,False,838
+1738,37,CSE 6890,,1,1,Seminar,1.0,85,,Online,Th,5:30 PM - 6:20 PM,Online Synchronous Section,,San Bernardino,,3,839,False,839
+1739,37,CSE 6940,,1,1,Supervision,3.0,,,,,,Online,,San Bernardino,,3,840,False,840
+1740,37,CSE 6950,,1,1,Supervision,3.0,35,,Online,,,Online,,San Bernardino,,3,841,False,841
+1741,37,CSE 6950,,2,1,Supervision,3.0,,,Online,,,Online,,San Bernardino,,3,842,False,842
+1742,37,CSE 6962,,1,1,Supervision,2.0,,,,,,Online,,San Bernardino,,3,843,False,843
+1743,37,CSE 6964,,1,1,Supervision,4.0,,,,,,Online,,San Bernardino,,3,844,False,844
+1744,37,CSE 6972,,1,1,Supervision,2.0,,,,,,Online,,San Bernardino,,3,845,False,845
+1745,37,CSE 6973,,1,1,Supervision,3.0,,,,,,Online,,San Bernardino,,3,846,False,846
+1746,37,CSE 6974,,1,1,Supervision,4.0,,,,,,Online,,San Bernardino,,3,847,False,847
+1747,37,CSE 6976,,1,1,Supervision,6.0,,,,,,Online,,San Bernardino,,3,848,False,848
+1748,37,CSE 6980,,1,1,Supervision,0.0,,,,,,Online,,San Bernardino,,3,849,False,849
+1749,37,CSE 6990,,1,1,Supervision,0.0,,,,,,Online,,San Bernardino,,3,850,False,850
+1750,37,CSE 6991,,1,1,Supervision,1.0,,,,,,Online,,San Bernardino,,3,851,False,851
+1751,37,CSE 6992,,1,1,Supervision,2.0,,,,,,Online,,San Bernardino,,3,852,False,852
+1752,37,CSE 6993,,1,1,Supervision,3.0,,,,,,Online,,San Bernardino,,3,853,False,853
+1755,37,CSE 6996,,1,1,Supervision,6.0,,,,,,Online,,San Bernardino,,3,856,False,856
+1756,23,CSE 1100,,3,1,Lecture,2.0,34,,HP 124,M-W,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,857,False,857
+1757,23,CSE 1100,,4,1,Activity,1.0,34,,JB 360,M-W,12:00 PM - 12:50 PM,Classroom,,San Bernardino,,3,858,False,858
+1758,23,CSE 1100,,5,1,Activity,1.0,34,,JB 360,M-W,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,859,False,859
+1759,23,CSE 1100,,6,1,Activity,1.0,34,,JB 360,M-W,2:30 PM - 3:20 PM,Classroom,,San Bernardino,,3,860,False,860
+1760,23,CSE 1250,,5,1,Lecture,3.0,34,,JB 102,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,861,False,861
+1761,23,CSE 1250,,6,1,Activity,1.0,34,,JB 360,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,862,False,862
+1762,23,CSE 1250,,7,1,Activity,1.0,34,,JB 360,Tu-Th,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,863,False,863
+1763,23,CSE 1250,,8,1,Activity,1.0,34,,JB 360,Tu-Th,2:30 PM - 3:20 PM,Classroom,,San Bernardino,,3,864,False,864
+1764,23,CSE 1290,,1,1,Seminar,3.0,10,,CGI 106,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,865,False,865
+1765,23,CSE 1290,,2,1,Seminar,3.0,10,,CGI 106,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,866,False,866
+1766,23,CSE 2010,,1,1,Discussion,3.0,84,,CGI 110,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,867,False,867
+1767,23,CSE 2010,,2,1,Activity,1.0,26,,JB 358,M-W,4:00 PM - 4:50 PM,Classroom,,San Bernardino,,3,868,False,868
+1768,23,CSE 2010,,62,1,Discussion,3.0,27,,Online,Tu-Th,5:30 PM - 6:45 PM,Online Synchronous Section,,San Bernardino,,3,869,False,869
+1769,23,CSE 2010,,63,1,Activity,1.0,26,,Online,Tu-Th,7:00 PM - 7:50 PM,Online Synchronous Section,,San Bernardino,,3,870,False,870
+1770,23,CSE 2020,,1,1,Discussion,3.0,32,,JB 262,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,871,False,871
+1771,23,CSE 2020,,2,1,Activity,1.0,32,,JB 358,M-W,12:00 PM - 12:50 PM,Classroom,,San Bernardino,,3,872,False,872
+1772,23,CSE 2020,,60,1,Discussion,3.0,95,,JB 359,M-W,4:00 PM - 5:15 PM,Online Synchronous Section,,San Bernardino,,3,875,False,875
+1773,23,CSE 2020,,61,1,Activity,1.0,95,,JB 359,M-W,5:30 PM - 6:20 PM,Online Synchronous Section,,San Bernardino,,3,876,False,876
+1774,23,CSE 2020,,7,1,Discussion,3.0,32,,CGI 110,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,873,False,873
+1775,23,CSE 2020,,8,1,Activity,1.0,32,,JB 358,Tu-Th,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,874,False,874
+1776,23,CSE 2130,,3,1,Discussion,3.0,12,,JB 102,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,877,False,877
+1777,23,CSE 2130,,4,1,Discussion,3.0,12,,CGI 110,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,878,False,878
+1778,23,CSE 3100,,1,1,Discussion,3.0,12,,CGI 110,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,879,False,879
+1779,23,CSE 3100,,2,1,Laboratory,1.0,12,,JB 356,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,880,False,880
+1780,23,CSE 3100,,3,1,Discussion,3.0,28,,CS 122,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,881,False,881
+1781,23,CSE 3100,,4,1,Laboratory,1.0,28,,JB 356,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,882,False,882
+1782,23,CSE 3100,,5,1,Discussion,3.0,12,,JB 383,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,883,False,883
+1783,23,CSE 3100,,6,1,Laboratory,1.0,12,,JB 356,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,884,False,884
+1784,23,CSE 3350,,1,1,Discussion,3.0,20,,CE 110,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,885,False,885
+1785,23,CSE 3660,,1,1,Discussion,2.0,15,,JB 262,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,886,False,886
+1786,23,CSE 3660,,2,1,Activity,1.0,15,,JB 356,Tu-Th,7:00 PM - 7:50 PM,Classroom,,San Bernardino,,3,887,False,887
+1787,23,CSE 4010,,1,1,Discussion,3.0,85,,JB 262,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,888,False,888
+1788,23,CSE 4010,,2,1,Laboratory,1.0,26,,JB 359,M-W,2:30 PM - 3:45 PM,Online,,San Bernardino,,3,889,False,889
+1789,23,CSE 4010,,3,1,Laboratory,1.0,26,,JB 359,Tu-Th,2:30 PM - 3:45 PM,Online Synchronous Section,,San Bernardino,,3,890,False,890
+1790,23,CSE 4010,,4,1,Discussion,3.0,85,,TBD,,,Online,,San Bernardino,,3,891,False,891
+1791,23,CSE 4030,,1,1,Discussion,3.0,16,,JB 262,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,892,False,892
+1792,23,CSE 4030,,2,1,Laboratory,1.0,16,,JB 360,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,893,False,893
+1793,23,CSE 4100,,1,1,Discussion,3.0,16,,CGI 203,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,894,False,894
+1794,23,CSE 4200,,1,1,Discussion,3.0,95,,JB 102,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,895,False,895
+1795,23,CSE 4310,,1,1,Discussion,3.0,88,,JB 254,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,896,False,896
+1796,23,CSE 4310,,60,1,Discussion,3.0,95,,JB 358,Tu-Th,10:30 AM - 11:45 AM,Online Synchronous Section,,San Bernardino,,3,897,False,897
+1797,23,CSE 4410,,1,1,Discussion,3.0,35,,HP 124,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,898,False,898
+1798,23,CSE 4410,,2,1,Discussion,3.0,35,,JB 356,Tu-Th,2:30 PM - 3:45 PM,Online Synchronous Section,,San Bernardino,,3,899,False,899
+1799,23,CSE 4500,,1,1,Discussion,3.0,100,,JB 262,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,900,False,900
+1800,23,CSE 4550,,1,1,Discussion,3.0,17,,CE 110,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,901,False,901
+1801,23,CSE 4550,,2,1,Discussion,3.0,17,,CE 110,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,902,False,902
+1802,23,CSE 4560,,1,1,Discussion,3.0,23,,JB 262,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,903,False,903
+1803,23,CSE 4560,,2,1,Laboratory,1.0,23,,JB 356,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,904,False,904
+1804,23,CSE 4600,,1,1,Discussion,3.0,19,,CGI 209,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,905,False,905
+1805,23,CSE 4600,,2,1,Discussion,3.0,35,,CGI 106,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,906,False,906
+1806,23,CSE 4600,,60,1,Discussion,3.0,71,,Online,Tu-Th,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,907,False,907
+1807,23,CSE 4610,,1,1,Discussion,3.0,88,,JB 358,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,908,False,908
+1808,23,CSE 4610,,2,1,Discussion,3.0,25,,TBD,Tu-Th,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,909,False,909
+1809,23,CSE 4820,,1,1,Supervision,3.0,17,,TBD,,,Classroom,,San Bernardino,,3,910,False,910
+1810,23,CSE 4820,,2,1,Supervision,3.0,23,,,,,Classroom,,San Bernardino,,3,911,False,911
+1811,23,CSE 4880,,3,1,Discussion,3.0,71,,,,,Online,,San Bernardino,,3,912,False,912
+1812,23,CSE 5000,,1,1,Discussion,3.0,32,,CGI 106,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,913,False,913
+1813,23,CSE 5120,,1,1,Discussion,3.0,23,,CS 142,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,914,False,914
+1814,23,CSE 5120,,2,1,Discussion,3.0,19,,CE 241,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,915,False,915
+1815,23,CSE 5120,,3,1,Discussion,3.0,20,,TBD,Tu-Th,4:00 PM - 5:15 PM,Online Synchronous Section,,San Bernardino,,3,916,False,916
+1816,23,CSE 5160,,60,1,Discussion,3.0,28,,Online,Tu-Th,4:00 PM - 5:15 PM,Bichronous,,San Bernardino,,3,917,False,917
+1817,23,CSE 5160,,61,1,Discussion,3.0,28,,TBD,,,Online,,San Bernardino,,3,918,False,918
+1818,23,CSE 5210,,1,1,Discussion,3.0,73,,CGI 110,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,919,False,919
+1819,23,CSE 5210,,2,1,Laboratory,1.0,72,,JB 358,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,920,False,920
+1820,23,CSE 5250,,1,1,Discussion,3.0,25,,SB 217,M-W,5:30 PM - 6:45 PM,Online Synchronous Section,,San Bernardino,,3,921,False,921
+1821,23,CSE 5350,,61,1,Discussion,3.0,20,,Online,,,Online,,San Bernardino,,3,922,False,922
+1822,23,CSE 5408,,1,1,Discussion,3.0,73,,JB 358,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,923,False,923
+1823,23,CSE 5408,,2,1,Laboratory,1.0,73,,JB 358,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,924,False,924
+1824,23,CSE 5500,,61,1,Discussion,3.0,71,,Online,Tu-Th,10:30 AM - 11:45 AM,Online,,San Bernardino,,3,925,False,925
+1825,23,CSE 5700,,1,1,Discussion,3.0,85,,JB 102,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,926,False,926
+1826,23,CSE 5720,,2,1,Discussion,3.0,17,,CGI 110,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,927,False,927
+1827,23,CSE 5750,,1,1,Supervision,3.0,9,,,,,Online,,San Bernardino,,3,928,False,928
+1828,23,CSE 5750,,2,1,Supervision,3.0,19,,,,,Classroom,,San Bernardino,,3,929,False,929
+1829,23,CSE 5940,,60,1,Discussion,3.0,71,,Online,M-W,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,930,False,930
+1830,23,CSE 5953,,1,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,931,False,931
+1831,23,CSE 5953,,2,1,Supervision,3.0,28,,,,,Classroom,,San Bernardino,,3,932,False,932
+1832,23,CSE 6030,,1,1,Discussion,3.0,85,,CE 100,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,933,False,933
+1833,23,CSE 6300,,1,1,Discussion,3.0,29,,CE 313,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,934,False,934
+1834,23,CSE 6300,,2,1,Discussion,3.0,29,,CE 313,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,935,False,935
+1835,23,CSE 6550,,1,1,Discussion,3.0,94,,JB 262,Tu-Th,4:00 PM - 5:15 PM,Online Synchronous Section,,San Bernardino,,3,936,False,936
+1836,23,CSE 6940,,1,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,937,False,937
+1837,23,CSE 6950,,1,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,938,False,938
+1838,23,CSE 6950,,2,1,Supervision,3.0,35,,,,,Classroom,,San Bernardino,,3,939,False,939
+1839,23,CSE 6950,,3,1,Supervision,3.0,28,,,,,Classroom,,San Bernardino,,3,940,False,940
+1840,23,CSE 6950,,4,1,Supervision,3.0,17,,,,,Classroom,,San Bernardino,,3,941,False,941
+1841,23,CSE 6962,,1,1,Supervision,2.0,,,,,,Classroom,,San Bernardino,,3,942,False,942
+1842,23,CSE 6964,,1,1,Supervision,4.0,35,,,,,Classroom,,San Bernardino,,3,943,False,943
+1843,23,CSE 6964,,2,1,Supervision,4.0,19,,,,,Classroom,,San Bernardino,,3,944,False,944
+1844,23,CSE 6964,,3,1,Supervision,4.0,29,,,,,Classroom,,San Bernardino,,3,945,False,945
+1845,23,CSE 6964,,4,1,Supervision,4.0,28,,,,,Classroom,,San Bernardino,,3,946,False,946
+1846,23,CSE 6972,,1,1,Supervision,2.0,,,,,,Classroom,,San Bernardino,,3,947,False,947
+1847,23,CSE 6973,,1,1,Supervision,3.0,,,,,,Classroom,,San Bernardino,,3,948,False,948
+1848,23,CSE 6974,,1,1,Supervision,4.0,,,,,,Classroom,,San Bernardino,,3,949,False,949
+1849,23,CSE 6976,,1,1,Supervision,6.0,85,,,,,Classroom,,San Bernardino,,3,950,False,950
+1850,23,CSE 6980,,1,1,Supervision,0.0,,,,,,Classroom,,San Bernardino,,3,951,False,951
+1851,23,CSE 6991,,1,1,Supervision,1.0,,,,,,Classroom,,San Bernardino,,3,952,False,952
+1852,23,CSE 6992,,1,1,Supervision,2.0,,,,,,Classroom,,San Bernardino,,3,953,False,953
+1853,23,CSE 6993,,1,1,Supervision,3.0,,,,,,Classroom,,San Bernardino,,3,954,False,954
+1854,23,CSE 6994,,1,1,Supervision,4.0,,,,,,Classroom,,San Bernardino,,3,955,False,955
+1855,23,CSE 6995,,1,1,Supervision,5.0,,,,,,Classroom,,San Bernardino,,3,956,False,956
+1856,23,CSE 6996,,1,1,Supervision,6.0,,,,,,Classroom,,San Bernardino,,3,957,False,957
+1857,28,CSE 1100,,3,1,Lecture,2.0,34,,HP 124,M-W,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,958,False,958
+1858,28,CSE 1100,,4,1,Activity,1.0,34,,JB 360,M-W,12:00 PM - 12:50 PM,Classroom,,San Bernardino,,3,959,False,959
+1859,28,CSE 1100,,5,1,Activity,1.0,34,,JB 360,M-W,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,960,False,960
+1860,28,CSE 1250,,5,1,Lecture,3.0,34,,JB 102,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,961,False,961
+1861,28,CSE 1250,,6,1,Activity,1.0,34,,JB 360,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,962,False,962
+1862,28,CSE 1250,,7,1,Activity,1.0,34,,JB 360,Tu-Th,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,963,False,963
+1863,28,CSE 1250,,8,1,Activity,1.0,34,,JB 360,Tu-Th,2:30 PM - 3:20 PM,Classroom,,San Bernardino,,3,964,False,964
+1864,28,CSE 1250,,9,1,Lecture,3.0,34,,JB 360,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,965,False,965
+1865,28,CSE 1290,,1,1,Seminar,3.0,10,,JB 144,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,966,False,966
+1866,28,CSE 1290,,2,1,Seminar,3.0,10,,JB 114,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,967,False,967
+1867,28,CSE 2010,,1,1,Discussion,3.0,27,,JB 262,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,968,False,968
+1868,28,CSE 2010,,2,1,Activity,1.0,25,,JB 358,M-W,7:00 PM - 7:50 PM,Classroom,,San Bernardino,,3,969,False,969
+1869,28,CSE 2010,,3,1,Discussion,3.0,11,,CGI 203,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,970,False,970
+1870,28,CSE 2010,,4,1,Activity,1.0,11,,JB 358,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,971,False,971
+1871,28,CSE 2010,,5,1,Discussion,3.0,16,,JB 113,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,972,False,972
+1872,28,CSE 2010,,6,1,Activity,1.0,16,,JB 359,M-W,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,973,False,973
+1873,28,CSE 2010,,60,1,Discussion,3.0,22,,Online,Tu-Th,5:30 PM - 6:45 PM,Online Synchronous Section,,San Bernardino,,3,976,False,976
+1874,28,CSE 2010,,61,1,Activity,1.0,22,,Online,Tu-Th,7:00 PM - 7:50 PM,Online Synchronous Section,,San Bernardino,,3,977,False,977
+1875,28,CSE 2010,,62,1,Discussion,3.0,20,,Online,,,Online Synchronous Section,,San Bernardino,,3,978,False,978
+1876,28,CSE 2010,,63,1,Activity,1.0,25,,Online,,,Online Synchronous Section,,San Bernardino,,3,979,False,979
+1877,28,CSE 2010,,64,1,Discussion,3.0,16,,Online,M-W,2:30 PM - 3:45 PM,Online Synchronous Section,,San Bernardino,,3,980,False,980
+1878,28,CSE 2010,,65,1,Activity,1.0,16,,Online,M-W,4:00 PM - 4:50 PM,Online Synchronous Section,,San Bernardino,,3,981,False,981
+1879,28,CSE 2010,,66,1,Discussion,3.0,20,,Online,,,Online,,San Bernardino,,3,982,False,982
+1880,28,CSE 2010,,67,1,Activity,1.0,25,,Online,,,Online,,San Bernardino,,3,983,False,983
+1881,28,CSE 2010,,7,1,Discussion,3.0,95,,JB 356,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,974,False,974
+1882,28,CSE 2010,,8,1,Activity,1.0,95,,JB 356,M-W,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,975,False,975
+1883,28,CSE 2020,,1,1,Discussion,3.0,32,,JB 262,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,984,False,984
+1884,28,CSE 2020,,2,1,Activity,1.0,32,,JB 358,M-W,12:00 PM - 12:50 PM,Classroom,,San Bernardino,,3,985,False,985
+1885,28,CSE 2020,,7,1,Discussion,3.0,32,,JB 140,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,986,False,986
+1886,28,CSE 2020,,8,1,Activity,1.0,32,,JB 358,Tu-Th,4:00 PM - 4:50 PM,Classroom,,San Bernardino,,3,987,False,987
+1887,28,CSE 2130,,61,1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,988,False,988
+1888,28,CSE 2130,,62,1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,989,False,989
+1889,28,CSE 3100,,5,1,Discussion,3.0,23,,JB 262,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,990,False,990
+1890,28,CSE 3100,,6,1,Laboratory,1.0,23,,JB 360,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,991,False,991
+1891,28,CSE 3100,,60,1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,994,False,994
+1892,28,CSE 3100,,61,1,Laboratory,1.0,12,,Online,,,Online,,San Bernardino,,3,995,False,995
+1893,28,CSE 3100,,62,1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,996,False,996
+1894,28,CSE 3100,,63,1,Laboratory,1.0,12,,,,,Online,,San Bernardino,,3,997,False,997
+1895,28,CSE 3100,,7,1,Discussion,3.0,83,,JB 111,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,992,False,992
+1896,28,CSE 3100,,8,1,Laboratory,1.0,83,,JB 356,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,993,False,993
+1897,28,CSE 3350,,1,1,Discussion,3.0,20,,JB 113,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,998,False,998
+1898,28,CSE 3660,,1,1,Discussion,2.0,15,,JB 144,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,999,False,999
+1899,28,CSE 3660,,2,1,Activity,1.0,15,,JB 356,Tu-Th,7:00 PM - 7:50 PM,Classroom,,San Bernardino,,3,1000,False,1000
+1900,28,CSE 4010,,1,1,Discussion,3.0,23,,JB 262,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,1001,False,1001
+1901,28,CSE 4010,,2,1,Laboratory,1.0,23,,JB 360,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,1002,False,1002
+1902,28,CSE 4010,,5,1,Discussion,3.0,26,,Online,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,1003,False,1003
+1903,28,CSE 4010,,6,1,Laboratory,1.0,26,,Online,,,Classroom,,San Bernardino,,3,1004,False,1004
+1904,28,CSE 4010,,60,1,Discussion,3.0,26,,Online,,,Online Synchronous Section,,San Bernardino,,3,1005,False,1005
+1905,28,CSE 4010,,61,1,Laboratory,1.0,25,,Online,,,Online,,San Bernardino,,3,1006,False,1006
+1906,28,CSE 4030,,1,1,Discussion,3.0,83,,JB 360,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,1007,False,1007
+1907,28,CSE 4030,,2,1,Laboratory,1.0,83,,JB 360,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,1008,False,1008
+1908,28,CSE 4100,,1,1,Discussion,3.0,23,,JB 254,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,1009,False,1009
+1909,28,CSE 4100,,2,1,Discussion,3.0,20,,JB 113,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,1010,False,1010
+1910,28,CSE 4100,,60,1,Discussion,3.0,20,,Online,,,Online,,San Bernardino,,3,1011,False,1011
+1911,28,CSE 4200,,1,1,Discussion,3.0,95,,JB 356,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,1012,False,1012
+1912,28,CSE 4310,,1,1,Discussion,3.0,32,,JB 254,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,1013,False,1013
+1913,28,CSE 4310,,2,1,Discussion,3.0,95,,JB 114,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,1014,False,1014
+1914,28,CSE 4310,,3,1,Discussion,3.0,88,,JB 262,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,1015,False,1015
+1915,28,CSE 4410,,1,1,Discussion,3.0,25,,HP 124,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,1016,False,1016
+1916,28,CSE 4410,,2,1,Discussion,3.0,25,,JB 113,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,1017,False,1017
+1917,28,CSE 4500,,60,1,Discussion,3.0,26,,Online,,,Online,,San Bernardino,,3,1018,False,1018
+1918,28,CSE 4500,,61,1,Discussion,3.0,22,,Online,,,Online,,San Bernardino,,3,1019,False,1019
+1919,28,CSE 4550,,1,1,Discussion,3.0,17,,CGI 203,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,1020,False,1020
+1920,28,CSE 4550,,2,1,Discussion,3.0,19,,CE 110,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,1021,False,1021
+1921,28,CSE 4560,,1,1,Discussion,3.0,30,,JB 262,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,1022,False,1022
+1922,28,CSE 4560,,2,1,Laboratory,1.0,30,,JB 356,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,1023,False,1023
+1923,28,CSE 4560,,3,1,Discussion,3.0,30,,JB 258,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,1024,False,1024
+1924,28,CSE 4560,,4,1,Laboratory,1.0,30,,JB 356,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,1025,False,1025
+1925,28,CSE 4600,,1,1,Discussion,3.0,35,,CS 128,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,1026,False,1026
+1926,28,CSE 4600,,2,1,Discussion,3.0,35,,CGI 106,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,1027,False,1027
+1927,28,CSE 4610,,1,1,Discussion,3.0,88,,JB 109,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,1028,False,1028
+1928,28,CSE 4610,,60,1,Discussion,3.0,22,,Online,Tu-Th,4:00 PM - 5:15 PM,Online Synchronous Section,,San Bernardino,,3,1029,False,1029
+1929,28,CSE 4820,,1,1,Supervision,3.0,23,,,,,Classroom,,San Bernardino,,3,1030,False,1030
+1930,28,CSE 4820,,2,1,Supervision,3.0,17,,,,,Classroom,,San Bernardino,,3,1031,False,1031
+1931,28,CSE 4880,,4,1,Discussion,3.0,26,,Online,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,1032,False,1032
+1932,28,CSE 5000,,60,1,Discussion,3.0,11,,Online,,,Online,,San Bernardino,,3,1033,False,1033
+1933,28,CSE 5120,,1,1,Discussion,3.0,19,,CE 110,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,1034,False,1034
+1934,28,CSE 5120,,2,1,Discussion,3.0,19,,CE 110,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,1035,False,1035
+1935,28,CSE 5160,,1,1,Discussion,3.0,35,,JB 146,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,1036,False,1036
+1936,28,CSE 5208,,60,1,Discussion,3.0,5,,Online,,,Online,,San Bernardino,,3,1037,False,1037
+1937,28,CSE 5208,,61,1,Laboratory,1.0,5,,Online,,,Online,,San Bernardino,,3,1038,False,1038
+1938,28,CSE 5210,,1,1,Discussion,3.0,73,,CGI 106,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,1039,False,1039
+1939,28,CSE 5210,,2,1,Laboratory,1.0,73,,JB 359,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,1040,False,1040
+1940,28,CSE 5250,,1,1,Discussion,3.0,25,,CGI 106,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,1041,False,1041
+1941,28,CSE 5350,,60,1,Discussion,3.0,5,,Online,M-W,4:00 PM - 5:15 PM,Online Synchronous Section,,San Bernardino,,3,1042,False,1042
+1942,28,CSE 5408,,1,1,Discussion,3.0,73,,JB 358,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,1043,False,1043
+1943,28,CSE 5408,,2,1,Laboratory,1.0,73,,JB 358,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,1044,False,1044
+1944,28,CSE 5408,,60,1,Discussion,3.0,24,,Online,,,Online,,San Bernardino,,3,1045,False,1045
+1945,28,CSE 5408,,61,1,Laboratory,1.0,24,,Online,,,Online,,San Bernardino,,3,1046,False,1046
+1946,28,CSE 5700,,1,1,Discussion,3.0,24,,Online,Th,1:00 PM - 2:00 PM,Bichronous,,San Bernardino,,3,1047,False,1047
+1947,28,CSE 5700,,2,1,Discussion,3.0,24,,Online,,5:30 PM - 6:45 PM,Online,,San Bernardino,,3,1048,False,1048
+1948,28,CSE 5720,,60,1,Discussion,3.0,17,,Online,,,Online,,San Bernardino,,3,1049,False,1049
+1949,28,CSE 5720,,61,1,Discussion,3.0,17,,Online,,,Online,,San Bernardino,,3,1050,False,1050
+1950,28,CSE 5720,,62,1,Discussion,3.0,14,,Online,,,Online,,San Bernardino,,3,1051,False,1051
+1951,28,CSE 5750,,60,1,Supervision,3.0,9,,,,,Online,,San Bernardino,,3,1052,False,1052
+1952,28,CSE 5750,,61,1,Supervision,3.0,11,,,,,Online,,San Bernardino,,3,1053,False,1053
+1953,28,CSE 5951,,1,1,Supervision,1.0,35,,,,,Classroom,,San Bernardino,,3,1054,False,1054
+1954,28,CSE 5953,,1,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,1055,False,1055
+1955,28,CSE 5953,,2,1,Supervision,3.0,35,,,,,Classroom,,San Bernardino,,3,1056,False,1056
+1956,28,CSE 6020,,60,1,Discussion,3.0,5,,Online,,,Online,,San Bernardino,,3,1057,False,1057
+1957,28,CSE 6030,,60,1,Discussion,3.0,24,,Online,Tu,10:30 AM - 11:45 AM,Bichronous,,San Bernardino,,3,1058,False,1058
+1958,28,CSE 6300,,1,1,Discussion,3.0,29,,CGI 203,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,1059,False,1059
+1959,28,CSE 6400,,1,1,Discussion,3.0,29,,CE 110,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,1060,False,1060
+1960,28,CSE 6550,,1,1,Discussion,3.0,4,,JB 262,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,1061,False,1061
+1961,28,CSE 6600,,60,1,Discussion,3.0,22,,Online,,,Online,,San Bernardino,,3,1062,False,1062
+1962,28,CSE 6890,,1,1,Seminar,1.0,29,,,,,Classroom,,San Bernardino,,3,1063,False,1063
+1963,28,CSE 6940,,1,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,1064,False,1064
+1964,28,CSE 6950,,1,1,Supervision,3.0,30,,,,,Classroom,,San Bernardino,,3,1065,False,1065
+1965,28,CSE 6950,,2,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,1066,False,1066
+1966,28,CSE 6964,,1,1,Supervision,4.0,30,,,,,Classroom,,San Bernardino,,3,1067,False,1067
+1967,28,CSE 6964,,10,1,Supervision,4.0,29,,,,,Classroom,,San Bernardino,,3,1076,False,1076
+1968,28,CSE 6964,,2,1,Supervision,4.0,17,,,,,Classroom,,San Bernardino,,3,1068,False,1068
+1969,28,CSE 6964,,3,1,Supervision,4.0,19,,,,,Classroom,,San Bernardino,,3,1069,False,1069
+1970,28,CSE 6964,,4,1,Supervision,4.0,73,,,,,Classroom,,San Bernardino,,3,1070,False,1070
+1971,28,CSE 6964,,5,1,Supervision,4.0,95,,,,,Classroom,,San Bernardino,,3,1071,False,1071
+1972,28,CSE 6964,,6,1,Supervision,4.0,23,,,,,Classroom,,San Bernardino,,3,1072,False,1072
+1973,28,CSE 6964,,7,1,Supervision,4.0,,,,,,Classroom,,San Bernardino,,3,1073,False,1073
+1974,28,CSE 6964,,8,1,Supervision,4.0,16,,,,,Classroom,,San Bernardino,,3,1074,False,1074
+1975,28,CSE 6964,,9,1,Supervision,4.0,35,,,,,Classroom,,San Bernardino,,3,1075,False,1075
+1976,28,CSE 6972,,1,1,Supervision,2.0,9,,,,,Classroom,,San Bernardino,,3,1077,False,1077
+1977,28,CSE 6973,,1,1,Supervision,3.0,19,,,,,Classroom,,San Bernardino,,3,1078,False,1078
+1978,28,CSE 6974,,1,1,Supervision,4.0,,,,,,Classroom,,San Bernardino,,3,1079,False,1079
+1979,28,CSE 6976,,1,1,Supervision,6.0,,,,,,Classroom,,San Bernardino,,3,1080,False,1080
+1980,28,CSE 6980,,1,1,Supervision,0.0,29,,,,,Classroom,,San Bernardino,,3,1081,False,1081
+1981,28,CSE 6992,,1,1,Supervision,2.0,29,,JB 112,Th,4:00 PM - 5:00 PM,Classroom,,San Bernardino,,3,1082,False,1082
+1982,38,CSE 1100,,3,1,Lecture,2.0,34,,JB 102,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,1083,False,1083
+1983,38,CSE 1100,,4,1,Activity,1.0,34,,JB 360,M-W,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,1084,False,1084
+1984,38,CSE 1100,,5,1,Activity,1.0,34,,JB 360,M-W,2:30 PM - 3:20 PM,Classroom,,San Bernardino,,3,1085,False,1085
+1985,38,CSE 1250,,1,1,Lecture,3.0,34,,JB 102,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,1086,False,1086
+1986,38,CSE 1250,,2,1,Activity,1.0,34,,JB 360,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,1087,False,1087
+1987,38,CSE 1250,,3,1,Activity,1.0,34,,JB 360,Tu-Th,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,1088,False,1088
+1988,38,CSE 1250,,4,1,Activity,1.0,34,,JB 360,Tu-Th,2:30 PM - 3:20 PM,Classroom,,San Bernardino,,3,1089,False,1089
+1989,38,CSE 1290,,1,1,Seminar,3.0,10,,JB 111,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,1090,False,1090
+1990,38,CSE 1290,,2,1,Seminar,3.0,10,,JB 262,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,1091,False,1091
+1991,38,CSE 1290,,60,1,Seminar,3.0,10,,Online,Tu-Th,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,1092,False,1092
+1992,38,CSE 1300,,1,1,Lecture,3.0,7,,JB 140,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,1093,False,1093
+1993,38,CSE 1300L,,1,1,Activity,1.0,7,,JB 359,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,1094,False,1094
+1994,38,CSE 2010,,1,1,Discussion,3.0,77,,JB 258,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,1095,False,1095
+1995,38,CSE 2010,,10,1,Activity,1.0,11,,JB 358,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,1102,False,1102
+1996,38,CSE 2010,,11,1,Discussion,3.0,13,,JB 144,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,1103,False,1103
+1997,38,CSE 2010,,12,1,Activity,1.0,89,,JB 356,M-W,4:00 PM - 4:50 PM,Classroom,,San Bernardino,,3,1104,False,1104
+1998,38,CSE 2010,,2,1,Activity,1.0,77,,JB 358,Tu-Th,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,1096,False,1096
+1999,38,CSE 2010,,3,1,Activity,1.0,7,,JB 358,Tu-Th,2:30 PM - 3:20 PM,Classroom,,San Bernardino,,3,1097,False,1097
+2000,38,CSE 2010,,5,1,Activity,1.0,25,,JB 358,Tu-Th,7:00 PM - 7:50 PM,Classroom,,San Bernardino,,3,1098,False,1098
+2001,38,CSE 2010,,60,1,Discussion,3.0,11,,Online,,,Online,,San Bernardino,,3,1105,False,1105
+2002,38,CSE 2010,,61,1,Activity,1.0,11,,Online,,,Online,,San Bernardino,,3,1106,False,1106
+2003,38,CSE 2010,,62,1,Discussion,3.0,27,,Online,,,Online,,San Bernardino,,3,1107,False,1107
+2004,38,CSE 2010,,7,1,Discussion,3.0,13,,JB 386,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,1099,False,1099
+2005,38,CSE 2010,,8,1,Activity,1.0,89,,JB 359,M-W,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,1100,False,1100
+2006,38,CSE 2010,,9,1,Discussion,3.0,11,,JB 114,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,1101,False,1101
+2007,38,CSE 2020,,1,1,Discussion,3.0,32,,PL 293,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,1108,False,1108
+2008,38,CSE 2020,,2,1,Activity,1.0,32,,JB 358,M-W,1:00 PM - 1:50 PM,Classroom,,San Bernardino,,3,1109,False,1109
+2009,38,CSE 2020,,3,1,Discussion,3.0,32,,JB 386,Tu-Th,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,1110,False,1110
+2010,38,CSE 2020,,4,1,Activity,1.0,32,,JB 358,Tu-Th,4:00 PM - 4:50 PM,Classroom,,San Bernardino,,3,1111,False,1111
+2011,38,CSE 2020,,60,1,Discussion,3.0,76,,Online,,,Online,,San Bernardino,,3,1112,False,1112
+2012,38,CSE 2020,,61,1,Activity,1.0,25,,Online,,,Online,,San Bernardino,,3,1113,False,1113
+2013,38,CSE 2130,,60,1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,1114,False,1114
+2014,38,CSE 2130,,61,1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,1115,False,1115
+2015,38,CSE 3100,,1,1,Discussion,3.0,12,,JB 146,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,1116,False,1116
+2016,38,CSE 3100,,2,1,Laboratory,1.0,12,,JB 356,M-W,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,1117,False,1117
+2017,38,CSE 3100,,3,1,Discussion,3.0,77,,JB 113,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,1118,False,1118
+2018,38,CSE 3100,,4,1,Laboratory,1.0,77,,JB 356,M-W,2:30 PM - 3:20 PM,Classroom,,San Bernardino,,3,1119,False,1119
+2019,38,CSE 3100,,60,1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,1120,False,1120
+2020,38,CSE 3100,,61,1,Laboratory,1.0,12,,Online,,,Online,,San Bernardino,,3,1121,False,1121
+2021,38,CSE 3100,,62,1,Discussion,3.0,28,,JB 386,Tu,10:30 AM - 11:45 AM,Classroom+Synchronous,,San Bernardino,,3,1122,False,1122
+2022,38,CSE 3100,,63,1,Laboratory,1.0,28,,JB 356,Tu,9:00 AM - 10:15 AM,Classroom+Synchronous,,San Bernardino,,3,1123,False,1123
+2023,38,CSE 3350,,1,1,Discussion,3.0,20,,JB 262,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,1124,False,1124
+2024,38,CSE 3660,,1,1,Discussion,2.0,15,,JB 359,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,1125,False,1125
+2025,38,CSE 3660,,2,1,Activity,1.0,15,,JB 356,Tu-Th,7:00 PM - 7:50 PM,Classroom,,San Bernardino,,3,1126,False,1126
+2026,38,CSE 4010,,60,1,Discussion,3.0,26,,Online,,,Online,,San Bernardino,,3,1127,False,1127
+2027,38,CSE 4010,,61,1,Laboratory,1.0,26,,Online,,,Online,,San Bernardino,,3,1128,False,1128
+2028,38,CSE 4010,,62,1,Discussion,3.0,26,,Online,Tu-Th,1:00 PM - 2:15 PM,Online Synchronous Section,,San Bernardino,,3,1129,False,1129
+2029,38,CSE 4010,,63,1,Laboratory,1.0,25,,Online,,,Online,,San Bernardino,,3,1130,False,1130
+2030,38,CSE 4030,,2,1,Laboratory,1.0,77,,JB 360,M-W,5:30 PM - 6:20 PM,Classroom,,San Bernardino,,3,1131,False,1131
+2031,38,CSE 4030,,60,1,Discussion,3.0,13,,Online,,,Online,,San Bernardino,,3,1132,False,1132
+2032,38,CSE 4100,,1,1,Discussion,3.0,24,,CGI 209,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,1133,False,1133
+2033,38,CSE 4100,,2,1,Discussion,3.0,20,,JB 262,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,1134,False,1134
+2034,38,CSE 4200,,1,1,Discussion,3.0,95,,JB 262,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,1135,False,1135
+2035,38,CSE 4310,,1,1,Discussion,3.0,88,,CE 113,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,1136,False,1136
+2036,38,CSE 4310,,2,1,Discussion,3.0,32,,JB 113,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,1137,False,1137
+2037,38,CSE 4410,,1,1,Discussion,3.0,25,,JB 140,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,1138,False,1138
+2038,38,CSE 4410,,2,1,Discussion,3.0,25,,JB 109,M-W,2:30 PM - 3:45 PM,Classroom,,San Bernardino,,3,1139,False,1139
+2039,38,CSE 4500,,1,1,Discussion,3.0,77,,JB 109,M-W,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,1140,False,1140
+2040,38,CSE 4500,,60,1,Discussion,3.0,26,,Online,,,Online,,San Bernardino,,3,1141,False,1141
+2041,38,CSE 4550,,1,1,Discussion,3.0,24,,PL 263,Tu-Th,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,1142,False,1142
+2042,38,CSE 4550,,2,1,Discussion,3.0,24,,CGI 106,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,1143,False,1143
+2043,38,CSE 4560,,1,1,Discussion,3.0,30,,JB 138,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,1144,False,1144
+2044,38,CSE 4560,,2,1,Laboratory,1.0,30,,JB 356,Tu-Th,10:30 AM - 11:20 AM,Classroom,,San Bernardino,,3,1145,False,1145
+2045,38,CSE 4560,,60,1,Discussion,3.0,30,,Online,,,Online,,San Bernardino,,3,1146,False,1146
+2046,38,CSE 4560,,61,1,Laboratory,1.0,30,,Online,,,Online,,San Bernardino,,3,1147,False,1147
+2047,38,CSE 4600,,1,1,Discussion,3.0,95,,JB 356,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,1148,False,1148
+2048,38,CSE 4600,,60,1,Discussion,3.0,35,,Online,Tu-Th,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,1149,False,1149
+2049,38,CSE 4600,,61,1,Discussion,3.0,35,,Online,Tu-Th,10:30 AM - 11:45 AM,Online Synchronous Section,,San Bernardino,,3,1150,False,1150
+2050,38,CSE 4610,,1,1,Discussion,3.0,88,,JB 258,Tu-Th,9:00 AM - 10:15 AM,Classroom,,San Bernardino,,3,1151,False,1151
+2051,38,CSE 4820,,1,1,Supervision,3.0,17,,,,,Classroom,,San Bernardino,,3,1152,False,1152
+2052,38,CSE 4820,,2,1,Supervision,3.0,,,,,,Classroom,,San Bernardino,,3,1153,False,1153
+2053,38,CSE 4880,,1,1,Discussion,3.0,26,,JB 111,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,1154,False,1154
+2054,38,CSE 5000,,60,1,Discussion,3.0,11,,Online,,,Online,,San Bernardino,,3,1155,False,1155
+2055,38,CSE 5120,,1,1,Discussion,3.0,19,,JB 113,M-W,10:30 AM - 11:45 AM,Classroom,,San Bernardino,,3,1156,False,1156
+2056,38,CSE 5120,,2,1,Discussion,3.0,19,,JB 262,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,1157,False,1157
+2057,38,CSE 5160,,1,1,Discussion,3.0,35,,JB 146,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,1158,False,1158
+2058,38,CSE 5160,,60,1,Discussion,3.0,22,,Online,Tu-Th,4:00 PM - 5:15 PM,Online Synchronous Section,,San Bernardino,,3,1159,False,1159
+2059,38,CSE 5210,,60,1,Discussion,3.0,76,,Online,,,Online,,San Bernardino,,3,1160,False,1160
+2060,38,CSE 5210,,61,1,Laboratory,1.0,76,,Online,,,Online,,San Bernardino,,3,1161,False,1161
+2061,38,CSE 5250,,60,1,Discussion,3.0,76,,Online,,,Online,,San Bernardino,,3,1162,False,1162
+2062,38,CSE 5350,,60,1,Discussion,3.0,20,,Online,M-W,2:30 PM - 3:45 PM,Online Synchronous Section,,San Bernardino,,3,1163,False,1163
+2063,38,CSE 5408,,60,1,Discussion,3.0,5,,JB 140,M,9:00 AM - 10:15 AM,Bichronous,,San Bernardino,,3,1164,False,1164
+2064,38,CSE 5408,,61,1,Laboratory,1.0,5,,JB 358,M,10:30 AM - 11:20 AM,Bichronous,,San Bernardino,,3,1165,False,1165
+2065,38,CSE 5700,,1,1,Discussion,3.0,7,,CGI 203,M-W,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,1166,False,1166
+2066,38,CSE 5700,,60,1,Discussion,3.0,76,,Online,,,Online,,San Bernardino,,3,1167,False,1167
+2067,38,CSE 5720,,1,1,Discussion,3.0,22,,JB 111,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,1168,False,1168
+2068,38,CSE 5720,,60,1,Discussion,3.0,17,,JB 140,Tu,10:30 AM - 11:45 AM,Classroom+Asynchronous Online,,San Bernardino,,3,1169,False,1169
+2069,38,CSE 5750,,1,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,1170,False,1170
+2070,38,CSE 5750,,2,1,Supervision,3.0,29,,,,,Classroom,,San Bernardino,,3,1171,False,1171
+2071,38,CSE 5953,,1,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,1172,False,1172
+2072,38,CSE 5953,,2,1,Supervision,3.0,35,,,,,Classroom,,San Bernardino,,3,1173,False,1173
+2073,38,CSE 6020,,60,1,Discussion,3.0,5,,JB 109,M,5:30 PM - 6:45 PM,Bichronous,,San Bernardino,,3,1174,False,1174
+2074,38,CSE 6030,,1,1,Discussion,3.0,13,,JB 111,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,1175,False,1175
+2075,38,CSE 6300,,1,1,Discussion,3.0,29,,CGI 207,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,1176,False,1176
+2076,38,CSE 6300,,2,1,Discussion,3.0,29,,CGI 207,Tu-Th,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,1177,False,1177
+2077,38,CSE 6400,,1,1,Discussion,3.0,29,,CGI 210,Tu-Th,1:00 PM - 2:15 PM,Classroom,,San Bernardino,,3,1178,False,1178
+2078,38,CSE 6400,,2,1,Discussion,3.0,24,,CGI 203,Tu-Th,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,1179,False,1179
+2079,38,CSE 6600,,1,1,Discussion,3.0,22,,JB 102,M-W,5:30 PM - 6:45 PM,Classroom,,San Bernardino,,3,1180,False,1180
+2080,38,CSE 6600,,2,1,Discussion,3.0,13,,CGI 209,M-W,4:00 PM - 5:15 PM,Classroom,,San Bernardino,,3,1181,False,1181
+2081,38,CSE 6890,,1,1,Seminar,1.0,9,,,,,Classroom,,San Bernardino,,3,1182,False,1182
+2082,38,CSE 6940,,1,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,1183,False,1183
+2083,38,CSE 6950,,1,1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,1184,False,1184
+2084,38,CSE 6950,,2,1,Supervision,3.0,7,,,,,Classroom,,San Bernardino,,3,1185,False,1185
+2085,38,CSE 6950,,3,1,Supervision,3.0,30,,,,,Classroom,,San Bernardino,,3,1186,False,1186
+2086,38,CSE 6950,,4,1,Supervision,3.0,17,,,,,Classroom,,San Bernardino,,3,1187,False,1187
+2087,38,CSE 6964,,1,1,Supervision,4.0,7,,,,,Classroom,,San Bernardino,,3,1188,False,1188
+2088,38,CSE 6964,,10,1,Supervision,4.0,,,,,,Classroom,,San Bernardino,,3,1197,False,1197
+2089,38,CSE 6964,,2,1,Supervision,4.0,30,,,,,Classroom,,San Bernardino,,3,1189,False,1189
+2090,38,CSE 6964,,3,1,Supervision,4.0,9,,,,,Classroom,,San Bernardino,,3,1190,False,1190
+2091,38,CSE 6964,,4,1,Supervision,4.0,28,,,,,Classroom,,San Bernardino,,3,1191,False,1191
+2092,38,CSE 6964,,5,1,Supervision,4.0,,,,,,Classroom,,San Bernardino,,3,1192,False,1192
+2093,38,CSE 6964,,6,1,Supervision,4.0,,,,,,Classroom,,San Bernardino,,3,1193,False,1193
+2094,38,CSE 6964,,7,1,Supervision,4.0,,,,,,Classroom,,San Bernardino,,3,1194,False,1194
+2095,38,CSE 6964,,8,1,Supervision,4.0,,,,,,Classroom,,San Bernardino,,3,1195,False,1195
+2096,38,CSE 6964,,9,1,Supervision,4.0,,,,,,Classroom,,San Bernardino,,3,1196,False,1196
+2097,38,CSE 6972,,1,1,Supervision,2.0,9,,,,,Classroom,,San Bernardino,,3,1198,False,1198
+2098,38,CSE 6973,,1,1,Supervision,3.0,,,,,,Classroom,,San Bernardino,,3,1199,False,1199
+2099,38,CSE 6974,,1,1,Supervision,4.0,,,,,,Classroom,,San Bernardino,,3,1200,False,1200
+2100,38,CSE 6976,,1,1,Supervision,6.0,,,,,,Classroom,,San Bernardino,,3,1201,False,1201
+2101,38,CSE 6980,,1,1,Supervision,0.0,17,,,,,Classroom,,San Bernardino,,3,1202,False,1202
+2102,38,CSE 6992,,1,1,Supervision,2.0,17,,TBD,Tu-Th,4:00 PM - 4:50 PM,Classroom,,San Bernardino,,3,1203,False,1203
+2103,1,CSE 6976,,3,1,Supervision,6.0,35,,JB 361,,,Classroom,,San Bernardino,,3,1408,False,1408
+2104,26,CSE 2010,,1,6W1,Discussion,6.0,11,,Online,,,Online,,San Bernardino,,3,1412,False,1412
+2105,26,CSE 2010,,2,6W1,Activity,2.0,11,,Online,,,Online,,San Bernardino,,3,1413,False,1413
+2106,26,CSE 2020,,1,6W2,Discussion,6.0,35,,Online,M-Tu-W-Th,8:55 AM - 11:10 AM,Bichronous,,San Bernardino,,3,1414,False,1414
+2107,26,CSE 2020,,2,6W2,Activity,2.0,35,,Online,M-Tu-W-Th,11:20 AM - 1:35 PM,Bichronous,,San Bernardino,,3,1415,False,1415
+2108,26,CSE 2130,,1,10W,Discussion,6.0,12,,Online,,,Online,,San Bernardino,,3,1416,False,1416
+2109,26,CSE 3100,,1,10W,Discussion,6.0,12,,Online,,,Online,,San Bernardino,,3,1417,False,1417
+2110,26,CSE 3100,,2,10W,Laboratory,2.0,12,,Online,,,Online,,San Bernardino,,3,1418,False,1418
+2111,26,CSE 4010,,1,10W,Discussion,6.0,23,,Online,Tu-Th,9:55 AM - 12:10 PM,Bichronous,,San Bernardino,,3,1419,False,1419
+2112,26,CSE 4010,,2,10W,Laboratory,2.0,23,,Online,,,Online,,San Bernardino,,3,1420,False,1420
+2113,26,CSE 4100,,1,6W1,Discussion,3.0,16,,Online,M-Tu-W-Th,7:30 AM - 9:40 AM,Bichronous,,San Bernardino,,3,1421,False,1421
+2114,26,CSE 4310,,1,6W2,Discussion,6.0,23,,Online,M-W,9:00 AM - 12:00 PM,Bichronous,,San Bernardino,,3,1423,False,1423
+2115,26,CSE 4560,,1,6W1,Discussion,6.0,30,,Online,,,Online,,San Bernardino,,3,1424,False,1424
+2116,26,CSE 4560,,2,6W1,Laboratory,2.0,30,,Online,,,Online,,San Bernardino,,3,1425,False,1425
+2117,26,CSE 4880,,1,6W1,Discussion,6.0,23,,Online,M-W,9:00 AM - 12:00 PM,Bichronous,,San Bernardino,,3,1426,False,1426
+2118,26,CSE 5160,,1,6W1,Discussion,6.0,28,,Online,M-Tu-W-Th,6:00 PM - 8:15 PM,Bichronous,,San Bernardino,,3,1427,False,1427
+2119,26,CSE 6964,,1,10W,Supervision,4.0,81,,Online,,,Online,,San Bernardino,,3,1430,False,1430
+2120,26,CSE 6964,,1,6W2,Supervision,4.0,81,,Online,,,Online,,San Bernardino,,3,1428,False,1428
+2121,24,CSE 2010,,60,6W1,Discussion,6.0,11,,Online,,,Online,,San Bernardino,,3,1432,False,1432
+2122,24,CSE 2010,,61,6W1,Activity,2.0,11,,Online,,,Online,,San Bernardino,,3,1433,False,1433
+2123,24,CSE 2020,,60,6W2,Discussion,6.0,35,,Online,,,Online,,San Bernardino,,3,1434,False,1434
+2124,24,CSE 2020,,61,6W2,Activity,2.0,35,,Online,,,Online,,San Bernardino,,3,1435,False,1435
+2125,24,CSE 2130,,60,10W,Discussion,6.0,12,,Online,,,Online,,San Bernardino,,3,1436,False,1436
+2126,24,CSE 3100,,60,10W,Discussion,6.0,12,,Online,,,Online,,San Bernardino,,3,1437,False,1437
+2127,24,CSE 3100,,61,10W,Laboratory,2.0,12,,Online,,,Online,,San Bernardino,,3,1438,False,1438
+2128,24,CSE 4100,,60,6W1,Discussion,6.0,23,,Online,Tu-Th,9:00 AM - 12:00 PM,Online Synchronous Section,,San Bernardino,,3,1439,False,1439
+2129,24,CSE 4100,,63,6W1,Discussion,6.0,16,,Online,,,Online,,San Bernardino,,3,1440,False,1440
+2130,24,CSE 4310,,60,6W2,Discussion,6.0,23,,Online,M-W,9:00 AM - 12:00 PM,Online Synchronous Section,,San Bernardino,,3,1441,False,1441
+2131,24,CSE 4310,,61,6W2,Discussion,6.0,20,,Online,M-W,9:00 AM - 12:00 PM,Online Synchronous Section,,San Bernardino,,3,1442,False,1442
+2132,24,CSE 4560,,60,6W1,Discussion,6.0,30,,Online,,,Online,,San Bernardino,,3,1443,False,1443
+2133,24,CSE 4560,,61,6W1,Laboratory,2.0,30,,Online,,,Online,,San Bernardino,,3,1444,False,1444
+2134,24,CSE 4600,,60,6W2,Discussion,6.0,23,,Online,Tu-Th,9:00 AM - 12:00 PM,Online Synchronous Section,,San Bernardino,,3,1445,False,1445
+2135,24,CSE 4880,,60,6W1,Discussion,6.0,23,,Online,M-W,9:00 AM - 12:00 PM,Online Synchronous Section,,San Bernardino,,3,1446,False,1446
+2136,24,CSE 5000,,60,6W2,Discussion,6.0,11,,Online,,,Online,,San Bernardino,,3,1447,False,1447
+2137,24,CSE 5000,,61,6W2,Discussion,6.0,11,,Online,,,Online,,San Bernardino,,3,1448,False,1448
+2138,24,CSE 5160,,60,6W1,Discussion,6.0,28,,Online,,,Online,,San Bernardino,,3,1449,False,1449
+2139,24,CSE 5160,,61,6W1,Discussion,6.0,28,,Online,,,Online,,San Bernardino,,3,1450,False,1450
+2140,24,CSE 5350,,61,6W2,Discussion,6.0,30,,Online,,,Online,,San Bernardino,,3,1451,False,1451
+2141,24,CSE 5750,,1,10W,Supervision,6.0,9,,Online,,,Online,,San Bernardino,,3,1452,False,1452
+2142,24,CSE 5952,,1,10W,Supervision,4.0,9,,Online,,,Online,,San Bernardino,,3,1453,False,1453
+2143,24,CSE 6950,,1,10W,Supervision,6.0,9,,,,,Classroom,,San Bernardino,,3,1454,False,1454
+2144,24,CSE 6964,,1,6W2,Supervision,8.0,9,,,,,Classroom,,San Bernardino,,3,1455,False,1455
+2145,32,CSE 2010,,60,6W1,Discussion,6.0,11,,Online,,,Online,,San Bernardino,,3,1456,False,1456
+2146,32,CSE 2010,,61,6W1,Activity,2.0,11,,Online,,,Online,,San Bernardino,,3,1457,False,1457
+2147,32,CSE 2020,,60,6W2,Discussion,3.0,35,,Online,,,Online,,San Bernardino,,3,1458,False,1458
+2148,32,CSE 2020,,61,6W2,Activity,2.0,80,,Online,,,Online,,San Bernardino,,3,1460,False,1460
+2149,32,CSE 2020,,62,6W2,Discussion,3.0,35,,Online,,,Online,,San Bernardino,,3,1461,False,1461
+2150,32,CSE 2020,,63,6W2,Activity,2.0,98,,Online,,,Online,,San Bernardino,,3,1463,False,1463
+2151,32,CSE 2130,,60,6W2,Discussion,6.0,12,,Online,,,Online,,San Bernardino,,3,1464,False,1464
+2152,32,CSE 3100,,60,6W1,Discussion,6.0,12,,Online,,,Online,,San Bernardino,,3,1465,False,1465
+2153,32,CSE 3100,,61,6W1,Laboratory,2.0,12,,Online,,,Online,,San Bernardino,,3,1466,False,1466
+2154,32,CSE 4100,,60,6W2,Discussion,6.0,23,,Online,,,Online,,San Bernardino,,3,1467,False,1467
+2155,32,CSE 4310,,60,6W1,Discussion,6.0,23,,Online,,,Online,,San Bernardino,,3,1468,False,1468
+2156,32,CSE 4560,,60,6W1,Discussion,3.0,30,,Online,,,Online,,San Bernardino,,3,1469,False,1469
+2157,32,CSE 4560,,61,6W1,Laboratory,1.0,30,,Online,,,Online,,San Bernardino,,3,1471,False,1471
+2158,32,CSE 4880,,60,6W2,Discussion,6.0,23,,Online,,,Online,,San Bernardino,,3,1473,False,1473
+2159,32,CSE 4880,,61,6W1,Discussion,6.0,23,,Online,,,Online,,San Bernardino,,3,1474,False,1474
+2160,32,CSE 5000,,60,6W2,Discussion,6.0,11,,Online,,,Online,,San Bernardino,,3,1475,False,1475
+2161,32,CSE 5000,,62,6W2,Discussion,6.0,11,,Online,,,Online,,San Bernardino,,3,1476,False,1476
+2162,32,CSE 5160,,60,6W1,Discussion,6.0,28,,Online,,,Online,,San Bernardino,,3,1477,False,1477
+2163,32,CSE 5160,,61,6W2,Discussion,6.0,28,,Online,,,Online,,San Bernardino,,3,1478,False,1478
+2164,32,CSE 5160,,62,6W1,Discussion,6.0,28,,Online,,,Online,,San Bernardino,,3,1479,False,1479
+2165,32,CSE 5350,,61,6W2,Discussion,3.0,30,,Online,,,Online,,San Bernardino,,3,1480,False,1480
+2166,32,CSE 5350,,62,6W2,Discussion,3.0,30,,Online,,,Online,,San Bernardino,,3,1482,False,1482
+2167,32,CSE 5720,,60,6W2,Discussion,6.0,17,,Online,,,Online,,San Bernardino,,3,1484,False,1484
+2168,32,CSE 5720,,61,6W1,Discussion,6.0,17,,Online,,,Online,,San Bernardino,,3,1485,False,1485
+2169,32,CSE 5720,,63,6W2,Discussion,6.0,17,,Online,,,Online,,San Bernardino,,3,1486,False,1486
+2170,32,CSE 5750,,1,10W,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,1487,False,1487
+2171,32,CSE 5750,,2,10W,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,1489,False,1489
+2172,32,CSE 5750,,3,10W,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,1491,False,1491
+2173,32,CSE 5952,,1,10W,Supervision,2.0,9,,,,,Classroom,,San Bernardino,,3,1493,False,1493
+2174,32,CSE 5953,,1,6W1,Supervision,6.0,9,,,,,Classroom,,San Bernardino,,3,1495,False,1495
+2175,32,CSE 6950,,1,10W,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,1496,False,1496
+2176,35,CSE 2010,,60,5W2,Discussion,3.0,11,,Online,,,Online,,San Bernardino,,3,1498,False,1498
+2177,35,CSE 2010,,61,5W2,Activity,1.0,11,,Online,,,Online,,San Bernardino,,3,1499,False,1499
+2178,35,CSE 2020,,60,5W1,Discussion,3.0,35,,Online,,,Online,,San Bernardino,,3,1500,False,1500
+2179,35,CSE 2020,,61,5W1,Activity,1.0,35,,Online,,,Online,,San Bernardino,,3,1501,False,1501
+2180,35,CSE 2020,,62,5W2,Discussion,3.0,35,,Online,,,Online,,San Bernardino,,3,1502,False,1502
+2181,35,CSE 2020,,63,5W2,Activity,1.0,35,,Online,,,Online,,San Bernardino,,3,1503,False,1503
+2182,35,CSE 2130,,60,5W2,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,1504,False,1504
+2183,35,CSE 3100,,60,5W1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,1505,False,1505
+2184,35,CSE 3100,,61,5W1,Laboratory,1.0,12,,Online,,,Online,,San Bernardino,,3,1506,False,1506
+2185,35,CSE 4030,,60,5W1,Discussion,3.0,16,,Online,M-W,9:00 AM - 10:15 AM,Online Synchronous Section,,San Bernardino,,3,1507,False,1507
+2186,35,CSE 4030,,61,5W1,Laboratory,1.0,16,,Online,,,Online,,San Bernardino,,3,1508,False,1508
+2187,35,CSE 4100,,60,5W2,Discussion,3.0,23,,Online,,,Online,,San Bernardino,,3,1509,False,1509
+2188,35,CSE 4310,,60,5W1,Discussion,3.0,23,,Online,,,Online,,San Bernardino,,3,1510,False,1510
+2189,35,CSE 4500,,60,5W2,Discussion,3.0,22,,Online,,,Online,,San Bernardino,,3,1511,False,1511
+2190,35,CSE 4560,,60,5W2,Discussion,3.0,30,,Online,,,Online,,San Bernardino,,3,1512,False,1512
+2191,35,CSE 4560,,61,5W2,Laboratory,1.0,30,,Online,,,Online,,San Bernardino,,3,1513,False,1513
+2192,35,CSE 4610,,60,5W1,Discussion,3.0,22,,Online,,,Online,,San Bernardino,,3,1514,False,1514
+2193,35,CSE 4880,,60,5W1,Discussion,3.0,23,,Online,,,Online,,San Bernardino,,3,1515,False,1515
+2194,35,CSE 5000,,60,5W1,Discussion,3.0,11,,Online,,,Online,,San Bernardino,,3,1516,False,1516
+2195,35,CSE 5000,,61,5W1,Discussion,3.0,11,,Online,,,Online,,San Bernardino,,3,1517,False,1517
+2196,35,CSE 5120,,60,10W,Discussion,3.0,29,,Online,,,Online,,San Bernardino,,3,1518,False,1518
+2197,35,CSE 5160,,60,5W1,Discussion,3.0,28,,Online,,,Online,,San Bernardino,,3,1519,False,1519
+2198,35,CSE 5160,,61,5W2,Discussion,3.0,28,,Online,,,Online,,San Bernardino,,3,1520,False,1520
+2199,35,CSE 5250,,60,10W,Discussion,3.0,76,,Online,,,Online,,San Bernardino,,3,1521,False,1521
+2200,35,CSE 5350,,60,5W1,Discussion,3.0,30,,Online,,,Online,,San Bernardino,,3,1522,False,1522
+2201,35,CSE 5700,,60,10W,Discussion,3.0,76,,Online,,,Online,,San Bernardino,,3,1523,False,1523
+2202,35,CSE 5720,,60,5W1,Discussion,3.0,17,,Online,,,Online,,San Bernardino,,3,1524,False,1524
+2203,35,CSE 5720,,61,5W2,Discussion,3.0,17,,Online,,,Online,,San Bernardino,,3,1525,False,1525
+2204,35,CSE 5750,,1,10W,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,1526,False,1526
+2205,35,CSE 5940,,60,5W1,Discussion,3.0,30,,Online,,,Online,,San Bernardino,,3,1527,False,1527
+2206,35,CSE 6600,,60,5W1,Discussion,3.0,22,,Online,,,Online,,San Bernardino,,3,1528,False,1528
+2207,35,CSE 6950,,1,10W,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,1529,False,1529
+2208,39,CSE 4310,,60,3W1,Discussion,3.0,23,,Online,M-Tu-W-Th,9:00 AM - 12:00 PM,Bichronous,,San Bernardino,,3,1579,False,1579
+2209,39,CSE 5952,,1,3W1,Supervision,2.0,9,,,,,Classroom,,San Bernardino,,3,1580,False,1580
+2210,39,CSE 6600,,60,3W1,Discussion,3.0,71,,Online,,,Online,,San Bernardino,,3,1581,False,1581
+2211,39,CSE 6950,,60,3W1,Supervision,3.0,,,Online,,,Online,,San Bernardino,,3,1582,False,1582
+2212,33,CSE 2020,,1,3W1,Discussion,3.0,35,,,,,Online,,San Bernardino,,3,1583,False,1583
+2213,33,CSE 2020,,2,3W1,Activity,1.0,35,,,,,Online,,San Bernardino,,3,1584,False,1584
+2214,33,CSE 4310,,1,3W1,Discussion,3.0,23,,,,,Bichronous,,San Bernardino,,3,1585,False,1585
+2215,33,CSE 5160,,1,3W1,Discussion,3.0,28,,,,,Online,,San Bernardino,,3,1586,False,1586
+2216,33,CSE 6600,,1,3W1,Discussion,3.0,4,,,,,Online,,San Bernardino,,3,1587,False,1587
+2217,33,CSE 6950,,1,3W1,Supervision,3.0,9,,,,,Classroom,,San Bernardino,,3,1588,False,1588
+2218,43,CSE 2020,,60,3W1,Discussion,3.0,35,,Online,,,Online,,San Bernardino,,3,1589,False,1589
+2219,43,CSE 2020,,61,3W1,Activity,1.0,35,,Online,,,Online,,San Bernardino,,3,1590,False,1590
+2220,43,CSE 2130,,60,3W1,Discussion,3.0,12,,Online,,,Online,,San Bernardino,,3,1591,False,1591
+2221,43,CSE 4310,,60,3W1,Discussion,3.0,23,,Online,,,Online,,San Bernardino,,3,1592,False,1592
+2222,43,CSE 5000,,60,3W1,Discussion,3.0,11,,Online,,,Online,,San Bernardino,,3,1593,False,1593
+2223,43,CSE 5160,,60,3W1,Discussion,3.0,28,,Online,,,Online,,San Bernardino,,3,1594,False,1594
+2224,43,CSE 5720,,60,3W1,Discussion,3.0,17,,Online,,,Online,,San Bernardino,,3,1595,False,1595
+2225,43,CSE 5940,,60,3W1,Discussion,3.0,30,,Online,,,Online,,San Bernardino,,3,1596,False,1596
